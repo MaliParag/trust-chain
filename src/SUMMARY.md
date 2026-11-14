@@ -25,9 +25,11 @@
 # Part III · Credentials & Access
 
 - [Windows Access Control, Integrity Levels, and Impersonation](chapters/25-access-control.md)
+- [Data Protection and Local Secret Custody](chapters/30-data-protection.md)
 - [Credential Guard and LSASS Isolation](chapters/08-credential-guard.md)
 - [The Death of NTLM](chapters/09-ntlm.md)
 - [Kerberos and Ticket Forgery](chapters/10-kerberos.md)
+- [Enterprise PKI, Service Identities, and Hybrid Bridges](chapters/31-enterprise-pki.md)
 - [Pass-the-Hash to Pass-the-PRT](chapters/11-pth-prt.md)
 - [Windows Hello and Passkeys](chapters/12-hello.md)
 
@@ -39,6 +41,7 @@
 
 - [Zero Trust](chapters/13-zero-trust.md)
 - [Continuous Access Evaluation](chapters/14-cae.md)
+- [Workload and AI Agent Security](chapters/32-agent-security.md)
 - [Confidential VMs](chapters/29-confidential-vms.md)
 
 # Finale · When the Chain Snaps

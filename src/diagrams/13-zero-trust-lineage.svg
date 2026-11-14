@@ -32,7 +32,7 @@
 <text x="118.0" y="312.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#365378" text-anchor="end">2017-18</text>
 <text x="118.0" y="418.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#b07926" text-anchor="end">Aug 2020</text>
 <text x="118.0" y="523.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#2b6a4c" text-anchor="end">2022-25</text>
-<text x="420.0" y="599.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Zero Trust turns every on-box guarantee from Chapters 1-16 into an evaluable input signal at the Policy Decision Point.</text>
+<text x="420.0" y="599.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Zero Trust turns every on-box guarantee from Chapters 1-18 into an evaluable input signal at the Policy Decision Point.</text>
 <line x1="140.0" y1="97.8" x2="172.0" y2="97.8" stroke="#365378" stroke-width="1.5"/>
 <line x1="140.0" y1="203.3" x2="172.0" y2="203.3" stroke="#236b66" stroke-width="1.5"/>
 <line x1="140.0" y1="308.8" x2="172.0" y2="308.8" stroke="#365378" stroke-width="1.5"/>

@@ -1,9 +1,9 @@
 # How to Read This Book
 
-This book constructs one continuous systems-engineering argument across twenty
-numbered chapters organized into four parts, an observability interlude, and a
-finale, preceded by a [Prologue](../chapters/00-prologue.md) and a
-[Foundations](../chapters/00b-foundations.md) primer.
+This book constructs one continuous systems-engineering argument across
+twenty-three numbered chapters organized into four parts, an observability
+interlude, and a finale, preceded by a [Prologue](../chapters/00-prologue.md)
+and a [Foundations](../chapters/00b-foundations.md) primer.
 
 ## Structure of the Chain
 
@@ -16,25 +16,29 @@ finale, preceded by a [Prologue](../chapters/00-prologue.md) and a
   and `VTL1` Trustlets ([Chapter 6](../chapters/05-secure-kernel.md)), Code Integrity, Authenticode, and
   Application Control ([Chapter 7](../chapters/06-code-integrity.md)), Protected Process Light ([Chapter 8](../chapters/18-ppl.md)), and
   Process Mitigation Policies ([Chapter 9](../chapters/19-mitigations.md)).
-- **Part III · Credentials & Access ([Chapter 10](../chapters/25-access-control.md) to [Chapter 15](../chapters/12-hello.md)):** Identity,
-  tokens, and secret custody: Windows Access Control, Integrity Levels, and
-  Service Impersonation ([Chapter 10](../chapters/25-access-control.md)), Credential Guard and `LSASS` Isolation
-  ([Chapter 11](../chapters/08-credential-guard.md)), The Death of `NTLM` ([Chapter 12](../chapters/09-ntlm.md)), Kerberos and Ticket Forgery
-  ([Chapter 13](../chapters/10-kerberos.md)), `Pass-the-Hash` to `Pass-the-PRT` ([Chapter 14](../chapters/11-pth-prt.md)), and Windows
-  Hello and Passkeys ([Chapter 15](../chapters/12-hello.md)).
-- **Interlude · Watching the Chain ([Chapter 16](../chapters/28-etw.md)):** Event Tracing for Windows
-  (`ETW`), `EtwTi`, and the kernel-to-user telemetry substrate beneath modern EDR.
-- **Part IV · Cloud ([Chapter 17](../chapters/13-zero-trust.md) to [Chapter 19](../chapters/29-confidential-vms.md)):** Extending endpoint trust off
-  the machine: Zero Trust and Conditional Access ([Chapter 17](../chapters/13-zero-trust.md)), Continuous
-  Access Evaluation ([Chapter 18](../chapters/14-cae.md)), and Azure Confidential VMs ([Chapter 19](../chapters/29-confidential-vms.md)).
-- **Finale · When the Chain Snaps ([Chapter 20](../chapters/15-storm0558.md)):** The July 2023 `Storm-0558`
+- **Part III · Credentials & Access ([Chapter 10](../chapters/25-access-control.md) to [Chapter 17](../chapters/12-hello.md)):** Identity,
+  tokens, data custody, and enterprise PKI: Windows Access Control, Integrity
+  Levels, and Service Impersonation ([Chapter 10](../chapters/25-access-control.md)), Data Protection and Local
+  Secret Custody ([Chapter 11](../chapters/30-data-protection.md)), Credential Guard and `LSASS` Isolation
+  ([Chapter 12](../chapters/08-credential-guard.md)), The Death of `NTLM` ([Chapter 13](../chapters/09-ntlm.md)), Kerberos and Ticket Forgery
+  ([Chapter 14](../chapters/10-kerberos.md)), Enterprise PKI, Service Identities, and Hybrid Bridges
+  ([Chapter 15](../chapters/31-enterprise-pki.md)), `Pass-the-Hash` to `Pass-the-PRT` ([Chapter 16](../chapters/11-pth-prt.md)), and Windows
+  Hello and Passkeys ([Chapter 17](../chapters/12-hello.md)).
+- **Interlude · Watching the Chain ([Chapter 18](../chapters/28-etw.md)):** Event Tracing for Windows
+  (`ETW`), `EtwTi`, the Windows Resiliency Initiative, and the kernel-to-user
+  telemetry substrate beneath modern EDR.
+- **Part IV · Cloud ([Chapter 19](../chapters/13-zero-trust.md) to [Chapter 22](../chapters/29-confidential-vms.md)):** Extending endpoint trust off
+  the machine: Zero Trust and Conditional Access ([Chapter 19](../chapters/13-zero-trust.md)), Continuous
+  Access Evaluation ([Chapter 20](../chapters/14-cae.md)), Workload and AI Agent Security
+  ([Chapter 21](../chapters/32-agent-security.md)), and Azure Confidential VMs ([Chapter 22](../chapters/29-confidential-vms.md)).
+- **Finale · When the Chain Snaps ([Chapter 23](../chapters/15-storm0558.md)):** The July 2023 `Storm-0558`
   intrusion, where every endpoint and session link held intact while a stolen
   cloud signing key and a missing cross-tier issuer check broke the top of the
   chain.
 
 ## Anatomy of Every Chapter
 
-Every numbered chapter ([Chapter 1](../chapters/16-secure-boot.md) through [Chapter 20](../chapters/15-storm0558.md)) follows the same
+Every numbered chapter ([Chapter 1](../chapters/16-secure-boot.md) through [Chapter 23](../chapters/15-storm0558.md)) follows the same
 predictable progression so readers can compare subsystems directly or locate
 specific reference material immediately:
 

@@ -13,14 +13,14 @@ def generate_part1(diag_dir: str):
 
     # 1. trust-chain-map.svg (Foundations)
     c = SvgCanvas(880, 560)
-    y = c.add_header("The 20-Chapter Windows Trust Chain", "Trust is inherited upward from immutable silicon; never self-asserted by higher layers") + 14
+    y = c.add_header("The 23-Chapter Windows Trust Chain", "Trust is inherited upward from immutable silicon; never self-asserted by higher layers") + 14
     main_x, main_w = 64.0, 540.0
     side_x, side_w = 646.0, 198.0
 
     tiers = [
-        ("Finale · Chapter 20", "When the Chain Snaps: Storm-0558", "Stolen 2016 MSA key + omitted cross-tier iss/aud check forges enterprise mail tokens", "red", "the chain snaps"),
-        ("Part IV · Chapters 17 to 19", "Cloud Control Plane & Confidential Compute", "17. Zero Trust (Conditional Access) · 18. Continuous Access Evaluation · 19. Confidential VMs", "amber", "inherits device & token signals"),
-        ("Part III · Chapters 10 to 15", "Credentials & Access", "10. Access Control · 11. Credential Guard · 12. NTLM · 13. Kerberos · 14. PRT · 15. Hello & Passkeys", "green", "inherits VTL1 & kernel boundaries"),
+        ("Finale · Chapter 23", "When the Chain Snaps: Storm-0558", "Stolen 2016 MSA key + omitted cross-tier iss/aud check forges enterprise mail tokens", "red", "the chain snaps"),
+        ("Part IV · Chapters 19 to 22", "Cloud, AI Agents, & Confidential Compute", "19. Zero Trust · 20. CAE · 21. Workload & AI Agent Security · 22. Confidential VMs", "amber", "inherits device & token signals"),
+        ("Part III · Chapters 10 to 17", "Credentials, Data Custody, & PKI", "10. Access · 11. BitLocker & DPAPI · 12. Cred Guard · 13. NTLM · 14. Kerberos · 15. AD CS & dMSA · 16. PRT · 17. Passkeys", "green", "inherits VTL1 & kernel boundaries"),
         ("Part II · Chapters 6 to 9", "Kernel & Code Integrity", "6. Secure Kernel & VBS · 7. Code Integrity & App Control · 8. PPL · 9. Process Mitigations", "teal", "inherits measured pre-OS handoff"),
         ("Part I · Chapters 1 to 5", "Silicon & Firmware Roots", "1. Secure Boot · 2. The TPM · 3. Pluton · 4. Measured Boot · 5. Remote Attestation", "slate", None),
     ]
@@ -47,7 +47,7 @@ def generate_part1(diag_dir: str):
     rail_bot = ys[4][0] + ys[4][1]
     c.add_rect(side_x, rail_top, side_w, rail_bot - rail_top, fill="#f4f1ea",
                stroke="#524c44", stroke_width=1.3, rx=8, dash="5,3", layer="bg")
-    c.add_card(side_x + 12, rail_top + 24, side_w - 24, tag="Interlude · Chapter 16",
+    c.add_card(side_x + 12, rail_top + 24, side_w - 24, tag="Interlude · Chapter 18",
                title="ETW: The EDR Substrate", body="Per-CPU ring buffers, AMSI, Sysmon, and kernel EtwTi observe every host tier",
                theme="white", align="center", title_size=11.5, body_size=10.0)
     c.add_text(side_x + side_w / 2, rail_bot - 42, "Observation, not enforcement:", size=9.8,

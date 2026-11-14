@@ -108,9 +108,14 @@ Discovered by `Rairii` in August 2022 and demonstrated publicly at 38C3 by Thoma
 
 Closing Bitpixie exposed a painful operational feedback loop across enterprise fleets [140]: revoking vulnerable boot managers requires updating `dbx` (KB5025885), which alters `EV_EFI_VARIABLE_DRIVER_CONFIG` for `dbx`, which changes `PCR[7]`, which immediately triggers 48-digit BitLocker recovery prompts on every `0x880`-sealed machine whose protection was not suspended across the update!
 
-### Subverting DRTM From Ring -2: The TXT SMM Bypass
+### Subverting DRTM From Ring -2 and PCIe DMA: SMM, WSMT, and Secured-core PC
 
-When Intel introduced `GETSEC[SENTER]` in 2007, early DRTM threat models assumed resetting `PCR[17..22]` at Locality 4 bypassed all motherboard firmware bugs. At Black Hat DC 2009, Joanna Rutkowska and Rafal Wojtczuk proved otherwise [137]: if an attacker compromised BIOS/SMM prior to `SENTER`, `SMRAM` remained active across the late launch. Triggering a System Management Interrupt (`SMI`) immediately after `SENTER` measured a clean `MLE` into `PCR[18]` allowed Ring -2 SMM code to overwrite the running hypervisor in DRAM while `PCR[17..18]` continued reporting a pristine digest. This architectural break forced modern Windows System Guard Secure Launch to treat hardware IOMMU enforcement *plus* SMM isolation (`Intel STM` or `AMD/Microsoft SMM Supervisor`) as non-negotiable preconditions for DRTM trust [128, 136].
+When Intel introduced `GETSEC[SENTER]` in 2007, early DRTM threat models assumed resetting `PCR[17..22]` at Locality 4 bypassed all motherboard firmware bugs. At Black Hat DC 2009, Joanna Rutkowska and Rafal Wojtczuk proved otherwise [137]: if an attacker compromised BIOS/SMM prior to `SENTER`, `SMRAM` remained active across the late launch. Triggering a System Management Interrupt (`SMI`) immediately after `SENTER` measured a clean `MLE` into `PCR[18]` allowed Ring -2 SMM code to overwrite the running hypervisor in DRAM while `PCR[17..18]` continued reporting a pristine digest.
+
+Similarly, PCIe, Thunderbolt, and M.2 bus-mastering peripherals (`PCILeech` FPGA interposers [887]) can issue Direct Memory Access (`DMA`) reads and writes straight to physical DRAM without consulting CPU page tables or extending any `PCR`. To close both side doors beneath the OS, Microsoft's Secured-core PC specification pairs System Guard Secure Launch (`DRTM`) with two mandatory firmware/silicon invariants [889]:
+
+* **SMM Isolation (`WSMT` + `SMM Supervisor` / `STM`):** Firmware publishes the ACPI Windows SMM Security Mitigations Table (`WSMT`) certifying that `SMM` communication buffers are validated against arbitrary guest physical memory pointers (`FIXED_COMM_BUFFERS`, `COMM_BUFFER_NESTED_PTR_PROTECTION`), while `SMM Supervisor` / `Intel STM` restricts Ring -2 handlers inside page-table sandboxes isolated from `VTL1` memory [128, 136, 888].
+* **Pre-Boot and Runtime `Kernel DMA Protection` (`IOMMU`):** Firmware enables `Intel VT-d` or `AMD-Vi` `IOMMU` remapping from early UEFI handoff through OS runtime, blocking external PCIe/Thunderbolt/USB4 devices from reading `BitLocker` keys or `VBS` pages unless explicitly mapped per-buffer by an authorized driver [111, 887, 889].
 
 ### Missing Firmware Measurements and Cuckoo/Log Forgery
 

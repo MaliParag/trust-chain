@@ -70,8 +70,8 @@ Inside Windows, user-mode and kernel-mode callers rarely construct raw `TPM2_*` 
 
 * **BitLocker Drive Encryption:** Seals the Volume Master Key (VMK) under a `TPM2_PolicyPCR` profile (canonically `PCR[7]` + `PCR[11]` when UEFI Secure Boot is active, optionally combined with `TPM2_PolicyAuthValue` for `TPMAndPIN`) ([Chapter 4](03-measured-boot.md)) [53, 67].
 * **Measured Boot and Device Health Attestation:** Extends boot components into PCRs and signs `TPM2_Quote` structures with an `AK` for remote health evaluation ([Chapter 4](03-measured-boot.md), [Chapter 5](04-attestation.md)) [68].
-* **Credential Guard and VBS Secrets:** Protects VTL1 isolated secret sealing keys against offline extraction ([Chapter 6](05-secure-kernel.md), [Chapter 11](08-credential-guard.md)) [69].
-* **Windows Hello for Business, DPAPI-NG, and Virtual Smart Cards:** Stores per-user asymmetric credentials, enterprise certificate keys (verified via TPM key attestation), and domain protection keys behind hardware anti-hammering ([Chapter 15](12-hello.md)) [65, 70, 71].
+* **Credential Guard and VBS Secrets:** Protects VTL1 isolated secret sealing keys against offline extraction ([Chapter 6](05-secure-kernel.md), [Chapter 12](08-credential-guard.md)) [69].
+* **Windows Hello for Business, DPAPI-NG, and Virtual Smart Cards:** Stores per-user asymmetric credentials, enterprise certificate keys (verified via TPM key attestation), and domain protection keys behind hardware anti-hammering ([Chapter 17](12-hello.md)) [65, 70, 71].
 
 Hardware vendors deliver this identical TCG 2.0 command surface across distinct physical realizations whose physical and microarchitectural attack surfaces differ sharply [62, 72, 73, 74]:
 
@@ -81,7 +81,7 @@ Hardware vendors deliver this identical TCG 2.0 command surface across distinct 
 | Host Interconnect | External PCB traces (LPC, SPI, or I2C) | Internal on-package/on-die fabric (CRB MMIO) | Internal on-die mailbox / CRB MMIO | Hypervisor VMBus / virtual CRB |
 | Shared TCB Surface | Dedicated TPM ROM/flash only | Shared with full Intel Management Engine stack | Shared with AMD PSP boot, SEV, and SMM helpers | Host hypervisor and cloud control plane |
 | Servicing Channel | Vendor TPM firmware updater / OEM capsule | OEM UEFI BIOS capsule | OEM UEFI BIOS capsule | Cloud host / hypervisor servicing |
-| Dominant Exposure | Passive LPC/SPI bus sniffing of plaintext `Unseal` [75, 76] | Shared-TEE timing side channels (TPM-Fail) [77] | PSP voltage fault injection (faulTPM) [78] | Host hypervisor compromise ([Chapter 19](29-confidential-vms.md)) |
+| Dominant Exposure | Passive LPC/SPI bus sniffing of plaintext `Unseal` [75, 76] | Shared-TEE timing side channels (TPM-Fail) [77] | PSP voltage fault injection (faulTPM) [78] | Host hypervisor compromise ([Chapter 22](29-confidential-vms.md)) |
 
 *(A fifth realization, Microsoft Pluton, integrates a dedicated security processor block directly onto the CPU die with Windows-Update-delivered firmware; [Chapter 3](02-pluton.md) analyzes Pluton's architecture and trade-offs in full [79, 80].)*
 
@@ -132,7 +132,7 @@ A TPM is a Root of Trust for Storage (RTS) and a Root of Trust for Reporting (RT
 Hardware non-exportability protects keys *used* inside the TPM (`TPM2_Sign`, `TPM2_RSA_Decrypt`), where private material never leaves the boundary. By contrast, *sealed data blobs* (`TPM2_Unseal`, used for symmetric bulk-encryption keys like the BitLocker VMK because a low-throughput TPM cannot AES-XTS-encrypt gigabytes of NVMe I/O inline) must cross into host DRAM to key the OS storage stack.
 
 > **Key idea.**
-> For sealed symmetric keys, the TPM's security invariant terminates at the instant of `TPM2_Unseal`. Against offline disk theft and pre-OS boot tampering, PCR sealing withholds the key; against passive bus taps during boot (`TPM`-only) or a runtime-compromised ring-0 kernel after boot, the unsealed key already resides outside the TPM TCB [67]. Protecting secrets *after* release requires hypervisor memory isolation ([Chapter 6](05-secure-kernel.md), [Chapter 11](08-credential-guard.md)).
+> For sealed symmetric keys, the TPM's security invariant terminates at the instant of `TPM2_Unseal`. Against offline disk theft and pre-OS boot tampering, PCR sealing withholds the key; against passive bus taps during boot (`TPM`-only) or a runtime-compromised ring-0 kernel after boot, the unsealed key already resides outside the TPM TCB [67]. Protecting secrets *after* release requires hypervisor memory isolation ([Chapter 6](05-secure-kernel.md), [Chapter 12](08-credential-guard.md)).
 
 ### Decoupling Key Residence from Resource Authorization
 
@@ -240,4 +240,4 @@ From this hardware foundation, the chain branches across four downstream links:
 * **Eliminating External Buses and Servicing Lag:** Moving the cryptoprocessor onto the CPU die inside a dedicated hardware block updated directly via Windows Update is the architecture of [Pluton (Chapter 3)](02-pluton.md).
 * **Constructing the Boot Transcript:** Orchestrating static (`PCR[0..7]`) and dynamic (`PCR[17..22]`) measurements, TCG event logs, and BitLocker sealing profiles belongs to [Measured Boot (Chapter 4)](03-measured-boot.md).
 * **Proving State Off the Box:** Binding `AK`s to `EK` certificates and validating signed `TPM2_Quote` payloads in enterprise cloud control planes is owned by [Attestation (Chapter 5)](04-attestation.md).
-* **Protecting Secrets After Unseal:** Isolating unwrapped credentials and kernel code integrity away from a compromised VTL0 operating system is enforced by [The Secure Kernel and VBS (Chapter 6)](05-secure-kernel.md) and [Credential Guard and LSASS Isolation (Chapter 11)](08-credential-guard.md).
+* **Protecting Secrets After Unseal:** Isolating unwrapped credentials and kernel code integrity away from a compromised VTL0 operating system is enforced by [The Secure Kernel and VBS (Chapter 6)](05-secure-kernel.md) and [Credential Guard and LSASS Isolation (Chapter 12)](08-credential-guard.md).

@@ -39,11 +39,11 @@ const PARTS = [
   { title: 'Part II · Kernel & Code',
     items: ['05-secure-kernel', '06-code-integrity', '18-ppl', '19-mitigations'] },
   { title: 'Part III · Credentials & Access',
-    items: ['25-access-control', '08-credential-guard', '09-ntlm', '10-kerberos', '11-pth-prt', '12-hello'] },
+    items: ['25-access-control', '30-data-protection', '08-credential-guard', '09-ntlm', '10-kerberos', '31-enterprise-pki', '11-pth-prt', '12-hello'] },
   { title: 'Interlude · Watching the Chain',
     items: ['28-etw'] },
   { title: 'Part IV · Cloud',
-    items: ['13-zero-trust', '14-cae', '29-confidential-vms'] },
+    items: ['13-zero-trust', '14-cae', '32-agent-security', '29-confidential-vms'] },
   { title: 'Finale · When the Chain Snaps',
     items: ['15-storm0558'] },
 ];

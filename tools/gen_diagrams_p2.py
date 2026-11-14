@@ -170,10 +170,10 @@ def generate_part2(diag_dir: str):
         [
             [{"id": "cg", "tag": "Protected Inside VTL1 LsaIso.exe", "title": "Domain NTOWF Hashes, Kerberos AES Keys, & TGT Session Keys", "body": "Local memory dumping (sekurlsa::logonpasswords) returns zero plaintext domain keys", "theme": "green"}],
             [
-                {"id": "r1", "tag": "1 · Active Tickets in VTL0", "title": "Issued Service Tickets (TGS)", "body": "Cached in VTL0 lsass for active sessions -> Kerberos (Chapter 13)", "theme": "amber"},
-                {"id": "r2", "tag": "2 · Cloud & Local Vaults", "title": "CloudAP PRTs, DPAPI, & Certs", "body": "In-use SSO cookies & software PFXs -> Pass-the-PRT (Chapter 14)", "theme": "red"},
+                {"id": "r1", "tag": "1 · Active Tickets in VTL0", "title": "Issued Service Tickets (TGS)", "body": "Cached in VTL0 lsass for active sessions -> Kerberos (Chapter 14)", "theme": "amber"},
+                {"id": "r2", "tag": "2 · Cloud & Local Vaults", "title": "CloudAP PRTs, DPAPI, & Certs", "body": "In-use SSO cookies & software PFXs -> Chapters 11, 15, 16", "theme": "red"},
                 {"id": "r3", "tag": "3 · Token Impersonation", "title": "Live Access Tokens & Potatoes", "body": "Stealing tokens needs no password -> Access Control (Chapter 10)", "theme": "amber"},
-                {"id": "r4", "tag": "4 · Off-Box Directory Stores", "title": "DC ntds.dit & Unbound Relays", "body": "DCSync on DCs & NTLM/Krb relay -> Chapters 12, 13, 17, 18", "theme": "red"},
+                {"id": "r4", "tag": "4 · Off-Box Directory Stores", "title": "DC ntds.dit & Unbound Relays", "body": "DCSync on DCs & NTLM/Krb relay -> Chapters 13, 14, 15, 19", "theme": "red"},
             ],
         ],
         [
@@ -252,7 +252,7 @@ def generate_part2(diag_dir: str):
             {"tag": "Phase 2 · Pre-Release Rollout (2025-2026)", "title": "IAKerb, Local KDC, IP-SPN, & Per-Machine Scope Policies", "body": "Closes valid NTLM fallback scenarios and refactors remaining inbox OS NTLM callers to Negotiate", "theme": "teal", "edge_label": "audit logs identify callers"},
             {"tag": "Phase 3 · Next Major Windows Release", "title": "Network NTLM Disabled by Default OS-Wide", "body": "Inbound and outbound network NTLM blocked out of the box; binaries remain only for explicit break-glass policy", "theme": "green", "edge_label": "all fallbacks closed"},
         ],
-        footer="Disabling network NTLM shifts 100% of domain authentication onto Kerberos (Chapter 13) and cloud tokens (Chapter 14)."
+        footer="Disabling network NTLM shifts 100% of domain authentication onto Kerberos (Chapter 14), PKI (Chapter 15), and cloud tokens (Chapter 16)."
     )
 
     # 44. Ch 13: 10-kerberos-message-triple.svg
@@ -534,10 +534,10 @@ def generate_part2(diag_dir: str):
             {"year": "Aug 2020", "tag": "Normative Architecture", "title": "NIST SP 800-207: Zero Trust Architecture", "body": "Defines vendor-neutral Control Plane (Policy Engine + Policy Administrator = PDP) and Data Plane (PEP), four months before SUNBURST.", "theme": "amber"},
             {"year": "2022-25", "tag": "Federal & Cloud Mandate", "title": "OMB M-22-09, CISA ZTMM v2.0, & Microsoft Entra Conditional Access", "body": "Mandates phishing-resistant MFA, device compliance, and explicit per-request verification across enterprise/federal estates.", "theme": "green"},
         ],
-        footer="Zero Trust turns every on-box guarantee from Chapters 1-16 into an evaluable input signal at the Policy Decision Point."
+        footer="Zero Trust turns every on-box guarantee from Chapters 1-18 into an evaluable input signal at the Policy Decision Point."
     )
 
-    # 57. Ch 17: 13-zero-trust-conditional-access.svg
+    # 57. Ch 19: 13-zero-trust-conditional-access.svg
     build_vertical_flow(
         P("13-zero-trust-conditional-access.svg"),
         "NIST SP 800-207 Control & Data Plane Loop in Microsoft Entra ID",
@@ -548,9 +548,9 @@ def generate_part2(diag_dir: str):
             {"tag": "4 · Policy Enforcement Point (PEP)", "title": "Entra STS + Cloud Resource Server (Exchange, SharePoint, Graph)", "body": "Issues & verifies scoped access token enforcing Token Protection (PoP) and session constraints", "theme": "green", "edge_label": "grant + session controls"},
         ],
         side_notes={
-            3: {"tag": "Post-Issuance Loop (t > 0)", "title": "Continuous Access Evaluation", "body": "Pushes critical revocations back to PEP within <= 15 min (Chapter 18)", "theme": "amber", "dashed": False, "edge_label": "CAE push", "edge_color": "#b07926", "reverse": True},
+            3: {"tag": "Post-Issuance Loop (t > 0)", "title": "Continuous Access Evaluation", "body": "Pushes critical revocations back to PEP within <= 15 min (Chapter 20)", "theme": "amber", "dashed": False, "edge_label": "CAE push", "edge_color": "#b07926", "reverse": True},
         },
-        footer="Network location grants zero implicit access; compromising the IdP signing key itself bypasses PDP evaluation (Chapter 20)."
+        footer="Network location grants zero implicit access; compromising the IdP signing key itself bypasses PDP evaluation (Chapter 23)."
     )
 
     # 58. Ch 17: 13-zero-trust-defender-xdr.svg
@@ -778,19 +778,181 @@ def generate_part2(diag_dir: str):
             {"tag": "Stage 3 · Cross-Tier Acceptance", "title": "OWA / Exchange Online Accepts MSA-Signed Enterprise Tokens", "body": "~60,000 State Dept emails exfiltrated across 22 enterprise orgs and ~503 personal accounts", "theme": "red"},
             {"tag": "Stage 4 · Detection Inversion (June 15, 2023)", "title": "State Dept SOC Spots Anomalous AppID in MailItemsAccessed", "body": "Caught by a customer paying for Purview Audit Premium -> CISA AA23-193A -> baseline free logging reversal", "theme": "teal", "edge_label": "detected downstream"},
         ],
-        footer="Every on-box and session link (Chapters 1-19) held intact; the chain broke where a cloud root secret and a missing issuer check met."
+        footer="Every on-box and session link (Chapters 1-22) held intact; the chain broke where a cloud root secret and a missing issuer check met."
     )
 
-    # 68. Ch 20: 15-storm0558-hardened-path.svg
+    # 68. Ch 23: 15-storm0558-hardened-path.svg
     build_vertical_flow(
         P("15-storm0558-hardened-path.svg"),
         "Post-Incident Identity-Plane Re-Architecture (Secure Future Initiative)",
         [
-            {"tag": "1 · Attested Execution (Closes Host/Dump Exposure)", "title": "Token-Signing Service Runs Inside Azure Confidential VMs", "body": "AMD SEV-SNP / Intel TDX hardware memory encryption isolates signing service from host operators & dumps (Apr 2025)", "theme": "teal"},
+            {"tag": "1 · Attested Execution (Closes Host/Dump Exposure)", "title": "Token-Signing Service Runs Inside Azure Confidential VMs", "body": "100% of MSA & Entra ID signing keys across public & US Gov clouds inside SEV-SNP / TDX (Jul 2026)", "theme": "teal"},
             {"tag": "2 · Hardware Key Custody + Rotation (Closes 2016 Key Theft)", "title": "FIPS 140-3 Level 3 Azure Managed HSM + Integrated HSM", "body": "Non-exportable signing keys (exportable=False) with automated rotation across MSA and Entra ID (Sep 2024)", "theme": "green", "edge_label": "attested HSM call"},
-            {"tag": "3 · Library-Enforced Isolation (Closes OWA Step-5 Omission)", "title": "Single Hardened Identity SDK Enforces iss, aud, kid, & tid", "body": "Validates > 90% of Entra ID tokens across Microsoft apps by default rather than trusting caller checks", "theme": "green", "edge_label": "issues scoped JWT"},
+            {"tag": "3 · Library-Enforced Isolation (Closes OWA Step-5 Omission)", "title": "Single Hardened Identity SDK Enforces iss, aud, kid, & tid", "body": "Validates 93% of Entra ID traffic across Microsoft apps by default; 1.4M unused apps retired", "theme": "green", "edge_label": "issues scoped JWT"},
             {"tag": "4 · Commodity Telemetry (Closes Detection Inversion)", "title": "Baseline Free MailItemsAccessed + 2-Year Internal Log Retention", "body": "180-day default customer Purview audit retention across commercial and government clouds", "theme": "slate"},
         ],
         footer="Open industry frontiers: multi-party threshold IdP signing (FROST RFC 9591 / DKLs) and Certificate-Transparency-style key/token logs."
     )
-    print("Part 2: Generated and collision-verified 36 diagrams!")
+
+    # 69. Ch 11: 30-bitlocker-key-hierarchy.svg
+    build_vertical_flow(
+        P("30-bitlocker-key-hierarchy.svg"),
+        "BitLocker Three-Tier Key Hierarchy & Hardware-Encryption Failure Seam",
+        [
+            {"tag": "Tier 1 · Key Protectors", "title": "TPM2_Seal(PCR 7, 11) + Pre-Boot PIN + 48-Digit Recovery Key", "body": "Multiple independent protectors wrap the same 256-bit VMK inside -FVE-FS- volume metadata", "theme": "slate"},
+            {"tag": "Tier 2 · Volume Master Key", "title": "256-Bit VMK (Wrapped Under AES-CCM)", "body": "Rotating a compromised PIN or recovery password re-wraps only the 32-byte VMK in milliseconds", "theme": "teal", "edge_label": "TPM2_Unseal + PIN"},
+            {"tag": "Tier 3 · Full Volume Encryption Key", "title": "256-Bit / 512-Bit FVEK Held in fvevol.sys Pool", "body": "Unwrapped into kernel RAM at boot; never written in cleartext to storage media", "theme": "amber", "edge_label": "AES-CCM unwrap"},
+            {"tag": "Inline Block Cipher", "title": "fvevol.sys Software XTS-AES-128 / XTS-AES-256", "body": "Encrypts every 16-byte block per sector tweak T = E_K2(sector) * alpha^j below ntfs.sys", "theme": "green", "edge_label": "sector I/O"},
+        ],
+        side_notes={
+            1: {"tag": "WinRE / Bus Seam", "title": "TPM-Only Physical Bypasses", "body": "SPI sniffing, Bitpixie, & WinRE swaps hit unattended VMK unseal", "theme": "red", "edge_label": "if no PIN"},
+            3: {"tag": "ADV190023 · S&P 2019", "title": "Broken TCG Opal SEDs", "body": "Drive firmware decoupled MEK from password; Windows defaults to software XTS", "theme": "red", "edge_label": "avoid Opal"},
+        },
+        footer="TPM+PIN + Kernel DMA Protection + software XTS-AES closes bus sniffing, unattended WinRE unseal, and broken SSD controller firmware."
+    )
+
+    # 70. Ch 11: 30-dpapi-keyiso-custody.svg
+    build_split_domains(
+        P("30-dpapi-keyiso-custody.svg"),
+        "Online Secret Custody: User-Scoped DPAPI vs. VTL1 KeyIso & Enclave Isolation",
+        left={
+            "label": "Ambient User-SID Scope (VTL0 Exposure)",
+            "theme": "amber",
+            "cards": [
+                {"tag": "CryptProtectData (DPAPI)", "title": "Per-User 512-Bit Rotating MasterKey", "body": "Any process running as the logged-in user SID calls LRPC to lsass to decrypt cookies & tokens", "theme": "white"},
+                {"tag": "Forest Escrow ([MS-BKRP])", "title": "Domain Controller RSA BackupKey", "body": "DCSync theft of G$BCKUPKEY_* decrypts every domain user's DPAPI blobs offline across the forest", "theme": "red", "dashed": True, "in_edge": "escrowed to AD"},
+            ],
+        },
+        right={
+            "label": "Process & Hardware-Isolated Custody",
+            "theme": "green",
+            "cards": [
+                {"tag": "App-Bound (IElevator) + VBS KeyIso", "title": "Path-Verified Cookies & VTL1 LsaIso Keys", "body": "IElevator binds cookies to browser binary; VBS KeyIso wraps CNG private keys inside VTL1 RAM", "theme": "teal"},
+                {"tag": "VTL1 VBS Enclave (vertdll)", "title": "Presence-Gated Enclave Stores (Recall)", "body": "Keys sealed to TPM + Enclave AuthorId/SVN; released only on live Windows Hello ESS user presence", "theme": "green", "in_edge": "adds presence gate"},
+            ],
+        },
+        bridges=[(0, 0, "lr", "hardens secret custody", "teal")],
+        boundary_label="Process + VTL1 Wall",
+        footer="Classic DPAPI isolates users from offline disk readers, not from same-user malware; VTL1 KeyIso and VBS Enclaves isolate keys from VTL0."
+    )
+
+    # 71. Ch 11: 30-recall-enclave-gate.svg
+    build_sequence(
+        P("30-recall-enclave-gate.svg"),
+        "Copilot+ Recall Presence-Gated VBS Enclave Decryption Ceremony",
+        [
+            {"title": "Windows Hello ESS", "sub": "VTL1 BioIso.exe UV", "theme": "green"},
+            {"title": "Recall VBS Enclave", "sub": "VTL1 IUM Enclave", "theme": "teal"},
+            {"title": "TPM 2.0 / Pluton", "sub": "Sealed Enclave Key", "theme": "slate"},
+            {"title": "Recall UKP Store", "sub": "VTL0 Encrypted SQLite", "theme": "amber"},
+        ],
+        [
+            (0, 1, "1 · Live NIR face / SDCP fingerprint match verdict inside VTL1", "green", False),
+            (1, 2, "2 · Unseal per-user master key bound to VBS Enclave identity + SVN", "teal", False),
+            (2, 1, "3 · Release master key exclusively into VTL1 enclave memory", "slate", False),
+            (3, 1, "4 · Stream AES-GCM encrypted snapshot / vector index pages", "amber", False),
+            (1, 1, "5 · Decrypt & evaluate query inside VTL1 (keys never enter VTL0)", "teal", False),
+        ],
+        footer="Neither offline NVMe imaging nor background user-mode infostealers can bulk-decrypt snapshots without interactive ESS verification."
+    )
+
+    # 72. Ch 15: 31-adcs-esc1-pkinit.svg
+    build_sequence(
+        P("31-adcs-esc1-pkinit.svg"),
+        "AD CS ESC1 + PKINIT Domain Escalation & KB5014754 Strong SID Mapping",
+        [
+            {"title": "Low-Priv Domain User", "sub": "Certipy / Certify", "theme": "amber"},
+            {"title": "Enterprise CA", "sub": "certsvc (NTAuth Trust)", "theme": "slate"},
+            {"title": "Domain Controller", "sub": "KDC PKINIT Verifier", "theme": "teal"},
+        ],
+        [
+            (0, 1, "1 · Submit CSR on ESC1 template with SAN UPN = Administrator@corp", "red", False),
+            (1, 0, "2 · Issue signed X.509 Client Auth cert (omits requester SID on ESC1)", "amber", False),
+            (0, 2, "3 · PKINIT AS-REQ presenting issued X.509 certificate", "red", False),
+            (2, 2, "4 · KB5014754 Full Enforcement checks OID 1.3.6.1.4.1.311.25.2 == target objectSid", "green", False),
+            (2, 0, "5 · Pre-patch / ESC1: issues Admin TGT; KB5014754 blocks Certifried SAN spoofing", "teal", False),
+        ],
+        footer="Enterprise CAs in NTAuthCertificates hold realm-wide identity authority co-equal with krbtgt (RID 502) and belong in Tier 0."
+    )
+
+    # 73. Ch 15: 31-dmsa-badsuccessor.svg
+    build_vertical_flow(
+        P("31-dmsa-badsuccessor.svg"),
+        "BadSuccessor (CVE-2025-53779): Windows Server 2025 dMSA Attribute Escalation",
+        [
+            {"tag": "1 · Delegated OU Permission", "title": "Attacker Holds CreateChild on Any Organizational Unit", "body": "Commonly delegated to regional helpdesk or server-operator groups outside Tier 0", "theme": "amber"},
+            {"tag": "2 · Rogue dMSA Creation", "title": "Create msDS-DelegatedManagedServiceAccount Object", "body": "Attacker owns the newly created dMSA object and holds WriteProperty over its attributes", "theme": "slate", "edge_label": "LDAP Add"},
+            {"tag": "3 · Unilateral Forward Pointer", "title": "Set msDS-ManagedAccountPrecededByLink = CN=Administrator", "body": "Sets msDS-DelegatedMSAState = 2 claiming completed migration of Domain Administrator", "theme": "red", "edge_label": "no target write check"},
+            {"tag": "4 · KDC PAC Synthesis Flaw", "title": "Server 2025 KDC Copies Target SIDs into dMSA TGT PAC", "body": "Pre-Aug 2025 kdcsvc.dll granted full Domain Admin RID 512 memberships without modifying Administrator", "theme": "red", "edge_label": "S4U / TGS-REQ"},
+        ],
+        side_notes={
+            2: {"tag": "Aug 2025 Fix", "title": "Bidirectional Consent", "body": "KDC verifies authorization on target superseded account before copying SIDs", "theme": "green", "dashed": False, "edge_label": "patched", "edge_color": "#2b6a4c"},
+        },
+        footer="Delegation links must always be verified on the target principal being impersonated, never solely on the caller's own object."
+    )
+
+    # 74. Ch 21: 32-windows-agent-workspace-mcp.svg
+    build_split_domains(
+        P("32-windows-agent-workspace-mcp.svg"),
+        "Windows 11 Agentic OS Containment: Primary User Desktop vs. Agent Workspace",
+        left={
+            "label": "Primary User Session (Human SID)",
+            "theme": "slate",
+            "cards": [
+                {"tag": "Ambient Personal State", "title": "Interactive Desktop, Browser Vault, & DPAPI", "body": "Holds unlocked user MasterKeys, personal mail, SSH keys, and elevated admin prompts", "theme": "white"},
+                {"tag": "Explicit Authorization", "title": "OS Consent & Folder Delegation Broker", "body": "User approves scoped Known-Folder ACLs and reviews high-impact MCP tool actions", "theme": "teal", "in_arrow": True},
+            ],
+        },
+        right={
+            "label": "Agent Workspace (Distinct Local Agent SID)",
+            "theme": "green",
+            "cards": [
+                {"tag": "Isolated Session & Identity", "title": "Separate Desktop + Dedicated Agent SID", "body": "Zero access to human DPAPI or primary UIPI windows; distinct ETW & 4688/4663 audit trail", "theme": "green"},
+                {"tag": "Mediated Tool Execution", "title": "LPAC Sandboxes + Signed Windows MCP Proxy", "body": "Verifies MCP server publisher signatures (WDAC) and enforces static JSON-RPC schemas", "theme": "teal", "in_edge": "invokes vetted tools"},
+            ],
+        },
+        bridges=[
+            (0, 0, "lr", "isolated (no ambient access)", "red"),
+            (1, 1, "lr", "scoped ACL + MCP consent", "green"),
+        ],
+        boundary_label="Session + SID Boundary",
+        footer="Separating the agent's Windows SID and desktop prevents indirect prompt injection from inheriting the user's ambient DPAPI and browser state."
+    )
+
+    # 75. Ch 21: 32-entra-agent-id-blueprint.svg
+    build_fan_bands(
+        P("32-entra-agent-id-blueprint.svg"),
+        "Microsoft Entra Agent ID Governance: Blueprints, OBO Intersection, & Agent CA",
+        [
+            [{"id": "bp", "tag": "Parent Definition & Credential Lifecycle", "title": "Agent Identity Blueprint (Verified Publisher + Human Sponsor + Scope Ceiling)", "body": "Manages credential rotation via Auth SDK sidecar, sponsor lifecycle transfer, and maximum inheritable permissions", "theme": "slate"}],
+            [
+                {"id": "obo", "tag": "Interactive / Delegated", "title": "OBO Agent Identity", "body": "Carries user sub + agent act claims; grants Perm(User) AND Scope(Agent)", "theme": "green"},
+                {"id": "aut", "tag": "Background Task", "title": "Autonomous Agent Identity", "body": "Ephemeral or persistent non-OBO token; platform-blocked from Tier-0 admin roles", "theme": "teal"},
+                {"id": "usr", "tag": "Collaboration Shim", "title": "1:1 Paired Agent User", "body": "Provisioned only when Exchange / Teams requires a directory user object", "theme": "amber"},
+            ],
+            [{"id": "pep", "tag": "Runtime Cloud Control Plane", "title": "Conditional Access for Agents + Entra ID Protection Risk Block + CAE Revocation", "body": "Blocks high-risk or unsponsored agents in real time and logs distinct agent principal telemetry across Microsoft Graph", "theme": "purple"}],
+        ],
+        [
+            ("bp", "obo", "instantiates", "green", False),
+            ("bp", "aut", "instantiates", "teal", False),
+            ("bp", "usr", "pairs 1:1", "amber", False),
+            ("obo", "pep", "evaluated by", "purple", False),
+            ("aut", "pep", "evaluated by", "purple", False),
+            ("usr", "pep", "evaluated by", "purple", False),
+        ],
+        footer="Unlike static Service Principals, Entra Agent ID enforces human sponsorship, OBO permission intersection, and Tier-0 role ceilings."
+    )
+
+    # 76. Ch 21: 32-agent-confused-deputy-xpia.svg
+    build_vertical_flow(
+        P("32-agent-confused-deputy-xpia.svg"),
+        "Indirect Prompt Injection (XPIA) as a Confused Deputy: EchoLeak (CVE-2025-32711)",
+        [
+            {"tag": "1 · Untrusted External Input", "title": "Attacker Sends Benign-Looking External Email with Hidden Instructions", "body": "Evades inbound XPIA text classifiers without requiring the victim to open or click the message", "theme": "amber"},
+            {"tag": "2 · RAG Context Collapse", "title": "Copilot Retrieves External Email Alongside Confidential Internal Files", "body": "System instructions, internal SharePoint data, and untrusted email merge in one LLM token stream", "theme": "red", "edge_label": "retrieved into context"},
+            {"tag": "3 · Confused-Deputy Execution", "title": "Injected Tokens Steer Model to Encode Secrets into Allowed Proxy URL", "body": "Exercises victim's ambient OBO Graph read scope and formats secret bytes into Markdown image/link query", "theme": "red", "edge_label": "instruction-data confusion"},
+            {"tag": "4 · Deterministic Architectural Closure", "title": "Enforce Strict Egress Origin Locks, Scope Separation, & Out-of-Model Gates", "body": "Security boundaries must sit outside the LLM (CSP/egress allowlist + LPAC/Workspace + OBO intersection)", "theme": "green", "edge_label": "blocked at PEP"},
+        ],
+        footer="Because natural-language prompt filtering is non-separable in general, deterministic OS and network PEPs must bound blast radius."
+    )
+    print("Part 2: Generated and collision-verified 44 diagrams!")

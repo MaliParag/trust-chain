@@ -27,8 +27,8 @@
 <text x="626.0" y="531.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">POST-ISSUANCE LOOP (T &gt; 0)</text>
 <text x="626.0" y="546.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Continuous Access Evaluation</text>
 <text x="626.0" y="564.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Pushes critical revocations back to PEP</text>
-<text x="626.0" y="577.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">within &lt;= 15 min (Chapter 18)</text>
-<text x="450.0" y="628.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Network location grants zero implicit access; compromising the IdP signing key itself bypasses PDP evaluation (Chapter 20).</text>
+<text x="626.0" y="577.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">within &lt;= 15 min (Chapter 20)</text>
+<text x="450.0" y="628.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Network location grants zero implicit access; compromising the IdP signing key itself bypasses PDP evaluation (Chapter 23).</text>
 <line x1="254.0" y1="151.5" x2="254.0" y2="203.0" stroke="#4a5568" stroke-width="1.5"/>
 <polygon points="254.0,209.5 258.0,201.0 250.0,201.0" fill="#4a5568"/>
 <line x1="254.0" y1="297.0" x2="254.0" y2="348.5" stroke="#4a5568" stroke-width="1.5"/>

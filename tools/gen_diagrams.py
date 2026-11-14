@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Master diagram builder for The Windows Trust Chain.
 
-Regenerates all 68 curated architectural SVG diagrams across Foundations and
-Chapters 1-20 with automatic text-wrapping, pill-masked edge labels, zero
+Regenerates all 76 curated architectural SVG diagrams across Foundations and
+Chapters 1-23 with automatic text-wrapping, pill-masked edge labels, zero
 em-dashes, and strict mathematical collision verification, and prunes orphaned
 unreferenced SVGs from src/diagrams/.
 """

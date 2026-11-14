@@ -111,39 +111,42 @@ Every major chapter must ground its theoretical claims in real-world adversarial
 
 ## 6. Book Architecture and Chapter Map
 
-The consolidated manuscript contains 20 core chapters across 4 parts, an interlude, and a finale:
+The consolidated manuscript contains 23 core chapters across 4 parts, an interlude, and a finale:
 
 ### Part I · Silicon (Hardware Root of Trust)
-* **Chapter 01: Secure Boot** (Firmware verifier, UEFI variables, LoadImage, Trusted Boot handoff)
-* **Chapter 02: The TPM** (Platform cryptoprocessor, PCRs, key hierarchies, endorsement keys)
-* **Chapter 03: Pluton** (On-die security processor, bus-sniffing elimination, unified firmware servicing)
-* **Chapter 04: Measured Boot** (SRTM, DRTM, TCG event logs, BitLocker sealing)
-* **Chapter 05: Attestation** (Remote attestation protocols, AIK, quotes, Health Attestation CSP)
+* **Chapter 1: Secure Boot** (Firmware verifier, UEFI variables, LoadImage, 2026 CA rollover, Trusted Boot handoff)
+* **Chapter 2: The TPM** (Platform cryptoprocessor, PCRs, key hierarchies, endorsement keys)
+* **Chapter 3: Pluton** (On-die security processor, bus-sniffing elimination, unified firmware servicing)
+* **Chapter 4: Measured Boot** (SRTM, DRTM, Secured-core DMA/SMM, TCG event logs, BitLocker sealing)
+* **Chapter 5: Attestation** (Remote attestation protocols, AIK, quotes, Health Attestation CSP)
 
 ### Part II · Kernel & Code (Execution & Isolation Boundaries)
-* **Chapter 06: The Secure Kernel and VBS** (Hyper-V, SLAT, VTL0 vs VTL1, IUM trustlets, enclaves)
-* **Chapter 07: Code Integrity and Application Control** (Authenticode, catalog files, KMCS, HVCI, WDAC)
-* **Chapter 08: Protected Process Light** (PPL signer lattice, `RunAsPPL`, LSASS protection, kernel bypasses)
-* **Chapter 09: Process Mitigation Policies** (Exploit mitigations: ASLR, DEP, CFG, XFG, Intel CET)
+* **Chapter 6: The Secure Kernel and VBS** (Hyper-V, SLAT, VTL0 vs VTL1, IUM trustlets, enclaves)
+* **Chapter 7: Code Integrity and Application Control** (Authenticode, catalog files, KMCS, HVCI, WDAC)
+* **Chapter 8: Protected Process Light** (PPL signer lattice, `RunAsPPL`, LSASS protection, kernel bypasses)
+* **Chapter 9: Process Mitigation Policies** (Exploit mitigations: ASLR, DEP, CFG, XFG, Intel CET)
 
-### Part III · Credentials & Access (Identity & Secrets)
+### Part III · Credentials & Access (Identity, Data Custody, & PKI)
 * **Chapter 10: Windows Access Control, Integrity Levels, and Impersonation** (Tokens, SIDs, DACLs, MIC, SeImpersonate)
-* **Chapter 11: Credential Guard and LSASS Isolation** (LSASS threat model, LsaIso trustlet, Pass-the-Challenge)
-* **Chapter 12: The Death of NTLM** (NTLM wire protocol, NetNTLM relay, Extended Protection for Authentication)
-* **Chapter 13: Kerberos and Ticket Forgery** (Kerberos protocol, PAC validation, KRBTGT, Golden/Silver tickets)
-* **Chapter 14: Pass-the-Hash to Pass-the-PRT** (Credential theft evolution, Primary Refresh Token in Entra ID)
-* **Chapter 15: Windows Hello and Passkeys** (Biometric pipeline, ESS, FIDO2/CTAP2 ceremonies, WebAuthn)
+* **Chapter 11: Data Protection and Local Secret Custody** (BitLocker, XTS-AES, CNG KeyIso, DPAPI, App-Bound Encryption, Recall enclaves)
+* **Chapter 12: Credential Guard and LSASS Isolation** (LSASS threat model, LsaIso trustlet, Pass-the-Challenge)
+* **Chapter 13: The Death of NTLM** (NTLM wire protocol, NetNTLM/DNS reflection, Extended Protection for Authentication)
+* **Chapter 14: Kerberos and Ticket Forgery** (Kerberos protocol, PAC validation, KRBTGT, Golden/Diamond/Sapphire tickets)
+* **Chapter 15: Enterprise PKI, Service Identities, and Hybrid Bridges** (AD CS ESC1-16, Shadow Credentials, Windows LAPS, dMSA BadSuccessor, Entra Connect)
+* **Chapter 16: Pass-the-Hash to Pass-the-PRT** (Credential theft evolution, Primary Refresh Token in Entra ID)
+* **Chapter 17: Windows Hello and Passkeys** (Biometric pipeline, ESS, FIDO2/CTAP2 ceremonies, WebAuthn)
 
 ### Interlude · Watching the Chain
-* **Chapter 16: ETW: The EDR Substrate** (Event Tracing for Windows, kernel trace loggers, telemetry evasion)
+* **Chapter 18: ETW: The EDR Substrate** (Event Tracing for Windows, EtwTi, Windows Resiliency Initiative, telemetry evasion)
 
-### Part IV · Cloud (Enterprise Session Enforcement)
-* **Chapter 17: Zero Trust** (Device health attestation, conditional access evaluation)
-* **Chapter 18: Continuous Access Evaluation** (Real-time token revocation, push vs pull session enforcement)
-* **Chapter 19: Confidential VMs** (Hardware-isolated VMs, AMD SEV-SNP, Intel TDX, vTPM attestation)
+### Part IV · Cloud (Enterprise Session, Agentic, & Confidential Enforcement)
+* **Chapter 19: Zero Trust** (Device health attestation, conditional access evaluation)
+* **Chapter 20: Continuous Access Evaluation** (Real-time token revocation, push vs pull session enforcement)
+* **Chapter 21: Workload and AI Agent Security** (Agent Workspace, local Agent SIDs, signed MCP, Microsoft Entra Agent ID, EchoLeak XPIA)
+* **Chapter 22: Confidential VMs** (Hardware-isolated VMs, AMD SEV-SNP, Intel TDX, vTPM attestation, Battering RAM)
 
 ### Finale · When the Chain Snaps
-* **Chapter 20: When the Chain Snaps: Storm-0558** (MSA signing key compromise, token validation failures, structural lessons)
+* **Chapter 23: When the Chain Snaps: Storm-0558** (MSA signing key compromise, CVE-2025-55241 Actor Tokens, July 2026 SFI completion)
 
 ---
 

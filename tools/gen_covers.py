@@ -100,12 +100,12 @@ def build_front_cover():
     cx = 478
     nodes = [
         # (cy, kind, part_tag, title, detail, accent)
-        (775,  "snap",   "FINALE · CHAPTER 20",          "WHEN THE CHAIN SNAPS",
+        (775,  "snap",   "FINALE · CHAPTER 23",          "WHEN THE CHAIN SNAPS",
          "Storm-0558  ·  Stolen Signing Root vs. Omitted RFC 8725 Issuer Check", "#df5a67"),
-        (955,  "ring",   "PART IV · CHAPTERS 17 TO 19",  "CLOUD & CONFIDENTIAL COMPUTE",
-         "Zero Trust PDP/PEP  ·  Continuous Access Evaluation  ·  SEV-SNP & TDX", "#d4a843"),
-        (1135, "ring",   "PART III · CHAPTERS 10 TO 15", "CREDENTIALS & ACCESS",
-         "Tokens & MIC  ·  Credential Guard  ·  NTLM Sunset  ·  Kerberos  ·  Passkeys", "#d4a843"),
+        (955,  "ring",   "PART IV · CHAPTERS 19 TO 22",  "CLOUD, AI AGENTS, & CONFIDENTIAL COMPUTE",
+         "Zero Trust  ·  CAE  ·  Agent Workspace & Entra Agent ID  ·  SEV-SNP & TDX", "#d4a843"),
+        (1135, "ring",   "PART III · CHAPTERS 10 TO 17", "CREDENTIALS, DATA CUSTODY, & PKI",
+         "Tokens  ·  BitLocker & DPAPI  ·  Cred Guard  ·  Kerberos  ·  AD CS  ·  Passkeys", "#d4a843"),
         (1315, "ring",   "PART II · CHAPTERS 6 TO 9",    "KERNEL & CODE INTEGRITY",
          "Hyper-V SLAT  ·  VTL1 Secure Kernel  ·  HVCI  ·  WDAC  ·  PPL  ·  CET", "#d4a843"),
         (1495, "anchor", "PART I · CHAPTERS 1 TO 5",     "SILICON & FIRMWARE ROOTS",
@@ -129,7 +129,7 @@ def build_front_cover():
                f'fill="#0c1422" stroke="#456184" stroke-width="1.2"/>')
     els.append(f'<text x="{rail_x + 5}" y="{mid_rail}" font-family=\'{SANS}\' font-size="13.5" '
                f'font-weight="700" letter-spacing="1.2px" fill="#8cb0db" text-anchor="middle" '
-               f'transform="rotate(-90 {rail_x + 5} {mid_rail})">CH. 16 · ETW TELEMETRY</text>')
+               f'transform="rotate(-90 {rail_x + 5} {mid_rail})">CH. 18 · ETW TELEMETRY</text>')
 
     # Upward inheritance connectors between consecutive nodes
     for idx in range(len(nodes) - 1):
@@ -226,11 +226,11 @@ def build_back_cover():
         "identity, ETW records kernel telemetry, and cloud policy engines continuously evaluate risk."
     )
     p2 = (
-        "Across twenty chapters grounded in 876 primary-source specifications, RFCs, research "
+        "Across twenty-three chapters grounded in 912 primary-source specifications, RFCs, research "
         "papers, and incident reports, this book pairs the exact mechanism of each link with the "
-        "adversarial techniques (BlackLotus, Bitpixie, BYOVD, Potato escalation, Pass-the-Challenge, "
-        "Golden Ticket, Pass-the-PRT, and Storm-0558) that break the chain whenever a higher tier "
-        "mistakes cryptographic validity for authorization."
+        "adversarial techniques (BlackLotus, Bitpixie, BYOVD, Potato escalation, BadSuccessor, "
+        "Golden Ticket, Pass-the-PRT, EchoLeak, and Storm-0558) that break the chain whenever a "
+        "higher tier mistakes cryptographic validity for authorization."
     )
 
     cy = 364
@@ -241,7 +241,7 @@ def build_back_cover():
         cy += 18
 
     # Architecture of the Book Engraved Grid (6 rows)
-    els.append(text_el(lx, cy + 16, "ARCHITECTURE OF THE TWENTY-CHAPTER EDITION",
+    els.append(text_el(lx, cy + 16, "ARCHITECTURE OF THE TWENTY-THREE-CHAPTER EDITION",
                        font=SANS, size=14.5, fill="#d4a843", weight="700", spacing=1.4))
     cy += 36
 
@@ -250,14 +250,14 @@ def build_back_cover():
          "UEFI Secure Boot, TPM 1.2 to 2.0, Microsoft Pluton, Measured Boot PCRs, and Remote Attestation", "#d4a843"),
         ("PART II · KERNEL & CODE", "Chapters 6 to 9",
          "Hyper-V VBS & VTL1 Trustlets, Authenticode, HVCI, App Control (WDAC), PPL, ACG, CFG/XFG, and CET", "#d4a843"),
-        ("PART III · CREDENTIALS", "Chapters 10 to 15",
-         "Tokens & MIC, Credential Guard, NTLM Deprecation, Kerberos & [MS-PAC], Pass-the-PRT, and Passkeys", "#d4a843"),
-        ("INTERLUDE · TELEMETRY", "Chapter 16",
-         "ETW Lock-Free Per-CPU Ring Buffers, Manifest Fan-Out, 0xC3 Patching vs. Kernel EtwTi, and PPL Gates", "#7ea6d8"),
-        ("PART IV · CLOUD", "Chapters 17 to 19",
-         "NIST SP 800-207 Conditional Access, Continuous Access Evaluation (CAE), and Azure Confidential VMs", "#d4a843"),
-        ("FINALE · THE SNAP", "Chapter 20",
-         "Storm-0558, Stolen 2016 MSA Signing Key, Omitted RFC 8725 Issuer Validation, and SFI Remediation", "#df5a67"),
+        ("PART III · CREDENTIALS", "Chapters 10 to 17",
+         "Tokens & MIC, BitLocker & DPAPI, Cred Guard, NTLM, Kerberos, AD CS & dMSA, PRTs, and Passkeys", "#d4a843"),
+        ("INTERLUDE · TELEMETRY", "Chapter 18",
+         "ETW Lock-Free Ring Buffers, EtwTi, Windows Resiliency Initiative, and Antimalware-PPL Gates", "#7ea6d8"),
+        ("PART IV · CLOUD & AI", "Chapters 19 to 22",
+         "NIST SP 800-207 Conditional Access, CAE, Windows Agent Workspace & Entra Agent ID, and CVMs", "#d4a843"),
+        ("FINALE · THE SNAP", "Chapter 23",
+         "Storm-0558, Stolen 2016 MSA Key, CVE-2025-55241 Actor Tokens, and July 2026 SFI Completion", "#df5a67"),
     ]
 
     row_h = 96
@@ -279,7 +279,7 @@ def build_back_cover():
     cy += 18
     col_w = (cw - 36) / 3
     pillars = [
-        ("876 PRIMARY SOURCES", "Normative TCG, UEFI, Intel, AMD, IETF, NIST, and [MS-*] protocol specs"),
+        ("912 PRIMARY SOURCES", "Normative TCG, UEFI, Intel, AMD, IETF, NIST, and [MS-*] protocol specs"),
         ("UNIFORM RIGOR", "Formal invariants, 6-column attack catalogs, and theoretical limits"),
         ("LIVE VERIFICATION", "Non-destructive PowerShell, bcdedit, wevtutil, and registry audits"),
     ]

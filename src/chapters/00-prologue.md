@@ -46,16 +46,16 @@ Accordingly, this book follows the exact order in which trust is constructed:
   trustlets, Code Integrity and Application Control (`WDAC` / `App Control`),
   Protected Process Light (`PPL`), and Process Mitigation Policies (`ACG`, `CFG`,
   `CET`).
-- **Part III · Credentials & Access ([Chapter 10](25-access-control.md) to [Chapter 15](12-hello.md)):** Access Control,
+- **Part III · Credentials & Access ([Chapter 10](25-access-control.md) to [Chapter 17](12-hello.md)):** Access Control,
   Integrity Levels, and `SeImpersonatePrivilege`, Credential Guard and `LSASS`
   Isolation, The Death of `NTLM`, Kerberos and `KRBTGT` Ticket Forgery,
   `Pass-the-Hash` to `Pass-the-PRT`, and Windows Hello with `WebAuthn` Passkeys.
-- **Interlude · Watching the Chain ([Chapter 16](28-etw.md)):** Event Tracing for Windows
+- **Interlude · Watching the Chain ([Chapter 18](28-etw.md)):** Event Tracing for Windows
   (`ETW`) and kernel-emitted `EtwTi` telemetry.
-- **Part IV · Cloud ([Chapter 17](13-zero-trust.md) to [Chapter 19](29-confidential-vms.md)):** Zero Trust and Conditional Access,
+- **Part IV · Cloud ([Chapter 19](13-zero-trust.md) to [Chapter 22](29-confidential-vms.md)):** Zero Trust and Conditional Access,
   Continuous Access Evaluation (`CAE`), and hardware-encrypted Azure Confidential
   VMs (`SEV-SNP` and `TDX`).
-- **Finale · When the Chain Snaps ([Chapter 20](15-storm0558.md)):** The July 2023 `Storm-0558`
+- **Finale · When the Chain Snaps ([Chapter 23](15-storm0558.md)):** The July 2023 `Storm-0558`
   intrusion across 22 enterprise organizations, demonstrating what happens when
   a cloud root signing key leaks and cross-tier validation fails.
 
@@ -78,9 +78,9 @@ because `AES`, `SHA-256`, `RSA`, or `ECDSA` was broken mathematically. Discrete
 TPM buses were passively sniffed with logic analyzers ([Chapter 2](01-tpm.md)); validly
 signed UEFI bootloaders (`BlackLotus`, [Chapter 1](16-secure-boot.md)) and validly signed third-party
 drivers (`BYOVD`, [Chapter 7](06-code-integrity.md)) subverted Secure Boot and `PPL`; `CloudAP` SSO
-derivations enabled `Pass-the-PRT` without extracting TPM keys ([Chapter 14](11-pth-prt.md));
+derivations enabled `Pass-the-PRT` without extracting TPM keys ([Chapter 16](11-pth-prt.md));
 and a genuine 2016 Microsoft consumer signing key forged enterprise Exchange
-Online tokens (`Storm-0558`, [Chapter 20](15-storm0558.md)). Across every tier, **cryptographic
+Online tokens (`Storm-0558`, [Chapter 23](15-storm0558.md)). Across every tier, **cryptographic
 validity proves provenance under a key, never runtime safety or resource-scoped
 authorization.**
 

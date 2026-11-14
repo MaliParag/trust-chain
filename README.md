@@ -19,7 +19,7 @@ where real-world adversaries break each link.
 
 ## What Is Inside
 
-- **20 numbered core chapters** (plus a Prologue and a Foundations
+- **23 numbered core chapters** (plus a Prologue and a Foundations
   primer) organized into four architectural parts, an observability interlude,
   and a finale:
   - **Part I · Silicon (Chapters 1 to 5):** Secure Boot, The TPM, Pluton,
@@ -27,14 +27,15 @@ where real-world adversaries break each link.
   - **Part II · Kernel & Code (Chapters 6 to 9):** The Secure Kernel and VBS,
     Code Integrity and Application Control, Protected Process Light, and Process
     Mitigation Policies.
-  - **Part III · Credentials & Access (Chapters 10 to 15):** Windows Access
-    Control, Integrity Levels, and Impersonation; Credential Guard and LSASS
-    Isolation; The Death of NTLM; Kerberos and Ticket Forgery; Pass-the-Hash to
-    Pass-the-PRT; and Windows Hello and Passkeys.
-  - **Interlude · Watching the Chain (Chapter 16):** ETW: The EDR Substrate.
-  - **Part IV · Cloud (Chapters 17 to 19):** Zero Trust, Continuous Access
-    Evaluation, and Confidential VMs.
-  - **Finale · When the Chain Snaps (Chapter 20):** When the Chain Snaps:
+  - **Part III · Credentials & Access (Chapters 10 to 17):** Windows Access
+    Control, Integrity Levels, and Impersonation; Data Protection and Local
+    Secret Custody; Credential Guard and LSASS Isolation; The Death of NTLM;
+    Kerberos and Ticket Forgery; Enterprise PKI, Service Identities, and Hybrid
+    Bridges; Pass-the-Hash to Pass-the-PRT; and Windows Hello and Passkeys.
+  - **Interlude · Watching the Chain (Chapter 18):** ETW: The EDR Substrate.
+  - **Part IV · Cloud (Chapters 19 to 22):** Zero Trust, Continuous Access
+    Evaluation, Workload and AI Agent Security, and Confidential VMs.
+  - **Finale · When the Chain Snaps (Chapter 23):** When the Chain Snaps:
     Storm-0558.
 - **Uniform eight-part chapter progression:** Overview (`Role`,
   `Invariant`, `TCB`, `Failure Modes`, `Handoff`), Core Engineering Problem &
@@ -42,7 +43,7 @@ where real-world adversaries break each link.
   Analysis, Theoretical Limits & Structural Invariants, live non-destructive
   PowerShell/CLI verification (`Inspecting and Verifying on a Running System`),
   and Summary & Handoff.
-- **876 primary-source references** linking every claim to normative vendor
+- **912 primary-source references** linking every claim to normative vendor
   specifications, RFCs, peer-reviewed security papers, and public incident
   reports.
 
@@ -83,13 +84,15 @@ node tools/gen-summary.mjs
 ├── src/
 │   ├── SUMMARY.md          Table of contents (generated in canonical reading order)
 │   ├── front-matter/       Title, copyright, preface, reading guide
-│   ├── chapters/           Prologue, Foundations, and 20 numbered core chapters
+│   ├── chapters/           Prologue, Foundations, and 23 numbered core chapters
 │   ├── back-matter/        References, glossary, about, colophon, index
 │   └── diagrams/           SVG architectural figures referenced by chapters
 ├── theme/                  Custom CSS and preview banner script
 ├── tools/
 │   ├── gen-summary.mjs       Regenerates src/SUMMARY.md in canonical reading order
-│   ├── gen_diagrams.py       Regenerates and collision-checks all 68 SVG diagrams
+│   ├── gen_diagrams.py       Regenerates and collision-checks all 76 SVG diagrams
+│   ├── gen_covers.py         Generates vector and PNG front and back covers
+│   ├── build-pdf.mjs         Builds the 7 x 9.25 in PDF edition with full-bleed covers
 │   ├── mdbook-trustchain.mjs mdBook preprocessor (KaTeX math, callouts, figures)
 │   └── gen-seo.mjs           Post-build SEO metadata, JSON-LD, sitemap, and robots
 ├── book.toml               mdBook configuration

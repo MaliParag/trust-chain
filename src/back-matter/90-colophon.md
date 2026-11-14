@@ -1,40 +1,29 @@
 # Colophon
 
-This book was made the way it argues you should reason about a Windows machine:
-by refusing to take any claim on faith.
+*The Windows Trust Chain* is authored in plain CommonMark Markdown and built from
+a single open-source repository without proprietary publishing tools.
 
-**The pipeline.** The text was produced by a multi-agent academic writing pipeline
-the author designed and operates. Each chapter passes through staged research,
-drafting, and a battery of automated gates (source verification before writing, a
-technical-accuracy review, a depth check, a citation audit, an academic-critic
-gate, and a final fact-check) before it is allowed near a reader. More than half
-of the pipeline's stages exist only to try to prove the draft wrong.
+**Web Edition.** Built with mdBook alongside a custom Node.js build-time
+preprocessor (`tools/mdbook-trustchain.mjs`) that renders display and inline
+mathematical notation via KaTeX, structures callouts and figures with visible
+captions, and links inline citations directly to 876 verified primary-source
+entries in the [References](70-references.md). Post-build metadata, canonical
+URLs, structured `schema.org/Book` JSON-LD, and sitemaps are generated via
+`tools/gen-seo.mjs`.
 
-**The evidence.** Where a claim is presented as 🟢 **CAPTURED**, the chapter shows
-the probe, the verbatim output, and a SHA-256 of that output recorded at capture
-time. A build gate (`evidence-fidelity-gate`) re-hashes every quoted capture
-against its manifest and against the bytes on disk, and refuses to build the
-chapter if a single character differs. Evidence that could not be captured on the
-lab machine (the parts of the chain rooted in physical silicon a virtual machine
-cannot expose, or cloud control-plane behavior outside the lab) is labeled 🔵
-**DOCUMENTED** rather than dressed up as a measurement. The three-color
-provenance taxonomy (🟢 captured · 🟡 emulated · 🔵 documented) is explained in *How
-to Read This Book*.
+**Diagrams and Typography.** Architectural diagrams are authored as clean,
+resolution-independent SVG figures designed to remain legible across light
+and dark reading themes. Print and PDF layouts pair Typst and Pandoc
+using Source Serif 4 for body prose, Source Sans 3 for headings and
+diagrams, and JetBrains Mono for code and terminal inspection blocks.
 
-**The tools.** Authored once in Markdown; rendered to web, EPUB, and print from a
-single source. Typesetting by **Typst**; multi-format conversion by **Pandoc**.
-Body text is set in **Source Serif 4**; headings and navigation in **Source Sans
-3**; code in **JetBrains Mono**. The cover was drawn in Typst. No proprietary
-toolchain was used, and the entire build (gate, render, and all) runs from one
-script.
+**Editorial Verification.** Every chapter in the twenty-chapter manuscript is
+validated mechanically against structural progression rules, citation resolution
+against `src/back-matter/70-references.md`, diagram integrity, diagnostic code
+conciseness, and house typographic standards.
 
-**Provenance of the live evidence.** Captured on a Microsoft Azure Trusted-Launch
-virtual machine (Windows 11, 25H2) with a virtual TPM, Secure Boot, and
-Virtualization-Based Security enabled. Because the TPM and the platform root are
-host-provided on a virtual machine, silicon-level mechanisms are presented as
-🔵 documented or 🟡 emulated, never as captured silicon.
-
-**License.** © 2026 Parag Mali. All rights reserved. See the copyright page.
-
-*If you find an error, the author wants to know, and will record the correction
-where the claim was made.*
+**License.** Copyright © 2026 Parag Mali. Licensed under Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International
+([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)), with all
+commercial rights reserved by the author. See the
+[Copyright](../front-matter/01-copyright.md) page for full terms.

@@ -17,28 +17,19 @@
 
 # Part II · Kernel & Code
 
-- [The Secure Kernel](chapters/05-secure-kernel.md)
-- [VBS Trustlets](chapters/17-vbs-trustlets.md)
-- [Code Integrity](chapters/06-code-integrity.md)
-- [Above Ring Zero](chapters/07-hypervisor.md)
+- [The Secure Kernel and VBS](chapters/05-secure-kernel.md)
+- [Code Integrity and Application Control](chapters/06-code-integrity.md)
 - [Protected Process Light](chapters/18-ppl.md)
 - [Process Mitigation Policies](chapters/19-mitigations.md)
-- [Authenticode and Catalog Files](chapters/20-authenticode.md)
-- [AppLocker vs App Control for Business](chapters/21-app-control.md)
 
 # Part III · Credentials & Access
 
-- [Mimikatz and the Credential-Theft Decade](chapters/22-mimikatz.md)
-- [Credential Guard](chapters/08-credential-guard.md)
+- [Windows Access Control, Integrity Levels, and Impersonation](chapters/25-access-control.md)
+- [Credential Guard and LSASS Isolation](chapters/08-credential-guard.md)
 - [The Death of NTLM](chapters/09-ntlm.md)
-- [Kerberos](chapters/10-kerberos.md)
-- [KRBTGT](chapters/23-krbtgt.md)
+- [Kerberos and Ticket Forgery](chapters/10-kerberos.md)
 - [Pass-the-Hash to Pass-the-PRT](chapters/11-pth-prt.md)
-- [Windows Hello](chapters/12-hello.md)
-- [WebAuthn and Passkeys](chapters/24-webauthn.md)
-- [Windows Access Control](chapters/25-access-control.md)
-- [The Integrity-Level Stack](chapters/26-integrity-levels.md)
-- [The SeImpersonate Primitive](chapters/27-seimpersonate.md)
+- [Windows Hello and Passkeys](chapters/12-hello.md)
 
 # Interlude · Watching the Chain
 

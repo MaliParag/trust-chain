@@ -4,6 +4,8 @@
 # Dependencies / tooling
 /node_modules/
 /.tools/
+__pycache__/
+*.pyc
 
 # Editor / OS noise
 .DS_Store

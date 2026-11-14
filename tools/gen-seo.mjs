@@ -91,10 +91,12 @@ for (const file of walk(BOOK_DIR)) {
   const descMatch = html.match(/<meta name="description" content="([^"]*)"/i);
   const pageDesc = descMatch ? attr(descMatch[1]) : DESCRIPTION;
 
-  // Give the landing page a descriptive, keyword-rich title.
+  // Give the landing page a descriptive, keyword-rich title, and rewrite
+  // relative links copied from front-matter/00-title.html to root index.html.
   if (isRoot) {
     const full = `${TITLE}: ${SUBTITLE}`;
     html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${esc(full)}</title>`);
+    html = html.replace(/href="\.\.\/(front-matter|chapters|back-matter)\//g, 'href="$1/');
     pageTitle = full;
   }
 

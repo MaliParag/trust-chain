@@ -1,111 +1,132 @@
 # Glossary
 
-Cross-tier quick reference. Fuller treatment of most terms is in Chapter 0.
+Alphabetical reference across all four parts of the Windows trust chain.
 
-**ALPC (Advanced Local Procedure Call).** The Windows IPC primitive; in Credential
-Guard the agent reaches the trustlet over a single ALPC channel mediated by the
-Secure Kernel.
+**ALPC (Advanced Local Procedure Call).** High-speed inter-process communication
+primitive in the NT kernel; in Credential Guard ([Chapter 11](../chapters/08-credential-guard.md)), `VTL0` `lsass.exe`
+requests cryptographic operations from `VTL1` `LsaIso.exe` across a mediated channel
+without reading raw keys.
 
-**Attestation.** The TPM signing a statement about the machine's measured boot
-state so a remote party can believe it without trusting the machine to
-self-report.
+**Attestation.** Cryptographic proof of platform or key state signed by a
+hardware-rooted key (`TPM AIK`, `AMD VCEK`, or `Intel TDX` Quoting Enclave) for a
+remote verifier ([Chapter 5](../chapters/04-attestation.md) and [Chapter 19](../chapters/29-confidential-vms.md)).
 
-**BYOVD (Bring Your Own Vulnerable Driver).** Loading a legitimately signed but
-vulnerable kernel driver to obtain ring-0 execution; the residual that HVCI's
-unsigned-code enforcement does not close.
+**Authenticode.** Microsoft's code-signing format (`PKCS #7` `SignedData` over a
+PE structural hash, embedded inline or in `.cat` catalogs, [Chapter 7](../chapters/06-code-integrity.md)).
 
-**CAE (Continuous Access Evaluation).** Cloud mechanism that re-evaluates or
-revokes a still-valid access token mid-session in near-real-time.
+**BYOVD (Bring Your Own Vulnerable Driver).** Loading a legitimately signed
+third-party kernel driver containing a memory read/write flaw to gain `VTL0`
+Ring 0 execution, bypassing `PPL` and blinding kernel `ETW` unless blocked by
+`HVCI` and the Vulnerable Driver Blocklist ([Chapter 7](../chapters/06-code-integrity.md), [Chapter 8](../chapters/18-ppl.md), and [Chapter 16](../chapters/28-etw.md)).
 
-**Conditional Access.** Entra policy deciding whether to honor an authentication
-based on user, device, location, and risk.
+**CAE (Continuous Access Evaluation).** Out-of-band push channel from Microsoft
+Entra ID (standardized vendor-neutrally as `OpenID SSF 1.0` / `CAEP 1.0`) enabling
+participating Resource Providers to reject revoked or IP-shifted OAuth tokens via
+`HTTP 401` `insufficient_claims` challenges ([Chapter 18](../chapters/14-cae.md)).
 
-**Credential Guard.** Uses VBS to hold long-lived credentials in a VTL1 trustlet
-(`LsaIso.exe`) so a compromised VTL0 cannot read them.
+**Conditional Access.** Microsoft Entra ID's `NIST SP 800-207` Policy Decision
+Point evaluating user, authentication strength, `PRT` device identity, MDM
+compliance, and risk signals before issuing cloud tokens ([Chapter 17](../chapters/13-zero-trust.md)).
 
-**DPAPI (Data Protection API).** Windows' standard per-user secret encryption at
-rest, keyed off the user's credentials.
+**Confidential VM (CVM).** Public-cloud virtual machine (`AMD SEV-SNP` or `Intel
+TDX`) whose DRAM and registers are encrypted inline by the CPU and bound via
+`RMP`/`PAMT` integrity tables so the host hypervisor is excluded from the memory
+`TCB` ([Chapter 19](../chapters/29-confidential-vms.md)).
 
-**EKU (Extended Key Usage).** An OID in an Authenticode signature constraining
-what the signed binary may do; trustlets require two specific Microsoft EKUs.
+**Credential Guard.** `VBS` feature isolating `NTOWF` hashes, Kerberos `TGT`
+session keys, and domain credentials inside `VTL1` `LsaIso.exe` ([Chapter 11](../chapters/08-credential-guard.md)).
 
-**Entra ID.** Microsoft's cloud identity provider (formerly Azure AD).
+**DPAPI (Data Protection API).** User- and machine-scoped symmetric encryption
+subsystem protecting local vaults, certificates, and browser cookies ([Chapter 11](../chapters/08-credential-guard.md) and [Chapter 14](../chapters/11-pth-prt.md)).
 
-**HVCI (Hypervisor-Enforced Code Integrity).** Uses the hypervisor to guarantee
-kernel code pages are signed and immutable and writable pages non-executable.
+**ELAM (Early Launch Antimalware).** Boot-start driver initialized by `ntoskrnl`
+before third-party drivers to adjudicate boot-driver signatures and anchor
+`Antimalware-PPL` user-mode services ([Chapter 1](../chapters/16-secure-boot.md), [Chapter 8](../chapters/18-ppl.md), and [Chapter 16](../chapters/28-etw.md)).
 
-**Hypervisor.** The layer beneath the NT kernel that creates the VTLs; the bottom
-of the on-box TCB once VBS is on.
+**ESS (Enhanced Sign-in Security).** Hardware-isolated Windows Hello biometric
+architecture pairing secure camera/sensor buses (`MIPI`, `SDCP`) with the `VTL1`
+`BioIso.exe` trustlet ([Chapter 15](../chapters/12-hello.md)).
 
-**Kerberoasting.** Requesting a service ticket for any SPN and cracking its
-encrypted portion offline to recover a weak service-account password (ATT&CK
-T1558.003).
+**EtwTi (`Microsoft-Windows-Threat-Intelligence`).** Kernel-emitted `ETW`
+provider (`{f4e1897c-bb5d-5668-f1d8-040f4d8dd344}`) firing inside `ntoskrnl.exe`
+on memory-modifying syscalls and restricted to `Antimalware-PPL` consumers
+([Chapter 16](../chapters/28-etw.md)).
 
-**KDC (Key Distribution Center).** The domain controller service that issues
-Kerberos TGTs and service tickets.
+**HVCI (Hypervisor-Protected Code Integrity).** `VBS` enforcement of `W^X` and
+signature verification over `VTL0` kernel pages via `SLAT` tables ([Chapter 6](../chapters/05-secure-kernel.md) and [Chapter 7](../chapters/06-code-integrity.md)).
 
-**LSASS (`lsass.exe`).** The Local Security Authority Subsystem; performs
-authentication and historically held the secrets it used.
+**Kerberoasting (`T1558.003`).** Requesting `TGS-REP` service tickets for SPN
+accounts and cracking password-derived ciphertexts (especially `enctype 23`
+`RC4-HMAC`) offline, mitigated by `gMSA`/`dMSA` and `AES`-only enforcement
+([Chapter 13](../chapters/10-kerberos.md)).
 
-**Measured boot.** Recording each boot stage into the TPM's PCRs (remembering),
-as distinct from Secure Boot (preventing).
+**KRBTGT (`RID 502`).** Built-in Active Directory account whose symmetric key set
+encrypts and signs every `TGT` and `[MS-PAC]` in the domain ([Chapter 13](../chapters/10-kerberos.md)).
 
-**NTOWF / NTLM hash.** The MD4 of the user's password; password-equivalent, hence
-Pass-the-Hash.
+**LSASS (`lsass.exe`).** Local Security Authority Subsystem Service hosting
+authentication packages (`msv1_0`, `kerberos`, `cloudap`, `schannel`) in `VTL0`
+([Chapter 11](../chapters/08-credential-guard.md) to [Chapter 14](../chapters/11-pth-prt.md)).
 
-**Pass-the-Hash / Pass-the-Ticket / Pass-the-PRT.** Authenticating by replaying a
-stolen credential artifact (the NT hash, a Kerberos ticket, or a cloud Primary
-Refresh Token) without the password.
+**Measured Boot.** Unconditional hash-extension (`TPM2_PCR_Extend`) of every boot
+component and configuration datum into `TPM` `PCRs` and the `WBCL` log ([Chapter 4](../chapters/03-measured-boot.md)).
 
-**PCR (Platform Configuration Register).** A TPM register you can only extend
-(hash-chain), forming a tamper-evident summary of the boot.
+**MIC (Mandatory Integrity Control).** Integrity-level lattice (`Untrusted`,
+`Low`, `Medium`, `High`, `System`) evaluated before `DACLs` to enforce `No-Write-Up`
+process and UI (`UIPI`) isolation ([Chapter 10](../chapters/25-access-control.md)).
 
-**Pluton.** A Microsoft security processor integrated on the CPU die and updatable
-through Windows Update.
+**NTOWF (NT One-Way Function).** Unsalted `MD4(UTF-16LE(password))` digest serving
+as both the `NTLM` secret and `Kerberos` `RC4-HMAC` key ([Chapter 12](../chapters/09-ntlm.md) to [Chapter 14](../chapters/11-pth-prt.md)).
 
-**PPL (Protected Process Light).** NT-kernel process protection (e.g. `RunAsPPL`
-for LSASS); complementary to, not a substitute for, Credential Guard.
+**OpenHCL.** Microsoft's open-source Rust paravisor running inside a Confidential
+VM (`VMPL0` on `SEV-SNP` or `L1 TD` on `TDX`) to synthesize devices and a `vTPM`
+without trusting the cloud host ([Chapter 19](../chapters/29-confidential-vms.md)).
 
-**PRT (Primary Refresh Token).** The cloud analog of the long-term credential,
-issued to a joined device and (on capable hardware) bound to a TPM key.
+**PAC (Privilege Attribute Certificate).** `[MS-PAC]` structure inside Kerberos
+tickets carrying user/group `SIDs` and up to four cryptographic signatures
+(`Server`, `KDC`, `Ticket`, and `KB5020805` `Full PAC`) ([Chapter 13](../chapters/10-kerberos.md)).
 
-**RBCD (Resource-Based Constrained Delegation).** A Kerberos delegation feature
-abusable to mint service tickets as any user when an attacker can write the target
-computer object's delegation attribute.
+**Passkey (`WebAuthn` / `CTAP 2.x`).** Discoverable FIDO2 asymmetric credential
+signing origin-bound (`clientDataJSON.origin` + `SHA256(rpId)`) assertions; either
+device-bound (`BE=0`, `NIST AAL3`-eligible) or synced (`BE=1`, `AAL2`) ([Chapter 15](../chapters/12-hello.md)).
 
-**Root of trust.** The one component whose trustworthiness is assumed because
-nothing beneath it can verify it; on Windows, in silicon.
+**PCR (Platform Configuration Register).** Extend-only `TPM` digest register
+recording ordered boot measurements ([Chapter 2](../chapters/01-tpm.md) and [Chapter 4](../chapters/03-measured-boot.md)).
 
-**Secure Boot.** Firmware refusing to run improperly signed bootloaders/firmware.
+**Pluton.** Microsoft-designed security processor integrated directly onto AMD,
+Intel, and Qualcomm CPU dies ([Chapter 3](../chapters/02-pluton.md)).
 
-**Secure Kernel.** The small kernel running in VTL1; hosts the trustlets.
+**PPL (Protected Process Light).** Kernel `_EPROCESS.Protection` lattice gating
+cross-process handle access Rights by code-signing level ([Chapter 8](../chapters/18-ppl.md)).
 
-**Sealing.** Encrypting a secret under a TPM policy so it unseals only when the
-PCRs match a specified state (e.g. BitLocker).
+**PRT (Primary Refresh Token).** 90-day rolling Microsoft Entra SSO artifact
+brokered by `cloudap.dll` and paired with a `TPM`-protected session key ([Chapter 14](../chapters/11-pth-prt.md)).
 
-**SLAT (Second-Level Address Translation).** The CPU feature the hypervisor uses
-to make VTL1 memory unmappable from VTL0.
+**RBCD (Resource-Based Constrained Delegation).** Kerberos `S4U2Self` +
+`S4U2Proxy` delegation controlled via `msDS-AllowedToActOnBehalfOfOtherIdentity`
+on the target computer object ([Chapter 13](../chapters/10-kerberos.md)).
 
-**SSP (Security Support Provider).** A pluggable authentication-protocol module in
-LSASS (NTLM, Kerberos, `cloudap`, Schannel).
+**RMP / PAMT.** Hardware page-ownership metadata tables in `AMD SEV-SNP` (`RMP`)
+and `Intel TDX` (`PAMT`) preventing host hypervisor ciphertext-remapping attacks
+([Chapter 19](../chapters/29-confidential-vms.md)).
 
-**TCB (Trusted Computing Base).** The set of components that must be correct for a
-security guarantee to hold; the chain works to shrink it.
+**Secure Boot.** `UEFI` signature enforcement blocking untrusted pre-OS binaries
+([Chapter 1](../chapters/16-secure-boot.md)).
 
-**TGT (Ticket-Granting Ticket).** The Kerberos credential, obtained from the KDC,
-exchanged for per-service tickets.
+**Secure Kernel (`securekernel.exe`).** Micro-kernel executing in `VTL1` under
+`VBS` to enforce `HVCI`, mediate `SLAT` permissions, and host isolated trustlets
+([Chapter 6](../chapters/05-secure-kernel.md)).
 
-**TPM (Trusted Platform Module).** A tamper-resistant chip/enclave holding keys,
-performing fixed crypto, and measuring the boot.
+**SLAT (Second-Level Address Translation).** CPU nested paging (`Intel EPT` /
+`AMD NPT`) used by Hyper-V both for VMs and to isolate `VTL1` RAM from `VTL0`
+([Chapter 6](../chapters/05-secure-kernel.md)).
 
-**Trustlet.** A Microsoft-signed user-mode process running in VTL1 (e.g.
-`LsaIso.exe`); `LsaIso` is Trustlet ID 1.
+**Strong Certificate Mapping (`KB5014754`).** Active Directory `PKINIT` rule
+binding X.509 certificates to principal `SIDs` via OID `1.3.6.1.4.1.311.25.2` to
+defeat SAN spoofing ([Chapter 13](../chapters/10-kerberos.md) and [Chapter 14](../chapters/11-pth-prt.md)).
 
-**VBS (Virtualization-Based Security).** Using the hypervisor to create the
-isolated VTL1 secure world.
+**TCB (Trusted Computing Base).** Every hardware, firmware, and software element
+that must operate honestly and bug-free for a security guarantee to hold
+([Foundations](../chapters/00b-foundations.md)).
 
-**VTL0 / VTL1.** Virtual Trust Levels: the normal world (kernel, drivers, your
-code) and the secure world the hypervisor isolates from it.
-
-**VSM master key.** A VTL1-only key, TPM-sealed under PCR policy, that wraps any
-persistent trustlet state.
+**WDAC / App Control for Business.** Kernel and user-mode policy engine (`ci.dll`)
+restricting executable code and scripts to approved signers and hashes ([Chapter 7](../chapters/06-code-integrity.md)).

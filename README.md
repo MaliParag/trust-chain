@@ -1,112 +1,117 @@
 # The Windows Trust Chain
 
-**How modern Windows builds a verifiable chain of trust from silicon to cloud, and where attackers break it.**
+How modern Windows builds a verifiable chain of trust from silicon to cloud, and where attackers break it.
 
-> ⚠️ **Preview edition.** This book is a work in progress: content may change
-> and may still contain errors. Corrections are welcome via
+> **Preview edition.** Content is actively maintained. Technical corrections and
+> reproductions are welcome via
 > [issues](https://github.com/MaliParag/windows-trust-chain/issues) and
 > [pull requests](CONTRIBUTING.md).
 
-This is the source for an open, evidence-based technical book aimed at security
-architects, detection leads, threat modelers, and advanced blue teams. It follows
-trust as it is *inherited* link by link, from firmware and the TPM up through the
-kernel, credentials, access control, and cloud identity, and it is honest about
-where each link breaks.
+This repository holds the source manuscript for an open, primary-source-grounded
+systems security book written for security architects, principal detection
+engineers, incident responders, and platform engineers. It traces how trust is
+*inherited* link by link, from UEFI firmware and the TPM up through the Hyper-V
+Secure Kernel, code integrity, access tokens, Active Directory cryptography,
+passkeys, `ETW` telemetry, and cloud attestation, and analyzes the exact seams
+where real-world adversaries break each link.
 
-Where a claim can be checked on a live machine, the book gives the exact command
-to reproduce it and, where the output was captured, a cryptographic hash that
-proves it was not edited to fit the prose.
+> **Read it online:** <https://maliparag.github.io/windows-trust-chain/>
 
-> **Read it online:** **<https://maliparag.github.io/windows-trust-chain/>**
+## What Is Inside
 
-## What is in here
+- **20 numbered core chapters** (plus a Prologue and a Foundations
+  primer) organized into four architectural parts, an observability interlude,
+  and a finale:
+  - **Part I · Silicon (Chapters 1 to 5):** Secure Boot, The TPM, Pluton,
+    Measured Boot, and Attestation.
+  - **Part II · Kernel & Code (Chapters 6 to 9):** The Secure Kernel and VBS,
+    Code Integrity and Application Control, Protected Process Light, and Process
+    Mitigation Policies.
+  - **Part III · Credentials & Access (Chapters 10 to 15):** Windows Access
+    Control, Integrity Levels, and Impersonation; Credential Guard and LSASS
+    Isolation; The Death of NTLM; Kerberos and Ticket Forgery; Pass-the-Hash to
+    Pass-the-PRT; and Windows Hello and Passkeys.
+  - **Interlude · Watching the Chain (Chapter 16):** ETW: The EDR Substrate.
+  - **Part IV · Cloud (Chapters 17 to 19):** Zero Trust, Continuous Access
+    Evaluation, and Confidential VMs.
+  - **Finale · When the Chain Snaps (Chapter 20):** When the Chain Snaps:
+    Storm-0558.
+- **Uniform eight-part chapter progression:** Overview (`Role`,
+  `Invariant`, `TCB`, `Failure Modes`, `Handoff`), Core Engineering Problem &
+  Threat Model, Architectural Deep Dive, six-column Attack Catalog & Gap
+  Analysis, Theoretical Limits & Structural Invariants, live non-destructive
+  PowerShell/CLI verification (`Inspecting and Verifying on a Running System`),
+  and Summary & Handoff.
+- **876 primary-source references** linking every claim to normative vendor
+  specifications, RFCs, peer-reviewed security papers, and public incident
+  reports.
 
-- 30 chapters (a Prologue, a Foundations primer, and 29 numbered chapters)
-  grouped into four parts plus an Interlude and a Finale.
-- Every chapter opens with a **trust ledger**: what the link inherits, what it
-  promises, its trusted computing base, how an adversary breaks it, what residual
-  risk remains, and what it bequeaths to the next link.
-- A provenance taxonomy tags every piece of evidence:
-  - 🟢 **CAPTURED** verbatim, hash-verified output from a lab VM.
-  - 🟡 **EMULATED** real values rooted in the host or VM layer.
-  - 🔵 **DOCUMENTED** mechanisms shown from primary sources, clearly labeled as
-    not captured on the lab VM.
+The web edition is built with [mdBook](https://rust-lang.github.io/mdBook/) and
+KaTeX, providing fast full-text search, responsive SVG figures with captions,
+and light/dark reading themes.
 
-The site is built with [mdBook](https://rust-lang.github.io/mdBook/), the same
-engine behind the official Rust book, so it ships with a chapter sidebar,
-full-text search, and light and dark themes.
+## Read or Build Locally
 
-## Read or build locally
-
-You need [mdBook](https://rust-lang.github.io/mdBook/) (0.4.43+) and Node.js
-(18+, used by the build-time preprocessor).
+You need [mdBook](https://rust-lang.github.io/mdBook/) (`0.4.43+` or `0.5.x`)
+and Node.js (`18+`, used by the build-time preprocessor and SEO generator).
 
 ```bash
-# Install mdBook (prebuilt binary), then:
+npm install
 mdbook serve --open   # live-reload preview at http://localhost:3000
 mdbook build          # static site into ./book
 ```
 
-Deploys additionally run a post-build SEO pass (canonical URLs, Open Graph and
-Twitter cards, `schema.org/Book` JSON-LD, `sitemap.xml`, and `robots.txt`):
+Production deployments additionally run the post-build SEO pass (canonical URLs,
+Open Graph and Twitter cards, `schema.org/Book` JSON-LD, `sitemap.xml`, and
+`robots.txt`):
 
 ```bash
 SITE_URL=https://maliparag.github.io/windows-trust-chain node tools/gen-seo.mjs
 ```
 
-If you edit which chapters exist or their order, regenerate the table of
-contents:
+If you modify chapter titles or reading order, regenerate `src/SUMMARY.md`:
 
 ```bash
-node tools/gen-summary.mjs   # rewrites src/SUMMARY.md from the reading order
+node tools/gen-summary.mjs
 ```
 
-## Repository layout
+## Repository Layout
 
 ```text
 .
 ├── src/
-│   ├── SUMMARY.md          Table of contents (generated; reading order != file order)
+│   ├── SUMMARY.md          Table of contents (generated in canonical reading order)
 │   ├── front-matter/       Title, copyright, preface, reading guide
-│   ├── chapters/           Prologue, Foundations, and 29 numbered chapters
+│   ├── chapters/           Prologue, Foundations, and 20 numbered core chapters
 │   ├── back-matter/        References, glossary, about, colophon, index
-│   └── diagrams/           SVG figures referenced by the chapters
-├── theme/trustchain.css    Styling for the trust-ledger blocks and figures
+│   └── diagrams/           SVG architectural figures referenced by chapters
+├── theme/                  Custom CSS and preview banner script
 ├── tools/
-│   ├── gen-summary.mjs      Regenerates src/SUMMARY.md in canonical reading order
-│   ├── mdbook-trustchain.mjs mdBook preprocessor (trust-ledger, callouts, evidence, figures)
-│   └── gen-seo.mjs          Post-build SEO: canonical, Open Graph, JSON-LD, sitemap, robots
+│   ├── gen-summary.mjs       Regenerates src/SUMMARY.md in canonical reading order
+│   ├── gen_diagrams.py       Regenerates and collision-checks all 68 SVG diagrams
+│   ├── mdbook-trustchain.mjs mdBook preprocessor (KaTeX math, callouts, figures)
+│   └── gen-seo.mjs           Post-build SEO metadata, JSON-LD, sitemap, and robots
 ├── book.toml               mdBook configuration
-└── .github/workflows/      Build and deploy to GitHub Pages
+└── .github/workflows/      Automated build and GitHub Pages deployment
 ```
-
-### About the source Markdown
-
-Chapter Markdown is kept close to the print manuscript so the two stay in sync.
-The mdBook preprocessor (`tools/mdbook-trustchain.mjs`) adapts it for the web at
-build time (rendering the `::: trust-ledger` blocks, resolving figure paths, and
-keeping reference lists intact) without modifying the source files.
 
 ## Contributing
 
 Corrections, clarifications, and reproductions are welcome. See
-[CONTRIBUTING.md](CONTRIBUTING.md). Please keep the house style: the prose is
-deliberately free of em-dashes, and verbatim quotes from vendors, researchers,
-and standards must stay verbatim.
+[CONTRIBUTING.md](CONTRIBUTING.md). Keep the house style: zero em-dashes, zero
+emojis, primary-source `[N]` citations, and verbatim preservation of quoted
+standards and advisories.
 
 ## License
 
-Everything in this repository, the prose, the diagrams, and the build tooling,
-is licensed under
+Everything in this repository (prose, diagrams, and build tooling) is licensed
+under
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-(CC BY-NC-SA 4.0). See [LICENSE](LICENSE). In short: share and adapt for
-noncommercial purposes, with attribution, under the same license. The author
-reserves all commercial rights.
+(`CC BY-NC-SA 4.0`). See [LICENSE](LICENSE). Commercial rights are reserved by
+the author.
 
 Verbatim quotations from vendors, researchers, and standards bodies, and any
-trademarks, remain the property of their respective owners and are not covered by
-this license. By contributing, you also grant the author a license to use your
-contribution in commercial editions; see [CONTRIBUTING.md](CONTRIBUTING.md).
+trademarks, remain the property of their respective owners.
 
 ## Author
 

@@ -198,7 +198,88 @@ function renderMath(content) {
   });
 }
 
-function transform(content) {
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// Convert standalone `![Figure: ...](path)` lines outside code fences into
+// semantic `<figure><img ...><figcaption>...</figcaption></figure>` blocks so
+// captions render visibly under `.content figcaption` in theme/trustchain.css.
+function convertFigures(lines) {
+  const out = [];
+  let fence = null;
+  for (const line of lines) {
+    const fenceOpen = line.match(/^\s*(```+|~~~+)/);
+    if (fence) {
+      out.push(line);
+      if (fenceOpen && line.trim().startsWith(fence)) fence = null;
+      continue;
+    }
+    if (fenceOpen) {
+      fence = fenceOpen[1];
+      out.push(line);
+      continue;
+    }
+    const figMatch = line.match(/^!\[(.+)\]\(([^)]+)\)\s*$/);
+    if (figMatch) {
+      const caption = escapeHtml(figMatch[1].trim());
+      const src = escapeHtml(figMatch[2].trim());
+      out.push(
+        '',
+        '<figure>',
+        `<img src="${src}" alt="${caption}">`,
+        `<figcaption>${caption}</figcaption>`,
+        '</figure>',
+        ''
+      );
+      continue;
+    }
+    out.push(line);
+  }
+  return out;
+}
+
+// Link inline `[N]` and `[N, M]` citations to `70-references.md#ref-N` while
+// skipping code blocks/spans, TeX math, Markdown images, and Markdown links.
+const CITE_TOKEN_RE = new RegExp(
+  '(```[\\s\\S]*?```|~~~[\\s\\S]*?~~~|`[^`\\n]*`|\\$\\$[\\s\\S]+?\\$\\$' +
+  '|(?<![\\\\$])\\$(?!\\s)(?:\\\\.|[^$\\\\\\n])+?(?<!\\s)\\$(?!\\d)' +
+  '|!\\[.+?\\]\\([^)]*\\)|\\[[^\\]]+\\]\\([^)]*\\))' +
+  '|(?<![A-Za-z0-9_\\\\])\\[(\\d+(?:\\s*,\\s*\\d+)*)\\](?!\\()',
+  'g'
+);
+
+function linkCitations(content, chPath) {
+  const normPath = (chPath || '').replace(/\\/g, '/');
+  if (normPath.endsWith('70-references.md')) {
+    return content.replace(/^(\d+)\.\s+/gm, '$1. <span id="ref-$1"></span>');
+  }
+  const refTarget = normPath.startsWith('back-matter/')
+    ? '70-references.md'
+    : normPath.includes('/')
+      ? '../back-matter/70-references.md'
+      : 'back-matter/70-references.md';
+
+  return content.replace(CITE_TOKEN_RE, (m, protectedToken, nums) => {
+    if (protectedToken !== undefined) return protectedToken;
+    const linked = nums
+      .split(',')
+      .map((s) => s.trim())
+      .map((n) => `[${n}](${refTarget}#ref-${n})`)
+      .join(', ');
+    return `[${linked}]`;
+  });
+}
+
+function transform(content, chPath = '') {
+  // Escape a leading `[label]:` in list items first so it is not parsed as a
+  // link-reference definition (which renders nothing).
+  content = content.replace(/^(\s*(?:\d+\.|[-*])\s+)\[([^\]]+)\]:/gm, '$1\\[$2\\]:');
+  content = linkCitations(content, chPath);
   content = renderMath(content);
   let lines = content.split('\n');
   lines = convertTrustLedger(lines);
@@ -213,9 +294,8 @@ function transform(content) {
   text = text.replace(/\]\(diagrams\//g, '](../diagrams/');
   text = text.replace(/(<img[^>]*\bsrc=")diagrams\//g, '$1../diagrams/');
 
-  // Escape a leading `[label]:` in list items so it is not parsed as a
-  // link-reference definition (which renders nothing).
-  text = text.replace(/^(\s*(?:\d+\.|[-*])\s+)\[([^\]]+)\]:/gm, '$1\\[$2\\]:');
+  // Render standalone Markdown figures with visible <figcaption> elements.
+  text = convertFigures(text.split('\n')).join('\n');
 
   return text;
 }
@@ -224,7 +304,8 @@ function walk(items) {
   for (const item of items) {
     if (item && item.Chapter) {
       const ch = item.Chapter;
-      if (typeof ch.content === 'string') ch.content = transform(ch.content);
+      const chPath = ch.path || ch.source_path || '';
+      if (typeof ch.content === 'string') ch.content = transform(ch.content, chPath);
       if (Array.isArray(ch.sub_items)) walk(ch.sub_items);
     }
   }
@@ -239,7 +320,7 @@ function main() {
   process.stdin.on('data', (chunk) => { input += chunk; });
   process.stdin.on('end', () => {
     const [, book] = JSON.parse(input);
-    walk(book.sections);
+    walk(book.items || book.sections);
     process.stdout.write(JSON.stringify(book));
   });
 }

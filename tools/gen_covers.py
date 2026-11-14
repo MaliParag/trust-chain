@@ -80,13 +80,13 @@ def build_front_cover():
     lx = 136
     # Top rubric
     els.append(text_el(lx, 162, "SYSTEMS SECURITY  ·  ARCHITECTURE & ADVERSARIAL ANALYSIS",
-                       font=SANS, size=15, fill="#d4a843", weight="600", spacing=4.2))
+                       font=SANS, size=15, fill="#d4a843", weight="600", spacing=1.5))
     els.append(f'<line x1="{lx}" y1="184" x2="1264" y2="184" stroke="#233248" stroke-width="1.2"/>')
 
     # Main Title Block
-    els.append(text_el(lx + 4, 256, "T H E", font=SERIF, size=27, fill="#d4a843", weight="700", spacing=6.0))
-    els.append(text_el(lx, 366, "WINDOWS", font=SERIF, size=112, fill="#f7f4ed", weight="700", spacing=2.5))
-    els.append(text_el(lx, 484, "TRUST CHAIN", font=SERIF, size=106, fill="#d4a843", weight="700", spacing=2.0))
+    els.append(text_el(lx + 4, 256, "T H E", font=SERIF, size=27, fill="#d4a843", weight="700"))
+    els.append(text_el(lx, 366, "WINDOWS", font=SERIF, size=112, fill="#f7f4ed", weight="700", spacing=1.2))
+    els.append(text_el(lx, 484, "TRUST CHAIN", font=SERIF, size=106, fill="#d4a843", weight="700", spacing=1.0))
 
     # Subtitle
     els.append(f'<rect x="{lx}" y="528" width="540" height="2.2" fill="url(#goldRule)"/>')
@@ -128,7 +128,7 @@ def build_front_cover():
     els.append(f'<rect x="{rail_x - 22}" y="{mid_rail - 165}" width="44" height="330" rx="6" '
                f'fill="#0c1422" stroke="#456184" stroke-width="1.2"/>')
     els.append(f'<text x="{rail_x + 5}" y="{mid_rail}" font-family=\'{SANS}\' font-size="13.5" '
-               f'font-weight="700" letter-spacing="2.6px" fill="#8cb0db" text-anchor="middle" '
+               f'font-weight="700" letter-spacing="1.2px" fill="#8cb0db" text-anchor="middle" '
                f'transform="rotate(-90 {rail_x + 5} {mid_rail})">CH. 16 · ETW TELEMETRY</text>')
 
     # Upward inheritance connectors between consecutive nodes
@@ -172,17 +172,13 @@ def build_front_cover():
             els.append(f'<circle cx="{cx}" cy="{cy}" r="6.5" fill="{acc}"/>')
 
         # Right-side text block aligned cleanly to medallion center
-        els.append(text_el(tx, cy - 22, ptag, font=SANS, size=13.5, fill=acc, weight="700", spacing=2.8))
-        els.append(text_el(tx, cy + 6, ptitle, font=SERIF, size=24.5, fill="#f7f4ed", weight="700", spacing=0.7))
+        els.append(text_el(tx, cy - 22, ptag, font=SANS, size=13.5, fill=acc, weight="700", spacing=1.2))
+        els.append(text_el(tx, cy + 6, ptitle, font=SERIF, size=24.5, fill="#f7f4ed", weight="700", spacing=0.5))
         els.append(text_el(tx, cy + 32, pdetail, font=MONO, size=13.4, fill="#9fb0c7"))
 
     # Bottom Divider & Author Bar
     els.append(f'<line x1="{lx}" y1="1648" x2="1264" y2="1648" stroke="#233248" stroke-width="1.2"/>')
-    els.append(text_el(lx, 1714, "Parag Mali", font=SERIF, size=42, fill="#f7f4ed", weight="400", spacing=0.8))
-    els.append(text_el(1264, 1702, "20 CHAPTERS  ·  68 ARCHITECTURAL FIGURES  ·  876 PRIMARY SOURCES",
-                       font=SANS, size=14, fill="#d4a843", weight="600", anchor="end", spacing=2.2))
-    els.append(text_el(1264, 1726, "SILICON ROOTS TO CLOUD IDENTITY",
-                       font=SANS, size=12.5, fill="#7f93ad", weight="500", anchor="end", spacing=2.6))
+    els.append(text_el(lx, 1716, "Parag Mali", font=SERIF, size=42, fill="#f7f4ed", weight="400", spacing=0.4))
 
     els.append("</svg>\n")
     return "\n".join(els)
@@ -211,7 +207,7 @@ def build_back_cover():
 
     # Top rubric
     els.append(text_el(lx, 162, "THE WINDOWS TRUST CHAIN  ·  ARCHITECTURAL OVERVIEW",
-                       font=SANS, size=15, fill="#d4a843", weight="600", spacing=4.0))
+                       font=SANS, size=15, fill="#d4a843", weight="600", spacing=1.5))
     els.append(f'<line x1="{lx}" y1="184" x2="{rx}" y2="184" stroke="#233248" stroke-width="1.2"/>')
 
     # Pull-quote lead
@@ -246,7 +242,7 @@ def build_back_cover():
 
     # Architecture of the Book Engraved Grid (6 rows)
     els.append(text_el(lx, cy + 16, "ARCHITECTURE OF THE TWENTY-CHAPTER EDITION",
-                       font=SANS, size=14.5, fill="#d4a843", weight="700", spacing=3.4))
+                       font=SANS, size=14.5, fill="#d4a843", weight="700", spacing=1.4))
     cy += 36
 
     parts = [
@@ -269,7 +265,7 @@ def build_back_cover():
         els.append(f'<rect x="{lx}" y="{cy}" width="{cw}" height="{row_h - 10}" rx="6" '
                    f'fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>')
         els.append(f'<rect x="{lx}" y="{cy}" width="5" height="{row_h - 10}" rx="2" fill="{acc}"/>')
-        els.append(text_el(lx + 24, cy + 33, p_name, font=SANS, size=14.5, fill=acc, weight="700", spacing=1.8))
+        els.append(text_el(lx + 24, cy + 33, p_name, font=SANS, size=14.5, fill=acc, weight="700", spacing=1.0))
         els.append(text_el(lx + 24, cy + 60, p_ch, font=MONO, size=13.5, fill="#8ea2bd"))
         desc_lines = wrap_para(p_desc, 74)
         if len(desc_lines) == 1:
@@ -291,7 +287,7 @@ def build_back_cover():
         px = lx + idx * (col_w + 18)
         els.append(f'<rect x="{px:.1f}" y="{cy}" width="{col_w:.1f}" height="106" rx="6" '
                    f'fill="#0a1220" stroke="#2a3c57" stroke-width="1.1"/>')
-        els.append(text_el(px + 20, cy + 34, pt, font=SANS, size=14, fill="#d4a843", weight="700", spacing=2.0))
+        els.append(text_el(px + 20, cy + 34, pt, font=SANS, size=14, fill="#d4a843", weight="700", spacing=1.0))
         lines = wrap_para(pb, 38)
         for li, ln in enumerate(lines[:2]):
             els.append(text_el(px + 20, cy + 62 + li * 22, ln, font=SERIF, size=16.5, fill="#b8c5d6"))
@@ -307,9 +303,9 @@ def build_back_cover():
     els.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="5" '
                f'fill="#0d1728" stroke="#d4a843" stroke-width="1.1" stroke-opacity="0.55"/>')
     els.append(text_el(bx + bw / 2, by + 30, "OPEN TECHNICAL EDITION  ·  2026",
-                       font=SANS, size=13.5, fill="#d4a843", weight="700", anchor="middle", spacing=2.2))
+                       font=SANS, size=13.5, fill="#d4a843", weight="700", anchor="middle", spacing=1.1))
     els.append(text_el(bx + bw / 2, by + 53, "CC BY-NC-SA 4.0  ·  SECURITY & OPERATING SYSTEMS",
-                       font=SANS, size=11.8, fill="#9fb0c7", weight="500", anchor="middle", spacing=1.4))
+                       font=SANS, size=11.8, fill="#9fb0c7", weight="500", anchor="middle", spacing=0.8))
 
     els.append("</svg>\n")
     return "\n".join(els)

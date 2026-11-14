@@ -34,7 +34,7 @@
   <path d="M 56 96 L 56 56 L 96 56 M 1304 56 L 1344 56 L 1344 96 M 56 1754 L 56 1794 L 96 1794 M 1304 1794 L 1344 1794 L 1344 1754"
         fill="none" stroke="#d4a843" stroke-width="2.0" stroke-opacity="0.72"/>
 
-<text x="136" y="162" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" font-weight="600" letter-spacing="4.0px" fill="#d4a843" text-anchor="start">THE WINDOWS TRUST CHAIN  ·  ARCHITECTURAL OVERVIEW</text>
+<text x="136" y="162" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" font-weight="600" letter-spacing="1.5px" fill="#d4a843" text-anchor="start">THE WINDOWS TRUST CHAIN  ·  ARCHITECTURAL OVERVIEW</text>
 <line x1="136" y1="184" x2="1264" y2="184" stroke="#233248" stroke-width="1.2"/>
 <text x="136" y="248" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="34" font-weight="700" fill="#f7f4ed" text-anchor="start">In modern Windows, no layer can assert its own trustworthiness.</text>
 <text x="136" y="294" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="31" font-weight="400" font-style="italic" fill="#d4a843" text-anchor="start">Every security invariant is inherited from silicon or lost at the seam.</text>
@@ -49,59 +49,59 @@
 <text x="136" y="654" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.5" font-weight="400" fill="#d0d9e6" text-anchor="start">techniques (BlackLotus, Bitpixie, BYOVD, Potato escalation, Pass-the-Challenge, Golden</text>
 <text x="136" y="688" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.5" font-weight="400" fill="#d0d9e6" text-anchor="start">Ticket, Pass-the-PRT, and Storm-0558) that break the chain whenever a higher tier mistakes</text>
 <text x="136" y="722" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.5" font-weight="400" fill="#d0d9e6" text-anchor="start">cryptographic validity for authorization.</text>
-<text x="136" y="790" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="3.4px" fill="#d4a843" text-anchor="start">ARCHITECTURE OF THE TWENTY-CHAPTER EDITION</text>
+<text x="136" y="790" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.4px" fill="#d4a843" text-anchor="start">ARCHITECTURE OF THE TWENTY-CHAPTER EDITION</text>
 <rect x="136" y="810" width="1128" height="86" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
 <rect x="136" y="810" width="5" height="86" rx="2" fill="#d4a843"/>
-<text x="160" y="843" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.8px" fill="#d4a843" text-anchor="start">PART I · SILICON</text>
+<text x="160" y="843" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#d4a843" text-anchor="start">PART I · SILICON</text>
 <text x="160" y="870" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 1 to 5</text>
 <text x="434" y="847" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">UEFI Secure Boot, TPM 1.2 to 2.0, Microsoft Pluton, Measured Boot PCRs,</text>
 <text x="434" y="871" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">and Remote Attestation</text>
 <rect x="136" y="906" width="1128" height="86" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
 <rect x="136" y="906" width="5" height="86" rx="2" fill="#d4a843"/>
-<text x="160" y="939" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.8px" fill="#d4a843" text-anchor="start">PART II · KERNEL &amp; CODE</text>
+<text x="160" y="939" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#d4a843" text-anchor="start">PART II · KERNEL &amp; CODE</text>
 <text x="160" y="966" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 6 to 9</text>
 <text x="434" y="943" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">Hyper-V VBS &amp; VTL1 Trustlets, Authenticode, HVCI, App Control (WDAC), PPL,</text>
 <text x="434" y="967" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">ACG, CFG/XFG, and CET</text>
 <rect x="136" y="1002" width="1128" height="86" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
 <rect x="136" y="1002" width="5" height="86" rx="2" fill="#d4a843"/>
-<text x="160" y="1035" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.8px" fill="#d4a843" text-anchor="start">PART III · CREDENTIALS</text>
+<text x="160" y="1035" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#d4a843" text-anchor="start">PART III · CREDENTIALS</text>
 <text x="160" y="1062" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 10 to 15</text>
 <text x="434" y="1039" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">Tokens &amp; MIC, Credential Guard, NTLM Deprecation, Kerberos &amp; [MS-PAC],</text>
 <text x="434" y="1063" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">Pass-the-PRT, and Passkeys</text>
 <rect x="136" y="1098" width="1128" height="86" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
 <rect x="136" y="1098" width="5" height="86" rx="2" fill="#7ea6d8"/>
-<text x="160" y="1131" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.8px" fill="#7ea6d8" text-anchor="start">INTERLUDE · TELEMETRY</text>
+<text x="160" y="1131" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#7ea6d8" text-anchor="start">INTERLUDE · TELEMETRY</text>
 <text x="160" y="1158" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapter 16</text>
 <text x="434" y="1135" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">ETW Lock-Free Per-CPU Ring Buffers, Manifest Fan-Out, 0xC3 Patching vs.</text>
 <text x="434" y="1159" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">Kernel EtwTi, and PPL Gates</text>
 <rect x="136" y="1194" width="1128" height="86" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
 <rect x="136" y="1194" width="5" height="86" rx="2" fill="#d4a843"/>
-<text x="160" y="1227" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.8px" fill="#d4a843" text-anchor="start">PART IV · CLOUD</text>
+<text x="160" y="1227" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#d4a843" text-anchor="start">PART IV · CLOUD</text>
 <text x="160" y="1254" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 17 to 19</text>
 <text x="434" y="1231" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">NIST SP 800-207 Conditional Access, Continuous Access Evaluation (CAE),</text>
 <text x="434" y="1255" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">and Azure Confidential VMs</text>
 <rect x="136" y="1290" width="1128" height="86" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
 <rect x="136" y="1290" width="5" height="86" rx="2" fill="#df5a67"/>
-<text x="160" y="1323" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.8px" fill="#df5a67" text-anchor="start">FINALE · THE SNAP</text>
+<text x="160" y="1323" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#df5a67" text-anchor="start">FINALE · THE SNAP</text>
 <text x="160" y="1350" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapter 20</text>
 <text x="434" y="1327" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">Storm-0558, Stolen 2016 MSA Signing Key, Omitted RFC 8725 Issuer</text>
 <text x="434" y="1351" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.6" font-weight="400" fill="#eef2f7" text-anchor="start">Validation, and SFI Remediation</text>
 <rect x="136.0" y="1404" width="364.0" height="106" rx="6" fill="#0a1220" stroke="#2a3c57" stroke-width="1.1"/>
-<text x="156.0" y="1438" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14" font-weight="700" letter-spacing="2.0px" fill="#d4a843" text-anchor="start">876 PRIMARY SOURCES</text>
+<text x="156.0" y="1438" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14" font-weight="700" letter-spacing="1.0px" fill="#d4a843" text-anchor="start">876 PRIMARY SOURCES</text>
 <text x="156.0" y="1466" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="16.5" font-weight="400" fill="#b8c5d6" text-anchor="start">Normative TCG, UEFI, Intel, AMD, IETF,</text>
 <text x="156.0" y="1488" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="16.5" font-weight="400" fill="#b8c5d6" text-anchor="start">NIST, and [MS-*] protocol specs</text>
 <rect x="518.0" y="1404" width="364.0" height="106" rx="6" fill="#0a1220" stroke="#2a3c57" stroke-width="1.1"/>
-<text x="538.0" y="1438" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14" font-weight="700" letter-spacing="2.0px" fill="#d4a843" text-anchor="start">UNIFORM RIGOR</text>
+<text x="538.0" y="1438" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14" font-weight="700" letter-spacing="1.0px" fill="#d4a843" text-anchor="start">UNIFORM RIGOR</text>
 <text x="538.0" y="1466" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="16.5" font-weight="400" fill="#b8c5d6" text-anchor="start">Formal invariants, 6-column attack</text>
 <text x="538.0" y="1488" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="16.5" font-weight="400" fill="#b8c5d6" text-anchor="start">catalogs, and theoretical limits</text>
 <rect x="900.0" y="1404" width="364.0" height="106" rx="6" fill="#0a1220" stroke="#2a3c57" stroke-width="1.1"/>
-<text x="920.0" y="1438" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14" font-weight="700" letter-spacing="2.0px" fill="#d4a843" text-anchor="start">LIVE VERIFICATION</text>
+<text x="920.0" y="1438" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14" font-weight="700" letter-spacing="1.0px" fill="#d4a843" text-anchor="start">LIVE VERIFICATION</text>
 <text x="920.0" y="1466" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="16.5" font-weight="400" fill="#b8c5d6" text-anchor="start">Non-destructive PowerShell, bcdedit,</text>
 <text x="920.0" y="1488" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="16.5" font-weight="400" fill="#b8c5d6" text-anchor="start">wevtutil, and registry audits</text>
 <line x1="136" y1="1648" x2="1264" y2="1648" stroke="#233248" stroke-width="1.2"/>
 <text x="136" y="1696" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="30" font-weight="700" fill="#f7f4ed" text-anchor="start">Parag Mali</text>
 <text x="136" y="1728" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="15.5" font-weight="400" fill="#8cb0db" text-anchor="start">https://maliparag.github.io/windows-trust-chain</text>
 <rect x="846" y="1668" width="418" height="72" rx="5" fill="#0d1728" stroke="#d4a843" stroke-width="1.1" stroke-opacity="0.55"/>
-<text x="1055.0" y="1698" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="2.2px" fill="#d4a843" text-anchor="middle">OPEN TECHNICAL EDITION  ·  2026</text>
-<text x="1055.0" y="1721" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="11.8" font-weight="500" letter-spacing="1.4px" fill="#9fb0c7" text-anchor="middle">CC BY-NC-SA 4.0  ·  SECURITY &amp; OPERATING SYSTEMS</text>
+<text x="1055.0" y="1698" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.1px" fill="#d4a843" text-anchor="middle">OPEN TECHNICAL EDITION  ·  2026</text>
+<text x="1055.0" y="1721" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="11.8" font-weight="500" letter-spacing="0.8px" fill="#9fb0c7" text-anchor="middle">CC BY-NC-SA 4.0  ·  SECURITY &amp; OPERATING SYSTEMS</text>
 </svg>

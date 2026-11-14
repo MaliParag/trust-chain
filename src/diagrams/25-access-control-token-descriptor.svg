@@ -1,52 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 548" width="880" height="548">
-<rect x="0" y="0" width="880" height="548" fill="#ffffff"/>
-<rect x="28.0" y="70.0" width="324.0" height="404.8" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="190.0" y="92.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">SUBJECT: ACCESS TOKEN (_TOKEN)</text>
-<rect x="528.0" y="70.0" width="324.0" height="404.8" rx="8.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="690.0" y="92.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#284163" text-anchor="middle">OBJECT: SECURITY DESCRIPTOR</text>
-<line x1="440.0" y1="66.0" x2="440.0" y2="478.8" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
-<text x="440.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">INPUTS EVALUATED BY KERNEL SEACCESSCHECK ON EVERY OBJECT OPEN</text>
-<rect x="44.0" y="108.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="58.0" y="129.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">IDENTITY &amp; GROUPS</text>
-<text x="58.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">User SID + Group SIDs + Logon SID</text>
-<text x="58.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Primary or impersonation token attached to</text>
-<text x="58.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">calling thread/process</text>
-<rect x="44.0" y="215.5" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="58.0" y="237.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CAPABILITIES</text>
-<text x="58.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Privileges &amp; Restricted /</text>
-<text x="58.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">AppContainer SIDs</text>
-<text x="58.0" y="287.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SeDebugPrivilege, SeImpersonatePrivilege,</text>
-<text x="58.0" y="301.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SeBackupPrivilege; LPAC capabilities</text>
-<rect x="44.0" y="339.0" width="292.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="58.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">MANDATORY LABEL</text>
-<text x="58.0" y="376.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Token Integrity Level (S-1-16-xxxx)</text>
-<text x="58.0" y="395.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Untrusted (0x0000), Low (0x1000), Medium</text>
-<text x="58.0" y="409.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">(0x2000), High (0x3000), System (0x4000)</text>
-<rect x="544.0" y="108.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="558.0" y="129.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">OWNERSHIP</text>
-<text x="558.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Owner SID &amp; Primary Group SID</text>
-<text x="558.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Owner implicitly receives READ_CONTROL</text>
-<text x="558.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">and WRITE_DAC unless restricted by MIC</text>
-<rect x="544.0" y="215.5" width="292.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="558.0" y="237.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">SACL (EVALUATED FIRST FOR MIC)</text>
-<text x="558.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SYSTEM_MANDATORY_LABEL_ACE +</text>
-<text x="558.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Audit ACEs</text>
-<text x="558.0" y="287.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Default No-Write-Up policy (0x1); missing</text>
-<text x="558.0" y="301.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">label defaults to Medium Integrity</text>
-<rect x="544.0" y="339.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="558.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">DACL (CANONICAL ORDER)</text>
-<text x="558.0" y="376.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Explicit Deny -&gt; Explicit Allow -&gt;</text>
-<text x="558.0" y="392.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Inherited</text>
-<text x="558.0" y="411.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">First-match accumulation over</text>
-<text x="558.0" y="425.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">RequestedAccess bits; NULL DACL != Empty</text>
-<text x="558.0" y="439.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">DACL</text>
-<text x="440.0" y="504.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Mandatory Integrity Control (SACL label) executes BEFORE the DACL walk: Low IL cannot write a Medium object even if DACL grants Everyone</text>
-<text x="440.0" y="519.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Full Control.</text>
-<polyline points="342.5,382.8 440.0,382.8 440.0,267.3 537.5,267.3" fill="none" stroke="#8d2d3b" stroke-width="1.6" stroke-linejoin="round"/>
-<polygon points="544.0,267.3 536.0,263.5 536.0,271.1" fill="#8d2d3b"/>
-<polygon points="336.0,382.8 344.0,386.6 344.0,379.0" fill="#8d2d3b"/>
-<rect x="370.7" y="47.0" width="138.6" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
-<text x="440.0" y="58.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">SRM Reference Monitor</text>
-<rect x="391.2" y="315.5" width="97.5" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="440.0" y="327.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">SeAccessCheck</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 570" width="900" height="570">
+<rect x="0" y="0" width="900" height="570" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="422.8" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">SUBJECT: ACCESS TOKEN (_TOKEN)</text>
+<rect x="550.0" y="74.0" width="324.0" height="422.8" rx="8.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#284163" text-anchor="middle">OBJECT: SECURITY DESCRIPTOR</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="500.8" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">INPUTS EVALUATED BY KERNEL SEACCESSCHECK ON EVERY OBJECT OPEN</text>
+<rect x="42.0" y="114.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">IDENTITY &amp; GROUPS</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">User SID + Group SIDs + Logon SID</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Primary or impersonation token attached to</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">calling thread/process</text>
+<rect x="42.0" y="229.5" width="292.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="56.0" y="251.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">MANDATORY LABEL (CHECKED FIRST)</text>
+<text x="56.0" y="267.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Token Integrity Level (S-1-16-xxxx)</text>
+<text x="56.0" y="285.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Untrusted (0x0000), Low (0x1000), Medium</text>
+<text x="56.0" y="299.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">(0x2000), High (0x3000), System (0x4000)</text>
+<rect x="42.0" y="361.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="382.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CAPABILITIES &amp; SANDBOX</text>
+<text x="56.0" y="398.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Privileges &amp; Restricted /</text>
+<text x="56.0" y="414.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">AppContainer SIDs</text>
+<text x="56.0" y="433.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SeDebugPrivilege, SeImpersonatePrivilege,</text>
+<text x="56.0" y="447.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SeBackupPrivilege; LPAC capabilities</text>
+<rect x="566.0" y="114.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">OWNERSHIP</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Owner SID &amp; Primary Group SID</text>
+<text x="580.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Owner implicitly receives READ_CONTROL</text>
+<text x="580.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">and WRITE_DAC unless restricted by MIC</text>
+<rect x="566.0" y="229.5" width="292.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="580.0" y="251.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">SACL (EVALUATED FIRST FOR MIC)</text>
+<text x="580.0" y="267.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SYSTEM_MANDATORY_LABEL_ACE +</text>
+<text x="580.0" y="283.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Audit ACEs</text>
+<text x="580.0" y="301.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Default No-Write-Up policy (0x1); missing</text>
+<text x="580.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">label defaults to Medium Integrity</text>
+<rect x="566.0" y="361.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="382.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">DACL (CANONICAL ORDER)</text>
+<text x="580.0" y="398.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Explicit Deny -&gt; Explicit Allow -&gt;</text>
+<text x="580.0" y="414.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Inherited</text>
+<text x="580.0" y="433.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">First-match accumulation over</text>
+<text x="580.0" y="447.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">RequestedAccess bits; NULL DACL != Empty</text>
+<text x="580.0" y="461.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">DACL</text>
+<text x="450.0" y="526.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Mandatory Integrity Control (SACL label) executes BEFORE the DACL walk: Low IL cannot write a Medium object even if DACL grants Everyone Full</text>
+<text x="450.0" y="541.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Control.</text>
+<line x1="340.5" y1="281.3" x2="559.5" y2="281.3" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="566.0,281.3 557.5,277.3 557.5,285.3" fill="#b07926"/>
+<polygon points="334.0,281.3 342.5,285.3 342.5,277.3" fill="#b07926"/>
+<line x1="340.5" y1="419.9" x2="559.5" y2="419.9" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,419.9 557.5,415.9 557.5,423.9" fill="#236b66"/>
+<polygon points="334.0,419.9 342.5,423.9 342.5,415.9" fill="#236b66"/>
+<rect x="380.7" y="49.0" width="138.6" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">SRM Reference Monitor</text>
+<rect x="396.7" y="271.9" width="106.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="283.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">Gate 1: MIC check</text>
+<rect x="393.2" y="410.5" width="113.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="422.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">Gate 2: DACL walk</text>
 </svg>

@@ -21,8 +21,8 @@ def generate_part2(diag_dir: str):
             "theme": "green",
             "cards": [
                 {"tag": "Identity & Groups", "title": "User SID + Group SIDs + Logon SID", "body": "Primary or impersonation token attached to calling thread/process", "theme": "white"},
-                {"tag": "Capabilities", "title": "Privileges & Restricted / AppContainer SIDs", "body": "SeDebugPrivilege, SeImpersonatePrivilege, SeBackupPrivilege; LPAC capabilities", "theme": "white"},
-                {"tag": "Mandatory Label", "title": "Token Integrity Level (S-1-16-xxxx)", "body": "Untrusted (0x0000), Low (0x1000), Medium (0x2000), High (0x3000), System (0x4000)", "theme": "teal"},
+                {"tag": "Mandatory Label (Checked First)", "title": "Token Integrity Level (S-1-16-xxxx)", "body": "Untrusted (0x0000), Low (0x1000), Medium (0x2000), High (0x3000), System (0x4000)", "theme": "teal"},
+                {"tag": "Capabilities & Sandbox", "title": "Privileges & Restricted / AppContainer SIDs", "body": "SeDebugPrivilege, SeImpersonatePrivilege, SeBackupPrivilege; LPAC capabilities", "theme": "white"},
             ],
         },
         right={
@@ -34,7 +34,10 @@ def generate_part2(diag_dir: str):
                 {"tag": "DACL (Canonical Order)", "title": "Explicit Deny -> Explicit Allow -> Inherited", "body": "First-match accumulation over RequestedAccess bits; NULL DACL != Empty DACL", "theme": "white"},
             ],
         },
-        bridges=[(2, 1, "both", "SeAccessCheck", "red")],
+        bridges=[
+            (1, 1, "both", "Gate 1: MIC check", "amber"),
+            (2, 2, "both", "Gate 2: DACL walk", "teal"),
+        ],
         boundary_label="SRM Reference Monitor",
         footer="Mandatory Integrity Control (SACL label) executes BEFORE the DACL walk: Low IL cannot write a Medium object even if DACL grants Everyone Full Control."
     )
@@ -484,6 +487,7 @@ def generate_part2(diag_dir: str):
             ("prov", "ring", "hot-path copy", "teal", False),
             ("prov", "evtx", "channel match", "amber", False),
             ("ring", "sub", "OpenTrace + ProcessTrace", "green", False),
+            ("evtx", "sub", "Event Log / SIEM", "amber", True),
         ],
         footer="ETW guarantees bounded producer latency by making delivery asynchronous and lossy under extreme consumer backpressure."
     )
@@ -618,33 +622,35 @@ def generate_part2(diag_dir: str):
     )
 
     # 62. Ch 18: 14-cae-design-space.svg
-    c = SvgCanvas(880, 490)
+    c = SvgCanvas(900, 490)
     y = c.add_header("Cloud Session Security Plane: Stale Authorization vs. Stolen Token Possession") + 14
-    top_banner_h = c.add_card(110.0, y, 710.0, tag="Orthogonal Edge Layer",
+    top_banner_h = c.add_card(112.0, y, 748.0, tag="Orthogonal Edge Layer",
                               title="Identity-Aware Reverse Proxies (Global Secure Access / IAP / Cloudflare)",
                               body="Terminate connections inline for proxied apps, whereas CAE & PoP operate inside native cloud APIs",
                               theme="stone", dashed=True, align="center", title_size=11.5, body_size=10.0)
-    ax_x, ax_y = 110.0, y + top_banner_h + 22.0
-    pw, ph = 710.0, 290.0
+    ax_x, ax_y = 112.0, y + top_banner_h + 22.0
+    pw, ph = 748.0, 290.0
     c.add_rect(ax_x, ax_y, pw, ph, fill="#faf8f5", stroke="#bfb8ad", rx=6, layer="bg")
-    c.add_line(ax_x + pw / 2, ax_y, ax_x + pw / 2, ax_y + ph, color="#cbd5e1", width=1.4, dash="5,4", layer="bg")
-    c.add_line(ax_x, ax_y + ph / 2, ax_x + pw, ax_y + ph / 2, color="#cbd5e1", width=1.4, dash="5,4", layer="bg")
+    c.add_line(ax_x + pw / 2, ax_y, ax_x + pw / 2, ax_y + ph, color="#cbd5e1", width=1.4, dash="5,4", layer="bg", is_connector=False)
+    c.add_line(ax_x, ax_y + ph / 2, ax_x + pw, ax_y + ph / 2, color="#cbd5e1", width=1.4, dash="5,4", layer="bg", is_connector=False)
 
-    cw, ch = pw / 2 - 54.0, ph / 2 - 32.0
-    c.add_card(ax_x + 20, ax_y + 16, cw, h=ch, tag="Push + Cached O(1)",
+    cw, ch = (pw - 36.0 - 116.0) / 2, ph / 2 - 32.0
+    lx_card = ax_x + 18.0
+    rx_card = ax_x + pw - 18.0 - cw
+    c.add_card(lx_card, ax_y + 16, cw, h=ch, tag="Push + Cached O(1)",
                title="Microsoft CAE & OpenID SSF/CAEP 1.0", body="Revokes legitimately issued tokens within minutes of state/risk change",
                theme="green", align="center", title_size=11.5, body_size=10.0)
-    c.add_card(ax_x + pw / 2 + 34, ax_y + 16, cw, h=ch, tag="Cryptographic Binding",
+    c.add_card(rx_card, ax_y + 16, cw, h=ch, tag="Cryptographic Binding",
                title="Entra Token Protection, DPoP (RFC 9449), & mTLS", body="Requires TPM/client private-key proof so stolen bearer tokens fail replay",
                theme="teal", align="center", title_size=11.5, body_size=10.0)
-    c.add_line(ax_x + 20 + cw, ax_y + 16 + ch / 2, ax_x + pw / 2 + 34, ax_y + 16 + ch / 2,
+    c.add_line(lx_card + cw, ax_y + 16 + ch / 2, rx_card, ax_y + 16 + ch / 2,
                color="#2b6a4c", width=1.6, dash="4,3", arrow_start=True, arrow_end=True,
-               label="compose", label_color="#2b6a4c")
+               label="compose", label_pos=0.50, label_color="#2b6a4c")
 
-    c.add_card(ax_x + 20, ax_y + ph / 2 + 16, cw, h=ch, tag="Poll / Static Expiry",
+    c.add_card(lx_card, ax_y + ph / 2 + 16, cw, h=ch, tag="Poll / Static Expiry",
                title="RFC 7662 /introspect & Short Lifetimes", body="Introspection bottlenecks hyperscale IdPs; short TTLs amplify refresh load",
                theme="amber", align="center", title_size=11.5, body_size=10.0)
-    c.add_card(ax_x + pw / 2 + 34, ax_y + ph / 2 + 16, cw, h=ch, tag="Default RFC 6749",
+    c.add_card(rx_card, ax_y + ph / 2 + 16, cw, h=ch, tag="Default RFC 6749",
                title="Unbound Bearer Access Tokens", body="Any party who copies the token string authenticates until expiry/revocation",
                theme="red", dashed=True, align="center", title_size=11.5, body_size=10.0)
 
@@ -665,67 +671,68 @@ def generate_part2(diag_dir: str):
             "label": "Hardware Memory Protection Stack",
             "theme": "green",
             "cards": [
-                {"tag": "Inside TEE · VMPL2 / L2 TD", "title": "Windows Server Guest (VTL0 Kernel | VTL1 VBS + LsaIso)", "body": "VTL1 still isolates Credential Guard & HVCI from a compromised guest VTL0 kernel", "theme": "green", "in_arrow": True},
-                {"tag": "Inside TEE · VMPL0 / L1 TD", "title": "OpenHCL Rust Paravisor + Synthesized vTPM", "body": "Mediates shared I/O bounce buffers and hosts per-VM vTPM inside encrypted RAM", "theme": "teal", "in_edge": "synthetic devices + vTPM"},
-                {"tag": "Outside Memory TCB (Untrusted Host)", "title": "Azure Hyper-V Host VMM (Sees Ciphertext Only)", "body": "Schedules vCPUs; blocked from reading or remapping private pages by RMP / PAMT", "theme": "red", "dashed": True, "in_edge": "CONFIDENTIALITY BOUNDARY"},
-                {"tag": "Silicon Root of Trust", "title": "AMD SEV-SNP (AMD-SP + RMP) / Intel TDX (SEAM + PAMT)", "body": "Inline AES memory encryption + hardware page-ownership tables + VCEK / DCAP signing", "theme": "slate", "in_edge": "enforced by silicon"},
+                {"tag": "Silicon Root of Trust", "title": "AMD SEV-SNP (AMD-SP + RMP) / Intel TDX (SEAM + PAMT)", "body": "Inline AES memory encryption + hardware page-ownership tables + VCEK / DCAP signing", "theme": "slate"},
+                {"tag": "Outside Memory TCB (Untrusted Host)", "title": "Azure Hyper-V Host VMM (Sees Ciphertext Only)", "body": "Schedules vCPUs; blocked from reading or remapping private pages by RMP / PAMT", "theme": "red", "dashed": True, "in_edge": "blocks host reads", "in_dir": "up"},
+                {"tag": "Inside TEE · VMPL0 / L1 TD", "title": "OpenHCL Rust Paravisor + Synthesized vTPM", "body": "Mediates shared I/O bounce buffers and hosts per-VM vTPM inside encrypted RAM", "theme": "teal", "in_edge": "CONFIDENTIALITY BOUNDARY", "in_dir": "up"},
+                {"tag": "Inside TEE · VMPL2 / L2 TD", "title": "Windows Server Guest (VTL0 Kernel | VTL1 VBS + LsaIso)", "body": "VTL1 still isolates Credential Guard & HVCI from a compromised guest VTL0 kernel", "theme": "green", "in_edge": "synthetic devices + vTPM", "in_dir": "up"},
             ],
         },
         right={
             "label": "RATS Passport Attestation & Key Release",
             "theme": "purple",
             "cards": [
-                {"tag": "1 · Hardware + Boot Evidence", "title": "SNP_REPORT / TD Quote + OpenHCL vTPM Quote", "body": "Signed by AMD VCEK or Intel Quoting Enclave over launch digest, PCR[7], & nonce", "theme": "white", "in_arrow": True},
+                {"tag": "1 · Hardware + Boot Evidence", "title": "SNP_REPORT / TD Quote + OpenHCL vTPM Quote", "body": "Signed by AMD VCEK or Intel Quoting Enclave over launch digest, PCR[7], & nonce", "theme": "white"},
                 {"tag": "2 · Verifier (Policy v1.2)", "title": "Microsoft Azure Attestation (MAA)", "body": "Checks TEE type, golden measurement, Secure Boot, VBS, & TCB SVN in authorizationrules", "theme": "purple", "in_edge": "evaluates evidence"},
                 {"tag": "3 · Attestation Result", "title": "Signed MAA JWT (sevsnpvm / tdxvm)", "body": "Carries verified runtime, compliance, and TCB claims", "theme": "amber", "in_edge": "mints signed JWT"},
                 {"tag": "4 · Relying Party (SKR)", "title": "Azure Key Vault / Managed HSM", "body": "Executes Secure Key Release to unwrap OS-disk / workload keys into CVM", "theme": "green", "in_edge": "releases HSM key"},
             ],
         },
         bridges=[
-            (1, 0, "lr", "vTPM + TEE quote", "teal"),
-            (0, 3, "rl", "unwrapped key", "green"),
+            (0, 0, "lr", "TEE + vTPM quote", "teal"),
+            (3, 3, "rl", "unwrapped key", "green"),
         ],
         footer="VMPL / TD partitioning excludes the cloud host; VBS VTL1 excludes the guest kernel; MAA authorizationrules bind both to HSM key release."
     )
 
     # 64. Ch 19: 29-confidential-vms-attack-rings.svg
-    c = SvgCanvas(880, 500)
+    c = SvgCanvas(900, 500)
     y = c.add_header("Confidential VM Attack Surface: Intact RMP/PAMT Core vs. Outer Architectural Seams",
                      "None of the 2024 attacks broke inline AES or RMP/PAMT; every exploit targeted surrounding notification, cache, or policy seams") + 12
-    cx, cy = 440.0, y + 195.0
+    cx, cy = 450.0, y + 196.0
     rings = [
-        (178.0, "#f4f1ea", "#8c857b", "Ring 4 · Relying-Party Policy"),
-        (134.0, "#efeaf7", "#5c4282", "Ring 3 · Firmware & TCB SVN"),
-        (90.0,  "#f9f1e1", "#b07926", "Ring 2 · Exit & Interrupt Seams"),
-        (46.0,  "#e6f4ec", "#2b6a4c", "RMP / PAMT"),
+        (176.0, "#f4f1ea", "#8c857b", "Ring 4 · Relying-Party Policy"),
+        (132.0, "#efeaf7", "#5c4282", "Ring 3 · Firmware & TCB SVN"),
+        (88.0,  "#f9f1e1", "#b07926", "Ring 2 · Exit & Interrupt Seams"),
+        (44.0,  "#e6f4ec", "#2b6a4c", "RMP / PAMT"),
     ]
     for r, fill, stroke, lbl in rings:
         c.add_circle(cx, cy, r, fill=fill, stroke=stroke, stroke_width=1.5, layer="bg")
         if r > 50:
-            c.add_pill_label(cx, cy - r + 15.0, lbl, size=9.2, color=stroke, bg="#ffffff", border=stroke, bold=True)
+            c.add_pill_label(cx, cy - r + 15.0, lbl, size=9.2, color=stroke, bg="#ffffff",
+                             border=stroke, bold=True, allow_card_touch=True)
         else:
             c.add_text(cx, cy - 3.0, "RMP / PAMT", size=9.8, fill="#1e5139", bold=True, anchor="middle")
             c.add_text(cx, cy + 11.0, "Core Intact", size=9.0, fill="#1e5139", anchor="middle")
 
-    # Four corner attack callout cards connecting cleanly at 45-degree diagonals (zero crossing of top labels!)
-    cw = 224.0
+    # Four corner attack callouts aligned horizontally with exact ring boundary points!
+    cw = 230.0
     corners = [
-        # (card_x, card_y, ring_radius, angle_deg, tag, title, body)
-        (24.0,  y + 20.0, 178.0, 210.0, "Policy Seam", "MAA issuancerules Bug", "Putting gates in issuancerules or omitting GPU quote check"),
-        (632.0, y + 20.0,  90.0, 330.0, "CVE-2024-25742", "WeSee (#VC Injection)", "Spoofed #VC traps trick SEV-SNP guest handler into leaking keys"),
-        (24.0,  y + 275.0, 134.0, 150.0, "CVE-2023-20592 · Glitch", "CacheWarp & One Glitch", "INVD drops dirty cache writes; physical glitching hits AMD-SP"),
-        (632.0, y + 275.0,  90.0,  30.0, "CVE-2024-25743 / 25744", "Heckler (Interrupts)", "Injected int 0x80 / signal vectors corrupt TDX & SEV-SNP flow"),
+        # (card_x, mid_y_offset, ring_radius, tag, title, body)
+        (24.0,  -92.0, 176.0, "Policy Seam", "MAA issuancerules Bug", "Putting gates in issuancerules or omitting GPU quote check"),
+        (646.0, -52.0,  88.0, "CVE-2024-25742", "WeSee (#VC Injection)", "Spoofed #VC traps trick SEV-SNP guest handler into leaking keys"),
+        (24.0,  +86.0, 132.0, "CVE-2023-20592 · Glitch", "CacheWarp & One Glitch", "INVD drops dirty cache writes; physical glitching hits AMD-SP"),
+        (646.0, +52.0,  88.0, "CVE-2024-25743 / 25744", "Heckler (Interrupts)", "Injected int 0x80 / signal vectors corrupt TDX & SEV-SNP flow"),
     ]
-    for bx, by, rad, deg, tag, ti, bo in corners:
-        bh = c.add_card(bx, by, cw, tag=tag, title=ti, body=bo, theme="red", title_size=11.2, body_size=9.8)
-        rad_ang = math.radians(deg)
-        # Note: screen y grows downward; angles: 210=upper-left? Wait: cos(210)<0, sin(210)<0 -> upper-left!
-        # 330: cos>0, sin<0 -> upper-right! 150: cos<0, sin>0 -> lower-left! 30: cos>0, sin>0 -> lower-right!
-        tx = cx + rad * math.cos(rad_ang)
-        ty = cy + rad * math.sin(rad_ang)
-        sx = (bx + cw) if bx < cx else bx
-        sy = by + bh / 2
-        c.add_line(sx, sy, tx, ty, color="#8d2d3b", width=1.5, dash="4,3", arrow_end=True)
+    for bx, dy_off, rad, tag, ti, bo in corners:
+        bh = SvgCanvas.measure_card_height(cw, tag=tag, title=ti, body=bo, title_size=11.2, body_size=9.8)
+        sy = cy + dy_off
+        by = sy - bh / 2
+        c.add_card(bx, by, cw, h=bh, tag=tag, title=ti, body=bo, theme="red", title_size=11.2, body_size=9.8)
+        dx_ring = math.sqrt(rad * rad - dy_off * dy_off)
+        if bx < cx:
+            c.add_line(bx + cw, sy, cx - dx_ring, sy, color="#8d2d3b", width=1.5, dash="4,3", arrow_end=True)
+        else:
+            c.add_line(bx, sy, cx + dx_ring, sy, color="#8d2d3b", width=1.5, dash="4,3", arrow_end=True)
 
     c.height = y + 408.0
     c.save(P("29-confidential-vms-attack-rings.svg"))

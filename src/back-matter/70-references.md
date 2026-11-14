@@ -180,7 +180,7 @@
 178. Alex Ionescu, "Battle of the SKM and IUM: How Windows 10 Rewrites OS Architecture". 2015. [https://github.com/tpn/pdfs/blob/master/Battle%20of%20SKM%20and%20IUM%20-%20How%20Windows%2010%20Rewrites%20OS%20Architecture%20-%20Alex%20Ionescu%20-%202015%20(blackhat2015)](https://github.com/tpn/pdfs/blob/master/Battle%20of%20SKM%20and%20IUM%20-%20How%20Windows%2010%20Rewrites%20OS%20Architecture%20-%20Alex%20Ionescu%20-%202015%20(blackhat2015)).pdf. accessed 2026-05-10. Black Hat USA 2015 PDF mirror.
 179. "Isolated User Mode (IUM) Processes". <https://learn.microsoft.com/en-us/windows/win32/procthread/isolated-user-mode--ium--processes>. accessed 2026-05-10. Microsoft Win32 SDK documentation.
 180. Andrea Allievi, Mark E. Russinovich, Alex Ionescu, David A. Solomon, "Windows Internals, Seventh Edition, Part 2". Microsoft Press. 2021. Chapter 9: Management mechanisms, trustlet architecture reference. ISBN 978-0135462409.
-181. Alex Ionescu, "The Evolution of Protected Processes Part 3: Windows PKI Internals (Signing Levels, Scenarios, Signers, Root Keys, EKUs & Runtime Signers)". <https://web.archive.org/web/2023/http://www.alex-ionescu.com/?p=146.> accessed 2026-05-10. Wayback Machine snapshot; original alex-ionescu.com offline.
+181. Alex Ionescu, "The Evolution of Protected Processes Part 3: Windows PKI Internals (Signing Levels, Scenarios, Signers, Root Keys, EKUs & Runtime Signers)". <https://web.archive.org/web/2023/http://www.alex-ionescu.com/?p=146> accessed 2026-05-10. Wayback Machine snapshot; original alex-ionescu.com offline.
 182. "How Credential Guard works". <https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/how-it-works>. accessed 2026-05-10.
 183. *Enable virtualization-based protection of code integrity* (2026-05-10). Microsoft Learn. <https://learn.microsoft.com/en-us/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity>
 184. "Guarded Fabric and Shielded VMs Overview". <https://learn.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms>. accessed 2026-05-10.
@@ -193,7 +193,7 @@
 191. *CVE-2021-28476 (Windows Hyper-V Remote Code Execution)* (2026-05-10). NIST National Vulnerability Database. <https://nvd.nist.gov/vuln/detail/CVE-2021-28476>
 192. *CVE-2025-21333 (Windows Hyper-V NT Kernel Integration VSP EoP)* (2026-05-10). NIST National Vulnerability Database. <https://nvd.nist.gov/vuln/detail/CVE-2025-21333>
 193. Oliver Lyak, “PassTheChallenge.” <https://raw.githubusercontent.com/ly4k/PassTheChallenge/main/README.md>
-194. Oliver Lyak, "Pass-the-Challenge: Defeating Windows Defender Credential Guard". 2022. <https://web.archive.org/web/20231217204121/https://research.ifcr.dk/pass-the-challenge-defeating-windows-defender-credential-guard-31a892eee22.> accessed 2026-05-10. Wayback Machine snapshot; original returns 403 to non-browser agents.
+194. Oliver Lyak, "Pass-the-Challenge: Defeating Windows Defender Credential Guard". 2022. <https://web.archive.org/web/20231217204121/https://research.ifcr.dk/pass-the-challenge-defeating-windows-defender-credential-guard-31a892eee22> accessed 2026-05-10. Wayback Machine snapshot; original returns 403 to non-browser agents.
 195. *CVE-2024-21407 (Windows Hyper-V Remote Code Execution / UAF)* (2026-05-10). NIST National Vulnerability Database. <https://nvd.nist.gov/vuln/detail/CVE-2024-21407>
 196. *CVE-2024-30092 (Windows Hyper-V Remote Code Execution)* (2026-05-10). NIST National Vulnerability Database. <https://nvd.nist.gov/vuln/detail/CVE-2024-30092>
 197. *CVE-2024-49117 (Windows Hyper-V Remote Code Execution)* (2026-05-10). NIST National Vulnerability Database. <https://nvd.nist.gov/vuln/detail/CVE-2024-49117>
@@ -345,7 +345,7 @@
 343. Ivan Fratric. *Bypassing Mitigations by Attacking JIT Server in Microsoft Edge* (2018). <https://projectzero.google/2018/05/bypassing-mitigations-by-attacking-jit.html>
 344. Samuel Gross. *The V8 Sandbox* (2024). <https://v8.dev/blog/sandbox>
 345. Arm Ltd. *Memory safety: Arm Memory Tagging Extension*. <https://newsroom.arm.com/blog/memory-safety-arm-memory-tagging-extension>
-346. Hong Hu, Shweta Shinde, Sendroiu Adrian, Zheng Leong Chua, Prateek Saxena, Zhenkai Liang. *Data-Oriented Programming: On the Expressiveness of Non-Control Data Attacks* (2016). <https://huhong789.github.io/papers/hu:dop.pdf>
+346. Hong Hu, Shweta Shinde, Sendroiu Adrian, Zheng Leong Chua, Prateek Saxena, Zhenkai Liang. *Data-Oriented Programming: On the Expressiveness of Non-Control Data Attacks* (2016). <https://huhong789.github.io/papers/hu_dop.pdf>
 347. *Exploit protection reference (Microsoft Defender)*. <https://learn.microsoft.com/en-us/defender-endpoint/exploit-protection-reference>
 348. Butler Lampson. *Protection* (1971). <http://bwlampson.site/08-Protection/WebPage.html>: Access-matrix model; the formal substrate Windows tokens instantiate.
 349. NIST Computer Security Resource Center. *DoD Rainbow Series*. 1985. <https://csrc.nist.gov/pubs/other/1985/12/26/dod-rainbow-series/final>.

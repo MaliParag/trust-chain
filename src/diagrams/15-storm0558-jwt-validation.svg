@@ -1,49 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 808" width="760" height="808">
-<rect x="0" y="0" width="760" height="808" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 822" width="760" height="822">
+<rect x="0" y="0" width="760" height="822" fill="#ffffff"/>
 <text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">RFC 8725 JWT VALIDATION PIPELINE: WHERE OWA / EXCHANGE ONLINE SNAPPED</text>
-<rect x="150.0" y="48.0" width="460.0" height="73.3" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="164.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 1 · HEADER PARSE</text>
-<text x="164.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Read JWT Header (alg = RS256, kid = 2016 MSA Key)</text>
-<text x="164.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Restricts algorithm family and extracts key identifier</text>
-<rect x="150.0" y="147.3" width="460.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="164.0" y="168.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 2 · CONVERGED METADATA</text>
-<text x="164.0" y="184.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Fetch Public Keys from Common 2018 Metadata Endpoint</text>
-<text x="164.0" y="203.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Endpoint publishes keys for both Consumer MSA and Enterprise Entra ID</text>
-<text x="164.0" y="217.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">apps</text>
-<rect x="150.0" y="260.8" width="460.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="164.0" y="282.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 3 · KEY LOOKUP</text>
-<text x="164.0" y="298.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Match Header kid -&gt; 2016 MSA Public Key</text>
-<text x="164.0" y="316.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">7-year-old key remained active because manual MSA rotation paused after</text>
-<text x="164.0" y="331.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">a 2021 outage</text>
-<rect x="150.0" y="374.3" width="460.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="164.0" y="395.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 4 · SIGNATURE CHECK</text>
-<text x="164.0" y="411.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Verify RS256 Signature Over Header.Payload</text>
-<text x="164.0" y="430.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Cryptographically VALID: token genuinely signed by the stolen 2016 MSA</text>
-<text x="164.0" y="444.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">private key</text>
-<rect x="150.0" y="507.8" width="460.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="164.0" y="529.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STEP 5 · RFC 8725 §§3.8-3.9 (OMITTED IN 2022 MAIL PATH)</text>
-<text x="164.0" y="545.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Enforce iss == Enterprise Tenant GUID &amp; aud == Exchange</text>
-<text x="164.0" y="561.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Online</text>
-<text x="164.0" y="580.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Consumer MSA iss (9188040d-...) was NEVER authorized for State Dept</text>
-<text x="164.0" y="594.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">enterprise mailboxes, but caller omitted check</text>
-<rect x="150.0" y="637.3" width="460.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
-<text x="164.0" y="658.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">IMPACT</text>
-<text x="164.0" y="674.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Forged Consumer-Signed Token Granted Enterprise Mailbox</text>
-<text x="164.0" y="690.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Access</text>
-<text x="164.0" y="709.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Signature authenticity was mistaken for cross-realm tenant</text>
-<text x="164.0" y="723.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">authorization</text>
-<text x="380.0" y="764.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Under EUF-CMA, signature verification proves only which key signed the bytes; Step 5 determines whether that key has</text>
-<text x="380.0" y="779.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">authority here.</text>
-<line x1="380.0" y1="121.3" x2="380.0" y2="140.8" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,147.3 383.8,139.3 376.2,139.3" fill="#4a5568"/>
-<line x1="380.0" y1="234.8" x2="380.0" y2="254.3" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,260.8 383.8,252.8 376.2,252.8" fill="#4a5568"/>
-<line x1="380.0" y1="348.3" x2="380.0" y2="367.8" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,374.3 383.8,366.3 376.2,366.3" fill="#4a5568"/>
-<line x1="380.0" y1="461.8" x2="380.0" y2="501.3" stroke="#8d2d3b" stroke-width="1.5"/>
-<polygon points="380.0,507.8 383.8,499.8 376.2,499.8" fill="#8d2d3b"/>
-<line x1="380.0" y1="611.3" x2="380.0" y2="630.8" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,637.3 383.8,629.3 376.2,629.3" fill="#4a5568"/>
-<rect x="315.9" y="475.3" width="128.2" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="486.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">SKIPPED BY CALLER</text>
+<rect x="145.0" y="48.0" width="470.0" height="73.3" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 1 · HEADER PARSE</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Read JWT Header (alg = RS256, kid = 2016 MSA Key)</text>
+<text x="159.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Restricts algorithm family and extracts key identifier</text>
+<rect x="145.0" y="151.3" width="470.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="172.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 2 · CONVERGED METADATA</text>
+<text x="159.0" y="188.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Fetch Public Keys from Common 2018 Metadata Endpoint</text>
+<text x="159.0" y="207.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Endpoint publishes keys for both Consumer MSA and Enterprise Entra ID</text>
+<text x="159.0" y="221.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">apps</text>
+<rect x="145.0" y="268.8" width="470.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="159.0" y="290.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 3 · KEY LOOKUP</text>
+<text x="159.0" y="306.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Match Header kid -&gt; 2016 MSA Public Key</text>
+<text x="159.0" y="324.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">7-year-old key remained active because manual MSA rotation paused after a</text>
+<text x="159.0" y="339.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">2021 outage</text>
+<rect x="145.0" y="386.3" width="470.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="407.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 4 · SIGNATURE CHECK</text>
+<text x="159.0" y="423.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Verify RS256 Signature Over Header.Payload</text>
+<text x="159.0" y="442.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Cryptographically VALID: token genuinely signed by the stolen 2016 MSA</text>
+<text x="159.0" y="456.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">private key</text>
+<rect x="145.0" y="531.8" width="470.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="159.0" y="553.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STEP 5 · RFC 8725 §§3.8-3.9 (OMITTED IN 2022 MAIL PATH)</text>
+<text x="159.0" y="569.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Enforce iss == Enterprise Tenant GUID &amp; aud == Exchange</text>
+<text x="159.0" y="585.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Online</text>
+<text x="159.0" y="604.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Consumer MSA iss (9188040d-...) was NEVER authorized for State Dept</text>
+<text x="159.0" y="618.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">enterprise mailboxes, but caller omitted check</text>
+<rect x="145.0" y="665.3" width="470.0" height="89.3" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="159.0" y="686.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">IMPACT</text>
+<text x="159.0" y="702.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Forged Consumer-Signed Token Granted Enterprise Mailbox</text>
+<text x="159.0" y="718.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Access</text>
+<text x="159.0" y="737.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Signature authenticity was mistaken for cross-realm tenant authorization</text>
+<text x="380.0" y="778.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Under EUF-CMA, signature verification proves only which key signed the bytes; Step 5 determines whether that key has</text>
+<text x="380.0" y="793.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">authority here.</text>
+<line x1="380.0" y1="121.3" x2="380.0" y2="144.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,151.3 384.0,142.8 376.0,142.8" fill="#4a5568"/>
+<line x1="380.0" y1="238.8" x2="380.0" y2="262.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,268.8 384.0,260.3 376.0,260.3" fill="#4a5568"/>
+<line x1="380.0" y1="356.3" x2="380.0" y2="379.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,386.3 384.0,377.8 376.0,377.8" fill="#4a5568"/>
+<line x1="380.0" y1="473.8" x2="380.0" y2="525.3" stroke="#8d2d3b" stroke-width="1.5"/>
+<polygon points="380.0,531.8 384.0,523.3 376.0,523.3" fill="#8d2d3b"/>
+<line x1="380.0" y1="635.3" x2="380.0" y2="658.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,665.3 384.0,656.8 376.0,656.8" fill="#4a5568"/>
+<rect x="317.0" y="489.9" width="126.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="501.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">SKIPPED BY CALLER</text>
 </svg>

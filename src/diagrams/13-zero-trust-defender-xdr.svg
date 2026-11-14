@@ -1,46 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 443" width="900" height="443">
-<rect x="0" y="0" width="900" height="443" fill="#ffffff"/>
-<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">MICROSOFT DEFENDER XDR CROSS-DOMAIN SIGNAL COMPOSITION PLANE</text>
-<rect x="26.0" y="52.0" width="198.5" height="84.1" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 429" width="920" height="429">
+<rect x="0" y="0" width="920" height="429" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">MICROSOFT DEFENDER XDR CROSS-DOMAIN SIGNAL COMPOSITION PLANE</text>
+<rect x="26.0" y="52.0" width="203.5" height="84.1" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
 <text x="40.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">ENDPOINTS</text>
 <text x="40.0" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Defender for Endpoint</text>
 <text x="40.0" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">ETW / EtwTi, process trees</text>
 <text x="40.0" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">(w3wp-&gt;cmd), device risk</text>
-<rect x="242.5" y="52.0" width="198.5" height="84.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="256.5" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">ON-PREMISES AD</text>
-<text x="256.5" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Defender for Identity</text>
-<text x="256.5" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">DC 4662 DCSync SACLs,</text>
-<text x="256.5" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Kerberos &amp; AD FS anomalies</text>
-<rect x="459.0" y="52.0" width="198.5" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="473.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CLOUD SESSIONS</text>
-<text x="473.0" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Defender for Cloud Apps</text>
-<text x="473.0" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">OAuth/SAML token anomalies &amp;</text>
-<text x="473.0" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">mass exfiltration</text>
-<rect x="675.5" y="52.0" width="198.5" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="689.5" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">COLLABORATION</text>
-<text x="689.5" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Defender for Office 365</text>
-<text x="689.5" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Phishing links, payload</text>
-<text x="689.5" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">detonation, BEC signals</text>
-<rect x="160.0" y="174.1" width="580.0" height="87.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
-<text x="450.0" y="195.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="middle">UNIFIED CORRELATION PLANE</text>
-<text x="450.0" y="211.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Shared KQL Hunting Schema &amp; Cross-Domain Incident Graph</text>
-<text x="450.0" y="230.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Fuses endpoint, AD, AD FS, and cloud-token alerts from one intrusion into a single correlated</text>
-<text x="450.0" y="244.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">incident</text>
-<rect x="160.0" y="315.6" width="580.0" height="73.3" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
-<text x="450.0" y="337.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="middle">AUTOMATED RESPONSE -&gt; ZERO TRUST PDP</text>
-<text x="450.0" y="353.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Elevates Device / User Risk -&gt; Conditional Access &amp; CAE Revoke Access</text>
-<text x="450.0" y="371.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Contains compromised hosts or identities across cloud resources automatically</text>
-<text x="450.0" y="414.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Supply-chain campaigns (SUNBURST) span build server -&gt; AD -&gt; AD FS -&gt; M365; isolated single-plane sensors see only fragments.</text>
-<polyline points="125.2,136.1 125.2,151.6 450.0,151.6 450.0,167.6" fill="none" stroke="#365378" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="450.0,174.1 453.8,166.1 446.2,166.1" fill="#365378"/>
-<polyline points="341.8,136.1 341.8,155.1 450.0,155.1 450.0,167.6" fill="none" stroke="#236b66" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="450.0,174.1 453.8,166.1 446.2,166.1" fill="#236b66"/>
-<polyline points="558.2,136.1 558.2,158.6 450.0,158.6 450.0,167.6" fill="none" stroke="#2b6a4c" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="450.0,174.1 453.8,166.1 446.2,166.1" fill="#2b6a4c"/>
-<polyline points="774.8,136.1 774.8,151.6 450.0,151.6 450.0,167.6" fill="none" stroke="#b07926" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="450.0,174.1 453.8,166.1 446.2,166.1" fill="#b07926"/>
-<line x1="450.0" y1="261.6" x2="450.0" y2="309.1" stroke="#8d2d3b" stroke-width="1.5"/>
-<polygon points="450.0,315.6 453.8,307.6 446.2,307.6" fill="#8d2d3b"/>
-<rect x="405.6" y="279.1" width="88.8" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="450.0" y="290.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">risk elevation</text>
+<rect x="247.5" y="52.0" width="203.5" height="84.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="261.5" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">ON-PREMISES AD</text>
+<text x="261.5" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Defender for Identity</text>
+<text x="261.5" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">DC 4662 DCSync SACLs,</text>
+<text x="261.5" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Kerberos &amp; AD FS anomalies</text>
+<rect x="469.0" y="52.0" width="203.5" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="483.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CLOUD SESSIONS</text>
+<text x="483.0" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Defender for Cloud Apps</text>
+<text x="483.0" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">OAuth/SAML token anomalies &amp;</text>
+<text x="483.0" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">mass exfiltration</text>
+<rect x="690.5" y="52.0" width="203.5" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="704.5" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">COLLABORATION</text>
+<text x="704.5" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Defender for Office 365</text>
+<text x="704.5" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Phishing links, payload</text>
+<text x="704.5" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">detonation, BEC signals</text>
+<rect x="26.0" y="170.1" width="868.0" height="73.0" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="460.0" y="191.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="middle">UNIFIED CORRELATION PLANE</text>
+<text x="460.0" y="207.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Shared KQL Hunting Schema &amp; Cross-Domain Incident Graph</text>
+<text x="460.0" y="226.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Fuses endpoint, AD, AD FS, and cloud-token alerts from one intrusion into a single correlated incident</text>
+<rect x="26.0" y="301.1" width="868.0" height="73.0" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="460.0" y="322.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="middle">AUTOMATED RESPONSE -&gt; ZERO TRUST PDP</text>
+<text x="460.0" y="338.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Elevates Device / User Risk -&gt; Conditional Access &amp; CAE Revoke Access</text>
+<text x="460.0" y="357.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Contains compromised hosts or identities across cloud resources automatically</text>
+<text x="460.0" y="400.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Supply-chain campaigns (SUNBURST) span build server -&gt; AD -&gt; AD FS -&gt; M365; isolated single-plane sensors see only fragments.</text>
+<line x1="127.8" y1="136.1" x2="127.8" y2="163.6" stroke="#365378" stroke-width="1.6"/>
+<polygon points="127.8,170.1 131.8,161.6 123.8,161.6" fill="#365378"/>
+<line x1="349.2" y1="136.1" x2="349.2" y2="163.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="349.2,170.1 353.2,161.6 345.2,161.6" fill="#236b66"/>
+<line x1="570.8" y1="136.1" x2="570.8" y2="163.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="570.8,170.1 574.8,161.6 566.8,161.6" fill="#2b6a4c"/>
+<line x1="792.2" y1="136.1" x2="792.2" y2="163.6" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="792.2,170.1 796.2,161.6 788.2,161.6" fill="#b07926"/>
+<line x1="460.0" y1="243.1" x2="460.0" y2="294.6" stroke="#8d2d3b" stroke-width="1.6"/>
+<polygon points="460.0,301.1 464.0,292.6 456.0,292.6" fill="#8d2d3b"/>
+<rect x="416.3" y="259.2" width="87.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="270.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">risk elevation</text>
 </svg>

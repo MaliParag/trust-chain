@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "summary": "node tools/gen-summary.mjs",
+    "diagrams": "python3 tools/gen_diagrams.py",
+    "covers": "python3 tools/gen_covers.py",
+    "pdf": "node tools/build-pdf.mjs"
+  },
   "dependencies": {
     "katex": "^0.17.0"
   }

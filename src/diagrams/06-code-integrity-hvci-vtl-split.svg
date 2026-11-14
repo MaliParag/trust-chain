@@ -1,53 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 505" width="880" height="505">
-<rect x="0" y="0" width="880" height="505" fill="#ffffff"/>
-<rect x="28.0" y="70.0" width="324.0" height="265.3" rx="8.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="190.0" y="92.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#875a14" text-anchor="middle">VTL0 · NORMAL KERNEL</text>
-<rect x="528.0" y="70.0" width="324.0" height="265.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="690.0" y="92.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">VTL1 · SECURE KERNEL</text>
-<line x1="440.0" y1="66.0" x2="440.0" y2="339.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
-<text x="440.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CODE INTEGRITY SPLIT UNDER HVCI: CI.DLL (VTL0) VS. SKCI.DLL (VTL1)</text>
-<rect x="44.0" y="108.0" width="292.0" height="101.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="58.0" y="129.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">IMAGE LOADER</text>
-<text x="58.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">ntoskrnl.exe + ci.dll</text>
-<text x="58.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Requests section creation when loading</text>
-<text x="58.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">drivers or executables; cannot mark kernel</text>
-<text x="58.0" y="192.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">pages executable on its own</text>
-<rect x="44.0" y="229.8" width="292.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="58.0" y="251.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">KDP PROTECTED DATA</text>
-<text x="58.0" y="267.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">g_CiOptions Policy Variable</text>
-<text x="58.0" y="285.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Locked read-only in VTL0 SLAT via Kernel</text>
-<text x="58.0" y="300.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Data Protection so BYOVD cannot zero DSE</text>
-<rect x="544.0" y="108.0" width="292.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="558.0" y="129.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">AUTHORITATIVE VERIFIER</text>
-<text x="558.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">securekernel.exe + skci.dll</text>
-<text x="558.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Validates PE page hashes, KMCS root, WDAC</text>
-<text x="558.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SiPolicy.p7b, and Driver Blocklist inside VTL1</text>
-<rect x="544.0" y="215.5" width="292.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="558.0" y="237.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">SLAT W^X ENFORCEMENT</text>
-<text x="558.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Immutable Executable Pages</text>
-<text x="558.0" y="271.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Instructs hypervisor to grant SLAT Execute</text>
-<text x="558.0" y="285.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">only after stripping SLAT Write</text>
-<rect x="68.0" y="379.3" width="744.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="440.0" y="400.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">HARDWARE ENFORCEMENT</text>
-<text x="440.0" y="416.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Hyper-V SLAT (EPT / NPT + MBEC)</text>
-<text x="440.0" y="435.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Enforces W^X across all kernel physical frames and blocks VTL0 writes to g_CiOptions</text>
-<text x="440.0" y="476.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Pre-HVCI, DSE lived entirely in VTL0 RAM (defeated by zeroing g_CiOptions); HVCI moves the verdict and page permissions across SLAT.</text>
-<line x1="190.0" y1="209.8" x2="190.0" y2="223.3" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="190.0,229.8 193.8,221.8 186.2,221.8" fill="#4a5568"/>
-<line x1="690.0" y1="195.5" x2="690.0" y2="209.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="690.0,215.5 693.8,207.5 686.2,207.5" fill="#4a5568"/>
-<line x1="336.0" y1="155.3" x2="537.5" y2="155.3" stroke="#236b66" stroke-width="1.6"/>
-<polygon points="544.0,155.3 536.0,151.5 536.0,159.1" fill="#236b66"/>
-<line x1="190.0" y1="379.3" x2="190.0" y2="341.8" stroke="#875a14" stroke-width="1.5"/>
-<polygon points="190.0,335.3 186.2,343.3 193.8,343.3" fill="#875a14"/>
-<line x1="690.0" y1="379.3" x2="690.0" y2="341.8" stroke="#2b6a4c" stroke-width="1.5"/>
-<polygon points="690.0,335.3 686.2,343.3 693.8,343.3" fill="#2b6a4c"/>
-<rect x="374.9" y="47.0" width="130.2" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
-<text x="440.0" y="58.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">VTL0 / VTL1 Boundary</text>
-<rect x="368.0" y="145.8" width="144.0" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="440.0" y="157.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#236b66" text-anchor="middle">VMCALL: verify section</text>
-<rect x="113.2" y="347.8" width="153.6" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="190.0" y="359.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#875a14" text-anchor="middle">traps g_CiOptions writes</text>
-<rect x="628.9" y="347.8" width="122.3" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="690.0" y="359.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#2b6a4c" text-anchor="middle">programs EPT X-bit</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 533" width="900" height="533">
+<rect x="0" y="0" width="900" height="533" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="275.3" rx="8.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#875a14" text-anchor="middle">VTL0 · NORMAL KERNEL</text>
+<rect x="550.0" y="74.0" width="324.0" height="275.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">VTL1 · SECURE KERNEL</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="353.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CODE INTEGRITY SPLIT UNDER HVCI: CI.DLL (VTL0) VS. SKCI.DLL (VTL1)</text>
+<rect x="42.0" y="114.0" width="292.0" height="101.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">IMAGE LOADER</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">ntoskrnl.exe + ci.dll</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Requests section creation when loading</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">drivers or executables; cannot mark kernel</text>
+<text x="56.0" y="198.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">pages executable on its own</text>
+<rect x="42.0" y="243.8" width="292.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="56.0" y="265.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">KDP PROTECTED DATA</text>
+<text x="56.0" y="281.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">g_CiOptions Policy Variable</text>
+<text x="56.0" y="299.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Locked read-only in VTL0 SLAT via Kernel</text>
+<text x="56.0" y="314.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Data Protection so BYOVD cannot zero DSE</text>
+<rect x="566.0" y="114.0" width="292.0" height="101.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">AUTHORITATIVE VERIFIER</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">securekernel.exe + skci.dll</text>
+<text x="580.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Validates PE page hashes, KMCS root, WDAC</text>
+<text x="580.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SiPolicy.p7b, and Driver Blocklist inside VTL1</text>
+<rect x="566.0" y="243.8" width="292.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="580.0" y="265.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">SLAT W^X ENFORCEMENT</text>
+<text x="580.0" y="281.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Immutable Executable Pages</text>
+<text x="580.0" y="299.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Instructs hypervisor to grant SLAT Execute</text>
+<text x="580.0" y="314.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">only after stripping SLAT Write</text>
+<rect x="66.0" y="407.3" width="768.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="450.0" y="428.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">HARDWARE ENFORCEMENT</text>
+<text x="450.0" y="444.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Hyper-V SLAT (EPT / NPT + MBEC)</text>
+<text x="450.0" y="463.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Enforces W^X across all kernel physical frames and blocks VTL0 writes to g_CiOptions</text>
+<text x="450.0" y="504.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Pre-HVCI, DSE lived entirely in VTL0 RAM (defeated by zeroing g_CiOptions); HVCI moves the verdict and page permissions across SLAT.</text>
+<line x1="188.0" y1="215.8" x2="188.0" y2="237.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,243.8 192.0,235.3 184.0,235.3" fill="#4a5568"/>
+<line x1="712.0" y1="215.8" x2="712.0" y2="237.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,243.8 716.0,235.3 708.0,235.3" fill="#4a5568"/>
+<line x1="334.0" y1="164.9" x2="559.5" y2="164.9" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,164.9 557.5,160.9 557.5,168.9" fill="#236b66"/>
+<line x1="188.0" y1="407.3" x2="188.0" y2="355.8" stroke="#875a14" stroke-width="1.5"/>
+<polygon points="188.0,349.3 184.0,357.8 192.0,357.8" fill="#875a14"/>
+<line x1="712.0" y1="407.3" x2="712.0" y2="355.8" stroke="#2b6a4c" stroke-width="1.5"/>
+<polygon points="712.0,349.3 708.0,357.8 716.0,357.8" fill="#2b6a4c"/>
+<rect x="384.9" y="49.0" width="130.2" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">VTL0 / VTL1 Boundary</text>
+<rect x="370.0" y="155.5" width="141.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="167.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">VMCALL: verify section</text>
+<rect x="112.6" y="372.4" width="150.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="383.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#875a14" text-anchor="middle">traps g_CiOptions writes</text>
+<rect x="651.9" y="372.4" width="120.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="383.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">programs EPT X-bit</text>
 </svg>

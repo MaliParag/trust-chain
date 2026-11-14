@@ -1,73 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 779" width="860" height="779">
-<rect x="0" y="0" width="860" height="779" fill="#ffffff"/>
-<text x="430.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">UEFI LOADIMAGE() SIGNATURE EVALUATION ORDER (DBX PRECEDES DB)</text>
-<rect x="36.0" y="48.0" width="450.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="50.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">INPUT</text>
-<text x="50.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">LoadImage(PE/COFF EFI Binary)</text>
-<text x="50.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Bootloader, UEFI driver, or PCIe Option ROM image</text>
-<rect x="36.0" y="147.3" width="450.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="50.0" y="168.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">STEP 1 · DIGEST</text>
-<text x="50.0" y="184.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Compute PE Authenticode Hash</text>
-<text x="50.0" y="203.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SHA-256 excluding Optional Header Checksum &amp; Attribute Certificate</text>
-<text x="50.0" y="217.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Table</text>
-<rect x="36.0" y="280.8" width="450.0" height="73.3" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="50.0" y="302.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 2 · DENYLIST HASH</text>
-<text x="50.0" y="318.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Image SHA-256 Present in DBX?</text>
-<text x="50.0" y="336.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Unconditional revocation check runs before any allowlist trust</text>
-<rect x="582.0" y="281.8" width="246.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="596.0" y="303.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED</text>
-<text x="596.0" y="318.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SECURITY_VIOLATION</text>
-<text x="596.0" y="336.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Revoked binary hash denied immediately</text>
-<rect x="36.0" y="400.0" width="450.0" height="73.3" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="50.0" y="421.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 3 · DENYLIST SIGNER</text>
-<text x="50.0" y="437.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Signing Certificate or Root in DBX?</text>
-<text x="50.0" y="456.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Blocks entire compromised or retired CA subtrees</text>
-<rect x="582.0" y="401.1" width="246.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="596.0" y="422.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED</text>
-<text x="596.0" y="437.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SECURITY_VIOLATION</text>
-<text x="596.0" y="455.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Revoked certificate chain denied</text>
-<rect x="36.0" y="519.3" width="450.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="50.0" y="540.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 4 · ALLOWLIST</text>
-<text x="50.0" y="556.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Image Hash in DB or Signer Chains to DB?</text>
-<text x="50.0" y="575.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Evaluates Microsoft Windows Production PCA / 2023 CA or Third-Party</text>
-<text x="50.0" y="589.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">UEFI CA</text>
-<rect x="582.0" y="527.4" width="246.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="596.0" y="548.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED</text>
-<text x="596.0" y="564.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SECURITY_VIOLATION</text>
-<text x="596.0" y="581.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Unsigned or untrusted signer rejected</text>
-<rect x="36.0" y="652.8" width="450.0" height="73.3" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="50.0" y="674.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">OUTCOME</text>
-<text x="50.0" y="690.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SUCCESS: Image Admitted</text>
-<text x="50.0" y="709.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Firmware transfers control or links UEFI driver into DXE</text>
-<text x="430.0" y="750.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Because DBX is evaluated before DB, a revoked hash in DBX can never be rescued by chaining to an active DB CA.</text>
-<line x1="261.0" y1="121.3" x2="261.0" y2="140.8" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,147.3 264.8,139.3 257.2,139.3" fill="#4a5568"/>
-<line x1="261.0" y1="234.8" x2="261.0" y2="274.3" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,280.8 264.8,272.8 257.2,272.8" fill="#4a5568"/>
-<line x1="486.0" y1="317.4" x2="575.5" y2="317.4" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
-<polygon points="582.0,317.4 574.0,313.6 574.0,321.2" fill="#8d2d3b"/>
-<line x1="261.0" y1="354.0" x2="261.0" y2="393.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,400.0 264.8,392.0 257.2,392.0" fill="#4a5568"/>
-<line x1="486.0" y1="436.7" x2="575.5" y2="436.7" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
-<polygon points="582.0,436.7 574.0,432.9 574.0,440.5" fill="#8d2d3b"/>
-<line x1="261.0" y1="473.3" x2="261.0" y2="512.8" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,519.3 264.8,511.3 257.2,511.3" fill="#4a5568"/>
-<line x1="486.0" y1="563.0" x2="575.5" y2="563.0" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
-<polygon points="582.0,563.0 574.0,559.2 574.0,566.8" fill="#8d2d3b"/>
-<line x1="261.0" y1="606.8" x2="261.0" y2="646.3" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,652.8 264.8,644.8 257.2,644.8" fill="#4a5568"/>
-<rect x="210.2" y="248.2" width="101.7" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="261.0" y="259.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">check DBX first</text>
-<rect x="517.9" y="307.9" width="32.2" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="534.0" y="319.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">yes</text>
-<rect x="247.9" y="367.5" width="26.1" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="261.0" y="379.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">no</text>
-<rect x="517.9" y="427.1" width="32.2" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="534.0" y="438.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">yes</text>
-<rect x="247.9" y="486.8" width="26.1" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="261.0" y="498.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">no</text>
-<rect x="520.9" y="553.5" width="26.1" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="534.0" y="565.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">no</text>
-<rect x="226.9" y="620.3" width="68.2" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="261.0" y="631.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">yes (valid)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 831" width="900" height="831">
+<rect x="0" y="0" width="900" height="831" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">UEFI LOADIMAGE() SIGNATURE EVALUATION ORDER (DBX PRECEDES DB)</text>
+<rect x="34.0" y="48.0" width="440.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">INPUT</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">LoadImage(PE/COFF EFI Binary)</text>
+<text x="48.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Bootloader, UEFI driver, or PCIe Option ROM image</text>
+<rect x="34.0" y="151.3" width="440.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="172.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">STEP 1 · DIGEST</text>
+<text x="48.0" y="188.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Compute PE Authenticode Hash</text>
+<text x="48.0" y="207.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SHA-256 excluding Optional Header Checksum &amp; Attribute Certificate</text>
+<text x="48.0" y="221.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Table</text>
+<rect x="34.0" y="296.8" width="440.0" height="73.3" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="318.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 2 · DENYLIST HASH</text>
+<text x="48.0" y="334.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Image SHA-256 Present in DBX?</text>
+<text x="48.0" y="352.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Unconditional revocation check runs before any allowlist trust</text>
+<rect x="612.0" y="297.8" width="260.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="319.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED</text>
+<text x="626.0" y="334.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SECURITY_VIOLATION</text>
+<text x="626.0" y="352.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Revoked binary hash denied immediately</text>
+<rect x="34.0" y="428.0" width="440.0" height="73.3" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="449.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 3 · DENYLIST SIGNER</text>
+<text x="48.0" y="465.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Signing Certificate or Root in DBX?</text>
+<text x="48.0" y="484.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Blocks entire compromised or retired CA subtrees</text>
+<rect x="612.0" y="429.1" width="260.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="450.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED</text>
+<text x="626.0" y="465.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SECURITY_VIOLATION</text>
+<text x="626.0" y="483.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Revoked certificate chain denied</text>
+<rect x="34.0" y="559.3" width="440.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="580.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 4 · ALLOWLIST</text>
+<text x="48.0" y="596.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Image Hash in DB or Signer Chains to DB?</text>
+<text x="48.0" y="615.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Evaluates Microsoft Windows Production PCA / 2023 CA or Third-Party</text>
+<text x="48.0" y="629.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">UEFI CA</text>
+<rect x="612.0" y="567.4" width="260.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="588.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED</text>
+<text x="626.0" y="604.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SECURITY_VIOLATION</text>
+<text x="626.0" y="621.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Unsigned or untrusted signer rejected</text>
+<rect x="34.0" y="704.8" width="440.0" height="73.3" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="48.0" y="726.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">OUTCOME</text>
+<text x="48.0" y="742.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">EFI_SUCCESS: Image Admitted</text>
+<text x="48.0" y="761.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Firmware transfers control or links UEFI driver into DXE</text>
+<text x="450.0" y="802.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Because DBX is evaluated before DB, a revoked hash in DBX can never be rescued by chaining to an active DB CA.</text>
+<line x1="254.0" y1="121.3" x2="254.0" y2="144.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,151.3 258.0,142.8 250.0,142.8" fill="#4a5568"/>
+<line x1="254.0" y1="238.8" x2="254.0" y2="290.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,296.8 258.0,288.3 250.0,288.3" fill="#4a5568"/>
+<line x1="474.0" y1="333.4" x2="605.5" y2="333.4" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,333.4 603.5,329.4 603.5,337.4" fill="#8d2d3b"/>
+<line x1="254.0" y1="370.0" x2="254.0" y2="421.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,428.0 258.0,419.5 250.0,419.5" fill="#4a5568"/>
+<line x1="474.0" y1="464.7" x2="605.5" y2="464.7" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,464.7 603.5,460.7 603.5,468.7" fill="#8d2d3b"/>
+<line x1="254.0" y1="501.3" x2="254.0" y2="552.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,559.3 258.0,550.8 250.0,550.8" fill="#4a5568"/>
+<line x1="474.0" y1="603.0" x2="605.5" y2="603.0" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,603.0 603.5,599.0 603.5,607.0" fill="#8d2d3b"/>
+<line x1="254.0" y1="646.8" x2="254.0" y2="698.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,704.8 258.0,696.3 250.0,696.3" fill="#4a5568"/>
+<rect x="204.0" y="254.9" width="100.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="266.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">check DBX first</text>
+<rect x="518.8" y="324.0" width="31.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">yes</text>
+<rect x="241.1" y="386.1" width="25.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="397.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">no</text>
+<rect x="518.8" y="455.3" width="31.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="466.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">yes</text>
+<rect x="241.1" y="517.4" width="25.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="528.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">no</text>
+<rect x="521.8" y="593.6" width="25.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="605.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">no</text>
+<rect x="220.4" y="662.9" width="67.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="674.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">yes (valid)</text>
 </svg>

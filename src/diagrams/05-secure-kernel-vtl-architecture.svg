@@ -1,55 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 507" width="880" height="507">
-<rect x="0" y="0" width="880" height="507" fill="#ffffff"/>
-<rect x="28.0" y="70.0" width="324.0" height="267.0" rx="8.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="190.0" y="92.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#875a14" text-anchor="middle">VTL0 · NORMAL WORLD (UNTRUSTED BY VTL1)</text>
-<rect x="528.0" y="70.0" width="324.0" height="267.0" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="690.0" y="92.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">VTL1 · SECURE WORLD (ISOLATED TCB)</text>
-<line x1="440.0" y1="66.0" x2="440.0" y2="341.0" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
-<text x="440.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">VIRTUALIZATION-BASED SECURITY (VBS): VTL0 NORMAL WORLD VS. VTL1 SECURE WORLD</text>
-<rect x="44.0" y="108.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="58.0" y="129.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">VTL0 RING 3</text>
-<text x="58.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Win32 Apps, Services, &amp; lsass.exe</text>
-<text x="58.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Standard user processes, browsers, and</text>
-<text x="58.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">protocol brokers</text>
-<rect x="44.0" y="215.5" width="292.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="58.0" y="237.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">VTL0 RING 0</text>
-<text x="58.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">NT Kernel (ntoskrnl.exe) &amp; 3rd-Party</text>
-<text x="58.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Drivers</text>
-<text x="58.0" y="287.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Assumed compromisable via BYOVD or kernel</text>
-<text x="58.0" y="301.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">0-day; cannot map VTL1 RAM</text>
-<rect x="544.0" y="108.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="558.0" y="129.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">VTL1 RING 3 · IUM</text>
-<text x="558.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Isolated User Mode Trustlets</text>
-<text x="558.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">LsaIso.exe (Credential Guard), BioIso.exe</text>
-<text x="558.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">(ESS), KeyIso, VBS Enclaves</text>
-<rect x="544.0" y="215.5" width="292.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="558.0" y="237.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">VTL1 RING 0</text>
-<text x="558.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Secure Kernel (securekernel.exe +</text>
-<text x="558.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">skci.dll)</text>
-<text x="558.0" y="287.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Enforces HVCI W^X over VTL0 and mediates</text>
-<text x="558.0" y="301.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">every VTL0&lt;-&gt;VTL1 transition</text>
-<rect x="68.0" y="381.0" width="744.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="440.0" y="402.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">RING -1 AUTHORITY</text>
-<text x="440.0" y="418.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Hyper-V Hypervisor + Per-VTL SLAT (EPT / NPT) + MBEC</text>
-<text x="440.0" y="437.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Maintains separate nested page tables per VTL: VTL1 physical frames are unmapped in VTL0's SLAT</text>
-<text x="440.0" y="478.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Even full Ring 0 arbitrary read/write in VTL0 triggers an immediate hardware EPT/NPT fault if directed at VTL1 physical pages.</text>
-<line x1="190.0" y1="195.5" x2="190.0" y2="209.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="190.0,215.5 193.8,207.5 186.2,207.5" fill="#4a5568"/>
-<line x1="690.0" y1="195.5" x2="690.0" y2="209.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="690.0,215.5 693.8,207.5 686.2,207.5" fill="#4a5568"/>
-<line x1="342.5" y1="267.3" x2="537.5" y2="267.3" stroke="#236b66" stroke-width="1.6"/>
-<polygon points="544.0,267.3 536.0,263.5 536.0,271.1" fill="#236b66"/>
-<polygon points="336.0,267.3 344.0,271.1 344.0,263.5" fill="#236b66"/>
-<line x1="190.0" y1="381.0" x2="190.0" y2="343.5" stroke="#875a14" stroke-width="1.5"/>
-<polygon points="190.0,337.0 186.2,345.0 193.8,345.0" fill="#875a14"/>
-<line x1="690.0" y1="381.0" x2="690.0" y2="343.5" stroke="#2b6a4c" stroke-width="1.5"/>
-<polygon points="690.0,337.0 686.2,345.0 693.8,345.0" fill="#2b6a4c"/>
-<rect x="385.0" y="47.0" width="110.1" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
-<text x="440.0" y="58.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">SLAT Memory Wall</text>
-<rect x="373.5" y="257.7" width="133.0" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="440.0" y="269.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#236b66" text-anchor="middle">Secure Call (VMCALL)</text>
-<rect x="128.3" y="349.5" width="123.5" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="190.0" y="361.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#875a14" text-anchor="middle">restricts VTL0 RWX</text>
-<rect x="631.3" y="349.5" width="117.4" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="690.0" y="361.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#2b6a4c" text-anchor="middle">protects VTL1 RAM</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 535" width="900" height="535">
+<rect x="0" y="0" width="900" height="535" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="277.0" rx="8.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#875a14" text-anchor="middle">VTL0 · NORMAL WORLD (UNTRUSTED BY VTL1)</text>
+<rect x="550.0" y="74.0" width="324.0" height="277.0" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">VTL1 · SECURE WORLD (ISOLATED TCB)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="355.0" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">VIRTUALIZATION-BASED SECURITY (VBS): VTL0 NORMAL WORLD VS. VTL1 SECURE WORLD</text>
+<rect x="42.0" y="114.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">VTL0 RING 3</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Win32 Apps, Services, &amp; lsass.exe</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Standard user processes, browsers, and</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">protocol brokers</text>
+<rect x="42.0" y="229.5" width="292.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="56.0" y="251.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">VTL0 RING 0</text>
+<text x="56.0" y="267.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">NT Kernel (ntoskrnl.exe) &amp; 3rd-Party</text>
+<text x="56.0" y="283.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Drivers</text>
+<text x="56.0" y="301.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Assumed compromisable via BYOVD or kernel</text>
+<text x="56.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">0-day; cannot map VTL1 RAM</text>
+<rect x="566.0" y="114.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">VTL1 RING 3 · IUM</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Isolated User Mode Trustlets</text>
+<text x="580.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">LsaIso.exe (Credential Guard), BioIso.exe</text>
+<text x="580.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">(ESS), KeyIso, VBS Enclaves</text>
+<rect x="566.0" y="229.5" width="292.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="580.0" y="251.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">VTL1 RING 0</text>
+<text x="580.0" y="267.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Secure Kernel (securekernel.exe +</text>
+<text x="580.0" y="283.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">skci.dll)</text>
+<text x="580.0" y="301.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Enforces HVCI W^X over VTL0 and mediates</text>
+<text x="580.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">every VTL0&lt;-&gt;VTL1 transition</text>
+<rect x="66.0" y="409.0" width="768.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="450.0" y="430.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">RING -1 AUTHORITY</text>
+<text x="450.0" y="446.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Hyper-V Hypervisor + Per-VTL SLAT (EPT / NPT) + MBEC</text>
+<text x="450.0" y="465.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Maintains separate nested page tables per VTL: VTL1 physical frames are unmapped in VTL0's SLAT</text>
+<text x="450.0" y="506.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Even full Ring 0 arbitrary read/write in VTL0 triggers an immediate hardware EPT/NPT fault if directed at VTL1 physical pages.</text>
+<line x1="188.0" y1="201.5" x2="188.0" y2="223.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,229.5 192.0,221.0 184.0,221.0" fill="#4a5568"/>
+<line x1="712.0" y1="201.5" x2="712.0" y2="223.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,229.5 716.0,221.0 708.0,221.0" fill="#4a5568"/>
+<line x1="340.5" y1="281.3" x2="559.5" y2="281.3" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,281.3 557.5,277.3 557.5,285.3" fill="#236b66"/>
+<polygon points="334.0,281.3 342.5,285.3 342.5,277.3" fill="#236b66"/>
+<line x1="188.0" y1="409.0" x2="188.0" y2="357.5" stroke="#875a14" stroke-width="1.5"/>
+<polygon points="188.0,351.0 184.0,359.5 192.0,359.5" fill="#875a14"/>
+<line x1="712.0" y1="409.0" x2="712.0" y2="357.5" stroke="#2b6a4c" stroke-width="1.5"/>
+<polygon points="712.0,351.0 708.0,359.5 716.0,359.5" fill="#2b6a4c"/>
+<rect x="395.0" y="49.0" width="110.1" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">SLAT Memory Wall</text>
+<rect x="384.7" y="271.9" width="130.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="283.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">Secure Call (VMCALL)</text>
+<rect x="127.3" y="374.1" width="121.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="385.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#875a14" text-anchor="middle">restricts VTL0 RWX</text>
+<rect x="654.3" y="374.1" width="115.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="385.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">protects VTL1 RAM</text>
 </svg>

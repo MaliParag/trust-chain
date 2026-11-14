@@ -97,6 +97,7 @@ for (const file of walk(BOOK_DIR)) {
     const full = `${TITLE}: ${SUBTITLE}`;
     html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${esc(full)}</title>`);
     html = html.replace(/href="\.\.\/(front-matter|chapters|back-matter)\//g, 'href="$1/');
+    html = html.replace(/href="\.\.\/the-windows-trust-chain\.pdf"/g, 'href="the-windows-trust-chain.pdf"');
     pageTitle = full;
   }
 

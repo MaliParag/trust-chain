@@ -1,88 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 709" width="880" height="709">
-<rect x="0" y="0" width="880" height="709" fill="#ffffff"/>
-<rect x="28.0" y="52.0" width="324.0" height="598.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="190.0" y="74.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">HARDWARE MEMORY PROTECTION STACK</text>
-<rect x="528.0" y="52.0" width="324.0" height="598.3" rx="8.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
-<text x="690.0" y="74.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#452e66" text-anchor="middle">RATS PASSPORT ATTESTATION &amp; KEY RELEASE</text>
-<text x="440.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">AZURE CONFIDENTIAL VM STACK: ORTHOGONAL VMPL/TD X VTL ISOLATION &amp; SKR ATTESTATION</text>
-<rect x="44.0" y="90.0" width="292.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="58.0" y="111.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">INSIDE TEE · VMPL2 / L2 TD</text>
-<text x="58.0" y="127.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Windows Server Guest (VTL0 Kernel |</text>
-<text x="58.0" y="143.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">VTL1 VBS + LsaIso)</text>
-<text x="58.0" y="162.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">VTL1 still isolates Credential Guard &amp; HVCI</text>
-<text x="58.0" y="176.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">from a compromised guest VTL0 kernel</text>
-<rect x="44.0" y="231.5" width="292.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="58.0" y="253.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">INSIDE TEE · VMPL0 / L1 TD</text>
-<text x="58.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">OpenHCL Rust Paravisor +</text>
-<text x="58.0" y="285.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Synthesized vTPM</text>
-<text x="58.0" y="303.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Mediates shared I/O bounce buffers and</text>
-<text x="58.0" y="317.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">hosts per-VM vTPM inside encrypted RAM</text>
-<rect x="44.0" y="373.0" width="292.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="58.0" y="394.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">OUTSIDE MEMORY TCB (UNTRUSTED HOST)</text>
-<text x="58.0" y="410.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Azure Hyper-V Host VMM (Sees</text>
-<text x="58.0" y="426.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Ciphertext Only)</text>
-<text x="58.0" y="445.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Schedules vCPUs; blocked from reading or</text>
-<text x="58.0" y="459.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">remapping private pages by RMP / PAMT</text>
-<rect x="44.0" y="514.5" width="292.0" height="117.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="58.0" y="536.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">SILICON ROOT OF TRUST</text>
-<text x="58.0" y="552.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">AMD SEV-SNP (AMD-SP + RMP) /</text>
-<text x="58.0" y="568.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Intel TDX (SEAM + PAMT)</text>
-<text x="58.0" y="586.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Inline AES memory encryption + hardware</text>
-<text x="58.0" y="601.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">page-ownership tables + VCEK / DCAP</text>
-<text x="58.0" y="615.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">signing</text>
-<rect x="544.0" y="90.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="558.0" y="111.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">1 · HARDWARE + BOOT EVIDENCE</text>
-<text x="558.0" y="127.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SNP_REPORT / TD Quote + OpenHCL</text>
-<text x="558.0" y="143.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">vTPM Quote</text>
-<text x="558.0" y="162.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Signed by AMD VCEK or Intel Quoting Enclave</text>
-<text x="558.0" y="176.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">over launch digest, PCR[7], &amp; nonce</text>
-<rect x="544.0" y="231.5" width="292.0" height="101.8" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
-<text x="558.0" y="253.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">2 · VERIFIER (POLICY V1.2)</text>
-<text x="558.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Microsoft Azure Attestation (MAA)</text>
-<text x="558.0" y="287.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Checks TEE type, golden measurement,</text>
-<text x="558.0" y="301.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Secure Boot, VBS, &amp; TCB SVN in</text>
-<text x="558.0" y="316.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">authorizationrules</text>
-<rect x="544.0" y="371.3" width="292.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="558.0" y="392.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">3 · ATTESTATION RESULT</text>
-<text x="558.0" y="408.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Signed MAA JWT (sevsnpvm / tdxvm)</text>
-<text x="558.0" y="427.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Carries verified runtime, compliance, and</text>
-<text x="558.0" y="441.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">TCB claims</text>
-<rect x="544.0" y="496.8" width="292.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="558.0" y="518.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">4 · RELYING PARTY (SKR)</text>
-<text x="558.0" y="534.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Azure Key Vault / Managed HSM</text>
-<text x="558.0" y="553.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Executes Secure Key Release to unwrap</text>
-<text x="558.0" y="567.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">OS-disk / workload keys into CVM</text>
-<text x="440.0" y="680.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">VMPL / TD partitioning excludes the cloud host; VBS VTL1 excludes the guest kernel; MAA authorizationrules bind both to HSM key release.</text>
-<line x1="190.0" y1="193.5" x2="190.0" y2="225.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="190.0,231.5 193.8,223.5 186.2,223.5" fill="#4a5568"/>
-<line x1="190.0" y1="335.0" x2="190.0" y2="366.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="190.0,373.0 193.8,365.0 186.2,365.0" fill="#4a5568"/>
-<line x1="190.0" y1="476.5" x2="190.0" y2="508.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="190.0,514.5 193.8,506.5 186.2,506.5" fill="#4a5568"/>
-<line x1="690.0" y1="193.5" x2="690.0" y2="225.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="690.0,231.5 693.8,223.5 686.2,223.5" fill="#4a5568"/>
-<line x1="690.0" y1="333.3" x2="690.0" y2="364.8" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="690.0,371.3 693.8,363.3 686.2,363.3" fill="#4a5568"/>
-<line x1="690.0" y1="458.8" x2="690.0" y2="490.3" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="690.0,496.8 693.8,488.8 686.2,488.8" fill="#4a5568"/>
-<polyline points="336.0,283.3 440.0,283.3 440.0,141.8 537.5,141.8" fill="none" stroke="#236b66" stroke-width="1.6" stroke-linejoin="round"/>
-<polygon points="544.0,141.8 536.0,138.0 536.0,145.6" fill="#236b66"/>
-<polyline points="342.5,145.8 440.0,145.8 440.0,544.5 544.0,544.5" fill="none" stroke="#2b6a4c" stroke-width="1.6" stroke-linejoin="round"/>
-<polygon points="336.0,145.8 344.0,149.6 344.0,142.0" fill="#2b6a4c"/>
-<rect x="114.5" y="203.0" width="151.0" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="190.0" y="214.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">synthetic devices + vTPM</text>
-<rect x="99.9" y="344.5" width="180.2" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="190.0" y="356.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">CONFIDENTIALITY BOUNDARY</text>
-<rect x="131.8" y="486.0" width="116.3" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="190.0" y="497.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">enforced by silicon</text>
-<rect x="632.3" y="203.0" width="115.5" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="690.0" y="214.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">evaluates evidence</text>
-<rect x="636.2" y="342.8" width="107.6" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="690.0" y="354.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">mints signed JWT</text>
-<rect x="636.1" y="468.3" width="107.7" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="690.0" y="479.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">releases HSM key</text>
-<rect x="384.5" y="203.0" width="111.1" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="440.0" y="214.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#236b66" text-anchor="middle">vTPM + TEE quote</text>
-<rect x="393.8" y="335.6" width="92.3" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="440.0" y="347.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#2b6a4c" text-anchor="middle">unwrapped key</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 771" width="900" height="771">
+<rect x="0" y="0" width="900" height="771" fill="#ffffff"/>
+<rect x="26.0" y="52.0" width="324.0" height="660.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="188.0" y="75.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">HARDWARE MEMORY PROTECTION STACK</text>
+<rect x="550.0" y="52.0" width="324.0" height="660.3" rx="8.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="712.0" y="75.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#452e66" text-anchor="middle">RATS PASSPORT ATTESTATION &amp; KEY RELEASE</text>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">AZURE CONFIDENTIAL VM STACK: ORTHOGONAL VMPL/TD X VTL ISOLATION &amp; SKR ATTESTATION</text>
+<rect x="42.0" y="92.0" width="292.0" height="117.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="56.0" y="113.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">SILICON ROOT OF TRUST</text>
+<text x="56.0" y="129.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">AMD SEV-SNP (AMD-SP + RMP) /</text>
+<text x="56.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Intel TDX (SEAM + PAMT)</text>
+<text x="56.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Inline AES memory encryption + hardware</text>
+<text x="56.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">page-ownership tables + VCEK / DCAP</text>
+<text x="56.0" y="192.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">signing</text>
+<rect x="42.0" y="267.8" width="292.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="56.0" y="289.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">OUTSIDE MEMORY TCB (UNTRUSTED HOST)</text>
+<text x="56.0" y="305.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Azure Hyper-V Host VMM (Sees</text>
+<text x="56.0" y="321.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Ciphertext Only)</text>
+<text x="56.0" y="339.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Schedules vCPUs; blocked from reading or</text>
+<text x="56.0" y="354.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">remapping private pages by RMP / PAMT</text>
+<rect x="42.0" y="429.3" width="292.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="56.0" y="450.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">INSIDE TEE · VMPL0 / L1 TD</text>
+<text x="56.0" y="466.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">OpenHCL Rust Paravisor +</text>
+<text x="56.0" y="482.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Synthesized vTPM</text>
+<text x="56.0" y="501.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Mediates shared I/O bounce buffers and</text>
+<text x="56.0" y="515.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">hosts per-VM vTPM inside encrypted RAM</text>
+<rect x="42.0" y="590.8" width="292.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="56.0" y="612.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">INSIDE TEE · VMPL2 / L2 TD</text>
+<text x="56.0" y="628.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Windows Server Guest (VTL0 Kernel |</text>
+<text x="56.0" y="644.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">VTL1 VBS + LsaIso)</text>
+<text x="56.0" y="663.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">VTL1 still isolates Credential Guard &amp; HVCI</text>
+<text x="56.0" y="677.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">from a compromised guest VTL0 kernel</text>
+<rect x="566.0" y="92.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="113.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">1 · HARDWARE + BOOT EVIDENCE</text>
+<text x="580.0" y="129.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SNP_REPORT / TD Quote + OpenHCL</text>
+<text x="580.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">vTPM Quote</text>
+<text x="580.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Signed by AMD VCEK or Intel Quoting Enclave</text>
+<text x="580.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">over launch digest, PCR[7], &amp; nonce</text>
+<rect x="566.0" y="267.8" width="292.0" height="103.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="580.0" y="289.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">2 · VERIFIER (POLICY V1.2)</text>
+<text x="580.0" y="305.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Microsoft Azure Attestation (MAA)</text>
+<text x="580.0" y="323.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Checks TEE type, golden measurement,</text>
+<text x="580.0" y="338.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Secure Boot, VBS, &amp; TCB SVN in</text>
+<text x="580.0" y="352.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">authorizationrules</text>
+<rect x="566.0" y="429.3" width="292.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="580.0" y="450.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">3 · ATTESTATION RESULT</text>
+<text x="580.0" y="466.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Signed MAA JWT (sevsnpvm / tdxvm)</text>
+<text x="580.0" y="485.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Carries verified runtime, compliance, and</text>
+<text x="580.0" y="499.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">TCB claims</text>
+<rect x="566.0" y="590.8" width="292.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="580.0" y="612.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">4 · RELYING PARTY (SKR)</text>
+<text x="580.0" y="628.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Azure Key Vault / Managed HSM</text>
+<text x="580.0" y="647.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Executes Secure Key Release to unwrap</text>
+<text x="580.0" y="661.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">OS-disk / workload keys into CVM</text>
+<text x="450.0" y="742.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">VMPL / TD partitioning excludes the cloud host; VBS VTL1 excludes the guest kernel; MAA authorizationrules bind both to HSM key release.</text>
+<line x1="188.0" y1="267.8" x2="188.0" y2="216.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,209.8 184.0,218.3 192.0,218.3" fill="#4a5568"/>
+<line x1="188.0" y1="429.3" x2="188.0" y2="377.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,371.3 184.0,379.8 192.0,379.8" fill="#4a5568"/>
+<line x1="188.0" y1="590.8" x2="188.0" y2="539.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,532.8 184.0,541.3 192.0,541.3" fill="#4a5568"/>
+<line x1="712.0" y1="209.8" x2="712.0" y2="261.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,267.8 716.0,259.3 708.0,259.3" fill="#4a5568"/>
+<line x1="712.0" y1="371.3" x2="712.0" y2="422.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,429.3 716.0,420.8 708.0,420.8" fill="#4a5568"/>
+<line x1="712.0" y1="532.8" x2="712.0" y2="584.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,590.8 716.0,582.3 708.0,582.3" fill="#4a5568"/>
+<line x1="334.0" y1="150.9" x2="559.5" y2="150.9" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,150.9 557.5,146.9 557.5,154.9" fill="#236b66"/>
+<line x1="340.5" y1="642.5" x2="566.0" y2="642.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="334.0,642.5 342.5,646.5 342.5,638.5" fill="#2b6a4c"/>
+<rect x="134.4" y="232.8" width="107.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="244.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">blocks host reads</text>
+<rect x="99.5" y="394.4" width="177.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="405.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">CONFIDENTIALITY BOUNDARY</text>
+<rect x="113.8" y="555.9" width="148.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="567.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">synthetic devices + vTPM</text>
+<rect x="655.3" y="225.9" width="113.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="237.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">evaluates evidence</text>
+<rect x="659.1" y="387.4" width="105.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="398.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">mints signed JWT</text>
+<rect x="659.0" y="548.9" width="105.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="560.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">releases HSM key</text>
+<rect x="386.1" y="141.5" width="109.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="153.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">TEE + vTPM quote</text>
+<rect x="413.9" y="633.1" width="90.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="459.3" y="644.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">unwrapped key</text>
 </svg>

@@ -11,11 +11,12 @@ entries in the [References](70-references.md). Post-build metadata, canonical
 URLs, structured `schema.org/Book` JSON-LD, and sitemaps are generated via
 `tools/gen-seo.mjs`.
 
-**Diagrams and Typography.** Architectural diagrams are authored as clean,
-resolution-independent SVG figures designed to remain legible across light
-and dark reading themes. Print and PDF layouts pair Typst and Pandoc
-using Source Serif 4 for body prose, Source Sans 3 for headings and
-diagrams, and JetBrains Mono for code and terminal inspection blocks.
+**Diagrams, Covers, and PDF Edition.** All 68 architectural diagrams (`tools/gen_diagrams.py`)
+and the front and back covers (`tools/gen_covers.py`) are generated from declarative
+vector specifications with automated collision and orthogonal-alignment verification.
+The print-ready `7 in x 9.25 in` PDF edition (`tools/build-pdf.mjs`) compiles the
+complete manuscript with full-bleed vector covers, KaTeX mathematical notation,
+native PDF bookmarks, and hyperlinked primary-source citations.
 
 **Editorial Verification.** Every chapter in the twenty-chapter manuscript is
 validated mechanically against structural progression rules, citation resolution

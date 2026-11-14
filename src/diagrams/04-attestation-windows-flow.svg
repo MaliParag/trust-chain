@@ -1,48 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 488" width="880" height="488">
-<rect x="0" y="0" width="880" height="488" fill="#ffffff"/>
-<line x1="125.8" y1="106.6" x2="125.8" y2="431.6" stroke="#cbd5e1" stroke-width="1.3"/>
-<line x1="335.2" y1="106.6" x2="335.2" y2="431.6" stroke="#cbd5e1" stroke-width="1.3"/>
-<line x1="544.8" y1="106.6" x2="544.8" y2="431.6" stroke="#cbd5e1" stroke-width="1.3"/>
-<line x1="754.2" y1="106.6" x2="754.2" y2="431.6" stroke="#cbd5e1" stroke-width="1.3"/>
-<text x="440.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PRODUCTION WINDOWS MEASURED BOOT ATTESTATION PIPELINE</text>
-<rect x="34.0" y="50.0" width="183.5" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="125.8" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">TPM 2.0 / Pluton</text>
-<text x="125.8" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Restricted AIK + PCRs</text>
-<rect x="243.5" y="50.0" width="183.5" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="335.2" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Windows Client</text>
-<text x="335.2" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">HealthAttestation CSP</text>
-<rect x="453.0" y="50.0" width="183.5" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
-<text x="544.8" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Attestation Verifier</text>
-<text x="544.8" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">HAS / Azure Attestation</text>
-<rect x="662.5" y="50.0" width="183.5" height="56.6" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="754.2" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">MDM &amp; Policy PDP</text>
-<text x="754.2" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Intune + Entra CA</text>
-<text x="440.0" y="459.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">The WBCL log is unauthenticated on disk, but any forged WBCL entry fails hash-replay verification against the AIK-signed PCR quote.</text>
-<line x1="544.8" y1="140.6" x2="341.8" y2="140.6" stroke="#5c4282" stroke-width="1.6"/>
-<polygon points="335.2,140.6 343.2,144.4 343.2,136.8" fill="#5c4282"/>
-<line x1="335.2" y1="178.6" x2="132.2" y2="178.6" stroke="#236b66" stroke-width="1.6"/>
-<polygon points="125.8,178.6 133.8,182.4 133.8,174.8" fill="#236b66"/>
-<line x1="125.8" y1="216.6" x2="328.8" y2="216.6" stroke="#365378" stroke-width="1.6"/>
-<polygon points="335.2,216.6 327.2,212.8 327.2,220.4" fill="#365378"/>
-<line x1="335.2" y1="254.6" x2="538.2" y2="254.6" stroke="#236b66" stroke-width="1.6"/>
-<polygon points="544.8,254.6 536.8,250.8 536.8,258.4" fill="#236b66"/>
-<line x1="544.8" y1="345.6" x2="747.8" y2="345.6" stroke="#2b6a4c" stroke-width="1.6"/>
-<polygon points="754.2,345.6 746.2,341.8 746.2,349.4" fill="#2b6a4c"/>
-<line x1="754.2" y1="383.6" x2="341.8" y2="383.6" stroke="#b07926" stroke-width="1.6"/>
-<polygon points="335.2,383.6 343.2,387.4 343.2,379.8" fill="#b07926"/>
-<rect x="328.1" y="118.2" width="223.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="440.0" y="129.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">1 · Fresh cryptographic nonce challenge</text>
-<rect x="109.1" y="156.2" width="242.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="230.5" y="167.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">2 · TPM2_Quote(AIK, PCR[0..7,11..14], nonce)</text>
-<rect x="88.5" y="194.2" width="284.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="230.5" y="205.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">3 · Signed TPMS_ATTEST (0xFF544347) + signature</text>
-<rect x="318.4" y="232.2" width="243.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="440.0" y="243.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">4 · Quote + AIK cert + raw WBCL binary log</text>
-<rect x="423.5" y="276.5" width="242.6" height="32.1" rx="4" fill="#f4f1ea" stroke="#5c4282" stroke-width="0.9"/>
-<text x="544.8" y="288.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#5c4282" text-anchor="middle">5 · Verify AIK chain, nonce, &amp; replay WBCL</text>
-<text x="544.8" y="301.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#5c4282" text-anchor="middle">== pcrDigest</text>
-<rect x="491.9" y="323.2" width="315.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="649.5" y="334.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">6 · Signed JWT posture claims (SecureBoot, HVCI, ELAM)</text>
-<rect x="383.7" y="361.2" width="322.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="544.8" y="372.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">7 · isCompliant = true -&gt; Conditional Access grants token</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 582" width="900" height="582">
+<rect x="0" y="0" width="900" height="582" fill="#ffffff"/>
+<line x1="127.5" y1="106.6" x2="127.5" y2="523.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="106.6" x2="342.5" y2="523.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="106.6" x2="557.5" y2="523.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="106.6" x2="772.5" y2="523.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PRODUCTION WINDOWS MEASURED BOOT ATTESTATION PIPELINE</text>
+<rect x="34.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="127.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">TPM 2.0 / Pluton</text>
+<text x="127.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Restricted AIK + PCRs</text>
+<rect x="249.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="342.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Windows Client</text>
+<text x="342.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">HealthAttestation CSP</text>
+<rect x="464.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="557.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Attestation Verifier</text>
+<text x="557.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">HAS / Azure Attestation</text>
+<rect x="679.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="772.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">MDM &amp; Policy PDP</text>
+<text x="772.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Intune + Entra CA</text>
+<text x="450.0" y="553.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">The WBCL log is unauthenticated on disk, but any forged WBCL entry fails hash-replay verification against the AIK-signed PCR quote.</text>
+<line x1="557.5" y1="164.2" x2="349.0" y2="164.2" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,164.2 351.0,168.2 351.0,160.2" fill="#5c4282"/>
+<line x1="342.5" y1="223.8" x2="134.0" y2="223.8" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="127.5,223.8 136.0,227.8 136.0,219.8" fill="#236b66"/>
+<line x1="127.5" y1="283.4" x2="336.0" y2="283.4" stroke="#365378" stroke-width="1.6"/>
+<polygon points="342.5,283.4 334.0,279.4 334.0,287.4" fill="#365378"/>
+<line x1="342.5" y1="343.0" x2="551.0" y2="343.0" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="557.5,343.0 549.0,339.0 549.0,347.0" fill="#236b66"/>
+<line x1="557.5" y1="454.6" x2="766.0" y2="454.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="772.5,454.6 764.0,450.6 764.0,458.6" fill="#2b6a4c"/>
+<line x1="772.5" y1="501.4" x2="349.0" y2="501.4" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="342.5,501.4 351.0,505.4 351.0,497.4" fill="#b07926"/>
+<rect x="365.6" y="124.8" width="168.7" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">1 · Fresh cryptographic nonce</text>
+<text x="450.0" y="148.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">challenge</text>
+<rect x="171.2" y="184.4" width="127.7" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">2 · TPM2_Quote(AIK,</text>
+<text x="235.0" y="208.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">PCR[0..7,11..14], nonce)</text>
+<rect x="162.2" y="244.0" width="145.7" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="255.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">3 · Signed TPMS_ATTEST</text>
+<text x="235.0" y="267.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">(0xFF544347) + signature</text>
+<rect x="357.7" y="303.6" width="184.5" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="315.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">4 · Quote + AIK cert + raw WBCL</text>
+<text x="450.0" y="327.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">binary log</text>
+<rect x="438.4" y="365.2" width="238.1" height="31.6" rx="4" fill="#f4f1ea" stroke="#5c4282" stroke-width="0.9"/>
+<text x="557.5" y="376.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">5 · Verify AIK chain, nonce, &amp; replay WBCL</text>
+<text x="557.5" y="389.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">== pcrDigest</text>
+<rect x="579.7" y="415.2" width="170.5" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="426.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">6 · Signed JWT posture claims</text>
+<text x="665.0" y="439.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">(SecureBoot, HVCI, ELAM)</text>
+<rect x="399.6" y="475.1" width="315.9" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="486.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">7 · isCompliant = true -&gt; Conditional Access grants token</text>
 </svg>

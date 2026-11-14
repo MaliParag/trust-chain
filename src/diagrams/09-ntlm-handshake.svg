@@ -1,46 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 561" width="880" height="561">
-<rect x="0" y="0" width="880" height="561" fill="#ffffff"/>
-<line x1="160.7" y1="106.6" x2="160.7" y2="408.6" stroke="#cbd5e1" stroke-width="1.3"/>
-<line x1="440.0" y1="106.6" x2="440.0" y2="408.6" stroke="#cbd5e1" stroke-width="1.3"/>
-<line x1="719.3" y1="106.6" x2="719.3" y2="408.6" stroke="#cbd5e1" stroke-width="1.3"/>
-<text x="440.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">THREE-MESSAGE NTLMV2 WIRE HANDSHAKE &amp; RELAY EXPOSURE</text>
-<rect x="34.0" y="50.0" width="253.3" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="160.7" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Client</text>
-<text x="160.7" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Holds NTOWF(password)</text>
-<rect x="313.3" y="50.0" width="253.3" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="440.0" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Application Server</text>
-<text x="440.0" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">SMB / HTTP / LDAP</text>
-<rect x="592.7" y="50.0" width="253.3" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="719.3" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Domain Controller</text>
-<text x="719.3" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Netlogon Verify</text>
-<rect x="70.0" y="422.6" width="740.0" height="87.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="440.0" y="444.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="middle">STRUCTURAL RELAY FLAW</text>
-<text x="440.0" y="460.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Unbound Challenge-Response Without Mandatory Signing + Channel Binding (EPA)</text>
-<text x="440.0" y="478.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Unless SMB/LDAP Signing and TLS Channel Binding Tokens (MsvAvChannelBindings) are enforced on the target, an attacker</text>
-<text x="440.0" y="493.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">forwards all 3 messages across protocols (SMB -&gt; AD CS HTTP ESC8 or LDAP).</text>
-<text x="440.0" y="532.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Because the verifier stores unsalted NTOWF = MD4(UTF-16LE(password)), the hash itself is password-equivalent (Pass-the-Hash).</text>
-<line x1="160.7" y1="140.6" x2="433.5" y2="140.6" stroke="#365378" stroke-width="1.6"/>
-<polygon points="440.0,140.6 432.0,136.8 432.0,144.4" fill="#365378"/>
-<line x1="440.0" y1="178.6" x2="167.2" y2="178.6" stroke="#236b66" stroke-width="1.6"/>
-<polygon points="160.7,178.6 168.7,182.4 168.7,174.8" fill="#236b66"/>
-<line x1="160.7" y1="284.6" x2="433.5" y2="284.6" stroke="#365378" stroke-width="1.6"/>
-<polygon points="440.0,284.6 432.0,280.8 432.0,288.4" fill="#365378"/>
-<line x1="440.0" y1="322.6" x2="712.8" y2="322.6" stroke="#236b66" stroke-width="1.6"/>
-<polygon points="719.3,322.6 711.3,318.8 711.3,326.4" fill="#236b66"/>
-<line x1="719.3" y1="360.6" x2="446.5" y2="360.6" stroke="#2b6a4c" stroke-width="1.6"/>
-<polygon points="440.0,360.6 448.0,364.4 448.0,356.8" fill="#2b6a4c"/>
-<rect x="146.0" y="118.2" width="308.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="300.3" y="129.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">1 · NEGOTIATE_MESSAGE (capability flags; no identity)</text>
-<rect x="91.0" y="156.2" width="418.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="300.3" y="167.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">2 · CHALLENGE_MESSAGE (8-byte ServerChallenge + TargetInfo AV_PAIRs)</text>
-<rect x="59.6" y="194.0" width="202.0" height="45.2" rx="4" fill="#f4f1ea" stroke="#b07926" stroke-width="0.9"/>
-<text x="160.7" y="205.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#b07926" text-anchor="middle">3 · NTOWFv2 = HMAC_MD5(NTOWF,</text>
-<text x="160.7" y="218.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#b07926" text-anchor="middle">Upper(User)||Domain); compute</text>
-<text x="160.7" y="231.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#b07926" text-anchor="middle">NTProofStr</text>
-<rect x="83.9" y="262.2" width="432.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="300.3" y="273.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">4 · AUTHENTICATE_MESSAGE (NTProofStr + optional MIC + optional EPA CBT)</text>
-<rect x="437.9" y="300.2" width="283.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="579.7" y="311.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">5 · NetrLogonSamLogonEx pass-through validation</text>
-<rect x="380.9" y="338.2" width="397.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="579.7" y="349.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#1a1a1a" text-anchor="middle">6 · Recompute HMAC from AD NTOWF -&gt; STATUS_SUCCESS + user SIDs</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 631" width="900" height="631">
+<rect x="0" y="0" width="900" height="631" fill="#ffffff"/>
+<line x1="163.3" y1="106.6" x2="163.3" y2="476.6" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="450.0" y1="106.6" x2="450.0" y2="476.6" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="736.7" y1="106.6" x2="736.7" y2="476.6" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">THREE-MESSAGE NTLMV2 WIRE HANDSHAKE &amp; RELAY EXPOSURE</text>
+<rect x="34.0" y="50.0" width="258.7" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="163.3" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Client</text>
+<text x="163.3" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Holds NTOWF(password)</text>
+<rect x="320.7" y="50.0" width="258.7" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="450.0" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Application Server</text>
+<text x="450.0" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">SMB / HTTP / LDAP</text>
+<rect x="607.3" y="50.0" width="258.7" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="736.7" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Domain Controller</text>
+<text x="736.7" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Netlogon Verify</text>
+<rect x="60.0" y="492.6" width="780.0" height="87.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="450.0" y="514.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="middle">STRUCTURAL RELAY FLAW</text>
+<text x="450.0" y="530.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Unbound Challenge-Response Without Mandatory Signing + Channel Binding (EPA)</text>
+<text x="450.0" y="548.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Unless SMB/LDAP Signing and TLS Channel Binding Tokens (MsvAvChannelBindings) are enforced on the target, an attacker</text>
+<text x="450.0" y="563.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">forwards all 3 messages across protocols (SMB -&gt; AD CS HTTP ESC8 or LDAP).</text>
+<text x="450.0" y="602.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Because the verifier stores unsalted NTOWF = MD4(UTF-16LE(password)), the hash itself is password-equivalent (Pass-the-Hash).</text>
+<line x1="163.3" y1="164.2" x2="443.5" y2="164.2" stroke="#365378" stroke-width="1.6"/>
+<polygon points="450.0,164.2 441.5,160.2 441.5,168.2" fill="#365378"/>
+<line x1="450.0" y1="223.8" x2="169.8" y2="223.8" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="163.3,223.8 171.8,227.8 171.8,219.8" fill="#236b66"/>
+<line x1="163.3" y1="335.4" x2="443.5" y2="335.4" stroke="#365378" stroke-width="1.6"/>
+<polygon points="450.0,335.4 441.5,331.4 441.5,339.4" fill="#365378"/>
+<line x1="450.0" y1="395.0" x2="730.2" y2="395.0" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="736.7,395.0 728.2,391.0 728.2,399.0" fill="#236b66"/>
+<line x1="736.7" y1="454.6" x2="456.5" y2="454.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="450.0,454.6 458.5,458.6 458.5,450.6" fill="#2b6a4c"/>
+<rect x="179.6" y="124.8" width="254.2" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="306.7" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">1 · NEGOTIATE_MESSAGE (capability flags; no</text>
+<text x="306.7" y="148.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">identity)</text>
+<rect x="193.7" y="184.4" width="226.0" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="306.7" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">2 · CHALLENGE_MESSAGE (8-byte</text>
+<text x="306.7" y="208.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">ServerChallenge + TargetInfo AV_PAIRs)</text>
+<rect x="40.5" y="246.0" width="245.7" height="31.6" rx="4" fill="#f4f1ea" stroke="#b07926" stroke-width="0.9"/>
+<text x="163.3" y="257.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">3 · NTOWFv2 = HMAC_MD5(NTOWF,</text>
+<text x="163.3" y="270.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">Upper(User)||Domain); compute NTProofStr</text>
+<rect x="181.8" y="296.0" width="249.8" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="306.7" y="307.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">4 · AUTHENTICATE_MESSAGE (NTProofStr +</text>
+<text x="306.7" y="319.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">optional MIC + optional EPA CBT)</text>
+<rect x="481.5" y="355.6" width="223.7" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="593.3" y="367.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">5 · NetrLogonSamLogonEx pass-through</text>
+<text x="593.3" y="379.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">validation</text>
+<rect x="481.9" y="415.2" width="222.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="593.3" y="426.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">6 · Recompute HMAC from AD NTOWF -&gt;</text>
+<text x="593.3" y="439.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">STATUS_SUCCESS + user SIDs</text>
 </svg>

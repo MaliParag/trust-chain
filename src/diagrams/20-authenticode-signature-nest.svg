@@ -1,45 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 462" width="900" height="462">
-<rect x="0" y="0" width="900" height="462" fill="#ffffff"/>
-<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PE AUTHENTICODE STRUCTURAL HASH &amp; PKCS #7 SIGNEDDATA NESTING</text>
-<rect x="160.0" y="52.0" width="580.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="450.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">PORTABLE EXECUTABLE (PE/COFF)</text>
-<text x="450.0" y="89.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Hashed Image Sections (.text, .rdata, headers)</text>
-<text x="450.0" y="108.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Authenticode SHA-256 omits exactly 3 regions: Optional Header Checksum,</text>
-<text x="450.0" y="122.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">DataDirectory[SECURITY] entry, and trailing Certificate Table bytes</text>
-<rect x="160.0" y="193.5" width="580.0" height="73.3" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="450.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">FILE OFFSET (NOT MAPPED RVA)</text>
-<text x="450.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">WIN_CERTIFICATE -&gt; PKCS #7 SignedData</text>
-<text x="450.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">ASN.1 DER container holding X.509 cert chain, SignerInfo, and authenticated attributes</text>
-<rect x="26.0" y="320.8" width="270.7" height="86.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="40.0" y="342.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">ECONTENT (1.3.6.1.4.1.311.2.1.4)</text>
-<text x="40.0" y="358.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">SpcIndirectDataContent</text>
-<text x="40.0" y="376.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Carries canonical PE image digest +</text>
-<text x="40.0" y="390.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">optional per-page hashes for HVCI</text>
-<rect x="314.7" y="320.8" width="270.7" height="86.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
-<text x="328.7" y="342.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">CERTIFICATES</text>
-<text x="328.7" y="358.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">X.509 Signer -&gt; Root + EKUs</text>
-<text x="328.7" y="376.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Chains to Microsoft / WHQL / Code</text>
-<text x="328.7" y="390.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Signing Root with EKU constraints</text>
-<rect x="603.3" y="320.8" width="270.7" height="86.6" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="617.3" y="342.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">UNAUTHENTICATEDATTRIBUTES</text>
-<text x="617.3" y="358.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">RFC 3161 Timestamp Token</text>
-<text x="617.3" y="376.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Proves signature existed before cert</text>
-<text x="617.3" y="390.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">expiry (lifetime signing)</text>
-<text x="450.0" y="433.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">CVE-2013-3900 exploited unhashed padding appended after WIN_CERTIFICATE; EnableCertPaddingCheck enforces strict zero-padding.</text>
-<line x1="450.0" y1="139.5" x2="450.0" y2="187.0" stroke="#365378" stroke-width="1.5"/>
-<polygon points="450.0,193.5 453.8,185.5 446.2,185.5" fill="#365378"/>
-<polyline points="450.0,266.8 450.0,290.3 161.3,290.3 161.3,314.3" fill="none" stroke="#2b6a4c" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="161.3,320.8 165.1,312.8 157.5,312.8" fill="#2b6a4c"/>
-<line x1="450.0" y1="266.8" x2="450.0" y2="314.3" stroke="#5c4282" stroke-width="1.5"/>
-<polygon points="450.0,320.8 453.8,312.8 446.2,312.8" fill="#5c4282"/>
-<polyline points="450.0,266.8 450.0,297.3 738.7,297.3 738.7,314.3" fill="none" stroke="#b07926" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="738.7,320.8 742.5,312.8 734.9,312.8" fill="#b07926"/>
-<rect x="395.9" y="157.0" width="108.3" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="450.0" y="168.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#365378" text-anchor="middle">DataDirectory[4]</text>
-<rect x="121.8" y="296.0" width="79.1" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="161.3" y="307.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#2b6a4c" text-anchor="middle">signs digest</text>
-<rect x="406.2" y="284.2" width="87.6" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="450.0" y="295.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#5c4282" text-anchor="middle">bundles certs</text>
-<rect x="696.5" y="299.5" width="84.3" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="738.7" y="311.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#b07926" text-anchor="middle">countersigns</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 456" width="920" height="456">
+<rect x="0" y="0" width="920" height="456" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PE AUTHENTICODE STRUCTURAL HASH &amp; PKCS #7 SIGNEDDATA NESTING</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">PORTABLE EXECUTABLE (PE/COFF)</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Hashed Image Sections (.text, .rdata, headers)</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Authenticode SHA-256 omits exactly 3 regions: Optional Header Checksum, DataDirectory[SECURITY] entry, and trailing Certificate Table bytes</text>
+<rect x="26.0" y="183.0" width="868.0" height="73.0" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="460.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">FILE OFFSET (NOT MAPPED RVA)</text>
+<text x="460.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">WIN_CERTIFICATE -&gt; PKCS #7 SignedData</text>
+<text x="460.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">ASN.1 DER container holding X.509 cert chain, SignerInfo, and authenticated attributes</text>
+<rect x="26.0" y="314.0" width="277.3" height="87.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="40.0" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">ECONTENT (1.3.6.1.4.1.311.2.1.4)</text>
+<text x="40.0" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">SpcIndirectDataContent</text>
+<text x="40.0" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Carries canonical PE image digest +</text>
+<text x="40.0" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">optional per-page hashes for HVCI</text>
+<rect x="321.3" y="314.0" width="277.3" height="87.1" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="335.3" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">CERTIFICATES</text>
+<text x="335.3" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">X.509 Signer -&gt; Root + EKUs</text>
+<text x="335.3" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Chains to Microsoft / WHQL / Code Signing</text>
+<text x="335.3" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Root with EKU constraints</text>
+<rect x="616.7" y="314.0" width="277.3" height="87.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="630.7" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">UNAUTHENTICATEDATTRIBUTES</text>
+<text x="630.7" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">RFC 3161 Timestamp Token</text>
+<text x="630.7" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Proves signature existed before cert</text>
+<text x="630.7" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">expiry (lifetime signing)</text>
+<text x="460.0" y="427.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">CVE-2013-3900 exploited unhashed padding appended after WIN_CERTIFICATE; EnableCertPaddingCheck enforces strict zero-padding.</text>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#365378"/>
+<line x1="164.7" y1="256.0" x2="164.7" y2="307.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="164.7,314.0 168.7,305.5 160.7,305.5" fill="#2b6a4c"/>
+<line x1="460.0" y1="256.0" x2="460.0" y2="307.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="460.0,314.0 464.0,305.5 456.0,305.5" fill="#5c4282"/>
+<line x1="755.3" y1="256.0" x2="755.3" y2="307.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="755.3,314.0 759.3,305.5 751.3,305.5" fill="#b07926"/>
+<rect x="406.8" y="141.1" width="106.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">DataDirectory[4]</text>
+<rect x="125.8" y="272.1" width="77.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">signs digest</text>
+<rect x="416.9" y="272.1" width="86.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">bundles certs</text>
+<rect x="713.9" y="272.1" width="82.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">countersigns</text>
 </svg>

@@ -1,37 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 599" width="760" height="599">
-<rect x="0" y="0" width="760" height="599" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 627" width="760" height="627">
+<rect x="0" y="0" width="760" height="627" fill="#ffffff"/>
 <text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">POST-INCIDENT IDENTITY-PLANE RE-ARCHITECTURE (SECURE FUTURE INITIATIVE)</text>
-<rect x="150.0" y="48.0" width="460.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="164.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">1 · ATTESTED EXECUTION (CLOSES HOST/DUMP EXPOSURE)</text>
-<text x="164.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Token-Signing Service Runs Inside Azure Confidential VMs</text>
-<text x="164.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">AMD SEV-SNP / Intel TDX hardware memory encryption isolates signing</text>
-<text x="164.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">service from host operators &amp; dumps (Apr 2025)</text>
-<rect x="150.0" y="181.5" width="460.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="164.0" y="203.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">2 · HARDWARE KEY CUSTODY + ROTATION (CLOSES 2016 KEY THEFT)</text>
-<text x="164.0" y="219.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">FIPS 140-3 Level 3 Azure Managed HSM + Integrated HSM</text>
-<text x="164.0" y="237.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Non-exportable signing keys (exportable=False) with automated rotation</text>
-<text x="164.0" y="251.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">across MSA and Entra ID (Sep 2024)</text>
-<rect x="150.0" y="315.0" width="460.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="164.0" y="336.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">3 · LIBRARY-ENFORCED ISOLATION (CLOSES OWA STEP-5 OMISSION)</text>
-<text x="164.0" y="352.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Single Hardened Identity SDK Enforces iss, aud, kid, &amp; tid</text>
-<text x="164.0" y="371.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Validates &gt; 90% of Entra ID tokens across Microsoft apps by default</text>
-<text x="164.0" y="385.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">rather than trusting caller checks</text>
-<rect x="150.0" y="428.5" width="460.0" height="103.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="164.0" y="450.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">4 · COMMODITY TELEMETRY (CLOSES DETECTION INVERSION)</text>
-<text x="164.0" y="466.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Baseline Free MailItemsAccessed + 2-Year Internal Log</text>
-<text x="164.0" y="482.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Retention</text>
-<text x="164.0" y="500.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">180-day default customer Purview audit retention across commercial and</text>
-<text x="164.0" y="515.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">government clouds</text>
-<text x="380.0" y="556.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Open industry frontiers: multi-party threshold IdP signing (FROST RFC 9591 / DKLs) and Certificate-Transparency-style</text>
-<text x="380.0" y="570.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">key/token logs.</text>
-<line x1="380.0" y1="135.5" x2="380.0" y2="175.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,181.5 383.8,173.5 376.2,173.5" fill="#4a5568"/>
-<line x1="380.0" y1="269.0" x2="380.0" y2="308.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,315.0 383.8,307.0 376.2,307.0" fill="#4a5568"/>
-<line x1="380.0" y1="402.5" x2="380.0" y2="422.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,428.5 383.8,420.5 376.2,420.5" fill="#4a5568"/>
-<rect x="324.3" y="149.0" width="111.4" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="160.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">attested HSM call</text>
-<rect x="323.1" y="282.5" width="113.8" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="294.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">issues scoped JWT</text>
+<rect x="145.0" y="48.0" width="470.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">1 · ATTESTED EXECUTION (CLOSES HOST/DUMP EXPOSURE)</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Token-Signing Service Runs Inside Azure Confidential VMs</text>
+<text x="159.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">AMD SEV-SNP / Intel TDX hardware memory encryption isolates signing</text>
+<text x="159.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">service from host operators &amp; dumps (Apr 2025)</text>
+<rect x="145.0" y="193.5" width="470.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">2 · HARDWARE KEY CUSTODY + ROTATION (CLOSES 2016 KEY THEFT)</text>
+<text x="159.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">FIPS 140-3 Level 3 Azure Managed HSM + Integrated HSM</text>
+<text x="159.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Non-exportable signing keys (exportable=False) with automated rotation</text>
+<text x="159.0" y="263.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">across MSA and Entra ID (Sep 2024)</text>
+<rect x="145.0" y="339.0" width="470.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">3 · LIBRARY-ENFORCED ISOLATION (CLOSES OWA STEP-5 OMISSION)</text>
+<text x="159.0" y="376.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Single Hardened Identity SDK Enforces iss, aud, kid, &amp; tid</text>
+<text x="159.0" y="395.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Validates &gt; 90% of Entra ID tokens across Microsoft apps by default rather</text>
+<text x="159.0" y="409.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">than trusting caller checks</text>
+<rect x="145.0" y="456.5" width="470.0" height="103.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="159.0" y="478.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">4 · COMMODITY TELEMETRY (CLOSES DETECTION INVERSION)</text>
+<text x="159.0" y="494.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Baseline Free MailItemsAccessed + 2-Year Internal Log</text>
+<text x="159.0" y="510.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Retention</text>
+<text x="159.0" y="528.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">180-day default customer Purview audit retention across commercial and</text>
+<text x="159.0" y="543.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">government clouds</text>
+<text x="380.0" y="584.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Open industry frontiers: multi-party threshold IdP signing (FROST RFC 9591 / DKLs) and Certificate-Transparency-style</text>
+<text x="380.0" y="598.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">key/token logs.</text>
+<line x1="380.0" y1="135.5" x2="380.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,193.5 384.0,185.0 376.0,185.0" fill="#4a5568"/>
+<line x1="380.0" y1="281.0" x2="380.0" y2="332.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,339.0 384.0,330.5 376.0,330.5" fill="#4a5568"/>
+<line x1="380.0" y1="426.5" x2="380.0" y2="450.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,456.5 384.0,448.0 376.0,448.0" fill="#4a5568"/>
+<rect x="325.3" y="151.6" width="109.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">attested HSM call</text>
+<rect x="324.1" y="297.1" width="111.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="308.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">issues scoped JWT</text>
 </svg>

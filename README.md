@@ -67,6 +67,7 @@ Open Graph and Twitter cards, `schema.org/Book` JSON-LD, `sitemap.xml`, and
 
 ```bash
 SITE_URL=https://maliparag.github.io/windows-trust-chain node tools/gen-seo.mjs
+node tools/build-pdf.mjs   # writes ./book/the-windows-trust-chain.pdf
 ```
 
 If you modify chapter titles or reading order, regenerate `src/SUMMARY.md`:

@@ -30,4 +30,4 @@ layer mistakes cryptographic validity for authorization.
 | Finale | [20. When the Chain Snaps: Storm-0558](../chapters/15-storm0558.md) | How a stolen 2016 `MSA` signing key and a missing cross-tier `RFC 8725` issuer check forged enterprise cloud mail tokens while every lower link held |
 | Back Matter | [References](../back-matter/70-references.md) · [Glossary](../back-matter/80-glossary.md) · [About This Book](../back-matter/85-about.md) · [Colophon](../back-matter/90-colophon.md) · [Index](../back-matter/95-index.md) | 876 primary-source references, cross-tier glossary, editorial methodology, build architecture, and hyperlinked subject index |
 
-Begin with the [Prologue](../chapters/00-prologue.md) or review [How to Read This Book](../front-matter/03-how-to-read.md).
+Begin with the [Prologue](../chapters/00-prologue.md), review [How to Read This Book](../front-matter/03-how-to-read.md), or download the [PDF Edition](../the-windows-trust-chain.pdf).

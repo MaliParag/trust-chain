@@ -1,50 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 542" width="900" height="542">
-<rect x="0" y="0" width="900" height="542" fill="#ffffff"/>
-<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">TPM 1.2 ARCHITECTURE: SINGLE STORAGE ROOT &amp; PRIVACY-CA INDIRECTION</text>
-<rect x="160.0" y="52.0" width="580.0" height="73.3" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="450.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">SINGLE OWNERSHIP</text>
-<text x="450.0" y="89.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Owner Authorization Secret</text>
-<text x="450.0" y="108.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Provisioned once via TPM_TakeOwnership</text>
-<rect x="160.0" y="179.3" width="580.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="450.0" y="200.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">SINGLE ROOT</text>
-<text x="450.0" y="216.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Storage Root Key (SRK, RSA-2048)</text>
-<text x="450.0" y="235.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Clearing TPM destroys SRK and invalidates every child key</text>
-<rect x="26.0" y="290.5" width="270.7" height="72.6" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="40.0" y="312.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CHILD KEY</text>
-<text x="40.0" y="327.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">Storage Key</text>
-<text x="40.0" y="346.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Wraps downstream keys</text>
-<rect x="314.7" y="290.5" width="270.7" height="72.6" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="328.7" y="312.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CHILD KEY</text>
-<text x="328.7" y="327.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">Binding / Sealing Key</text>
-<text x="328.7" y="346.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">PCR-bound data blobs</text>
-<rect x="603.3" y="290.5" width="270.7" height="72.6" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="617.3" y="312.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CHILD KEY</text>
-<text x="617.3" y="327.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">Signing Key</text>
-<text x="617.3" y="346.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Application signatures</text>
-<rect x="26.0" y="401.1" width="270.7" height="86.6" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="40.0" y="422.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">HARDWARE IDENTITY</text>
-<text x="40.0" y="438.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">Endorsement Key (EK)</text>
-<text x="40.0" y="456.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">1 RSA key per chip; decryption-only (cannot</text>
-<text x="40.0" y="470.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">sign quotes directly)</text>
-<rect x="314.7" y="401.1" width="270.7" height="86.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="328.7" y="422.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">EXTERNAL BROKER</text>
-<text x="328.7" y="438.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">Privacy CA</text>
-<text x="328.7" y="456.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Verifies EK cert and encrypts AIK</text>
-<text x="328.7" y="470.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">credential back to EK</text>
-<rect x="603.3" y="401.1" width="270.7" height="86.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
-<text x="617.3" y="422.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">QUOTE SIGNER</text>
-<text x="617.3" y="438.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.2" font-weight="700" fill="#1a1a1a" text-anchor="start">Attestation Identity Key (AIK)</text>
-<text x="617.3" y="456.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">Signs PCR quotes without exposing raw EK</text>
-<text x="617.3" y="470.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="400" fill="#433e38" text-anchor="start">modulus</text>
-<text x="450.0" y="513.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">TPM 1.2 coupled platform and OS administration under one SRK and fixed algorithms to SHA-1 + RSA-2048.</text>
-<line x1="450.0" y1="125.3" x2="450.0" y2="172.8" stroke="#b07926" stroke-width="1.5"/>
-<polygon points="450.0,179.3 453.8,171.3 446.2,171.3" fill="#b07926"/>
-<polyline points="450.0,252.5 450.0,268.0 161.3,268.0 161.3,284.0" fill="none" stroke="#365378" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="161.3,290.5 165.1,282.5 157.5,282.5" fill="#365378"/>
-<line x1="450.0" y1="252.5" x2="450.0" y2="284.0" stroke="#365378" stroke-width="1.5"/>
-<polygon points="450.0,290.5 453.8,282.5 446.2,282.5" fill="#365378"/>
-<polyline points="450.0,252.5 450.0,275.0 738.7,275.0 738.7,284.0" fill="none" stroke="#365378" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="738.7,290.5 742.5,282.5 734.9,282.5" fill="#365378"/>
-<rect x="420.0" y="142.7" width="60.0" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="450.0" y="154.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#b07926" text-anchor="middle">controls</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 572" width="920" height="572">
+<rect x="0" y="0" width="920" height="572" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">TPM 1.2 ARCHITECTURE: SINGLE STORAGE ROOT &amp; PRIVACY-CA INDIRECTION</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">SINGLE OWNERSHIP</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Owner Authorization Secret</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Provisioned once via TPM_TakeOwnership</text>
+<rect x="26.0" y="183.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">SINGLE ROOT</text>
+<text x="460.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Storage Root Key (SRK, RSA-2048)</text>
+<text x="460.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Clearing TPM destroys SRK and invalidates every child key</text>
+<rect x="26.0" y="314.0" width="277.3" height="73.0" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="40.0" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CHILD KEY</text>
+<text x="40.0" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Storage Key</text>
+<text x="40.0" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Wraps downstream keys</text>
+<rect x="321.3" y="314.0" width="277.3" height="73.0" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="335.3" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CHILD KEY</text>
+<text x="335.3" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Binding / Sealing Key</text>
+<text x="335.3" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">PCR-bound data blobs</text>
+<rect x="616.7" y="314.0" width="277.3" height="73.0" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="630.7" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CHILD KEY</text>
+<text x="630.7" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Signing Key</text>
+<text x="630.7" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Application signatures</text>
+<rect x="26.0" y="415.0" width="217.3" height="103.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="40.0" y="436.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">HARDWARE IDENTITY</text>
+<text x="40.0" y="452.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Endorsement Key (EK)</text>
+<text x="40.0" y="471.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">1 RSA key per chip;</text>
+<text x="40.0" y="485.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">decryption-only (cannot sign</text>
+<text x="40.0" y="499.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">quotes directly)</text>
+<rect x="351.3" y="415.0" width="217.3" height="103.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="365.3" y="436.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">EXTERNAL BROKER</text>
+<text x="365.3" y="452.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Privacy CA</text>
+<text x="365.3" y="471.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Verifies EK cert and encrypts</text>
+<text x="365.3" y="485.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">AIK credential back to EK</text>
+<rect x="676.7" y="415.0" width="217.3" height="103.0" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="690.7" y="436.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">QUOTE SIGNER</text>
+<text x="690.7" y="452.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Attestation Identity Key</text>
+<text x="690.7" y="468.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">(AIK)</text>
+<text x="690.7" y="486.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Signs PCR quotes without</text>
+<text x="690.7" y="501.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">exposing raw EK modulus</text>
+<text x="460.0" y="544.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">TPM 1.2 coupled platform and OS administration under one SRK and fixed algorithms to SHA-1 + RSA-2048.</text>
+<line x1="243.3" y1="466.5" x2="344.8" y2="466.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="351.3,466.5 342.8,462.5 342.8,470.5" fill="#b07926"/>
+<line x1="568.7" y1="466.5" x2="670.2" y2="466.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="676.7,466.5 668.2,462.5 668.2,470.5" fill="#5c4282"/>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#b07926"/>
+<line x1="164.7" y1="256.0" x2="164.7" y2="307.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="164.7,314.0 168.7,305.5 160.7,305.5" fill="#365378"/>
+<line x1="460.0" y1="256.0" x2="460.0" y2="307.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="460.0,314.0 464.0,305.5 456.0,305.5" fill="#365378"/>
+<line x1="755.3" y1="256.0" x2="755.3" y2="307.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="755.3,314.0 759.3,305.5 751.3,305.5" fill="#365378"/>
+<rect x="263.2" y="457.1" width="55.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="290.9" y="468.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">EK cert</text>
+<rect x="571.9" y="457.1" width="88.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="616.2" y="468.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">encrypted AIK</text>
+<rect x="430.4" y="141.1" width="59.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">controls</text>
+<rect x="141.7" y="272.1" width="46.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">wraps</text>
+<rect x="437.0" y="272.1" width="46.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">wraps</text>
+<rect x="732.3" y="272.1" width="46.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">wraps</text>
 </svg>

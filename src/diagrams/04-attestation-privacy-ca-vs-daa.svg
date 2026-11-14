@@ -1,62 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 568" width="880" height="568">
-<rect x="0" y="0" width="880" height="568" fill="#ffffff"/>
-<rect x="28.0" y="52.0" width="324.0" height="442.5" rx="8.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="190.0" y="74.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#19524e" text-anchor="middle">SHIPPING ENTERPRISE MODEL: PRIVACY CA</text>
-<rect x="528.0" y="52.0" width="324.0" height="442.5" rx="8.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
-<text x="690.0" y="74.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#452e66" text-anchor="middle">TCG ACADEMIC ALTERNATIVE: ECDAA</text>
-<text x="440.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">REMOTE HARDWARE ANONYMITY: BROKERED PRIVACY CA VS. ZERO-KNOWLEDGE ECDAA</text>
-<rect x="44.0" y="90.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="58.0" y="111.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 1 · ENROLLMENT</text>
-<text x="58.0" y="127.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Send EKCert + Restricted AKPub to</text>
-<text x="58.0" y="143.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CA</text>
-<text x="58.0" y="162.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">MAA or AD CS validates TPM vendor EK</text>
-<text x="58.0" y="176.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">certificate chain</text>
-<rect x="44.0" y="231.5" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="58.0" y="253.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 2 · CHALLENGE</text>
-<text x="58.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">TPM2_MakeCredential -&gt;</text>
-<text x="58.0" y="285.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">ActivateCredential</text>
-<text x="58.0" y="303.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Secret encrypted to EKPub and bound to</text>
-<text x="58.0" y="317.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Name(AKPub); only co-resident TPM unwraps</text>
-<rect x="44.0" y="373.0" width="292.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="58.0" y="394.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 3 · OPERATIONAL TRADE-OFF</text>
-<text x="58.0" y="410.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Simple ECDSA/RSA Quotes; Trusted</text>
-<text x="58.0" y="426.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Broker</text>
-<text x="58.0" y="445.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Verifier sees AKCert (not EK), while the</text>
-<text x="58.0" y="459.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">CA/MAA broker enforces privacy by policy</text>
-<rect x="544.0" y="90.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="558.0" y="111.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 1 · ONE-TIME BLIND JOIN</text>
-<text x="558.0" y="127.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Issuer Certifies Hidden Secret f</text>
-<text x="558.0" y="143.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Blindly</text>
-<text x="558.0" y="162.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Bilinear pairing credential (A, B, C, D) issued</text>
-<text x="558.0" y="176.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">without learning f</text>
-<rect x="544.0" y="231.5" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
-<text x="558.0" y="253.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 2 · SPLIT SIGN</text>
-<text x="558.0" y="269.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">TPM2_Commit + Zero-Knowledge</text>
-<text x="558.0" y="285.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Proof</text>
-<text x="558.0" y="303.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Host randomizes credential and proves</text>
-<text x="558.0" y="317.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">validity without revealing identity</text>
-<rect x="544.0" y="373.0" width="292.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="558.0" y="394.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 3 · WHY PRODUCTION SKIPPED IT</text>
-<text x="558.0" y="410.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Complex Pairing Curves (BN_P256) &amp;</text>
-<text x="558.0" y="426.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Rogue-Key Lists</text>
-<text x="558.0" y="445.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Barreto-Naehrig curve weakness +</text>
-<text x="558.0" y="459.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">revocation complexity kept Windows on AKs</text>
-<text x="440.0" y="524.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Enterprise Windows favors deterministic EK-&gt;AK activation (MAA / HealthAttestation) because manageability and fleet inventory outweigh</text>
-<text x="440.0" y="539.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">anonymous group signatures.</text>
-<line x1="190.0" y1="193.5" x2="190.0" y2="225.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="190.0,231.5 193.8,223.5 186.2,223.5" fill="#4a5568"/>
-<line x1="190.0" y1="335.0" x2="190.0" y2="366.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="190.0,373.0 193.8,365.0 186.2,365.0" fill="#4a5568"/>
-<line x1="690.0" y1="193.5" x2="690.0" y2="225.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="690.0,231.5 693.8,223.5 686.2,223.5" fill="#4a5568"/>
-<line x1="690.0" y1="335.0" x2="690.0" y2="366.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="690.0,373.0 693.8,365.0 686.2,365.0" fill="#4a5568"/>
-<rect x="131.1" y="203.0" width="117.9" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="190.0" y="214.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">co-residency proof</text>
-<rect x="126.0" y="344.5" width="127.9" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="190.0" y="356.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">issues AKCert / JWT</text>
-<rect x="630.5" y="203.0" width="119.0" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="690.0" y="214.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">blind randomization</text>
-<rect x="628.6" y="344.5" width="122.7" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="690.0" y="356.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">unlinkable signature</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 610" width="900" height="610">
+<rect x="0" y="0" width="900" height="610" fill="#ffffff"/>
+<rect x="26.0" y="52.0" width="324.0" height="484.5" rx="8.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="188.0" y="75.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#19524e" text-anchor="middle">SHIPPING ENTERPRISE MODEL: PRIVACY CA</text>
+<rect x="550.0" y="52.0" width="324.0" height="484.5" rx="8.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="712.0" y="75.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#452e66" text-anchor="middle">TCG ACADEMIC ALTERNATIVE: ECDAA</text>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">REMOTE HARDWARE ANONYMITY: BROKERED PRIVACY CA VS. ZERO-KNOWLEDGE ECDAA</text>
+<rect x="42.0" y="92.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="113.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 1 · ENROLLMENT</text>
+<text x="56.0" y="129.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Send EKCert + Restricted AKPub to</text>
+<text x="56.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CA</text>
+<text x="56.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">MAA or AD CS validates TPM vendor EK</text>
+<text x="56.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">certificate chain</text>
+<rect x="42.0" y="253.5" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="275.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 2 · CHALLENGE</text>
+<text x="56.0" y="291.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">TPM2_MakeCredential -&gt;</text>
+<text x="56.0" y="307.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">ActivateCredential</text>
+<text x="56.0" y="325.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Secret encrypted to EKPub and bound to</text>
+<text x="56.0" y="339.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Name(AKPub); only co-resident TPM unwraps</text>
+<rect x="42.0" y="415.0" width="292.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="56.0" y="436.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 3 · OPERATIONAL TRADE-OFF</text>
+<text x="56.0" y="452.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Simple ECDSA/RSA Quotes; Trusted</text>
+<text x="56.0" y="468.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Broker</text>
+<text x="56.0" y="487.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Verifier sees AKCert (not EK), while the</text>
+<text x="56.0" y="501.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">CA/MAA broker enforces privacy by policy</text>
+<rect x="566.0" y="92.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="113.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 1 · ONE-TIME BLIND JOIN</text>
+<text x="580.0" y="129.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Issuer Certifies Hidden Secret f</text>
+<text x="580.0" y="145.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Blindly</text>
+<text x="580.0" y="164.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Bilinear pairing credential (A, B, C, D) issued</text>
+<text x="580.0" y="178.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">without learning f</text>
+<rect x="566.0" y="253.5" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="275.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 2 · SPLIT SIGN</text>
+<text x="580.0" y="291.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">TPM2_Commit + Zero-Knowledge</text>
+<text x="580.0" y="307.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Proof</text>
+<text x="580.0" y="325.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Host randomizes credential and proves</text>
+<text x="580.0" y="339.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">validity without revealing identity</text>
+<rect x="566.0" y="415.0" width="292.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="580.0" y="436.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 3 · WHY PRODUCTION SKIPPED IT</text>
+<text x="580.0" y="452.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Complex Pairing Curves (BN_P256) &amp;</text>
+<text x="580.0" y="468.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Rogue-Key Lists</text>
+<text x="580.0" y="487.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Barreto-Naehrig curve weakness +</text>
+<text x="580.0" y="501.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">revocation complexity kept Windows on AKs</text>
+<text x="450.0" y="566.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Enterprise Windows favors deterministic EK-&gt;AK activation (MAA / HealthAttestation) because manageability and fleet inventory outweigh</text>
+<text x="450.0" y="581.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">anonymous group signatures.</text>
+<line x1="188.0" y1="195.5" x2="188.0" y2="247.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,253.5 192.0,245.0 184.0,245.0" fill="#4a5568"/>
+<line x1="188.0" y1="357.0" x2="188.0" y2="408.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,415.0 192.0,406.5 184.0,406.5" fill="#4a5568"/>
+<line x1="712.0" y1="195.5" x2="712.0" y2="247.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,253.5 716.0,245.0 708.0,245.0" fill="#4a5568"/>
+<line x1="712.0" y1="357.0" x2="712.0" y2="408.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,415.0 716.0,406.5 708.0,406.5" fill="#4a5568"/>
+<rect x="130.1" y="211.6" width="115.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="223.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">co-residency proof</text>
+<rect x="125.2" y="373.1" width="125.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="384.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">issues AKCert / JWT</text>
+<rect x="653.5" y="211.6" width="116.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="223.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">blind randomization</text>
+<rect x="651.7" y="373.1" width="120.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="384.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">unlinkable signature</text>
 </svg>

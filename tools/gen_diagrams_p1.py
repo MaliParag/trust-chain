@@ -30,7 +30,7 @@ def generate_part1(diag_dir: str):
         h = c.add_card(main_x, cur_y, main_w, tag=tag, title=ti, body=bo, theme=th)
         ys.append((cur_y, h, edge_lbl, th))
         if idx < len(tiers) - 1:
-            cur_y += h + 38.0
+            cur_y += h + 58.0
         else:
             cur_y += h
 
@@ -40,7 +40,7 @@ def generate_part1(diag_dir: str):
         col = "#8d2d3b" if idx == 0 else "#b07926"
         # Upward inheritance arrow from lower tier to upper tier!
         c.add_line(main_x + main_w / 2, lower_top, main_x + main_w / 2, upper_top + upper_h,
-                   color=col, width=1.8, arrow_end=True, label=lbl, label_color=col)
+                   color=col, width=1.8, arrow_end=True, label=lbl, label_pos=0.44, label_color=col)
 
     # Interlude side rail spanning Parts I-IV
     rail_top = ys[1][0]
@@ -137,9 +137,11 @@ def generate_part1(diag_dir: str):
         ],
         [
             ("own", "srk", "controls", "amber", False),
-            ("srk", "sk", None, "slate", False),
-            ("srk", "bk", None, "slate", False),
-            ("srk", "sgk", None, "slate", False),
+            ("srk", "sk", "wraps", "slate", False),
+            ("srk", "bk", "wraps", "slate", False),
+            ("srk", "sgk", "wraps", "slate", False),
+            ("ek", "pca", "EK cert", "amber", False),
+            ("pca", "aik", "encrypted AIK", "purple", False),
         ],
         footer="TPM 1.2 coupled platform and OS administration under one SRK and fixed algorithms to SHA-1 + RSA-2048."
     )
@@ -227,10 +229,10 @@ def generate_part1(diag_dir: str):
             ],
         ],
         [
-            ("ref", "plu", "shared spec lineage", "red", False),
-            ("ref", "ptt", "shared spec lineage", "red", False),
-            ("ref", "dtpm", "shared spec lineage", "red", False),
-            ("ref", "vtp", "shared spec lineage", "red", False),
+            ("ref", "plu", "Windows Update", "green", False),
+            ("ref", "ptt", "OEM UEFI capsule", "amber", False),
+            ("ref", "dtpm", "vendor flash tool", "amber", False),
+            ("ref", "vtp", "package rebuild", "slate", False),
         ],
         footer="Centralizing firmware on TCG reference code unifies behavior, making rapid fleet patch delivery (Windows Update) decisive."
     )

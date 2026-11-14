@@ -1,38 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 617" width="760" height="617">
-<rect x="0" y="0" width="760" height="617" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 645" width="760" height="645">
+<rect x="0" y="0" width="760" height="645" fill="#ffffff"/>
 <text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">SUNSPOT -&gt; SUNBURST -&gt; GOLDEN SAML: BYPASSING CODE SIGNING &amp; CLOUD MFA</text>
-<rect x="150.0" y="48.0" width="460.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="164.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">1 · BUILD-PIPELINE INJECTION</text>
-<text x="164.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SUNSPOT Monitors MsBuild.exe on SolarWinds Build Server</text>
-<text x="164.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Atomically swaps InventoryManager.cs before C# compilation and restores</text>
-<text x="164.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">clean source on disk afterward</text>
-<rect x="150.0" y="181.5" width="460.0" height="103.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="164.0" y="203.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">2 · VALID VENDOR SIGNATURE</text>
-<text x="164.0" y="219.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SolarWinds Signs Orion DLL with Legitimate Authenticode</text>
-<text x="164.0" y="235.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Cert</text>
-<text x="164.0" y="253.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">&lt; 18,000 enterprises validate the genuine publisher signature and execute</text>
-<text x="164.0" y="267.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SUNBURST inside trusted monitoring</text>
-<rect x="150.0" y="311.0" width="460.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
-<text x="164.0" y="332.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">3 · ON-PREMISES ESCALATION</text>
-<text x="164.0" y="348.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Selective TEARDROP / Raindrop Pivot (~100 High-Value</text>
-<text x="164.0" y="364.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Targets)</text>
-<text x="164.0" y="383.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Harvests credentials and extracts on-premises AD FS SAML token-signing</text>
-<text x="164.0" y="397.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">private key</text>
-<rect x="150.0" y="460.5" width="460.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
-<text x="164.0" y="482.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">4 · GOLDEN SAML FORGERY</text>
-<text x="164.0" y="498.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Mint Arbitrary SAML 2.0 Assertions Offline (Including MFA</text>
-<text x="164.0" y="514.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Claims)</text>
-<text x="164.0" y="532.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Cloud tenant trusts federated AD FS cert and issues M365 tokens without</text>
-<text x="164.0" y="547.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">touching a DC or prompting MFA</text>
-<text x="380.0" y="588.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Closed upstream by SLSA Build Level 3 + Sigstore ephemeral signing, and in identity by retiring AD FS for cloud-native auth.</text>
-<line x1="380.0" y1="135.5" x2="380.0" y2="175.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,181.5 383.8,173.5 376.2,173.5" fill="#4a5568"/>
-<line x1="380.0" y1="285.0" x2="380.0" y2="304.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,311.0 383.8,303.0 376.2,303.0" fill="#4a5568"/>
-<line x1="380.0" y1="414.5" x2="380.0" y2="454.0" stroke="#8d2d3b" stroke-width="1.5"/>
-<polygon points="380.0,460.5 383.8,452.5 376.2,452.5" fill="#8d2d3b"/>
-<rect x="315.6" y="149.0" width="128.8" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="160.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">signed post-injection</text>
-<rect x="326.9" y="428.0" width="106.2" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="439.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">stolen AD FS key</text>
+<rect x="145.0" y="48.0" width="470.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">1 · BUILD-PIPELINE INJECTION</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SUNSPOT Monitors MsBuild.exe on SolarWinds Build Server</text>
+<text x="159.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Atomically swaps InventoryManager.cs before C# compilation and restores</text>
+<text x="159.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">clean source on disk afterward</text>
+<rect x="145.0" y="193.5" width="470.0" height="103.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="159.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">2 · VALID VENDOR SIGNATURE</text>
+<text x="159.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SolarWinds Signs Orion DLL with Legitimate Authenticode</text>
+<text x="159.0" y="247.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Cert</text>
+<text x="159.0" y="265.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">&lt; 18,000 enterprises validate the genuine publisher signature and execute</text>
+<text x="159.0" y="279.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SUNBURST inside trusted monitoring</text>
+<rect x="145.0" y="327.0" width="470.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="159.0" y="348.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">3 · ON-PREMISES ESCALATION</text>
+<text x="159.0" y="364.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Selective TEARDROP / Raindrop Pivot (~100 High-Value</text>
+<text x="159.0" y="380.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Targets)</text>
+<text x="159.0" y="399.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Harvests credentials and extracts on-premises AD FS SAML token-signing</text>
+<text x="159.0" y="413.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">private key</text>
+<rect x="145.0" y="488.5" width="470.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="159.0" y="510.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">4 · GOLDEN SAML FORGERY</text>
+<text x="159.0" y="526.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Mint Arbitrary SAML 2.0 Assertions Offline (Including MFA</text>
+<text x="159.0" y="542.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Claims)</text>
+<text x="159.0" y="560.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Cloud tenant trusts federated AD FS cert and issues M365 tokens without</text>
+<text x="159.0" y="575.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">touching a DC or prompting MFA</text>
+<text x="380.0" y="616.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Closed upstream by SLSA Build Level 3 + Sigstore ephemeral signing, and in identity by retiring AD FS for cloud-native auth.</text>
+<line x1="380.0" y1="135.5" x2="380.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,193.5 384.0,185.0 376.0,185.0" fill="#4a5568"/>
+<line x1="380.0" y1="297.0" x2="380.0" y2="320.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,327.0 384.0,318.5 376.0,318.5" fill="#4a5568"/>
+<line x1="380.0" y1="430.5" x2="380.0" y2="482.0" stroke="#8d2d3b" stroke-width="1.5"/>
+<polygon points="380.0,488.5 384.0,480.0 376.0,480.0" fill="#8d2d3b"/>
+<rect x="316.7" y="151.6" width="126.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">signed post-injection</text>
+<rect x="327.8" y="446.7" width="104.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="458.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">stolen AD FS key</text>
 </svg>

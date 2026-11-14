@@ -1,41 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 651" width="760" height="651">
-<rect x="0" y="0" width="760" height="651" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 671" width="760" height="671">
+<rect x="0" y="0" width="760" height="671" fill="#ffffff"/>
 <text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">29-YEAR CREDENTIAL REPLAY PROGRESSION: ISOLATING STORAGE VS. EXPOSING USE</text>
-<rect x="150.0" y="48.0" width="460.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="164.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">GEN 1 · ON-DISK &amp; VTL0 CACHE (1997 / 2008)</text>
-<text x="164.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-Hash: NTOWF in SAM &amp; VTL0 lsass.exe</text>
-<text x="164.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Substitutes MD4 password hash directly into SMB/NTLM challenge</text>
-<text x="164.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">responses</text>
-<rect x="150.0" y="181.5" width="460.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="164.0" y="203.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GEN 2 &amp; 3 · VTL0 KERBEROS CACHE (2011-2014)</text>
-<text x="164.0" y="219.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-Ticket &amp; Overpass-the-Hash (.kirbi / AES &amp; RC4</text>
-<text x="164.0" y="235.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Keys)</text>
-<text x="164.0" y="253.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Closed locally on non-DC endpoints when Credential Guard moves NTOWF &amp;</text>
-<text x="164.0" y="267.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">TGT keys into VTL1 LsaIso</text>
-<rect x="150.0" y="331.0" width="460.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="164.0" y="352.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">GEN 4 · PKI KEY CONTAINERS (2021)</text>
-<text x="164.0" y="368.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-Certificate &amp; AD CS ESC1-ESC16 (PKINIT /</text>
-<text x="164.0" y="384.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">LDAPS)</text>
-<text x="164.0" y="403.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SAN spoofing closed by KB5014754 SID OID, while software PFXs &amp;</text>
-<text x="164.0" y="417.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">template ACL flaws remain</text>
-<rect x="150.0" y="480.5" width="460.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
-<text x="164.0" y="502.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">GEN 5 · CLOUDAP BROKER SEAM (2020-PRESENT)</text>
-<text x="164.0" y="518.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-PRT: TPM-Sealed Root vs. VTL0 CloudAP KDF</text>
-<text x="164.0" y="534.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Context Key</text>
-<text x="164.0" y="552.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Even with TPM transport key protection, SYSTEM drives VTL0 cloudap.dll</text>
-<text x="164.0" y="567.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">/ KDF context keys to mint x-ms-RefreshTokenCredential cookies</text>
-<text x="380.0" y="608.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Closing credential replay requires hardware root isolation + isolated per-request signing + downstream verifier Token</text>
-<text x="380.0" y="622.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Protection (PoP).</text>
-<line x1="380.0" y1="135.5" x2="380.0" y2="175.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,181.5 383.8,173.5 376.2,173.5" fill="#4a5568"/>
-<line x1="380.0" y1="285.0" x2="380.0" y2="324.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="380.0,331.0 383.8,323.0 376.2,323.0" fill="#4a5568"/>
-<line x1="380.0" y1="434.5" x2="380.0" y2="474.0" stroke="#8d2d3b" stroke-width="1.5"/>
-<polygon points="380.0,480.5 383.8,472.5 376.2,472.5" fill="#8d2d3b"/>
-<rect x="303.9" y="149.0" width="152.1" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="160.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">Credential Guard -&gt; VTL1</text>
-<rect x="315.2" y="298.5" width="129.7" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="310.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">pivots outside LsaIso</text>
-<rect x="297.2" y="448.0" width="165.7" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="380.0" y="459.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">storage != in-use derivation</text>
+<rect x="145.0" y="48.0" width="470.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">GEN 1 · ON-DISK &amp; VTL0 CACHE (1997 / 2008)</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-Hash: NTOWF in SAM &amp; VTL0 lsass.exe</text>
+<text x="159.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Substitutes MD4 password hash directly into SMB/NTLM challenge</text>
+<text x="159.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">responses</text>
+<rect x="145.0" y="193.5" width="470.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="159.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GEN 2 &amp; 3 · VTL0 KERBEROS CACHE (2011-2014)</text>
+<text x="159.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-Ticket &amp; Overpass-the-Hash (.kirbi / AES &amp; RC4</text>
+<text x="159.0" y="247.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Keys)</text>
+<text x="159.0" y="265.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Closed locally on non-DC endpoints when Credential Guard moves NTOWF &amp;</text>
+<text x="159.0" y="279.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">TGT keys into VTL1 LsaIso</text>
+<rect x="145.0" y="355.0" width="470.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="159.0" y="376.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">GEN 4 · PKI KEY CONTAINERS (2021)</text>
+<text x="159.0" y="392.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-Certificate &amp; AD CS ESC1-ESC16 (PKINIT / LDAPS)</text>
+<text x="159.0" y="411.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SAN spoofing closed by KB5014754 SID OID, while software PFXs &amp; template</text>
+<text x="159.0" y="425.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">ACL flaws remain</text>
+<rect x="145.0" y="500.5" width="470.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="159.0" y="522.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">GEN 5 · CLOUDAP BROKER SEAM (2020-PRESENT)</text>
+<text x="159.0" y="538.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pass-the-PRT: TPM-Sealed Root vs. VTL0 CloudAP KDF</text>
+<text x="159.0" y="554.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Context Key</text>
+<text x="159.0" y="572.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Even with TPM transport key protection, SYSTEM drives VTL0 cloudap.dll /</text>
+<text x="159.0" y="587.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">KDF context keys to mint x-ms-RefreshTokenCredential cookies</text>
+<text x="380.0" y="628.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Closing credential replay requires hardware root isolation + isolated per-request signing + downstream verifier Token</text>
+<text x="380.0" y="642.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Protection (PoP).</text>
+<line x1="380.0" y1="135.5" x2="380.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,193.5 384.0,185.0 376.0,185.0" fill="#4a5568"/>
+<line x1="380.0" y1="297.0" x2="380.0" y2="348.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,355.0 384.0,346.5 376.0,346.5" fill="#4a5568"/>
+<line x1="380.0" y1="442.5" x2="380.0" y2="494.0" stroke="#8d2d3b" stroke-width="1.5"/>
+<polygon points="380.0,500.5 384.0,492.0 376.0,492.0" fill="#8d2d3b"/>
+<rect x="305.3" y="151.6" width="149.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">Credential Guard -&gt; VTL1</text>
+<rect x="316.3" y="313.1" width="127.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="324.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">pivots outside LsaIso</text>
+<rect x="298.6" y="458.7" width="162.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="470.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">storage != in-use derivation</text>
 </svg>

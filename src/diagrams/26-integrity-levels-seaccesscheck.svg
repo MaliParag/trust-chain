@@ -1,51 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 569" width="860" height="569">
-<rect x="0" y="0" width="860" height="569" fill="#ffffff"/>
-<text x="430.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">TWO-GATE KERNEL SEACCESSCHECK EVALUATION PIPELINE</text>
-<rect x="36.0" y="48.0" width="450.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
-<text x="50.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">REQUEST</text>
-<text x="50.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Thread Requests DesiredAccess Mask on Kernel Object</text>
-<text x="50.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Uses thread ImpersonationToken if active (and SecurityImpersonation+),</text>
-<text x="50.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">else process PrimaryToken</text>
-<rect x="36.0" y="161.5" width="450.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
-<text x="50.0" y="183.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">GATE 1 · MANDATORY INTEGRITY (MIC)</text>
-<text x="50.0" y="199.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Compare Token Integrity Level vs. Object SACL Label</text>
-<text x="50.0" y="217.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Enforces SYSTEM_MANDATORY_LABEL_NO_WRITE_UP (plus</text>
-<text x="50.0" y="231.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">NO_READ_UP / NO_EXECUTE_UP where set)</text>
-<rect x="582.0" y="169.7" width="246.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="596.0" y="191.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED AT GATE 1</text>
-<text x="596.0" y="206.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">STATUS_ACCESS_DENIED</text>
-<text x="596.0" y="224.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Caller IL &lt; Object IL on write</text>
-<rect x="36.0" y="295.0" width="450.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
-<text x="50.0" y="316.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GATE 2 · DISCRETIONARY ACL (DACL)</text>
-<text x="50.0" y="332.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Walk Ordered ACEs Until All DesiredAccess Bits Granted</text>
-<text x="50.0" y="351.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Evaluates Explicit Deny ACEs before Explicit Allow ACEs ( plus</text>
-<text x="50.0" y="365.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Restricted/AppContainer SIDs if present)</text>
-<rect x="582.0" y="303.2" width="246.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
-<text x="596.0" y="324.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED AT GATE 2</text>
-<text x="596.0" y="340.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">STATUS_ACCESS_DENIED</text>
-<text x="596.0" y="357.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Explicit Deny or ungranted bit</text>
-<rect x="36.0" y="428.5" width="450.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
-<text x="50.0" y="450.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">OUTCOME</text>
-<text x="50.0" y="466.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">STATUS_SUCCESS: Handle Created with GrantedAccess</text>
-<text x="50.0" y="484.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Access mask frozen into handle table entry at open time (not</text>
-<text x="50.0" y="499.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">re-evaluated on ReadFile/WriteFile)</text>
-<text x="430.0" y="540.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">UIPI extends the same integrity lattice to window messages, blocking Medium/Low processes from PostMessage injection into High-IL windows.</text>
-<line x1="261.0" y1="135.5" x2="261.0" y2="155.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,161.5 264.8,153.5 257.2,153.5" fill="#4a5568"/>
-<line x1="486.0" y1="205.3" x2="575.5" y2="205.3" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
-<polygon points="582.0,205.3 574.0,201.5 574.0,209.1" fill="#8d2d3b"/>
-<line x1="261.0" y1="249.0" x2="261.0" y2="288.5" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,295.0 264.8,287.0 257.2,287.0" fill="#4a5568"/>
-<line x1="486.0" y1="338.8" x2="575.5" y2="338.8" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
-<polygon points="582.0,338.8 574.0,335.0 574.0,342.6" fill="#8d2d3b"/>
-<line x1="261.0" y1="382.5" x2="261.0" y2="422.0" stroke="#4a5568" stroke-width="1.5"/>
-<polygon points="261.0,428.5 264.8,420.5 257.2,420.5" fill="#4a5568"/>
-<rect x="500.1" y="195.7" width="67.8" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="534.0" y="207.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">IL too low</text>
-<rect x="224.0" y="262.5" width="74.0" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="261.0" y="274.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">MIC passed</text>
-<rect x="497.6" y="329.3" width="72.8" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="534.0" y="340.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#8d2d3b" text-anchor="middle">DACL deny</text>
-<rect x="211.9" y="396.0" width="98.2" height="19.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
-<text x="261.0" y="407.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#4a5568" text-anchor="middle">all bits granted</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 597" width="900" height="597">
+<rect x="0" y="0" width="900" height="597" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">TWO-GATE KERNEL SEACCESSCHECK EVALUATION PIPELINE</text>
+<rect x="34.0" y="48.0" width="440.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">REQUEST</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Thread Requests DesiredAccess Mask on Kernel Object</text>
+<text x="48.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Uses thread ImpersonationToken if active (and</text>
+<text x="48.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SecurityImpersonation+), else process PrimaryToken</text>
+<rect x="34.0" y="165.5" width="440.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="187.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">GATE 1 · MANDATORY INTEGRITY (MIC)</text>
+<text x="48.0" y="203.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Compare Token Integrity Level vs. Object SACL Label</text>
+<text x="48.0" y="221.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Enforces SYSTEM_MANDATORY_LABEL_NO_WRITE_UP (plus</text>
+<text x="48.0" y="235.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">NO_READ_UP / NO_EXECUTE_UP where set)</text>
+<rect x="612.0" y="173.7" width="260.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="195.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED AT GATE 1</text>
+<text x="626.0" y="210.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">STATUS_ACCESS_DENIED</text>
+<text x="626.0" y="228.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Caller IL &lt; Object IL on write</text>
+<rect x="34.0" y="311.0" width="440.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="48.0" y="332.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GATE 2 · DISCRETIONARY ACL (DACL)</text>
+<text x="48.0" y="348.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Walk Ordered ACEs Until All DesiredAccess Bits Granted</text>
+<text x="48.0" y="367.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Evaluates Explicit Deny ACEs before Explicit Allow ACEs ( plus</text>
+<text x="48.0" y="381.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Restricted/AppContainer SIDs if present)</text>
+<rect x="612.0" y="319.2" width="260.0" height="71.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="340.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BLOCKED AT GATE 2</text>
+<text x="626.0" y="356.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">STATUS_ACCESS_DENIED</text>
+<text x="626.0" y="373.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Explicit Deny or ungranted bit</text>
+<rect x="34.0" y="456.5" width="440.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="48.0" y="478.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">OUTCOME</text>
+<text x="48.0" y="494.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">STATUS_SUCCESS: Handle Created with GrantedAccess</text>
+<text x="48.0" y="512.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Access mask frozen into handle table entry at open time (not</text>
+<text x="48.0" y="527.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">re-evaluated on ReadFile/WriteFile)</text>
+<text x="450.0" y="568.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">UIPI extends the same integrity lattice to window messages, blocking Medium/Low processes from PostMessage injection into High-IL windows.</text>
+<line x1="254.0" y1="135.5" x2="254.0" y2="159.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,165.5 258.0,157.0 250.0,157.0" fill="#4a5568"/>
+<line x1="474.0" y1="209.3" x2="605.5" y2="209.3" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,209.3 603.5,205.3 603.5,213.3" fill="#8d2d3b"/>
+<line x1="254.0" y1="253.0" x2="254.0" y2="304.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,311.0 258.0,302.5 250.0,302.5" fill="#4a5568"/>
+<line x1="474.0" y1="354.8" x2="605.5" y2="354.8" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,354.8 603.5,350.8 603.5,358.8" fill="#8d2d3b"/>
+<line x1="254.0" y1="398.5" x2="254.0" y2="450.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,456.5 258.0,448.0 250.0,448.0" fill="#4a5568"/>
+<rect x="501.4" y="199.9" width="66.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="211.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">IL too low</text>
+<rect x="217.6" y="269.1" width="72.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="280.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">MIC passed</text>
+<rect x="498.9" y="345.4" width="71.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="356.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">DACL deny</text>
+<rect x="205.7" y="414.7" width="96.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="426.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">all bits granted</text>
 </svg>

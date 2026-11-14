@@ -153,5 +153,29 @@
     margin-top: 0.4rem;
 }
 
-/* Wide reference/evidence tables should scroll rather than overflow. */
-.content table { display: block; overflow-x: auto; }
+/* Tables: fit cleanly inside the reading column without clipping or hidden horizontal scrollbars. */
+.content table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 0.88em;
+    line-height: 1.42;
+}
+.content th,
+.content td {
+    padding: 0.45rem 0.55rem;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+.content td code,
+.content th code {
+    font-size: 0.9em;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+@media (max-width: 640px) {
+    .content table { display: block; overflow-x: auto; table-layout: auto; }
+}

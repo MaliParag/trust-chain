@@ -396,16 +396,18 @@ pre code {
 }
 pre .buttons { display: none !important; }
 
-/* Tables: wrap all 6 Attack Catalog columns cleanly inside 5.76in text block! */
+/* Tables: wrap all columns cleanly inside 5.76in text block! */
 .pdf-interior table,
 .content table {
   display: table !important;
   width: 100% !important;
+  max-width: 100% !important;
+  table-layout: fixed !important;
   border-collapse: collapse;
   margin: 9pt 0 11pt 0;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  font-size: 7.5pt;
-  line-height: 1.32;
+  font-size: 7.4pt;
+  line-height: 1.34;
   overflow: visible !important;
 }
 thead { display: table-header-group; }
@@ -415,19 +417,24 @@ th {
   color: #0f172a;
   font-weight: 700;
   text-align: left;
-  padding: 4.5pt 5pt;
+  padding: 4.5pt 4.5pt;
   border: 0.6pt solid #cbd5e1;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
 }
 td {
-  padding: 4pt 5pt;
+  padding: 4pt 4.5pt;
   border: 0.6pt solid #d8e0ea;
   vertical-align: top;
-  overflow-wrap: break-word;
-  word-break: normal;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
 }
 td code, th code {
-  font-size: 7.1pt;
+  font-size: 7.0pt;
   padding: 0.5pt 2pt;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
 }
 
 /* Trust-Chain Ledger & Callouts */
@@ -712,7 +719,7 @@ async function main() {
     await cdp.send('Page.navigate', { url: `http://127.0.0.1:${port}/__pdf.html` });
     await loadDone;
 
-    // Wait until all web fonts and all 68 SVG images report complete + non-zero dimensions
+    // Wait until all web fonts and all 68 SVG images report complete, and assert ZERO horizontal overflow across all tables/code/figures!
     const imgStats = await cdp.send('Runtime.evaluate', {
       awaitPromise: true,
       returnByValue: true,
@@ -724,13 +731,24 @@ async function main() {
           img.addEventListener('error', res, { once: true });
         })));
         const broken = imgs.filter((i) => !i.complete || i.naturalWidth === 0).map((i) => i.getAttribute('src'));
-        return { totalImgs: imgs.length, broken };
+        const mainRect = document.querySelector('.pdf-interior').getBoundingClientRect();
+        const overflows = [];
+        document.querySelectorAll('.pdf-interior table, .pdf-interior pre, .pdf-interior figure').forEach((el, idx) => {
+          const r = el.getBoundingClientRect();
+          if (r.width > mainRect.width + 1.5 || el.scrollWidth > mainRect.width + 2.0) {
+            overflows.push(\`\${el.tagName}#\${idx} (w=\${Math.round(r.width)}, scroll=\${el.scrollWidth}, max=\${Math.round(mainRect.width)})\`);
+          }
+        });
+        return { totalImgs: imgs.length, totalTables: document.querySelectorAll('.pdf-interior table').length, broken, overflows };
       })()`,
     });
 
-    const { totalImgs, broken } = imgStats.result.value;
+    const { totalImgs, totalTables, broken, overflows } = imgStats.result.value;
     if (broken.length > 0) {
       throw new Error(`Broken images in PDF render: ${broken.join(', ')}`);
+    }
+    if (overflows.length > 0) {
+      throw new Error(`Horizontal overflow in PDF render: ${overflows.join('; ')}`);
     }
 
     const headerTemplate = `
@@ -753,7 +771,7 @@ async function main() {
 
     const buf = Buffer.from(pdfRes.data, 'base64');
     writeFileSync(OUT_PDF, buf);
-    console.log(`PDF written: ${OUT_PDF} (${(buf.length / (1024 * 1024)).toFixed(2)} MB, ${totalImgs} vector figures verified)`);
+    console.log(`PDF written: ${OUT_PDF} (${(buf.length / (1024 * 1024)).toFixed(2)} MB, ${totalImgs} vector figures & ${totalTables} tables verified overflow-free)`);
     cdp.close();
   } finally {
     if (chrome.exitCode === null) {

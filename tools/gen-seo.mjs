@@ -71,6 +71,52 @@ const bookSchema = JSON.stringify({
   ...(IMAGE ? { image: IMAGE } : {}),
 });
 
+function formatTables(html) {
+  return html.replace(/<table\b[^>]*>[\s\S]*?<\/table>/gi, (tableHtml) => {
+    if (/<colgroup\b/i.test(tableHtml)) return tableHtml;
+    const rows = [...tableHtml.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map((m) => m[1]);
+    if (rows.length === 0) return tableHtml;
+
+    const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, 'x').trim();
+    const hdrCells = [...rows[0].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((m) => strip(m[1]));
+    const nCols = hdrCells.length;
+    if (nCols < 2) return tableHtml;
+
+    let pcts;
+    if (nCols === 6 && /^year$/i.test(hdrCells[1])) {
+      pcts = [16, 8, 14, 14, 26, 22];
+    } else {
+      const bodyRows = rows.slice(1).map((r) =>
+        [...r.matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((m) => strip(m[1]))
+      ).filter((r) => r.length === nCols);
+
+      const weights = hdrCells.map((h, j) => {
+        const longestWord = Math.max(...h.split(/\s+/).map((w) => w.length), 3);
+        const minW = Math.min(18, Math.max(10, longestWord * 1.1 + 3));
+        const avgBody = bodyRows.length
+          ? bodyRows.reduce((acc, r) => acc + r[j].length, 0) / bodyRows.length
+          : h.length;
+        return Math.max(minW, Math.pow(Math.max(avgBody, h.length * 0.85), 0.56) * 5.2);
+      });
+      const sumW = weights.reduce((a, b) => a + b, 0);
+      pcts = weights.map((w) => Math.round((w / sumW) * 1000) / 10);
+      const drift = Math.round((100 - pcts.reduce((a, b) => a + b, 0)) * 10) / 10;
+      pcts[pcts.length - 1] = Math.round((pcts[pcts.length - 1] + drift) * 10) / 10;
+    }
+
+    const colgroup = `<colgroup>${pcts.map((p) => `<col style="width:${p}%">`).join('')}</colgroup>`;
+    let updated = tableHtml.replace(/^(<table\b[^>]*>)/i, `$1${colgroup}`);
+
+    // Add clean break opportunities after \, /, and _ inside <td><code>...</code></td>
+    updated = updated.replace(/(<td\b[^>]*>[\s\S]*?<\/td>)/gi, (td) =>
+      td.replace(/<code>([\s\S]*?)<\/code>/gi, (_, inner) =>
+        `<code>${inner.replace(/([\\/_])/g, '$1<wbr>')}</code>`
+      )
+    );
+    return updated;
+  });
+}
+
 const pages = [];
 
 for (const file of walk(BOOK_DIR)) {
@@ -131,6 +177,7 @@ for (const file of walk(BOOK_DIR)) {
     tags.push(`<script type="application/ld+json">${bookSchema}</script>`);
   }
 
+  html = formatTables(html);
   html = html.replace('</head>', `        ${tags.join('\n        ')}\n    </head>`);
   writeFileSync(file, html, 'utf8');
 }

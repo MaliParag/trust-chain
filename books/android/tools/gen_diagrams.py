@@ -19,9 +19,14 @@ DIAG_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", 
 
 
 def main():
+    import runpy
     os.makedirs(DIAG_DIR, exist_ok=True)
     generate_part1(DIAG_DIR)
     generate_part2(DIAG_DIR)
+    for b in ("gen_extra_b1.py", "gen_extra_b2.py", "gen_extra_b3.py", "gen_extra_b4.py"):
+        bp = os.path.join(LOCAL_TOOLS, b)
+        if os.path.exists(bp):
+            runpy.run_path(bp, run_name="__main__")
     svgs = sorted(glob.glob(os.path.join(DIAG_DIR, "*.svg")))
     print(f"Generated and 7-way collision-verified {len(svgs)} SVG diagrams in {DIAG_DIR}")
 

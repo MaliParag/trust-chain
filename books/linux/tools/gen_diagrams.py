@@ -2051,12 +2051,18 @@ def generate_part4_and_finale():
 
 
 def main():
+    import runpy
     os.makedirs(DIAG_DIR, exist_ok=True)
     generate_opening()
     generate_part1()
     generate_part2_and_interlude()
     generate_part3()
     generate_part4_and_finale()
+    here = os.path.dirname(os.path.abspath(__file__))
+    for b in ("gen_extra_b1.py", "gen_extra_b2.py", "gen_extra_b3.py", "gen_extra_b4.py"):
+        bp = os.path.join(here, b)
+        if os.path.exists(bp):
+            runpy.run_path(bp, run_name="__main__")
     svgs = sorted(f for f in os.listdir(DIAG_DIR) if f.endswith(".svg"))
     print(f"Generated and verified {len(svgs)} SVG diagrams in {DIAG_DIR}")
 

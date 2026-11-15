@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 717" width="900" height="717">
+<rect x="0" y="0" width="900" height="717" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">DYLD_SHARED_CACHE SLIDE INFO V3/V5 &amp; KERNEL PAGE-IN PAC POINTER REBASING</text>
+<rect x="34.0" y="48.0" width="440.0" height="117.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">SEALED ON-DISK SHARED CACHE (SSV OR OS CRYPTEX1)</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">dyld_cache_mapping_and_slide_info &amp;</text>
+<text x="48.0" y="101.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">dyld_cache_slide_info5</text>
+<text x="48.0" y="120.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Encodes 16 KB page_starts[pageIndex] delta chains (0xFFFF =</text>
+<text x="48.0" y="134.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">NO_REBASE) across __DATA_CONST, __AUTH_CONST, and</text>
+<text x="48.0" y="148.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">__AUTH_GOT</text>
+<rect x="34.0" y="223.8" width="440.0" height="103.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="48.0" y="245.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">64-BIT ON-DISK CHAINED FIXUP ENCODING (FIXUP-CHAINS.H)</text>
+<text x="48.0" y="261.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">dyld_chained_ptr_arm64e_shared_cache_rebase vs.</text>
+<text x="48.0" y="277.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">_auth_rebase</text>
+<text x="48.0" y="295.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Plain: {runtimeOffset:34, high8:8, next:11, auth:0} · Auth:</text>
+<text x="48.0" y="310.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">{runtimeOffset:34, diversity:16, addrDiv:1, keyIsData:1, next:11, auth:1}</text>
+<rect x="34.0" y="385.3" width="440.0" height="117.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="48.0" y="406.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">XNU KERNEL PAGE-IN HANDLER (VM_SHARED_REGION_SLIDE_PAGE)</text>
+<text x="48.0" y="422.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Single-Boot ASLR Slide Addition + In-Kernel QARMA PAC</text>
+<text x="48.0" y="438.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Signing</text>
+<text x="48.0" y="457.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Walks next*8 chain in private kernel buffer, computes value_add +</text>
+<text x="48.0" y="471.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">runtimeOffset + boot_slide, and signs auth=1 slots with IA/DA key +</text>
+<text x="48.0" y="486.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">diversity</text>
+<rect x="612.0" y="395.1" width="260.0" height="98.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="416.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">ANTI-ORACLE INVARIANT</text>
+<text x="626.0" y="431.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Why Kernel Slides on Fault</text>
+<text x="626.0" y="449.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Disk holds zero valid PAC tags; XNU signs</text>
+<text x="626.0" y="463.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">pointers on page-in so shared pages stay</text>
+<text x="626.0" y="476.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">clean across processes</text>
+<rect x="34.0" y="561.0" width="440.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="48.0" y="582.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">USER-SPACE EL0 HARDWARE PROTECTION (APRR / SPRR TPRO)</text>
+<text x="48.0" y="598.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Read-Only TPRO Sealing of __DATA_CONST &amp;</text>
+<text x="48.0" y="614.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">PrebuiltLoader RuntimeState</text>
+<text x="48.0" y="633.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Mapped clean/immutable into task; thread flips TPRO RW- only inside</text>
+<text x="48.0" y="647.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">dyld fixup gates, then locks R-- prior to initializers</text>
+<rect x="612.0" y="563.7" width="260.0" height="98.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="585.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">IN-THE-WILD BYPASS</text>
+<text x="626.0" y="600.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CVE-2026-20700 (DarkSword)</text>
+<text x="626.0" y="618.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Corrupted dyld transition state during</text>
+<text x="626.0" y="631.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">writable window to hijack legitimate PAC</text>
+<text x="626.0" y="645.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">signing &amp; _ModInitFuncs</text>
+<text x="450.0" y="688.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Combining SSV disk immutability, kernel page-in PAC rebasing, and TPRO leaves only transient dyld state transitions exposed.</text>
+<line x1="254.0" y1="165.8" x2="254.0" y2="217.3" stroke="#5c4282" stroke-width="1.5"/>
+<polygon points="254.0,223.8 258.0,215.3 250.0,215.3" fill="#5c4282"/>
+<line x1="254.0" y1="327.3" x2="254.0" y2="378.8" stroke="#236b66" stroke-width="1.5"/>
+<polygon points="254.0,385.3 258.0,376.8 250.0,376.8" fill="#236b66"/>
+<line x1="474.0" y1="444.2" x2="605.5" y2="444.2" stroke="#b07926" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,444.2 603.5,440.2 603.5,448.2" fill="#b07926"/>
+<line x1="254.0" y1="503.0" x2="254.0" y2="554.5" stroke="#2b6a4c" stroke-width="1.5"/>
+<polygon points="254.0,561.0 258.0,552.5 250.0,552.5" fill="#2b6a4c"/>
+<line x1="474.0" y1="612.8" x2="605.5" y2="612.8" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,612.8 603.5,608.8 603.5,616.8" fill="#8d2d3b"/>
+<rect x="185.3" y="181.9" width="137.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="193.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">faults 16 KB DATA page</text>
+<rect x="208.9" y="343.4" width="90.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="354.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">walk delta != 0</text>
+<rect x="487.7" y="434.8" width="94.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="446.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">zero disk PACs</text>
+<rect x="202.2" y="519.2" width="103.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="530.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">maps into task_t</text>
+<rect x="499.4" y="603.4" width="70.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="614.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">state race</text>
+</svg>

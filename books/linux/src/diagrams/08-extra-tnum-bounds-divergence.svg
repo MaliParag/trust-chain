@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 615" width="920" height="615">
+<rect x="0" y="0" width="920" height="615" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">EBPF VERIFIER FIVE-DOMAIN REGISTER LATTICE (TNUM + INTERVALS) AND ESCAPE SEAM</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">ABSTRACT STATE · INCLUDE/LINUX/BPF_VERIFIER.H</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">struct bpf_reg_state Path-Sensitive Tracking Across R0..R10</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">bpf_check() tracks SCALAR_VALUE and pointer offsets across CFG paths up to 1,000,000 verified dynamic states</text>
+<rect x="26.0" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">BITWISE LATTICE</text>
+<text x="40.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">struct tnum var_off</text>
+<text x="40.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">(value, mask) with (value &amp; mask) == 0</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">tracks known 0/1 bits vs unknown x bits</text>
+<text x="40.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">across shifts and XOR/OR/AND</text>
+<rect x="321.3" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="335.3" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">64-BIT INTERVALS</text>
+<text x="335.3" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">smin..smax &amp; umin..umax</text>
+<text x="335.3" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Signed and unsigned 64-bit bounds (cnum64</text>
+<text x="335.3" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">r64) tightened on 64-bit ALU ops and</text>
+<text x="335.3" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">BPF_JGT / BPF_JSGE branches</text>
+<rect x="616.7" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="630.7" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">32-BIT SUBREGISTER</text>
+<text x="630.7" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">s32_min..u32_max</text>
+<text x="630.7" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Signed and unsigned 32-bit bounds (cnum32</text>
+<text x="630.7" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">r32) tracking low w0..w9 ALU32 and JMP32</text>
+<text x="630.7" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">subregister operations</text>
+<rect x="26.0" y="342.2" width="868.0" height="73.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="460.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">MUTUAL DOMAIN REDUCTION · KERNEL/BPF/VERIFIER.C</text>
+<text x="460.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">reg_bounds_sync(): Cross-Tightening Intervals Against tnum Bitmasks</text>
+<text x="460.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Propagates tighter bounds bidirectionally between r64, r32, and var_off while marking downstream live scalars precise</text>
+<rect x="26.0" y="473.2" width="425.0" height="87.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="40.0" y="494.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">VERIFIED NATIVE JIT + SPECTRE CLAMP</text>
+<text x="40.0" y="510.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Sound Proof &amp; sanitize_ptr_alu(alu_limit)</text>
+<text x="40.0" y="529.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Proves umax + access_size &lt;= map_size and emits branchless alu_limit</text>
+<text x="40.0" y="543.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">masking to block Spectre v1 OOB speculation</text>
+<rect x="469.0" y="473.2" width="425.0" height="87.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="483.0" y="494.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">SOUNDNESS ESCAPE (CVE-2020-8835 / CVE-2021-3490 / CVE-2023-2163)</text>
+<text x="483.0" y="510.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Oracle Register Divergence (Static 0 vs Runtime 1)</text>
+<text x="483.0" y="529.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Skipped ALU32 bound sync or faulty parent precision pruning yields</text>
+<text x="483.0" y="543.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">R6 believed 0; R6 *= 0x1000 bypasses map bounds</text>
+<text x="460.0" y="586.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Because eBPF emits native Ring 0 machine code without runtime SFI checks, a 1-bit domain bug grants kernel R/W.</text>
+<line x1="164.7" y1="125.0" x2="164.7" y2="176.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="164.7,183.0 168.7,174.5 160.7,174.5" fill="#365378"/>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#365378"/>
+<line x1="755.3" y1="125.0" x2="755.3" y2="176.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="755.3,183.0 759.3,174.5 751.3,174.5" fill="#365378"/>
+<line x1="164.7" y1="284.2" x2="164.7" y2="335.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="164.7,342.2 168.7,333.7 160.7,333.7" fill="#236b66"/>
+<line x1="460.0" y1="284.2" x2="460.0" y2="335.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="460.0,342.2 464.0,333.7 456.0,333.7" fill="#236b66"/>
+<line x1="755.3" y1="284.2" x2="755.3" y2="335.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="755.3,342.2 759.3,333.7 751.3,333.7" fill="#236b66"/>
+<line x1="238.5" y1="415.2" x2="238.5" y2="466.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="238.5,473.2 242.5,464.7 234.5,464.7" fill="#2b6a4c"/>
+<line x1="681.5" y1="415.2" x2="681.5" y2="466.7" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="4,3"/>
+<polygon points="681.5,473.2 685.5,464.7 677.5,464.7" fill="#8d2d3b"/>
+<rect x="129.4" y="141.1" width="70.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">known bits</text>
+<rect x="419.9" y="141.1" width="80.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">64-bit range</text>
+<rect x="715.2" y="141.1" width="80.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">32-bit range</text>
+<rect x="405.1" y="300.4" width="109.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">intersect domains</text>
+<rect x="190.7" y="431.4" width="95.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="238.5" y="442.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">sound invariant</text>
+<rect x="628.3" y="431.4" width="106.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="681.5" y="442.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">under-approx bug</text>
+</svg>

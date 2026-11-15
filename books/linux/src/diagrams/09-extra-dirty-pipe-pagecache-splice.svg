@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 687" width="900" height="687">
+<rect x="0" y="0" width="900" height="687" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">DIRTY PIPE (CVE-2022-0847): UNINITIALIZED PIPE_BUFFER FLAGS CORRUPTING PAGE CACHE</text>
+<rect x="34.0" y="48.0" width="440.0" height="101.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">STEP 1 · PRIME PIPE RING (FS/PIPE.C)</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Fill &amp; Drain All 16 struct pipe_buffer Ring Slots</text>
+<text x="48.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Unprivileged task writes and drains anonymous pipe pages so</text>
+<text x="48.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">anon_pipe_buf_ops leaves PIPE_BUF_FLAG_CAN_MERGE set on every</text>
+<text x="48.0" y="132.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">slot</text>
+<rect x="34.0" y="207.8" width="440.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="229.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 2 · ZERO-COPY SPLICE (LIB/IOV_ITER.C)</text>
+<text x="48.0" y="245.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">open("/etc/passwd", O_RDONLY) -&gt; splice() 1 Byte into</text>
+<text x="48.0" y="261.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Pipe</text>
+<text x="48.0" y="279.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">copy_page_to_iter_pipe() points buf-&gt;page at the live read-only</text>
+<text x="48.0" y="294.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">page-cache folio and sets buf-&gt;ops = page_cache_pipe_buf_ops</text>
+<rect x="612.0" y="210.5" width="260.0" height="98.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="232.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">MISSING INIT</text>
+<text x="626.0" y="247.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Stale Flag Retained</text>
+<text x="626.0" y="264.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">copy_page_to_iter_pipe() initialized page,</text>
+<text x="626.0" y="278.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">offset, and len while forgetting</text>
+<text x="626.0" y="291.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">buf-&gt;flags = 0</text>
+<rect x="34.0" y="369.3" width="440.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="48.0" y="390.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STEP 3 · PAGE-CACHE OVERWRITE</text>
+<text x="48.0" y="406.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">write(pipe_w, "root::0:0:...", len) Merges Into Backing</text>
+<text x="48.0" y="422.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Folio</text>
+<text x="48.0" y="441.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">pipe_write() sees stale PIPE_BUF_FLAG_CAN_MERGE and copies bytes</text>
+<text x="48.0" y="455.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">directly into shared RAM page cache, bypassing O_RDONLY &amp; DAC</text>
+<rect x="612.0" y="372.0" width="260.0" height="98.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="393.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">SILENT MUTATION</text>
+<text x="626.0" y="408.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Dirty Without Writeback</text>
+<text x="626.0" y="426.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Overwrites /etc/passwd or SUID ELF in</text>
+<text x="626.0" y="439.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">RAM without marking inode dirty or</text>
+<text x="626.0" y="453.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">requiring userns</text>
+<rect x="34.0" y="530.8" width="440.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="48.0" y="552.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 4 · KERNEL FIX &amp; IMMUTABLE DEFENSE</text>
+<text x="48.0" y="568.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Explicit buf-&gt;flags = 0 (Linux 5.16.11+) &amp; dm-verity /</text>
+<text x="48.0" y="584.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">fs-verity</text>
+<text x="48.0" y="603.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Commit 9d2231c5d74e zeroes flags in copy_page_to_iter_pipe() and</text>
+<text x="48.0" y="617.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">push_pipe(); IPE + fs-verity protect immutable binaries</text>
+<text x="450.0" y="658.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Dirty Pipe required zero capabilities or namespaces, proving why Ring 0 state initialization and immutable /usr matter.</text>
+<line x1="254.0" y1="149.8" x2="254.0" y2="201.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,207.8 258.0,199.3 250.0,199.3" fill="#4a5568"/>
+<line x1="474.0" y1="259.5" x2="605.5" y2="259.5" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,259.5 603.5,255.5 603.5,263.5" fill="#8d2d3b"/>
+<line x1="254.0" y1="311.3" x2="254.0" y2="362.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,369.3 258.0,360.8 250.0,360.8" fill="#4a5568"/>
+<line x1="474.0" y1="421.0" x2="605.5" y2="421.0" stroke="#b07926" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,421.0 603.5,417.0 603.5,425.0" fill="#b07926"/>
+<line x1="254.0" y1="472.8" x2="254.0" y2="524.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,530.8 258.0,522.3 250.0,522.3" fill="#4a5568"/>
+<rect x="192.0" y="165.9" width="124.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="177.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">splice(fd_ro, pipe_w)</text>
+<rect x="497.0" y="250.1" width="75.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="261.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">missing init</text>
+<rect x="202.7" y="327.4" width="102.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="338.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">unchecked merge</text>
+<rect x="496.1" y="411.6" width="77.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="423.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">UID 0 hijack</text>
+<rect x="201.4" y="488.9" width="105.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="500.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">architectural fix</text>
+</svg>

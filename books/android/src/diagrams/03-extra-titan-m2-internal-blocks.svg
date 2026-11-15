@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+<rect x="0" y="0" width="900" height="600" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="467.3" rx="8.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#284163" text-anchor="middle">MAIN APPLICATION SOC (TENSOR)</text>
+<rect x="550.0" y="74.0" width="324.0" height="467.3" rx="8.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#452e66" text-anchor="middle">DISCRETE TITAN M2 CHIP (STRONGBOX)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="545.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">GOOGLE TITAN M2 DISCRETE STRONGBOX INTERNAL ARCHITECTURE &amp; SOC BOUNDARY</text>
+<rect x="42.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">NORMAL WORLD EL0 / EL1</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">keystore2, LockSettings, &amp; SPI</text>
+<text x="56.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Driver</text>
+<text x="56.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Serializes KeyMint, Weaver, and Identity</text>
+<text x="56.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">commands into framed packets over the</text>
+<text x="56.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">physical SPI bus</text>
+<rect x="42.0" y="259.8" width="292.0" height="117.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="56.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">PRE-OS BOOTLOADER (ABL)</text>
+<text x="56.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">One-Way Verified Boot &amp; Patch Latch</text>
+<text x="56.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Sends verifiedBootKey, lock state, and</text>
+<text x="56.0" y="330.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">BOOT_PATCHLEVEL before jumping to</text>
+<text x="56.0" y="344.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">untrusted EL1 Linux</text>
+<rect x="42.0" y="405.5" width="292.0" height="117.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="56.0" y="427.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">BOARD-LEVEL PHYSICAL LINE</text>
+<text x="56.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Dedicated Power/Volume Button</text>
+<text x="56.0" y="459.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">GPIO</text>
+<text x="56.0" y="477.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Direct electrical user-presence trace</text>
+<text x="56.0" y="492.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">sampled during Android Protected</text>
+<text x="56.0" y="506.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Confirmation prompts</text>
+<rect x="566.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">COMPUTE &amp; MEMORY ISOLATION</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Hardened RV32IMC Core &amp; Static</text>
+<text x="580.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">MPU</text>
+<text x="580.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">OpenTitan-derived RISC-V core with</text>
+<text x="580.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">dual-core lockstep, shadow PC, W^X on-die</text>
+<text x="580.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SRAM, and zero dynamic heap</text>
+<rect x="566.0" y="259.8" width="292.0" height="117.8" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="580.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">COUNTERMEASURE SILICON</text>
+<text x="580.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Masked Crypto, TRNG, &amp; Glitch</text>
+<text x="580.0" y="313.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Sensors</text>
+<text x="580.0" y="331.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">DPA-masked AES/ECC/SHA-3 engines, NIST</text>
+<text x="580.0" y="346.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SP 800-90B TRNG, and voltage/laser</text>
+<text x="580.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">detectors that zeroize keys</text>
+<rect x="566.0" y="405.5" width="292.0" height="117.8" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="580.0" y="427.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">PRIVATE ON-DIE STORAGE</text>
+<text x="580.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Internal Embedded Flash (NVM) &amp; IAR</text>
+<text x="580.0" y="461.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Holds 64 Weaver slots, HBK hierarchy, and</text>
+<text x="580.0" y="476.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Insider Attack Resistance requiring valid</text>
+<text x="580.0" y="490.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">LSKF before FW update</text>
+<text x="450.0" y="571.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Unlike TrustZone S-EL1, Titan M2 shares zero LPDDR DRAM, CPU caches, or DVFS voltage rails with the main application processor.</text>
+<line x1="188.0" y1="231.8" x2="188.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,259.8 192.0,251.3 184.0,251.3" fill="#4a5568"/>
+<line x1="188.0" y1="377.5" x2="188.0" y2="399.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,405.5 192.0,397.0 184.0,397.0" fill="#4a5568"/>
+<line x1="712.0" y1="231.8" x2="712.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,259.8 716.0,251.3 708.0,251.3" fill="#4a5568"/>
+<line x1="712.0" y1="377.5" x2="712.0" y2="399.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,405.5 716.0,397.0 708.0,397.0" fill="#4a5568"/>
+<line x1="340.5" y1="172.9" x2="559.5" y2="172.9" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,172.9 557.5,168.9 557.5,176.9" fill="#236b66"/>
+<polygon points="334.0,172.9 342.5,176.9 342.5,168.9" fill="#236b66"/>
+<line x1="334.0" y1="318.7" x2="559.5" y2="318.7" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="566.0,318.7 557.5,314.7 557.5,322.7" fill="#b07926"/>
+<line x1="334.0" y1="464.4" x2="559.5" y2="464.4" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="566.0,464.4 557.5,460.4 557.5,468.4" fill="#2b6a4c"/>
+<rect x="311.0" y="49.0" width="278.1" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">Physical Package Air Gap (Off-DRAM, Off-Cache)</text>
+<rect x="391.8" y="163.5" width="116.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="175.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">Narrow SPI Mailbox</text>
+<rect x="375.7" y="309.3" width="130.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="320.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">Latched RootOfTrust</text>
+<rect x="372.3" y="455.0" width="136.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="466.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Hardware Presence Pin</text>
+</svg>

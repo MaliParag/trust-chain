@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 655" width="900" height="655">
+<rect x="0" y="0" width="900" height="655" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ANATOMY OF THE CGROUP V1 RELEASE_AGENT CONTAINER ESCAPE (CVE-2022-0492)</text>
+<rect x="34.0" y="48.0" width="440.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 1 · OVER-PRIVILEGED POD</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Mount cgroup v1 Controller &amp; Enable notify_on_release</text>
+<text x="48.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Container with --privileged (or unshare -UrmC lacking LSM) mounts</text>
+<text x="48.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">rdma/memory cgroup v1 and writes 1 to /tmp/cgrp/x/notify_on_release</text>
+<rect x="612.0" y="42.7" width="260.0" height="98.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="64.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">CVE-2022-0492 BUG</text>
+<text x="626.0" y="79.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Missing init_user_ns Check</text>
+<text x="626.0" y="97.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">release_agent_write() checked</text>
+<text x="626.0" y="110.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">CAP_SYS_ADMIN only after mount,</text>
+<text x="626.0" y="124.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">omitting ns_capable(init_user_ns)!</text>
+<rect x="34.0" y="193.5" width="440.0" height="101.8" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STEP 2 · HOST PATH DISCOVERY</text>
+<text x="48.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Extract OverlayFS upperdir= Host Path From /etc/mtab</text>
+<text x="48.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Reads container mount options</text>
+<text x="48.0" y="263.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">(upperdir=/var/lib/docker/overlay2/&lt;id&gt;/diff) to learn where</text>
+<text x="48.0" y="278.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">container files sit on the host VFS</text>
+<rect x="34.0" y="353.3" width="440.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="48.0" y="374.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STEP 3 · WEAPONIZE CALLBACK</text>
+<text x="48.0" y="390.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Write $host_path/cmd to release_agent &amp; Empty Child</text>
+<text x="48.0" y="406.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">cgroup</text>
+<text x="48.0" y="425.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Drops root payload at /cmd, registers its host path in release_agent,</text>
+<text x="48.0" y="439.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">and exits a dummy sh process inside /tmp/cgrp/x/cgroup.procs</text>
+<rect x="34.0" y="514.8" width="440.0" height="87.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="48.0" y="536.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STEP 4 · RING 0 CONFUSED DEPUTY</text>
+<text x="48.0" y="552.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Kernel cgroup1_release_agent Spawns /cmd as Host Root</text>
+<text x="48.0" y="571.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Workqueue invokes call_usermodehelper() inside init_pid_ns +</text>
+<text x="48.0" y="585.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">init_mnt_ns with full CapEff, executing /cmd on the worker node</text>
+<rect x="612.0" y="509.5" width="260.0" height="98.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="531.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STRUCTURAL FIX</text>
+<text x="626.0" y="546.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Unified cgroups v2</text>
+<text x="626.0" y="563.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">cgroups v2 deletes release_agent</text>
+<text x="626.0" y="577.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">completely, replacing upcalls with pollable</text>
+<text x="626.0" y="590.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">cgroup.events files!</text>
+<text x="450.0" y="626.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Kernel upcalls (release_agent, core_pattern, modprobe_path) execute in the root init namespace; cgroups v2 removes upcall helpers by design.</text>
+<line x1="474.0" y1="91.8" x2="605.5" y2="91.8" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,91.8 603.5,87.8 603.5,95.8" fill="#8d2d3b"/>
+<line x1="254.0" y1="135.5" x2="254.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,193.5 258.0,185.0 250.0,185.0" fill="#4a5568"/>
+<line x1="254.0" y1="295.3" x2="254.0" y2="346.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,353.3 258.0,344.8 250.0,344.8" fill="#4a5568"/>
+<line x1="254.0" y1="456.8" x2="254.0" y2="508.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,514.8 258.0,506.3 250.0,506.3" fill="#4a5568"/>
+<line x1="612.0" y1="558.5" x2="480.5" y2="558.5" stroke="#2b6a4c" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="474.0,558.5 482.5,562.5 482.5,554.5" fill="#2b6a4c"/>
+<rect x="499.4" y="82.4" width="70.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="93.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">root cause</text>
+<rect x="194.0" y="151.6" width="119.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">leaks host VFS path</text>
+<rect x="185.0" y="311.4" width="138.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="322.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">triggers last-task exit</text>
+<rect x="189.4" y="472.9" width="129.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="484.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">call_usermodehelper()</text>
+<rect x="486.5" y="549.1" width="96.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="560.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">eliminated in v2</text>
+</svg>

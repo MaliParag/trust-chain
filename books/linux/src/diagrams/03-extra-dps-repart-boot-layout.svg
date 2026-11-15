@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 456" width="920" height="456">
+<rect x="0" y="0" width="920" height="456" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">UAPI DISCOVERABLE PARTITIONS (DPS) AND SYSTEMD-REPART CRYPTOGRAPHIC DISK BINDING</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">FAT32 EFI SYSTEM PARTITION (UNTRUSTED STORAGE, CRYPTOGRAPHICALLY SIGNED PAYLOADS)</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">UKI /EFI/Linux/os-v2.efi (.cmdline: usrhash=H_hi||H_lo) + LoaderDevicePartUUID</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">systemd-stub pins 256-bit dm-verity root digest and exports backing NVMe ESP origin via Boot Loader Interface</text>
+<rect x="26.0" y="183.0" width="277.3" height="87.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GPT TYPE 8484680C.. (X86-64 /USR)</text>
+<text x="40.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">_usr_b Read-Only EROFS</text>
+<text x="40.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">PartUUID = first 128 bits of usrhash (H_hi);</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">discovered without /etc/fstab</text>
+<rect x="321.3" y="183.0" width="277.3" height="87.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="335.3" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">GPT TYPE 77FF5F63.. (/USR-VERITY)</text>
+<text x="335.3" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">_verity_b Merkle Tree</text>
+<text x="335.3" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">PartUUID = last 128 bits of usrhash (H_lo) +</text>
+<text x="335.3" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">optional FEC Reed-Solomon blocks</text>
+<rect x="616.7" y="183.0" width="277.3" height="87.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="630.7" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">GPT TYPE 4D21B016.. (/VAR)</text>
+<text x="630.7" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">systemd-repart LUKS2 + AEAD</text>
+<text x="630.7" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Created on first boot from machine-id</text>
+<text x="630.7" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">seed; TPM2 keyslot + dm-integrity tags</text>
+<rect x="26.0" y="328.1" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">ASSEMBLED RUNTIME ROOT HIERARCHY (SYSTEMD-GPT-AUTO-GENERATOR + PCR[15])</text>
+<text x="460.0" y="365.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Immutable dm-verity /usr + Signed systemd-sysext OverlayFS + Noexec Authenticated /var</text>
+<text x="460.0" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Prevents partition-swap attacks across A/B slots and binds mounted volume identity into TPM 2.0 PCR[15]</text>
+<text x="460.0" y="427.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Encoding the 256-bit Merkle usrhash directly into paired GPT Partition UUIDs eliminates mutable /etc/fstab lookup spoofing.</text>
+<line x1="164.7" y1="125.0" x2="164.7" y2="176.5" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="164.7,183.0 168.7,174.5 160.7,174.5" fill="#236b66"/>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#2b6a4c"/>
+<line x1="755.3" y1="125.0" x2="755.3" y2="176.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="755.3,183.0 759.3,174.5 751.3,174.5" fill="#b07926"/>
+<line x1="164.7" y1="270.1" x2="164.7" y2="321.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="164.7,328.1 168.7,319.6 160.7,319.6" fill="#236b66"/>
+<line x1="460.0" y1="270.1" x2="460.0" y2="321.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,328.1 464.0,319.6 456.0,319.6" fill="#2b6a4c"/>
+<line x1="755.3" y1="270.1" x2="755.3" y2="321.6" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="755.3,328.1 759.3,319.6 751.3,319.6" fill="#b07926"/>
+<rect x="122.8" y="141.1" width="83.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">matches H_hi</text>
+<rect x="418.2" y="141.1" width="83.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">matches H_lo</text>
+<rect x="708.7" y="141.1" width="93.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">repart.d policy</text>
+<rect x="119.8" y="286.2" width="89.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">verified pages</text>
+<rect x="409.8" y="286.2" width="100.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">root_hash check</text>
+<rect x="709.3" y="286.2" width="92.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">PCR[15] extend</text>
+</svg>

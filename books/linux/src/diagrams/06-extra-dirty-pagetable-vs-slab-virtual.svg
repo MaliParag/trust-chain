@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 628" width="900" height="628">
+<rect x="0" y="0" width="900" height="628" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="495.3" rx="8.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="6,3"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#6e1f2b" text-anchor="middle">LINEAR DIRECT MAP (DIRTY PAGETABLE ATTACK)</text>
+<rect x="550.0" y="74.0" width="324.0" height="495.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">SLAB_VIRTUAL (PERMANENT VIRTUAL ARENA)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="573.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">DIRTY PAGETABLE CROSS-CACHE PTE REUSE VS. SLAB_VIRTUAL QUARANTINE</text>
+<rect x="42.0" y="114.0" width="292.0" height="101.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 1 · SLAB DRAIN</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Free Victim &amp; Drain Sibling Slots</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">UAF leaves dangling struct file pointer;</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">freeing remaining objects returns order-0</text>
+<text x="56.0" y="198.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">physical frame P to buddy allocator</text>
+<rect x="42.0" y="273.8" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="295.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 2 · PTE SPRAY</text>
+<text x="56.0" y="311.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">User Page Table Reclaims Frame P</text>
+<text x="56.0" y="329.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Dense mmap() faults allocate last-level PTE</text>
+<text x="56.0" y="344.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">page on exact physical frame P at identical</text>
+<text x="56.0" y="358.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">linear direct-map VA</text>
+<rect x="42.0" y="449.5" width="292.0" height="101.8" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="56.0" y="471.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STEP 3 · DATA-ONLY ROOT</text>
+<text x="56.0" y="487.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Dangling Write Corrupts PTE PFN</text>
+<text x="56.0" y="505.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Stale f_count increment or field write alters</text>
+<text x="56.0" y="520.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">PTE physical frame bits; Ring 3 maps kernel</text>
+<text x="56.0" y="534.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">.text/cred RW</text>
+<rect x="566.0" y="114.0" width="292.0" height="101.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 1 · DEDICATED VA</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Type-Pinned Virtual Slab Page</text>
+<text x="580.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">kmem_cache allocates virtual page V_filp</text>
+<text x="580.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">outside direct map, bound exclusively to filp</text>
+<text x="580.0" y="198.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">for system uptime</text>
+<rect x="566.0" y="273.8" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="295.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STEP 2 · UNMAP ON FREE</text>
+<text x="580.0" y="311.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Physical Frame P Unmapped from</text>
+<text x="580.0" y="327.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">V_filp</text>
+<text x="580.0" y="345.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Buddy allocator recycles physical frame P for</text>
+<text x="580.0" y="360.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">user PTEs at a disjoint VA while V_filp PTE</text>
+<text x="580.0" y="374.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">stays unmapped</text>
+<rect x="566.0" y="449.5" width="292.0" height="101.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="580.0" y="471.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 3 · CONTAINED FAULT</text>
+<text x="580.0" y="487.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">#PF Trap or Same-Cache Object Only</text>
+<text x="580.0" y="505.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Dereferencing stale V_filp hits unmapped #PF</text>
+<text x="580.0" y="520.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">or another genuine struct file; PTE</text>
+<text x="580.0" y="534.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">cross-cache alias impossible</text>
+<text x="450.0" y="599.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">SLAB_VIRTUAL severs linear direct-map aliasing so buddy-allocator physical recycling never overlaps disjoint types.</text>
+<line x1="188.0" y1="215.8" x2="188.0" y2="267.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,273.8 192.0,265.3 184.0,265.3" fill="#4a5568"/>
+<line x1="188.0" y1="391.5" x2="188.0" y2="443.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,449.5 192.0,441.0 184.0,441.0" fill="#4a5568"/>
+<line x1="712.0" y1="215.8" x2="712.0" y2="267.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,273.8 716.0,265.3 708.0,265.3" fill="#4a5568"/>
+<line x1="712.0" y1="391.5" x2="712.0" y2="443.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,449.5 716.0,441.0 708.0,441.0" fill="#4a5568"/>
+<line x1="334.0" y1="164.9" x2="559.5" y2="164.9" stroke="#365378" stroke-width="1.6"/>
+<polygon points="566.0,164.9 557.5,160.9 557.5,168.9" fill="#365378"/>
+<line x1="334.0" y1="332.7" x2="559.5" y2="332.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,332.7 557.5,328.7 557.5,336.7" fill="#236b66"/>
+<line x1="334.0" y1="500.4" x2="559.5" y2="500.4" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="566.0,500.4 557.5,496.4 557.5,504.4" fill="#2b6a4c"/>
+<rect x="133.6" y="231.9" width="108.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="243.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">buddy page_alloc()</text>
+<rect x="142.7" y="407.7" width="90.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="419.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">UAF write/inc</text>
+<rect x="659.0" y="231.9" width="105.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="243.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">unmap V_filp PTE</text>
+<rect x="654.9" y="407.7" width="114.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="419.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">UAF deref trapped</text>
+<rect x="352.8" y="49.0" width="194.4" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">Virtual-to-Physical Aliasing Seam</text>
+<rect x="392.5" y="155.5" width="96.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="167.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">same physical P</text>
+<rect x="390.1" y="323.3" width="101.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="334.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">severed VA alias</text>
+<rect x="385.3" y="491.0" width="110.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="502.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">PTE spray blocked</text>
+</svg>

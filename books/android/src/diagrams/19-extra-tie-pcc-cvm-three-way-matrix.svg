@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 348" width="940" height="348">
+<rect x="0" y="0" width="940" height="348" fill="#ffffff"/>
+<text x="470.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CONFIDENTIAL CLOUD AI ARCHITECTURE MATRIX: GOOGLE TIE VS. APPLE PCC VS. AZURE CVM</text>
+<text x="470.0" y="48.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Comparing silicon roots of trust, accelerator protection, operator exclusion, and client transparency</text>
+<rect x="28.0" y="66.0" width="216.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="40.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#524c44" text-anchor="start">Row / Column</text>
+<rect x="244.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="327.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Silicon RoT</text>
+<text x="327.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Boot &amp; Identity</text>
+<rect x="411.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="494.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Accelerator TEE</text>
+<text x="494.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">HBM &amp; Link Crypto</text>
+<rect x="578.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="661.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Operator Shell</text>
+<text x="661.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Admin Break-Glass</text>
+<rect x="745.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="828.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Transparency</text>
+<text x="828.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Client Log Check</text>
+<rect x="28.0" y="120.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="140.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Google Private AI (TIE)</text>
+<text x="40.0" y="155.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Titanium + Custom TPU</text>
+<rect x="244.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="327.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Titan + Caliptra DICE</text>
+<rect x="411.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="494.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Sealed Custom TPU</text>
+<rect x="578.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="661.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Disabled by Design</text>
+<rect x="745.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="828.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Public Log Verified</text>
+<rect x="28.0" y="166.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="186.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Apple PCC (Apple + GCP)</text>
+<text x="40.0" y="201.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">M-Series / TDX+Blackwell</text>
+<rect x="244.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="327.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">SEP / Titan Dual-RoT</text>
+<rect x="411.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="494.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Unified RAM / NV-CC</text>
+<rect x="578.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="661.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Disabled by Design</text>
+<rect x="745.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="828.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">ATLog + Image Pub</text>
+<rect x="28.0" y="212.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="232.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Azure Confidential VMs</text>
+<text x="40.0" y="247.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">SEV-SNP / TDX + H100</text>
+<rect x="244.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="327.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">AMD-SP / TDX + OpenHCL</text>
+<rect x="411.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="494.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Opt-In H100 SPDM</text>
+<rect x="578.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="661.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Customer Policy</text>
+<rect x="745.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="828.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Tenant MAA Policy</text>
+<text x="28.0" y="276.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#3a352f" text-anchor="start">At WWDC 2026, Apple and Google extended PCC onto Google Cloud combining Intel TDX, NVIDIA Blackwell CC, and Google Titan dual-vendor roots.</text>
+<text x="470.0" y="304.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Consumer AI enclaves (TIE and PCC) bake zero-admin-shell and mandatory binary transparency into the appliance, whereas IaaS CVMs delegate policy to</text>
+<text x="470.0" y="319.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">tenants.</text>
+</svg>

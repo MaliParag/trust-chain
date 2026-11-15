@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" width="920" height="470">
+<rect x="0" y="0" width="920" height="470" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">SPIFFE/SPIRE HARDWARE NODE ROOTS, KERNEL SELECTORS, AND BUNDLE FEDERATION</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="middle">TRUST DOMAIN CONTROL PLANE &amp; CROSS-CLUSTER FEDERATION</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">SPIRE Server Authenticates Nodes (tpm_devid, aws_iid, gcp_iit, k8s_psat) and Federates Bundles</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Enforces Trust-On-First-Attest (TOFA), scopes authorized registration entries per node, and exchanges CA bundles via https_spiffe</text>
+<rect x="26.0" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">HARDWARE NODE ROOT</text>
+<text x="40.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">TPM 2.0 DevID (tpm_devid)</text>
+<text x="40.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">IEEE 802.1AR factory IDevID cert +</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">TPM2_Certify prove physical silicon</text>
+<text x="40.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">residency</text>
+<rect x="321.3" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="335.3" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">KERNEL PROCESS ATTESTER</text>
+<text x="335.3" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">SO_PEERCRED + SO_PEERPIDFD</text>
+<text x="335.3" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Unforgeable socket peer check over UID,</text>
+<text x="335.3" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">GID, and /proc/pid/exe SHA-256 digest</text>
+<rect x="616.7" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="630.7" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CGROUP &amp; POD ATTESTER</text>
+<text x="630.7" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">cgroups v2 &amp; Kubelet Verify</text>
+<text x="630.7" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Maps caller cgroup slice to systemd unit or</text>
+<text x="630.7" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">K8s Pod UID, SA, and image SHA-256</text>
+<rect x="26.0" y="342.2" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">WORKLOAD API OVER /RUN/SPIRE/SOCKETS/AGENT.SOCK (ZERO STATIC SECRETS ON DISK)</text>
+<text x="460.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Auto-Rotated 1-Hour X.509-SVID (mTLS URI SAN) + Audience-Bound JWT-SVID + Federated Bundles</text>
+<text x="460.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Streamed directly into Envoy, Cilium, or app RAM via gRPC; rotates keys and cross-cloud root CAs without restarting processes</text>
+<text x="460.0" y="441.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Combining hardware/cloud node attestation with kernel pidfd and cgroup v2 workload attestation eliminates bootstrap secrets.</text>
+<line x1="164.7" y1="125.0" x2="164.7" y2="176.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="164.7,183.0 168.7,174.5 160.7,174.5" fill="#5c4282"/>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#236b66"/>
+<line x1="755.3" y1="125.0" x2="755.3" y2="176.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="755.3,183.0 759.3,174.5 751.3,174.5" fill="#2b6a4c"/>
+<line x1="164.7" y1="284.2" x2="164.7" y2="335.7" stroke="#365378" stroke-width="1.6"/>
+<polygon points="164.7,342.2 168.7,333.7 160.7,333.7" fill="#365378"/>
+<line x1="460.0" y1="284.2" x2="460.0" y2="335.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="460.0,342.2 464.0,333.7 456.0,333.7" fill="#236b66"/>
+<line x1="755.3" y1="284.2" x2="755.3" y2="335.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="755.3,342.2 759.3,333.7 751.3,333.7" fill="#2b6a4c"/>
+<rect x="118.0" y="141.1" width="93.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">attests silicon</text>
+<rect x="408.0" y="141.1" width="104.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">pushes selectors</text>
+<rect x="698.8" y="141.1" width="113.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">scopes pod entries</text>
+<rect x="114.1" y="300.4" width="101.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">Agent SVID root</text>
+<rect x="413.4" y="300.4" width="93.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">verifies binary</text>
+<rect x="708.4" y="300.4" width="93.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">mints pod SVID</text>
+</svg>

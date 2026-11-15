@@ -96,15 +96,15 @@
     "back-matter/95-index.md"
   ],
   "interior": {
-    "name": "Alabaster, Brushed Titanium, & Glacier Blueprint",
-    "paperLight": "#f8f9fb",
-    "paperDark": "#0b1017",
-    "accentLight": "#1e5fa8",
+    "name": "Platform Trust Chain Monograph (Unified Series Typesetting)",
+    "paperLight": "#fbfaf6",
+    "paperDark": "#0f141d",
+    "accentLight": "#2b547e",
     "accentDark": "#7cc4f8",
-    "bodyFont": "Charter, Iowan Old Style, Source Serif 4, Georgia, serif",
-    "headingFont": "Inter, -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif",
-    "cardStyle": "top-rule-ledger",
-    "tableStyle": "open-horizontal-hairlines"
+    "bodyFont": "Georgia, Baskerville, Iowan Old Style, serif",
+    "headingFont": "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif",
+    "cardStyle": "left-accent-bar",
+    "tableStyle": "classic-grid"
   },
   "audit": {
     "required_h2": [

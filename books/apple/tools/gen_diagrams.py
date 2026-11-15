@@ -1164,12 +1164,18 @@ def gen_part4_and_finale():
 
 
 def main():
+    import runpy
     os.makedirs(DIAG_DIR, exist_ok=True)
     gen_opening()
     gen_part1()
     gen_part2()
     gen_interlude_and_part3()
     gen_part4_and_finale()
+    here = os.path.dirname(os.path.abspath(__file__))
+    for b in ("gen_extra_b1.py", "gen_extra_b2.py", "gen_extra_b3.py", "gen_extra_b4.py"):
+        bp = os.path.join(here, b)
+        if os.path.exists(bp):
+            runpy.run_path(bp, run_name="__main__")
     svgs = sorted(f for f in os.listdir(DIAG_DIR) if f.endswith(".svg"))
     print(f"Successfully generated and 7-way collision-verified {len(svgs)} SVG diagrams in {DIAG_DIR}")
 

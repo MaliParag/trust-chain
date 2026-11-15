@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" width="900" height="660">
+<rect x="0" y="0" width="900" height="660" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="527.3" rx="8.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#19524e" text-anchor="middle">GVISOR RUNSC (SYSTRAP PLATFORM)</text>
+<rect x="550.0" y="74.0" width="324.0" height="527.3" rx="8.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#452e66" text-anchor="middle">AWS FIRECRACKER + JAILER VMM</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="605.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">GVISOR SYSTRAP APPLICATION KERNEL VS. FIRECRACKER JAILED KVM MICRO-VM</text>
+<rect x="42.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">GUEST TRAP · PURE USERSPACE</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Systrap 7-Byte Binary Hot-Patch</text>
+<text x="56.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">(jmp *%gs:offset)</text>
+<text x="56.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">First syscall triggers SECCOMP_RET_TRAP</text>
+<text x="56.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SIGSYS; Sentry patches mov+syscall into</text>
+<text x="56.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">fast shared-memory jump without /dev/kvm</text>
+<rect x="42.0" y="289.8" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="311.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">SYSCALL ENGINE · MEMORY-SAFE GO</text>
+<text x="56.0" y="327.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Go Sentry (vfs2 + netstack) +</text>
+<text x="56.0" y="343.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Separate lisafs Gofer</text>
+<text x="56.0" y="361.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Services 250+ Linux syscalls and TCP/IP in</text>
+<text x="56.0" y="376.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">bounds-checked Go; proxies container file ops</text>
+<text x="56.0" y="390.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">to isolated Gofer over AF_UNIX</text>
+<rect x="42.0" y="465.5" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="487.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">OUTER HOST CAGE</text>
+<text x="56.0" y="503.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Empty pivot_root + ~68-Syscall Host</text>
+<text x="56.0" y="519.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">seccomp-BPF</text>
+<text x="56.0" y="537.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Blocks host open/socket creation inside</text>
+<text x="56.0" y="552.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Sentry; host Ring 0 sees only filtered</text>
+<text x="56.0" y="566.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">memory/futex/epoll syscalls</text>
+<rect x="566.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">GUEST TRAP · SILICON SLAT</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Dedicated Guest Linux Kernel Under</text>
+<text x="580.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">VT-x EPT / Stage-2</text>
+<text x="580.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Container syscalls terminate inside per-pod</text>
+<text x="580.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">guest Ring 0; VMGenID reseeds guest</text>
+<text x="580.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">CSPRNG synchronously on snapshot restore</text>
+<rect x="566.0" y="289.8" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="311.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">DEVICE MODEL · ~50K LOC RUST</text>
+<text x="580.0" y="327.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Minimalist Rust VMM (virtio-net,</text>
+<text x="580.0" y="343.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">virtio-blk, vsock)</text>
+<text x="580.0" y="361.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Strips QEMU BIOS/PCI/USB/VGA attack</text>
+<text x="580.0" y="376.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">surface; enforces token-bucket IOPS &amp;</text>
+<text x="580.0" y="390.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">bandwidth limiters on host TAP/block FDs</text>
+<rect x="566.0" y="465.5" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="487.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">OUTER HOST CAGE</text>
+<text x="580.0" y="503.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">jailer chroot + Unique UID +</text>
+<text x="580.0" y="519.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Per-Thread VMM seccomp</text>
+<text x="580.0" y="537.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Isolates each micro-VM in /srv/jailer,</text>
+<text x="580.0" y="552.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">cgroups v2, netns, and ~35-syscall</text>
+<text x="580.0" y="566.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">VMM/vCPU/API seccomp filters</text>
+<text x="450.0" y="631.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Systrap runs anywhere in userspace without nested KVM; Firecracker delivers native guest kernel compatibility backed by hardware EPT/Stage-2.</text>
+<line x1="188.0" y1="231.8" x2="188.0" y2="283.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,289.8 192.0,281.3 184.0,281.3" fill="#4a5568"/>
+<line x1="188.0" y1="407.5" x2="188.0" y2="459.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,465.5 192.0,457.0 184.0,457.0" fill="#4a5568"/>
+<line x1="712.0" y1="231.8" x2="712.0" y2="283.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,289.8 716.0,281.3 708.0,281.3" fill="#4a5568"/>
+<line x1="712.0" y1="407.5" x2="712.0" y2="459.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,465.5 716.0,457.0 708.0,457.0" fill="#4a5568"/>
+<line x1="340.5" y1="172.9" x2="559.5" y2="172.9" stroke="#365378" stroke-width="1.6"/>
+<polygon points="566.0,172.9 557.5,168.9 557.5,176.9" fill="#365378"/>
+<polygon points="334.0,172.9 342.5,176.9 342.5,168.9" fill="#365378"/>
+<line x1="340.5" y1="348.7" x2="559.5" y2="348.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,348.7 557.5,344.7 557.5,352.7" fill="#236b66"/>
+<polygon points="334.0,348.7 342.5,352.7 342.5,344.7" fill="#236b66"/>
+<line x1="340.5" y1="524.4" x2="559.5" y2="524.4" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="566.0,524.4 557.5,520.4 557.5,528.4" fill="#2b6a4c"/>
+<polygon points="334.0,524.4 342.5,528.4 342.5,520.4" fill="#2b6a4c"/>
+<rect x="136.7" y="247.9" width="102.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="259.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">shared-mem ring</text>
+<rect x="126.2" y="423.7" width="123.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="435.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">no direct host open()</text>
+<rect x="654.8" y="247.9" width="114.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="259.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">KVM_RUN VM-EXIT</text>
+<rect x="654.9" y="423.7" width="114.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="435.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">confined Rust VMM</text>
+<rect x="345.1" y="49.0" width="209.7" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">De-Privileged Isolation Architecture</text>
+<rect x="381.6" y="163.5" width="136.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="175.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">Ring 3 jmp vs. CPU EPT</text>
+<rect x="388.6" y="339.3" width="122.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="350.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">Go ABI vs. Rust VMM</text>
+<rect x="375.8" y="515.0" width="148.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="526.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">strict host seccomp cage</text>
+</svg>

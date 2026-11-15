@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 466" width="900" height="466">
+<rect x="0" y="0" width="900" height="466" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="333.5" rx="8.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#6e1f2b" text-anchor="middle">ANDROID 4-6 · MONOLITHIC MEDIASERVER</text>
+<rect x="550.0" y="74.0" width="324.0" height="333.5" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">ANDROID 8-16 · SPLIT MEDIA + TREBLE AIDL HALS</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="411.5" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">DE-PRIVILEGING MEDIA &amp; HARDWARE STACKS: PRE-TREBLE MEDIASERVER VS. TREBLE HALS</text>
+<rect x="42.0" y="114.0" width="292.0" height="129.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">SINGLE ADDRESS SPACE · UID 1013</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Parsers + Codecs + Camera + Audio</text>
+<text x="56.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Combined</text>
+<text x="56.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">libstagefright MP4/MKV extractors ran</text>
+<text x="56.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">in-process alongside camera, mic, Bluetooth,</text>
+<text x="56.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">and dlopen() vendor .so blobs</text>
+<rect x="42.0" y="271.8" width="292.0" height="117.8" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="56.0" y="293.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STAGEFRIGHT FAILURE · CVE-2015-1538</text>
+<text x="56.0" y="309.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">One Integer Overflow Compromises</text>
+<text x="56.0" y="325.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">All Hardware</text>
+<text x="56.0" y="343.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Remote MMS or browser video heap</text>
+<text x="56.0" y="358.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">corruption immediately yielded camera/audio</text>
+<text x="56.0" y="372.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">snooping and wide /dev ioctl reach</text>
+<rect x="566.0" y="114.0" width="292.0" height="129.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">MAINLINE APEX · MEDIA.EXTRACTOR &amp;</text>
+<text x="580.0" y="147.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">MEDIA.SWCODEC</text>
+<text x="580.0" y="163.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Zero-Device, No-Network seccomp</text>
+<text x="580.0" y="179.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Parser Jail</text>
+<text x="580.0" y="198.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Container parsers hold zero file descriptors</text>
+<text x="580.0" y="212.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">or /dev nodes; read bytes strictly over</text>
+<text x="580.0" y="226.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Binder DataSource</text>
+<rect x="566.0" y="271.8" width="292.0" height="117.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="580.0" y="293.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">ISOLATED /VENDOR DAEMONS · STABLE AIDL</text>
+<text x="580.0" y="309.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">hal_camera, hal_codec2, &amp;</text>
+<text x="580.0" y="325.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">hal_audio_default</text>
+<text x="580.0" y="343.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Each vendor HAL runs in its own UID, SELinux</text>
+<text x="580.0" y="358.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">domain, and seccomp filter with zero network</text>
+<text x="580.0" y="372.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">socket capability</text>
+<text x="450.0" y="437.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Breaking mediaserver into restricted Mainline sandboxes and Binderized Treble HALs forces attackers to chain multiple cross-process bugs.</text>
+<line x1="188.0" y1="243.8" x2="188.0" y2="265.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,271.8 192.0,263.3 184.0,263.3" fill="#4a5568"/>
+<line x1="712.0" y1="243.8" x2="712.0" y2="265.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,271.8 716.0,263.3 708.0,263.3" fill="#4a5568"/>
+<line x1="334.0" y1="178.9" x2="559.5" y2="178.9" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="566.0,178.9 557.5,174.9 557.5,182.9" fill="#2b6a4c"/>
+<line x1="334.0" y1="330.7" x2="559.5" y2="330.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,330.7 557.5,326.7 557.5,334.7" fill="#236b66"/>
+<rect x="335.1" y="49.0" width="229.8" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">Architectural Blast-Radius Containment</text>
+<rect x="367.7" y="169.5" width="146.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="181.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">splits parsers + seccomp</text>
+<rect x="361.4" y="321.3" width="158.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="332.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">isolates vendor .so -&gt; AIDL</text>
+</svg>

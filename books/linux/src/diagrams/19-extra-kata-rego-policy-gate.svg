@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 703" width="900" height="703">
+<rect x="0" y="0" width="900" height="703" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CLOSING THE KUBELET BACKDOOR INSIDE CONFIDENTIAL CONTAINERS WITH AGENT-POLICY.REGO</text>
+<rect x="34.0" y="48.0" width="440.0" height="117.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">STEP 1 · WORKLOAD OWNER CI BUILD</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">genpolicy Compiles Strict OPA Rego Policy Into</text>
+<text x="48.0" y="101.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">initdata.toml</text>
+<text x="48.0" y="120.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Pins allowed container SHA-256 digests, argv, env,</text>
+<text x="48.0" y="134.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">CopyFileRequest=false, ReadStreamRequest=false, and</text>
+<text x="48.0" y="148.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">ExecProcessRequest=false</text>
+<rect x="34.0" y="223.8" width="440.0" height="103.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="48.0" y="245.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">STEP 2 · SILICON LAUNCH COMMITMENT</text>
+<text x="48.0" y="261.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SHA-384(initdata) Bound Into SEV-SNP HOST_DATA or</text>
+<text x="48.0" y="277.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">TDX MRCONFIGID</text>
+<text x="48.0" y="295.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Attestation Agent verifies received initdata matches hardware launch</text>
+<text x="48.0" y="310.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">register before loading policy.rego into kata-agent</text>
+<rect x="34.0" y="385.3" width="440.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="48.0" y="406.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">STEP 3 · INTRA-ENCLAVE TTRPC REFERENCE MONITOR</text>
+<text x="48.0" y="422.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">kata-agent Rego Engine Evaluates Every Host Shim</text>
+<text x="48.0" y="438.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Request Over AF_VSOCK</text>
+<text x="48.0" y="457.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Admits matching CreateContainerRequest while deterministically</text>
+<text x="48.0" y="471.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">rejecting unauthorized exec, mount, or stream calls</text>
+<rect x="612.0" y="388.0" width="260.0" height="98.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="409.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">HOST ATTACK BLOCKED</text>
+<text x="626.0" y="424.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Compromised Worker Kubelet</text>
+<text x="626.0" y="442.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Attempts kubectl exec, rogue bind-mount,</text>
+<text x="626.0" y="455.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">or LD_PRELOAD injection; rejected inside</text>
+<text x="626.0" y="469.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">TEE with PermissionDenied</text>
+<rect x="34.0" y="546.8" width="440.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="48.0" y="568.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 4 · RCAR ATTESTATION &amp; KEY RELEASE</text>
+<text x="48.0" y="584.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Trustee KBS Verifies Quote + Initdata Digest Before</text>
+<text x="48.0" y="600.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Releasing ocicrypt Keys</text>
+<text x="48.0" y="619.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">If host kubelet alters policy.rego to re-enable kubectl exec,</text>
+<text x="48.0" y="633.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">HOST_DATA changes and Trustee withholds workload secrets</text>
+<text x="450.0" y="674.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Binding policy.rego into hardware HOST_DATA/MRCONFIGID strips a compromised Kubernetes node of interactive pod control.</text>
+<line x1="254.0" y1="165.8" x2="254.0" y2="217.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,223.8 258.0,215.3 250.0,215.3" fill="#4a5568"/>
+<line x1="254.0" y1="327.3" x2="254.0" y2="378.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,385.3 258.0,376.8 250.0,376.8" fill="#4a5568"/>
+<line x1="612.0" y1="437.0" x2="480.5" y2="437.0" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="474.0,437.0 482.5,441.0 482.5,433.0" fill="#8d2d3b"/>
+<line x1="254.0" y1="488.8" x2="254.0" y2="540.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,546.8 258.0,538.3 250.0,538.3" fill="#4a5568"/>
+<rect x="191.8" y="181.9" width="124.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="193.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">measured at VM boot</text>
+<rect x="191.0" y="343.4" width="126.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="354.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">loads immutable Rego</text>
+<rect x="495.3" y="427.6" width="78.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="439.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">blocked RPC</text>
+<rect x="182.7" y="504.9" width="142.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="516.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">quote binds HOST_DATA</text>
+</svg>

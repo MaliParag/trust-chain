@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" width="920" height="430">
+<rect x="0" y="0" width="920" height="430" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">APK SIGNATURE SCHEME V3 / V3.1 SIGNINGCERTIFICATELINEAGE &amp; CAPABILITY FLAGS</text>
+<rect x="24.0" y="54.0" width="194.0" height="126.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="121.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">NODE 1 · ORIGINAL KEY K1</text>
+<text x="121.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">2016 Legacy RSA-2048</text>
+<text x="121.0" y="106.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Cert</text>
+<text x="121.0" y="124.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Signs delegation Sign_K1(K2 ||</text>
+<text x="121.0" y="137.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">flags); strips</text>
+<text x="121.0" y="150.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">PAST_CERT_PERMISSION on</text>
+<text x="121.0" y="163.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">retired K1</text>
+<rect x="250.0" y="54.0" width="194.0" height="126.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="347.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">NODE 2 · ROTATED KEY K2</text>
+<text x="347.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">2021 ECDSA P-256 Cert</text>
+<text x="347.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Signs Sign_K2(K3 || flags);</text>
+<text x="347.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">retains</text>
+<text x="347.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">PAST_CERT_INSTALLED_DATA</text>
+<text x="347.0" y="148.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">for seamless v1 upgrades</text>
+<rect x="476.0" y="54.0" width="194.0" height="126.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="573.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">LEAF · ACTIVE KEY K3</text>
+<text x="573.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">2026 HSM P-384 Signer</text>
+<text x="573.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Signs APK v3.1 block</text>
+<text x="573.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">(0x1b93ad61) + full lineage</text>
+<text x="573.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">attribute (0x3ba06f8c)</text>
+<rect x="702.0" y="54.0" width="194.0" height="126.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="799.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="middle">GATE · PACKAGEMANAGER</text>
+<text x="799.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Lineage &amp; SDK</text>
+<text x="799.0" y="106.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Verification</text>
+<text x="799.0" y="124.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Verifies unbroken chain from</text>
+<text x="799.0" y="137.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">pinned K1/K2 to K3 + 1 MiB</text>
+<text x="799.0" y="150.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Merkle digest</text>
+<rect x="449.0" y="238.5" width="248.0" height="138.8" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="573.0" y="260.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">BACKWARD COMPATIBILITY · BLOCK</text>
+<text x="573.0" y="272.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">0XF05368C0 VS. 0X1B93AD61</text>
+<text x="573.0" y="287.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">v3.1 Targets API 33+ While v3</text>
+<text x="573.0" y="302.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Block Preserves Legacy Signer</text>
+<text x="573.0" y="316.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">for Older SDKs</text>
+<text x="573.0" y="334.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Includes rotation-min-sdk-version</text>
+<text x="573.0" y="347.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">stripping protection inside signed data</text>
+<text x="573.0" y="360.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">so attackers cannot downgrade lineage</text>
+<text x="460.0" y="401.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Self-certified proof-of-rotation frees Android apps from permanent TOFU key lock-in without introducing a central CA single point of failure.</text>
+<line x1="218.0" y1="117.3" x2="243.5" y2="117.3" stroke="#365378" stroke-width="1.6"/>
+<polygon points="250.0,117.3 241.5,113.3 241.5,121.3" fill="#365378"/>
+<line x1="444.0" y1="117.3" x2="469.5" y2="117.3" stroke="#365378" stroke-width="1.6"/>
+<polygon points="476.0,117.3 467.5,113.3 467.5,121.3" fill="#365378"/>
+<line x1="670.0" y1="117.3" x2="695.5" y2="117.3" stroke="#365378" stroke-width="1.6"/>
+<polygon points="702.0,117.3 693.5,113.3 693.5,121.3" fill="#365378"/>
+<line x1="573.0" y1="238.5" x2="573.0" y2="187.0" stroke="#8d2d3b" stroke-width="1.6"/>
+<polygon points="573.0,180.5 569.0,189.0 577.0,189.0" fill="#8d2d3b"/>
+<rect x="527.6" y="203.6" width="90.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="573.0" y="215.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">SDK targeting</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 495" width="920" height="495">
+<rect x="0" y="0" width="920" height="495" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">LOCKED-IOS SPYWARE TRIAGE: VOLATILE IMPLANT WIPE VS. SURVIVING FORENSIC ARTIFACTS</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="middle">AFU EXPLOITATION · PEGASUS, PREDATOR, &amp; OPERATION TRIANGULATION</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Volatile In-Memory / Staging Implant (/private/var/db/... or /private/var/tmp/)</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">APFS Signed System Volume blocks rootfs persistence; reboot or 72-hour AFU inactivity timer wipes implant binary and RAM state</text>
+<rect x="26.0" y="183.0" width="203.5" height="112.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">REBOOT BARRIER LEDGER</text>
+<text x="40.0" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Shutdown.log</text>
+<text x="40.0" y="237.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Logs PIDs &amp; anomalous</text>
+<text x="40.0" y="250.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">/private/var/db/ paths delaying</text>
+<text x="40.0" y="263.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">SIGTERM during clean shutdown</text>
+<rect x="247.5" y="183.0" width="203.5" height="112.0" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="261.5" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">SYMPTOMSD ACCOUNTING</text>
+<text x="261.5" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">DataUsage &amp;</text>
+<text x="261.5" y="234.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">netusage.sqlite</text>
+<text x="261.5" y="251.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Retains orphaned ZPROCESS</text>
+<text x="261.5" y="265.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">names, timestamps, &amp; WAN byte</text>
+<text x="261.5" y="278.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">counts after binary unlink</text>
+<rect x="469.0" y="183.0" width="203.5" height="112.0" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="483.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">APPEND-ONLY STREAMS</text>
+<text x="483.0" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Biome SEGB Segments</text>
+<text x="483.0" y="237.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Segmented binary records</text>
+<text x="483.0" y="250.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">preserve tombstoned</text>
+<text x="483.0" y="263.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">app/focus/device events with</text>
+<text x="483.0" y="276.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">timestamps</text>
+<rect x="690.5" y="183.0" width="203.5" height="112.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="704.5" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">FAULT TELEMETRY</text>
+<text x="704.5" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">ips Crash &amp; Cache.db</text>
+<text x="704.5" y="237.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Captures BlastDoor / imagent /</text>
+<text x="704.5" y="250.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">WebKit EXC_BAD_ACCESS</text>
+<text x="704.5" y="263.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">traces &amp; attachment fetch</text>
+<text x="704.5" y="276.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">artifacts</text>
+<rect x="26.0" y="353.0" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="374.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">OFFLINE ACQUISITION &amp; CORRELATION · ZERO THIRD-PARTY KERNEL HOOKS REQUIRED</text>
+<text x="460.0" y="390.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">sysdiagnose Archive + Encrypted Backup Parsed by Mobile Verification Toolkit (MVT)</text>
+<text x="460.0" y="409.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Correlates cross-database timeline anomalies and STIX2 indicators to prove compromise months after reboot</text>
+<text x="460.0" y="452.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Even when mercenary spyware deletes its staged files and vanishes on reboot, independent system ledgers preserve durable execution and network</text>
+<text x="460.0" y="466.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">traces.</text>
+<line x1="127.8" y1="125.0" x2="127.8" y2="176.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="127.8,183.0 131.8,174.5 123.8,174.5" fill="#b07926"/>
+<line x1="349.2" y1="125.0" x2="349.2" y2="176.5" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="349.2,183.0 353.2,174.5 345.2,174.5" fill="#236b66"/>
+<line x1="570.8" y1="125.0" x2="570.8" y2="176.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="570.8,183.0 574.8,174.5 566.8,174.5" fill="#5c4282"/>
+<line x1="792.2" y1="125.0" x2="792.2" y2="176.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="792.2,183.0 796.2,174.5 788.2,174.5" fill="#365378"/>
+<line x1="127.8" y1="295.0" x2="127.8" y2="346.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="127.8,353.0 131.8,344.5 123.8,344.5" fill="#2b6a4c"/>
+<line x1="349.2" y1="295.0" x2="349.2" y2="346.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="349.2,353.0 353.2,344.5 345.2,344.5" fill="#2b6a4c"/>
+<line x1="570.8" y1="295.0" x2="570.8" y2="346.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="570.8,353.0 574.8,344.5 566.8,344.5" fill="#2b6a4c"/>
+<line x1="792.2" y1="295.0" x2="792.2" y2="346.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="792.2,353.0 796.2,344.5 788.2,344.5" fill="#2b6a4c"/>
+<rect x="87.2" y="141.1" width="81.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="127.8" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">SIGTERM lag</text>
+<rect x="308.6" y="141.1" width="81.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="349.2" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">WAN sockets</text>
+<rect x="529.5" y="141.1" width="82.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">state events</text>
+<rect x="749.2" y="141.1" width="86.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="792.2" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">parser faults</text>
+<rect x="89.3" y="311.2" width="77.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="127.8" y="322.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">sysdiagnose</text>
+<rect x="296.1" y="311.2" width="106.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="349.2" y="322.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">encrypted backup</text>
+<rect x="532.5" y="311.2" width="76.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="322.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">SEGB parse</text>
+<rect x="752.3" y="311.2" width="79.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="792.2" y="322.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">IOC timeline</text>
+</svg>

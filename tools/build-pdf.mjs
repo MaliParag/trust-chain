@@ -288,29 +288,6 @@ function buildPdfHtml() {
   const trustchainCss = readFileSync(path.join(ROOT, 'theme', 'trustchain.css'), 'utf8');
   const frontSvg = namespaceSvgIds(readFileSync(path.join(SRC_DIR, 'cover.svg'), 'utf8'), 'fc');
   const backSvg = namespaceSvgIds(readFileSync(path.join(SRC_DIR, 'back-cover.svg'), 'utf8'), 'bc');
-  const volAccent = (HOUSE.interior && HOUSE.interior.accentLight) || '#2b547e';
-  const volPrintOverrides = BOOK_SLUG === 'windows' ? '' : `
-html[data-volume="${BOOK_SLUG}"] body {
-  font-family: Charter, "Iowan Old Style", Georgia, serif;
-}
-html[data-volume="${BOOK_SLUG}"] .pdf-ch-rubric {
-  color: ${volAccent};
-  border-bottom-color: #cbd5e1;
-}
-html[data-volume="${BOOK_SLUG}"] a,
-html[data-volume="${BOOK_SLUG}"] a.cite-ref {
-  color: ${volAccent};
-}
-html[data-volume="${BOOK_SLUG}"] .chapter-overview {
-  border-left-width: 1pt !important;
-  border-top: 2pt solid ${volAccent} !important;
-}
-html[data-volume="${BOOK_SLUG}"] .pdf-interior table th,
-html[data-volume="${BOOK_SLUG}"] .pdf-interior table td {
-  border-left: 0 !important;
-  border-right: 0 !important;
-}
-`;
 
   return `<!DOCTYPE html>
 <html lang="en" class="light" data-volume="${BOOK_SLUG}">
@@ -710,10 +687,19 @@ figcaption {
   overflow-wrap: anywhere;
 }
 
-/* KaTeX print sizing */
-.katex { font-size: 1.02em; }
-.katex-display { margin: 8pt 0; overflow: visible; break-inside: avoid; }
-${volPrintOverrides}
+/* KaTeX print sizing - clamp display formulas to text block so Chrome never shrinks page scale */
+.katex { font-size: 0.98em; }
+.katex-display {
+  margin: 8pt 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 0.88em;
+  break-inside: avoid;
+}
+.katex-display > .katex {
+  max-width: 100%;
+  white-space: normal;
+}
   </style>
 </head>
 <body>

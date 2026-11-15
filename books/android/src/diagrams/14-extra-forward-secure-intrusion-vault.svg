@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 633" width="920" height="633">
+<rect x="0" y="0" width="920" height="633" fill="#ffffff"/>
+<line x1="130.0" y1="132.6" x2="130.0" y2="574.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="350.0" y1="132.6" x2="350.0" y2="574.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="570.0" y1="132.6" x2="570.0" y2="574.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="790.0" y1="132.6" x2="790.0" y2="574.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="460.0" y1="72.0" x2="460.0" y2="574.2" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">FORWARD-SECURE INTRUSION LOGGING VAULT ACROSS PRE- AND POST-COMPROMISE EPOCHS</text>
+<rect x="34.0" y="76.0" width="192.0" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="130.0" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">OS Telemetry</text>
+<text x="130.0" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">SecurityLog / Netd / USB</text>
+<rect x="254.0" y="76.0" width="192.0" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="350.0" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">On-Device Sealer</text>
+<text x="350.0" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">One-Way E2EE / HPKE</text>
+<rect x="474.0" y="76.0" width="192.0" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="570.0" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Google Cloud Vault</text>
+<text x="570.0" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Append-Only 12m Store</text>
+<rect x="694.0" y="76.0" width="192.0" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="790.0" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Owner + MVT Lab</text>
+<text x="790.0" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">LSKF + AndroidQF</text>
+<text x="460.0" y="604.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Unlike local volatile buffers (logcat, tombstones, or unvaulted sysdiagnose), pre-compromise epochs survive post-exploitation root wiping.</text>
+<line x1="130.0" y1="203.0" x2="343.5" y2="203.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="350.0,203.0 341.5,199.0 341.5,207.0" fill="#365378"/>
+<line x1="350.0" y1="275.4" x2="563.5" y2="275.4" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="570.0,275.4 561.5,271.4 561.5,279.4" fill="#236b66"/>
+<line x1="130.0" y1="347.8" x2="343.5" y2="347.8" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="350.0,347.8 341.5,343.8 341.5,351.8" fill="#8d2d3b"/>
+<line x1="350.0" y1="407.4" x2="563.5" y2="407.4" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="570.0,407.4 561.5,403.4 561.5,411.4" fill="#8d2d3b"/>
+<line x1="790.0" y1="479.8" x2="576.5" y2="479.8" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="570.0,479.8 578.5,483.8 578.5,475.8" fill="#2b6a4c"/>
+<line x1="570.0" y1="552.2" x2="783.5" y2="552.2" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="790.0,552.2 781.5,548.2 781.5,556.2" fill="#5c4282"/>
+<rect x="344.5" y="50.9" width="231.0" height="18.2" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="460.0" y="62.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.5" font-weight="700" fill="#8d2d3b" text-anchor="middle">Zero Local Decrypt / Append-Only Cloud</text>
+<rect x="144.9" y="150.5" width="190.2" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="240.0" y="161.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Epoch t &lt; t0: Capture keyguard,</text>
+<text x="240.0" y="174.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">ADB, package install, USB, DNS, &amp;</text>
+<text x="240.0" y="187.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">TCP events</text>
+<rect x="364.1" y="222.9" width="191.7" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="234.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Encrypt batch under user E2EE</text>
+<text x="460.0" y="246.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">public key -&gt; append ciphertext to</text>
+<text x="460.0" y="259.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">cloud</text>
+<rect x="147.7" y="295.3" width="184.5" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="240.0" y="306.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Epoch t = t0: Mercenary spyware</text>
+<text x="240.0" y="319.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">gains EL1 root &amp; scrubs local</text>
+<text x="240.0" y="331.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">logd/dropbox</text>
+<rect x="359.5" y="368.0" width="200.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="379.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Root implant holds zero decrypt key</text>
+<text x="460.0" y="391.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">&amp; cannot delete prior cloud epochs</text>
+<rect x="591.9" y="427.3" width="176.3" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="680.0" y="438.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Epoch t &gt; t0: User authorizes</text>
+<text x="680.0" y="451.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Download &amp; Decrypt via LSKF +</text>
+<text x="680.0" y="463.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Titan CKV</text>
+<rect x="594.0" y="499.7" width="172.0" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="680.0" y="511.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">AndroidQF + mvt-android</text>
+<text x="680.0" y="523.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">check-advanced-logs extracts</text>
+<text x="680.0" y="536.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">delivery &amp; C2 IOCs</text>
+</svg>

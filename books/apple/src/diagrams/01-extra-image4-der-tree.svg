@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 629" width="920" height="629">
+<rect x="0" y="0" width="920" height="629" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">IMAGE4 (IMG4) ASN.1 DER VERIFICATION GRAPH: IM4P, IM4M, AND IM4R</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">TOP-LEVEL ITU-T X.690 DER SEQUENCE</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">IMG4 Container := SEQUENCE { IA5String 'IMG4', IM4P, [0] IM4M, [1] IM4R (opt) }</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Canonical Distinguished Encoding Rules forbid variable-length BER padding and parser-verifier ambiguity</text>
+<rect x="26.0" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">UNIVERSAL PAYLOAD · IM4P</text>
+<text x="40.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Firmware &amp; OS Object</text>
+<text x="40.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">4CC tag ('illb', 'ibot', 'sepi', 'krnl', 'sptm',</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">'txm', 'ltrs'), build string, LZFSE/BVX2</text>
+<text x="40.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">data, optional GID KBAG</text>
+<rect x="321.3" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="335.3" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">PERSONALIZED TICKET · IM4M</text>
+<text x="335.3" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Signed Manifest (MANB)</text>
+<text x="335.3" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">SET of MANP chip constraints + OBJP</text>
+<text x="335.3" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">per-component SHA-384 digests +</text>
+<text x="335.3" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">RSA/ECDSA signature + X.509 cert chain</text>
+<rect x="616.7" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="630.7" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">RESTORE NONCE · IM4R</text>
+<text x="630.7" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Boot Nonce Seed (BNCN)</text>
+<text x="630.7" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">8-byte SEP/NVRAM generator g committed</text>
+<text x="630.7" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">before restore; Boot ROM / LLB hashes</text>
+<text x="630.7" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">SHA-384(g) == MANP.BNCH</text>
+<rect x="26.0" y="342.2" width="277.3" height="101.2" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="40.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">DIGEST GATE</text>
+<text x="40.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">SHA-384(IM4P) == OBJP.DGST</text>
+<text x="40.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Verifies exact 4CC tag match, EPRO/ESEC</text>
+<text x="40.0" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">security flags, and full payload integrity in</text>
+<text x="40.0" y="426.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">SRAM/DRAM</text>
+<rect x="321.3" y="342.2" width="277.3" height="101.2" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="335.3" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">SILICON IDENTITY GATE</text>
+<text x="335.3" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">MANP == Live SoC Fuses</text>
+<text x="335.3" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Matches 64-bit ECID, CHIP, BORD, SDOM,</text>
+<text x="335.3" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">CEPO epoch, CPRO production fuse, and</text>
+<text x="335.3" y="426.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Apple Root CA PK hash</text>
+<rect x="616.7" y="342.2" width="277.3" height="101.2" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="630.7" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">ANTI-REPLAY GATE</text>
+<text x="630.7" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">SHA-384(BNCN) == MANP.BNCH</text>
+<text x="630.7" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Invalidates captured historical SHSH/IM4M</text>
+<text x="630.7" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">tickets as soon as SEP rotates the</text>
+<text x="630.7" y="426.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">hardware nonce slot</text>
+<rect x="26.0" y="501.5" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="523.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">CONJUNCTION GATE IN SECUREROM / LLB / IBOOT</text>
+<text x="460.0" y="539.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Admit &amp; Map Next Stage Executable iff Signature &amp; Fuses &amp; Digest &amp; Nonce All Hold</text>
+<text x="460.0" y="557.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Any mismatch scrubs staging memory and traps directly into USB DFU or paired One True Recovery (1TR)</text>
+<text x="460.0" y="600.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">IM4P binaries stay identical on Apple CDNs while tiny IM4M manifests bind authorization to one ECID and nonce.</text>
+<line x1="164.7" y1="125.0" x2="164.7" y2="176.5" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="164.7,183.0 168.7,174.5 160.7,174.5" fill="#236b66"/>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#b07926"/>
+<line x1="755.3" y1="125.0" x2="755.3" y2="176.5" stroke="#5c4282" stroke-width="1.6" stroke-dasharray="4,3"/>
+<polygon points="755.3,183.0 759.3,174.5 751.3,174.5" fill="#5c4282"/>
+<line x1="164.7" y1="284.2" x2="164.7" y2="335.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="164.7,342.2 168.7,333.7 160.7,333.7" fill="#236b66"/>
+<line x1="460.0" y1="284.2" x2="460.0" y2="335.7" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="460.0,342.2 464.0,333.7 456.0,333.7" fill="#b07926"/>
+<line x1="755.3" y1="284.2" x2="755.3" y2="335.7" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="755.3,342.2 759.3,333.7 751.3,333.7" fill="#5c4282"/>
+<line x1="164.7" y1="443.5" x2="164.7" y2="495.0" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="164.7,501.5 168.7,493.0 160.7,493.0" fill="#2b6a4c"/>
+<line x1="460.0" y1="443.5" x2="460.0" y2="495.0" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,501.5 464.0,493.0 456.0,493.0" fill="#2b6a4c"/>
+<line x1="755.3" y1="443.5" x2="755.3" y2="495.0" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="755.3,501.5 759.3,493.0 751.3,493.0" fill="#2b6a4c"/>
+<rect x="138.2" y="141.1" width="52.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">field [1]</text>
+<rect x="435.9" y="141.1" width="48.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">tag [0]</text>
+<rect x="732.5" y="141.1" width="45.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">tag [1]</text>
+<rect x="135.1" y="300.4" width="59.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">SHA-384</text>
+<rect x="417.2" y="300.4" width="85.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">MANB / MANP</text>
+<rect x="717.0" y="300.4" width="76.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">generator g</text>
+<rect x="133.5" y="459.6" width="62.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="471.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">digest ok</text>
+<rect x="417.3" y="459.6" width="85.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="471.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">PK + fuses ok</text>
+<rect x="717.1" y="459.6" width="76.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="471.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">fresh BNCH</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 484" width="920" height="484">
+<rect x="0" y="0" width="920" height="484" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">MACH-O LC_CODE_SIGNATURE SUPERBLOB &amp; CS_CODEDIRECTORY HASH SLOTS</text>
+<rect x="26.0" y="52.0" width="868.0" height="87.1" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">MACH-O __LINKEDIT · CSMAGIC_EMBEDDED_SIGNATURE (0XFADE0CC0)</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">CS_SuperBlob Typed Index Table (CS_BlobIndex[])</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Indexes CodeDirectory (0x0), Requirements (0x2), XML/DER Entitlements (0x5 / 0x7), Launch Constraints (0x8..0xb), CMS Signature (0x10000), &amp;</text>
+<text x="460.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Notary Ticket (0x10002)</text>
+<rect x="26.0" y="197.1" width="277.3" height="101.2" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="40.0" y="218.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">SPECIAL SLOTS -1..-5</text>
+<text x="40.0" y="234.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Bundle &amp; Legacy Metadata</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">h[-1] Info.plist · h[-2] Internal</text>
+<text x="40.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Requirements · h[-3] CodeResources · h[-5]</text>
+<text x="40.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">XML Entitlements (0xfade7171)</text>
+<rect x="321.3" y="197.1" width="277.3" height="101.2" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="335.3" y="218.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">SPECIAL SLOTS -7..-11</text>
+<text x="335.3" y="234.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">DER Entitlements &amp; LWCR</text>
+<text x="335.3" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">h[-7] ASN.1 DER Entitlements (0xfade7172) ·</text>
+<text x="335.3" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">h[-8..-11] Self, Parent, Responsible, &amp;</text>
+<text x="335.3" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Library Constraints (0xfade8181)</text>
+<rect x="616.7" y="197.1" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="630.7" y="218.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">POSITIVE SLOTS 0..P-1</text>
+<text x="630.7" y="234.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">4 KB Executable Code Pages</text>
+<text x="630.7" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">h[0..P-1] per-page SHA-256 digests covering</text>
+<text x="630.7" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">__TEXT up to codeLimit64; verified lazily</text>
+<text x="630.7" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">on page-in</text>
+<rect x="26.0" y="356.4" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="377.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">CANONICAL IDENTITY · CDHASH = TRUNC_160(SHA-256(CS_CODEDIRECTORY))</text>
+<text x="460.0" y="393.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">TXM (GL0) Trust Cache / CoreTrust Anchor + XNU vm_fault Page-In Gate</text>
+<text x="460.0" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Binds metadata slots and 4 KB code pages into a single 20-byte CDHash; page mismatch clears CS_VALID and triggers SIGKILL under CS_KILL</text>
+<text x="460.0" y="455.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Every negative metadata digest and positive 4 KB page digest sits inside CS_CodeDirectory, so mutating entitlements or resources changes CDHash.</text>
+<line x1="164.7" y1="139.1" x2="164.7" y2="190.6" stroke="#365378" stroke-width="1.6"/>
+<polygon points="164.7,197.1 168.7,188.6 160.7,188.6" fill="#365378"/>
+<line x1="460.0" y1="139.1" x2="460.0" y2="190.6" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="460.0,197.1 464.0,188.6 456.0,188.6" fill="#5c4282"/>
+<line x1="755.3" y1="139.1" x2="755.3" y2="190.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="755.3,197.1 759.3,188.6 751.3,188.6" fill="#236b66"/>
+<line x1="164.7" y1="298.4" x2="164.7" y2="349.9" stroke="#365378" stroke-width="1.6"/>
+<polygon points="164.7,356.4 168.7,347.9 160.7,347.9" fill="#365378"/>
+<line x1="460.0" y1="298.4" x2="460.0" y2="349.9" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="460.0,356.4 464.0,347.9 456.0,347.9" fill="#5c4282"/>
+<line x1="755.3" y1="298.4" x2="755.3" y2="349.9" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="755.3,356.4 759.3,347.9 751.3,347.9" fill="#2b6a4c"/>
+<rect x="125.8" y="155.2" width="77.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">binds bundle</text>
+<rect x="415.8" y="155.2" width="88.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">canonical DER</text>
+<rect x="717.2" y="155.2" width="76.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">4 KB chunks</text>
+<rect x="123.6" y="314.5" width="82.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="326.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">hashed in CD</text>
+<rect x="422.3" y="314.5" width="75.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="326.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">TXM parsed</text>
+<rect x="691.3" y="314.5" width="128.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="326.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">ubc_cs_page_validate</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 443" width="920" height="443">
+<rect x="0" y="0" width="920" height="443" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">EXTENDED VERIFICATION MODULE (EVM) INODE METADATA AND XATTR HMAC BINDING</text>
+<rect x="26.0" y="52.0" width="203.5" height="98.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="40.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">CONTENT DIGEST / SIG</text>
+<text x="40.0" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">security.ima</text>
+<text x="40.0" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">RSA/ECDSA file sig or</text>
+<text x="40.0" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">fs-verity digest</text>
+<rect x="247.5" y="52.0" width="203.5" height="98.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="261.5" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">MAC SECURITY LABEL</text>
+<text x="261.5" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">security.selinux /</text>
+<text x="261.5" y="103.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SMACK64</text>
+<text x="261.5" y="120.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Mandatory domain &amp; type</text>
+<text x="261.5" y="134.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">enforcement label</text>
+<rect x="469.0" y="52.0" width="203.5" height="98.8" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="483.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">FILE CAPABILITIES &amp; ACLS</text>
+<text x="483.0" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">security.capability</text>
+<text x="483.0" y="106.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Permitted/effective file</text>
+<text x="483.0" y="119.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">capability bitmasks</text>
+<rect x="690.5" y="52.0" width="203.5" height="98.8" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="704.5" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">STRUCT H_MISC INODE TUPLE</text>
+<text x="704.5" y="88.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">ino, gen, uid, gid, mode,</text>
+<text x="704.5" y="103.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">s_uuid</text>
+<text x="704.5" y="120.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">init_user_ns ownership, SUID</text>
+<text x="704.5" y="134.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">bits &amp; FS UUID</text>
+<rect x="26.0" y="184.8" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="206.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">RING 0 METADATA AUTHENTICATOR (SECURITY/INTEGRITY/EVM/EVM_CRYPTO.C)</text>
+<text x="460.0" y="222.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">evm_calc_hmac_or_hash() Keyed by TPM 2.0 Sealed Kernel Master Key (evm-key)</text>
+<text x="460.0" y="240.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Computes HMAC-SHA256 (mutable files) or verifies EVM_XATTR_PORTABLE_DIGSIG asymmetric vendor signature</text>
+<rect x="26.0" y="315.8" width="868.0" height="73.0" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="460.0" y="337.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="middle">OFFLINE TAMPER VERDICT (EVM_VERIFYXATTR -&gt; SECURITY.EVM)</text>
+<text x="460.0" y="353.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Blocks Offline chmod +s SUID Escalation, Label Stripping, and Cross-Inode Xattr Transplant</text>
+<text x="460.0" y="371.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Any offline disk edit to uid/gid/mode or protected xattrs invalidates security.evm and returns -EACCES / -EPERM</text>
+<text x="460.0" y="414.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Without EVM (or a read-only dm-verity Merkle tree), security.ima authenticates file bytes while leaving chmod +s and labels exposed.</text>
+<line x1="127.8" y1="150.8" x2="127.8" y2="178.3" stroke="#365378" stroke-width="1.6"/>
+<polygon points="127.8,184.8 131.8,176.3 123.8,176.3" fill="#365378"/>
+<line x1="349.2" y1="150.8" x2="349.2" y2="178.3" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="349.2,184.8 353.2,176.3 345.2,176.3" fill="#236b66"/>
+<line x1="570.8" y1="150.8" x2="570.8" y2="178.3" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="570.8,184.8 574.8,176.3 566.8,176.3" fill="#b07926"/>
+<line x1="792.2" y1="150.8" x2="792.2" y2="178.3" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="792.2,184.8 796.2,176.3 788.2,176.3" fill="#5c4282"/>
+<line x1="460.0" y1="257.8" x2="460.0" y2="309.3" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,315.8 464.0,307.3 456.0,307.3" fill="#2b6a4c"/>
+<rect x="395.6" y="274.0" width="128.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="285.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">verifies security.evm</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 529" width="900" height="529">
+<rect x="0" y="0" width="900" height="529" fill="#ffffff"/>
+<line x1="450.0" y1="104.1" x2="450.0" y2="430.4" stroke="#94a3b8" stroke-width="2.0"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">THE 180-SECOND PASSCODE-THEFT KILL CHAIN (WSJ 2023) VS. STOLEN DEVICE PROTECTION</text>
+<text x="208.0" y="54.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#8d2d3b" text-anchor="middle">PRE-IOS 17.3 SHOULDER-SURF TAKEOVER</text>
+<text x="692.0" y="54.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#2b6a4c" text-anchor="middle">IOS 17.3+ STOLEN DEVICE PROTECTION (SDP)</text>
+<rect x="28.0" y="72.0" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="42.0" y="93.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">PASSCODE RECON</text>
+<text x="42.0" y="108.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Shoulder-Surf 6-Digit PIN &amp; Snatch iPhone</text>
+<text x="42.0" y="126.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Thief forces Face ID failure in crowded venue, films PIN</text>
+<text x="42.0" y="139.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">entry, and steals unlocked or locked handset</text>
+<rect x="512.0" y="72.0" width="360.0" height="84.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="526.0" y="93.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">CONTEXT EVALUATION</text>
+<text x="526.0" y="108.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CoreRoutine Flags Unfamiliar Location</text>
+<text x="526.0" y="126.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Bar, street, or transit node fails encrypted on-device</text>
+<text x="526.0" y="139.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Significant Locations check (or Always mode active)</text>
+<rect x="28.0" y="174.1" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="42.0" y="195.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">ACCOUNT RESET</text>
+<text x="42.0" y="210.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Change Apple Account Password via Device PIN</text>
+<text x="42.0" y="228.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">AuthKit accepts local SEP passcode token to reset Apple ID</text>
+<text x="42.0" y="241.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">password and kick out victim's other devices</text>
+<rect x="512.0" y="174.1" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="195.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">DELAY GATE</text>
+<text x="526.0" y="210.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Biometric #1 + Mandatory 60-Minute Timer</text>
+<text x="526.0" y="228.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Password reset requires live Face ID / Touch ID with zero PIN</text>
+<text x="526.0" y="241.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">fallback, then blocks for 1 full hour</text>
+<rect x="28.0" y="276.2" width="360.0" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="42.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">PERMANENT LOCKOUT</text>
+<text x="42.0" y="313.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Generate 28-Char Recovery Key &amp; Disable Find My</text>
+<text x="42.0" y="330.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Enrolling a new Recovery Key blocks Apple Support recovery;</text>
+<text x="42.0" y="343.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">thief clears Activation Lock for resale</text>
+<rect x="512.0" y="276.2" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CUSTODY LOCK</text>
+<text x="526.0" y="313.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Recovery Key, Biometry, &amp; Find My Frozen</text>
+<text x="526.0" y="330.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Find My cannot be disabled while SDP is on; Recovery Key</text>
+<text x="526.0" y="343.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">mutation requires second live Face ID after 1h</text>
+<rect x="28.0" y="378.4" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="42.0" y="399.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">VAULT DRAIN</text>
+<text x="42.0" y="415.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Passcode Fallback Unlocks Keychain &amp; Banking</text>
+<text x="42.0" y="432.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Thief opens Passwords vault via PIN fallback to drain bank</text>
+<text x="42.0" y="445.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">apps, crypto seeds, and tax records</text>
+<rect x="512.0" y="378.4" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="399.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">BIOMETRIC ONLY</text>
+<text x="526.0" y="415.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Zero Passcode Fallback on Saved Credentials</text>
+<text x="526.0" y="432.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Passwords.app, Passkeys, Safari AutoFill cards, and eSIM</text>
+<text x="526.0" y="445.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">transfer strictly require live Face ID / Touch ID</text>
+<text x="450.0" y="500.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Severing passcode fallback turns a 3-minute irrevocable account lockout into a blocked hardware brick while the owner enables Lost Mode.</text>
+<line x1="388.0" y1="114.1" x2="414.0" y2="114.1" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="114.1" x2="512.0" y2="114.1" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="216.2" x2="414.0" y2="216.2" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="216.2" x2="512.0" y2="216.2" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="318.3" x2="414.0" y2="318.3" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="318.3" x2="512.0" y2="318.3" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="420.4" x2="414.0" y2="420.4" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="420.4" x2="512.0" y2="420.4" stroke="#2b6a4c" stroke-width="1.4"/>
+<rect x="430.3" y="104.9" width="39.4" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="116.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">T+0s</text>
+<rect x="427.3" y="207.0" width="45.4" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="218.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">T+30s</text>
+<rect x="427.3" y="309.2" width="45.4" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="320.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">T+90s</text>
+<rect x="425.5" y="411.3" width="49.1" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="422.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">T+180s</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 617" width="900" height="617">
+<rect x="0" y="0" width="900" height="617" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="484.5" rx="8.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#6e1f2b" text-anchor="middle">NAIVE WORKSPACE-SCOPED AGENT</text>
+<rect x="550.0" y="74.0" width="324.0" height="484.5" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">HARDENED BUBBLEWRAP + LANDLOCK MASK</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="562.5" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">DEFEATING .GIT/HOOKS AND CONFIG PERSISTENCE ESCAPES WITH READ-ONLY BIND MASKS</text>
+<rect x="42.0" y="114.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">UNTRUSTED INPUT</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">XPIA in PR Diff, README, or MCP</text>
+<text x="56.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Output</text>
+<text x="56.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Adversarial tokens instruct coding agent to</text>
+<text x="56.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">write helper script inside ./repo</text>
+<rect x="42.0" y="275.5" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="297.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CONTROL-PLANE TAMPERING</text>
+<text x="56.0" y="313.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Mutates .git/hooks or .git/config</text>
+<text x="56.0" y="331.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Writes .git/hooks/pre-commit,</text>
+<text x="56.0" y="345.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">core.fsmonitor, or .vscode/settings.json</text>
+<text x="56.0" y="360.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">autoApprove</text>
+<rect x="42.0" y="437.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="458.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">DELAYED HOST ESCAPE</text>
+<text x="56.0" y="474.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Executes Unsandboxed on Host git</text>
+<text x="56.0" y="490.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">status</text>
+<text x="56.0" y="509.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Developer runs git on host terminal; hook</text>
+<text x="56.0" y="523.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">steals ~/.ssh and cloud credentials</text>
+<rect x="566.0" y="114.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">BASE ISOLATION</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Read-Only Root + Writable ./repo</text>
+<text x="580.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Bind</text>
+<text x="580.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">--ro-bind / / with --bind ./repo /workspace</text>
+<text x="580.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">unmaps host $HOME completely</text>
+<rect x="566.0" y="275.5" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="297.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">SURGICAL CARVEOUTS</text>
+<text x="580.0" y="313.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Read-Only Masks Over Executable</text>
+<text x="580.0" y="329.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Paths</text>
+<text x="580.0" y="347.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Stacks --ro-bind on .git/hooks, .git/config,</text>
+<text x="580.0" y="361.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">.vscode, .codex &amp; /dev/null on symlinks</text>
+<rect x="566.0" y="437.0" width="292.0" height="103.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="458.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">DETERMINISTIC KERNEL DENY</text>
+<text x="580.0" y="474.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Ring 0 VFS Returns -EROFS</text>
+<text x="580.0" y="490.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Immediately</text>
+<text x="580.0" y="509.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Agent edits source &amp; commits objects</text>
+<text x="580.0" y="523.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">normally, while hook/config writes fail in VFS</text>
+<text x="450.0" y="588.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Writable access to a Git working tree is equivalent to host code execution unless .git/hooks, .git/config, and IDE configs are masked read-only.</text>
+<line x1="188.0" y1="217.5" x2="188.0" y2="269.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,275.5 192.0,267.0 184.0,267.0" fill="#4a5568"/>
+<line x1="188.0" y1="379.0" x2="188.0" y2="430.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,437.0 192.0,428.5 184.0,428.5" fill="#4a5568"/>
+<line x1="712.0" y1="217.5" x2="712.0" y2="269.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,275.5 716.0,267.0 708.0,267.0" fill="#4a5568"/>
+<line x1="712.0" y1="379.0" x2="712.0" y2="430.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,437.0 716.0,428.5 708.0,428.5" fill="#4a5568"/>
+<line x1="334.0" y1="165.8" x2="559.5" y2="165.8" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,165.8 557.5,161.8 557.5,169.8" fill="#236b66"/>
+<line x1="334.0" y1="327.3" x2="559.5" y2="327.3" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="566.0,327.3 557.5,323.3 557.5,331.3" fill="#2b6a4c"/>
+<line x1="334.0" y1="488.8" x2="559.5" y2="488.8" stroke="purple" stroke-width="1.6"/>
+<polygon points="566.0,488.8 557.5,484.8 557.5,492.8" fill="purple"/>
+<rect x="126.1" y="233.6" width="123.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="245.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">allowed inside ./repo</text>
+<rect x="137.8" y="395.1" width="100.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="406.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">escapes sandbox</text>
+<rect x="641.8" y="233.6" width="140.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="245.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">specificity mount order</text>
+<rect x="655.3" y="395.1" width="113.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="406.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">blocks persistence</text>
+<rect x="374.3" y="49.0" width="151.4" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">VFS Subpath Mount Policy</text>
+<rect x="386.0" y="156.4" width="109.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="167.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">mounts fresh VFS</text>
+<rect x="371.3" y="317.9" width="138.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="329.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">masks .git control files</text>
+<rect x="368.7" y="479.4" width="144.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="490.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="purple" text-anchor="middle">neutralizes host trigger</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 498" width="920" height="498">
+<rect x="0" y="0" width="920" height="498" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">WEBCONTENT RENDERER HARDENING VS. RESIDUAL IOKIT KERNEL SURFACE</text>
+<rect x="26.0" y="52.0" width="277.3" height="101.2" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="40.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">JSC TYPE ISOLATION</text>
+<text x="40.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">StructureID Contiguous Heap</text>
+<text x="40.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">2 GB (iOS) / 4 GB (macOS) Structure</text>
+<text x="40.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">reservation; tryDecode() bounds-checks</text>
+<text x="40.0" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">32-bit offsets and nukedStructureIDBit</text>
+<rect x="321.3" y="52.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="335.3" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">BMALLOC POINTER CAGING</text>
+<text x="335.3" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">16 GB / 64 GB Primitive Gigacage</text>
+<text x="335.3" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Masks TypedArray &amp; ArrayBuffer backing</text>
+<text x="335.3" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">pointers into isolated virtual cage away</text>
+<text x="335.3" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">from JSObject vtables</text>
+<rect x="616.7" y="52.0" width="277.3" height="101.2" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="630.7" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">THREAD-LOCAL W^X</text>
+<text x="630.7" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">APRR Fast JIT Toggle</text>
+<text x="630.7" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">pthread_jit_write_protect_np flips</text>
+<text x="630.7" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">core-local permission register so JIT pages</text>
+<text x="630.7" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">never map global RWX</text>
+<rect x="26.0" y="211.2" width="868.0" height="73.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="460.0" y="232.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">SEATBELT MACF CONTAINMENT · SANDBOX.KEXT BYTECODE VM</text>
+<text x="460.0" y="248.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Default-Deny Filter Over VFS, bootstrap_look_up, Syscall Bitmasks, &amp; iokit-open-user-client</text>
+<text x="460.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Blocks direct file/socket access and strips 95%+ of IOKit classes; mediates graphics via narrow GPU Extension &amp; residual user-clients</text>
+<rect x="26.0" y="342.2" width="425.0" height="87.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="40.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">RESIDUAL EL1 KERNEL ATTACK SURFACE</text>
+<text x="40.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">IOUserClient::externalMethod Selector Dispatch</text>
+<text x="40.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">IOConnectCallMethod passes scalarInput[16] &amp; structureInput;</text>
+<text x="40.0" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">CVE-2021-30807 hit IOMobileFramebuffer selector #83 OOB index</text>
+<rect x="469.0" y="342.2" width="425.0" height="87.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="483.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">MODERN KERNEL COUNTERMEASURE</text>
+<text x="483.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">IOExternalMethodDispatch2022 &amp; DriverKit</text>
+<text x="483.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Enforces per-selector checkEntitlement, scalar/struct bounds,</text>
+<text x="483.0" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">single-thread locking, and SPTM/MIE heap isolation</text>
+<text x="460.0" y="455.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Even after defeating StructureID, Gigacage, and APRR inside WebContent, an attacker can reach EL1 only through Seatbelt-permitted Mach and IOKit</text>
+<text x="460.0" y="469.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">selectors.</text>
+<line x1="164.7" y1="153.2" x2="164.7" y2="204.7" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="164.7,211.2 168.7,202.7 160.7,202.7" fill="#5c4282"/>
+<line x1="460.0" y1="153.2" x2="460.0" y2="204.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="460.0,211.2 464.0,202.7 456.0,202.7" fill="#236b66"/>
+<line x1="755.3" y1="153.2" x2="755.3" y2="204.7" stroke="#365378" stroke-width="1.6"/>
+<polygon points="755.3,211.2 759.3,202.7 751.3,202.7" fill="#365378"/>
+<line x1="238.5" y1="284.2" x2="238.5" y2="335.7" stroke="#8d2d3b" stroke-width="1.6"/>
+<polygon points="238.5,342.2 242.5,333.7 234.5,333.7" fill="#8d2d3b"/>
+<line x1="681.5" y1="284.2" x2="681.5" y2="335.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="681.5,342.2 685.5,333.7 677.5,333.7" fill="#2b6a4c"/>
+<rect x="131.6" y="169.4" width="66.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="180.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">post-RCE</text>
+<rect x="426.9" y="169.4" width="66.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="180.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">post-RCE</text>
+<rect x="710.6" y="169.4" width="89.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="180.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">ROP/JOP only</text>
+<rect x="187.8" y="300.4" width="101.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="238.5" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">allowed selector</text>
+<rect x="639.6" y="300.4" width="83.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="681.5" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">filtered trap</text>
+</svg>

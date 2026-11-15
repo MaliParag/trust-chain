@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 598" width="920" height="598">
+<rect x="0" y="0" width="920" height="598" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">OCTAGON PEER CLIQUE, CKKS VIEWS, AND CLOUDKIT PROTECTED CLOUD STORAGE (PCS) TREE</text>
+<rect x="26.0" y="52.0" width="480.4" height="87.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">OCTAGON TRUST CLIQUE (OTCLIQUE)</text>
+<text x="40.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Trusted Device SEP Peer Keys</text>
+<text x="40.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Peer P-384/P-256 signing &amp; encryption keys counter-signed into circle</text>
+<text x="40.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">manifest</text>
+<rect x="524.4" y="52.0" width="369.6" height="87.1" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="538.4" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">OUT-OF-BAND RECOVERY ANCHORS</text>
+<text x="538.4" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">28-Char Recovery Key / Custodian (CRK)</text>
+<text x="538.4" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">128-bit+ HKDF Backup Key or peer-wrapped Recovery</text>
+<text x="538.4" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Contact voucher</text>
+<rect x="26.0" y="197.1" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="218.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">CKKS SYNCED KEY HIERARCHY</text>
+<text x="460.0" y="234.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Top-Level Keys (TLK) -&gt; Class A / Class C Keys -&gt; PCS Master Identities (pcsi / pcsk)</text>
+<text x="460.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">TLKShares wrapped per Octagon peer; Synced Keychain items encrypted with 512-bit AES-SIV under view keys</text>
+<rect x="26.0" y="328.1" width="203.5" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="40.0" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">PCS SERVICE KEY</text>
+<text x="40.0" y="364.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">iCloud Backup</text>
+<text x="40.0" y="382.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">E2EE under ADP (wraps</text>
+<text x="40.0" y="395.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Messages backup)</text>
+<rect x="247.5" y="328.1" width="203.5" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="261.5" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">PCS SERVICE KEY</text>
+<text x="261.5" y="364.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Photos &amp; Notes</text>
+<text x="261.5" y="382.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Client-rotated 256-bit service</text>
+<text x="261.5" y="395.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">root keys</text>
+<rect x="469.0" y="328.1" width="203.5" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="483.0" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">PCS SERVICE KEY</text>
+<text x="483.0" y="364.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">iCloud Drive</text>
+<text x="483.0" y="382.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Pages, PDFs, &amp;</text>
+<text x="483.0" y="395.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Desktop/Documents sync</text>
+<rect x="690.5" y="328.1" width="203.5" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="704.5" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">OUTSIDE PCS E2EE</text>
+<text x="704.5" y="364.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Mail, Contacts, Cal</text>
+<text x="704.5" y="382.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Server-held keys for</text>
+<text x="704.5" y="395.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">SMTP/CalDAV/CardDAV</text>
+<rect x="26.0" y="470.2" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="491.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">CLOUDKIT OBJECT STORAGE (CLOUDD)</text>
+<text x="460.0" y="507.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Container -&gt; Zone Key (K_zone) -&gt; Record Key (K_record) -&gt; Per-Chunk AES-256-GCM</text>
+<text x="460.0" y="526.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Every field and S3/Apple asset chunk encrypted on client before upload; under ADP Apple holds zero K_service copies</text>
+<text x="460.0" y="569.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Under Advanced Data Protection, evicting Apple from CloudKit requires moving only the PCS Service Keys into the Octagon CKKS clique.</text>
+<line x1="266.2" y1="139.1" x2="266.2" y2="190.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="266.2,197.1 270.2,188.6 262.2,188.6" fill="#236b66"/>
+<line x1="709.2" y1="139.1" x2="709.2" y2="190.6" stroke="#5c4282" stroke-width="1.6" stroke-dasharray="4,3"/>
+<polygon points="709.2,197.1 713.2,188.6 705.2,188.6" fill="#5c4282"/>
+<line x1="127.8" y1="270.1" x2="127.8" y2="321.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="127.8,328.1 131.8,319.6 123.8,319.6" fill="#2b6a4c"/>
+<line x1="349.2" y1="270.1" x2="349.2" y2="321.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="349.2,328.1 353.2,319.6 345.2,319.6" fill="#2b6a4c"/>
+<line x1="570.8" y1="270.1" x2="570.8" y2="321.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="570.8,328.1 574.8,319.6 566.8,319.6" fill="#2b6a4c"/>
+<line x1="127.8" y1="412.2" x2="127.8" y2="463.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="127.8,470.2 131.8,461.7 123.8,461.7" fill="#2b6a4c"/>
+<line x1="349.2" y1="412.2" x2="349.2" y2="463.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="349.2,470.2 353.2,461.7 345.2,461.7" fill="#2b6a4c"/>
+<line x1="570.8" y1="412.2" x2="570.8" y2="463.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="570.8,470.2 574.8,461.7 566.8,461.7" fill="#2b6a4c"/>
+<line x1="792.2" y1="412.2" x2="792.2" y2="463.7" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="4,3"/>
+<polygon points="792.2,470.2 796.2,461.7 788.2,461.7" fill="#8d2d3b"/>
+<rect x="215.5" y="155.2" width="101.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="266.2" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">wraps TLKShare</text>
+<rect x="665.0" y="155.2" width="88.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="709.2" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">escrows TLKs</text>
+<rect x="87.1" y="286.2" width="81.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="127.8" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">ADP custody</text>
+<rect x="308.6" y="286.2" width="81.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="349.2" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">ADP custody</text>
+<rect x="530.1" y="286.2" width="81.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">ADP custody</text>
+<rect x="91.3" y="428.4" width="73.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="127.8" y="439.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">wraps zone</text>
+<rect x="312.8" y="428.4" width="73.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="349.2" y="439.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">wraps zone</text>
+<rect x="534.3" y="428.4" width="73.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="439.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">wraps zone</text>
+<rect x="731.4" y="428.4" width="121.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="792.2" y="439.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">server TLS/at-rest</text>
+</svg>

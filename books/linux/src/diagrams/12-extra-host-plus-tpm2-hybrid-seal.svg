@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 456" width="920" height="456">
+<rect x="0" y="0" width="920" height="456" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">SYSTEMD-CREDS HYBRID SEALING (HOST+TPM2) AND NON-SWAPPABLE RAMFS PROJECTION</text>
+<rect x="26.0" y="52.0" width="425.0" height="87.1" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="40.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">FACTOR 1 · PERSISTENT DISK SECRET</text>
+<text x="40.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">256-Bit .host Key (/var/lib/systemd/credential.secret)</text>
+<text x="40.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Stored mode 0400 on LUKS2 /var; defeats passive SPI/LPC TPM bus</text>
+<text x="40.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">interposers when disk remains locked</text>
+<rect x="469.0" y="52.0" width="425.0" height="87.1" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="483.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">FACTOR 2 · SILICON BOOT BINDING</text>
+<text x="483.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">TPM 2.0 SRK Policy Key (PCR[7] + PCR[11] / pcrlock)</text>
+<text x="483.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Unsealed inside TPM 2.0 only under verified Secure Boot + UKI phase;</text>
+<text x="483.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">defeats offline disk &amp; backup theft</text>
+<rect x="26.0" y="197.1" width="868.0" height="73.0" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="460.0" y="218.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">CRYPTOGRAPHIC ENVELOPE · SYSTEMD-CREDS ENCRYPT --WITH-KEY=HOST+TPM2</text>
+<text x="460.0" y="234.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">SHA-256 Hybrid Key Derivation -&gt; AES-256-GCM Ciphertext + Authenticated Metadata (AAD)</text>
+<text x="460.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Binds logical credential name (e.g., 'db-pass') and monotonic notAfter timestamp in GCM AAD to prevent credential-swapping</text>
+<rect x="26.0" y="328.1" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">ACTIVATION-TIME DELIVERY · LOADCREDENTIALENCRYPTED=</text>
+<text x="460.0" y="365.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">PID 1 Unseals Into Private Per-Unit ramfs (/run/credentials/&lt;unit&gt;/, MS_NOSYMFOLLOW | MS_NOEXEC)</text>
+<text x="460.0" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Mode 0400 owned by transient DynamicUser; ramfs pages are kernel-unswappable (never touch swap) and purged on unit stop</text>
+<text x="460.0" y="427.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Neither a stolen backup archive nor a passive discrete-TPM bus tap suffices alone to recover a host+tpm2 service credential.</text>
+<line x1="238.5" y1="139.1" x2="238.5" y2="190.6" stroke="#365378" stroke-width="1.6"/>
+<polygon points="238.5,197.1 242.5,188.6 234.5,188.6" fill="#365378"/>
+<line x1="681.5" y1="139.1" x2="681.5" y2="190.6" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="681.5,197.1 685.5,188.6 677.5,188.6" fill="#5c4282"/>
+<line x1="460.0" y1="270.1" x2="460.0" y2="321.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,328.1 464.0,319.6 456.0,319.6" fill="#2b6a4c"/>
+<rect x="186.1" y="155.2" width="104.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="238.5" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">256-bit host half</text>
+<rect x="617.3" y="155.2" width="128.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="681.5" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">TPM2 PCR-gated half</text>
+<rect x="395.4" y="286.2" width="129.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">GCM verify + decrypt</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 584" width="920" height="584">
+<rect x="0" y="0" width="920" height="584" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="334.0" height="451.3" rx="8.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="6,3"/>
+<text x="193.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#6e1f2b" text-anchor="middle">ANDROID 13-14 SESSION-DROPPER BYPASS</text>
+<rect x="560.0" y="74.0" width="334.0" height="451.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="727.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">ANDROID 15-17 ECM &amp; ADVANCED PROTECTION</text>
+<line x1="460.0" y1="70.0" x2="460.0" y2="529.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">SESSION-BASED DROPPER EVASION VS. ANDROID 15-17 ENHANCED CONFIRMATION &amp; AAPM</text>
+<rect x="42.0" y="114.0" width="302.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STAGE 1 · DROPPER-AS-A-SERVICE</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SecuriDropper / Zombinder / Anatsa</text>
+<text x="56.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Decoy APK</text>
+<text x="56.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Sideloaded or store-staged utility requests</text>
+<text x="56.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">REQUEST_INSTALL_PACKAGES while omitting</text>
+<text x="56.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">AccessibilityService from its own manifest</text>
+<rect x="42.0" y="259.8" width="302.0" height="101.8" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="56.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">STAGE 2 · STORE-MIMICKING API</text>
+<text x="56.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">PackageInstaller SessionParams API</text>
+<text x="56.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Streams decrypted banking trojan (Xenomorph,</text>
+<text x="56.0" y="330.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Hook, PixPirate) via multi-part createSession()</text>
+<text x="56.0" y="344.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">API used by app stores</text>
+<rect x="42.0" y="389.5" width="302.0" height="117.8" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="56.0" y="411.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">STAGE 3 · RESTRICTED SETTINGS EVADED</text>
+<text x="56.0" y="427.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Payload Treated as Trusted Session</text>
+<text x="56.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Install</text>
+<text x="56.0" y="461.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Android 13 exempted session-installed packages</text>
+<text x="56.0" y="476.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">from ECM; AccessibilityService toggle</text>
+<text x="56.0" y="490.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">remained clickable for ATS wire fraud</text>
+<rect x="576.0" y="114.0" width="302.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="590.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">GATE 1 · FACTORY XML ALLOWLIST</text>
+<text x="590.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">/system/etc/sysconfig Allowlist</text>
+<text x="590.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">EnhancedConfirmationService exempts only</text>
+<text x="590.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">factory-allowlisted stores; unverified session</text>
+<text x="590.0" y="198.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">droppers inherit ECM blocks</text>
+<rect x="576.0" y="259.8" width="302.0" height="101.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="590.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GATE 2 · IMMUTABLE SOURCE ATTRIBUTION</text>
+<text x="590.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Downloaded-File Source Pinning</text>
+<text x="590.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Flags PACKAGE_SOURCE_DOWNLOADED_FILE</text>
+<text x="590.0" y="330.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">even on sessions and blocks self-update source</text>
+<text x="590.0" y="344.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">laundering (CVE-2026-58836)</text>
+<rect x="576.0" y="389.5" width="302.0" height="117.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="590.0" y="411.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">GATE 3 · ANDROID 17 AAPM HARD-BLOCK</text>
+<text x="590.0" y="427.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Verified AccessibilityTool Gate</text>
+<text x="590.0" y="445.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Advanced Protection blocks sideloading globally</text>
+<text x="590.0" y="460.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">and denies AccessibilityService to non-verified</text>
+<text x="590.0" y="474.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">assistive apps</text>
+<text x="460.0" y="555.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Closing the session-installer loophole forced trojans out of fake store sessions; Android 17 AAPM eliminates unverified Accessibility grants completely.</text>
+<line x1="193.0" y1="231.8" x2="193.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="193.0,259.8 197.0,251.3 189.0,251.3" fill="#4a5568"/>
+<line x1="193.0" y1="361.5" x2="193.0" y2="383.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="193.0,389.5 197.0,381.0 189.0,381.0" fill="#4a5568"/>
+<line x1="727.0" y1="231.8" x2="727.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="727.0,259.8 731.0,251.3 723.0,251.3" fill="#4a5568"/>
+<line x1="727.0" y1="361.5" x2="727.0" y2="383.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="727.0,389.5 731.0,381.0 723.0,381.0" fill="#4a5568"/>
+<line x1="344.0" y1="172.9" x2="569.5" y2="172.9" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="576.0,172.9 567.5,168.9 567.5,176.9" fill="#236b66"/>
+<line x1="344.0" y1="310.7" x2="569.5" y2="310.7" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="576.0,310.7 567.5,306.7 567.5,314.7" fill="#b07926"/>
+<line x1="344.0" y1="448.4" x2="569.5" y2="448.4" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="576.0,448.4 567.5,444.4 567.5,452.4" fill="#2b6a4c"/>
+<rect x="356.9" y="49.0" width="206.2" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="460.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">EnhancedConfirmationManager Gate</text>
+<rect x="390.7" y="163.5" width="120.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.7" y="175.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">audits installer UID</text>
+<rect x="392.2" y="301.3" width="117.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.7" y="312.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">pins packageSource</text>
+<rect x="410.6" y="439.0" width="80.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.7" y="450.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">blocks grant</text>
+</svg>

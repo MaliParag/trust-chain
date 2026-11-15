@@ -3,91 +3,228 @@
 ## Overview
 
 * **Link in the Chain:** Defends Ring 0 internally when an unprivileged thread, network packet, or rogue hypervisor/PCIe device triggers a memory-safety flaw inside verified kernel code, preserving the `Lockdown` ([Chapter 5](05-kernel-lockdown-modules.md)) and `LSM` ([Chapter 7](07-stacked-lsms-landlock.md)) boundaries.
-* **Core Security Invariant:** Spatial/privilege hardware flags (`SMEP`, `SMAP`/`PAN`, `W^X`), forward- and backward-edge Control-Flow Integrity (`KCFI`/`FineIBT` + hardware `CET` Shadow Stacks / `PAC`), virtual-address-isolated slab allocators (`RANDOM_KMALLOC_CACHES`, `SLAB_VIRTUAL`), and compile-time-verified `Rust-for-Linux` safe driver abstractions prevent memory bugs from hijacking `%rip`/`PC` or deterministically aliasing `struct cred`.
-* **Deployment Profile Matrix:** Mainstream distros (`Ubuntu 24.04+`, `Fedora 40+`, `RHEL 9/10`) enable `KASLR`, `SMEP`/`SMAP`, `SLAB_FREELIST_HARDENED`, `init_on_alloc`, `KFENCE`, and increasingly `KCFI`/`FineIBT` + `RANDOM_KMALLOC_CACHES`; hardened cloud/mobile builds (`Google` `cos`/`kCTF`, `Android` GKI, `Talos`) add Clang `KCFI`, `SLAB_VIRTUAL` / `AUTOSLAB`, and mainline Rust drivers (`CONFIG_RUST=y`).
-* **Trusted Computing Base (TCB):** CPU MMU and control registers (`CR4.SMEP`, `CR4.SMAP`, `CR4.CET`, ARM64 `SCTLR_EL1` `PAN`/`PXN`/`PAC`), `LLVM`/`Clang` or `GCC` + `rustc` compiler toolchains, Linux `mm/slub.c` allocator, `arch/*/kernel/alternative.c`, and `unsafe` FFI wrapper blocks inside `rust/kernel/`.
-* **Integration Seam & Handoff:** Contains C memory-corruption primitives and eliminates lifecycle/race bugs in safe Rust modules so `struct cred` and `security_hook_heads` cannot be silently overwritten; hands off intact Ring 0 enforcement to stacked `LSM` policies in [Chapter 7](07-stacked-lsms-landlock.md).
+* **Core Security Invariant:** Spatial and privilege hardware flags (`SMEP`/`PXN`, `SMAP`/`PAN`, `W^X`), forward- and backward-edge Control-Flow Integrity (`KCFI`/`FineIBT` paired with hardware `CET` Shadow Stacks and `ARM64` `PAC`/`GCS`), virtual-address-isolated slab allocators (`RANDOM_KMALLOC_CACHES`, `SLAB_VIRTUAL`), and compile-time-verified `Rust-for-Linux` safe driver abstractions prevent memory bugs from hijacking `%rip`/`PC` or deterministically aliasing `struct cred` and user page tables.
+* **Deployment Profile Matrix:** Mainstream distributions (`Ubuntu 24.04+`, `Fedora 41+`, `RHEL 9/10`) enable `KASLR`, `SMEP`/`SMAP`, `SLAB_FREELIST_RANDOM`, `SLAB_FREELIST_HARDENED`, `INIT_STACK_ALL_ZERO`, `FORTIFY_SOURCE` (`__bdos`), `KFENCE`, and `KCFI`/`FineIBT` with `RANDOM_KMALLOC_CACHES`; hardened cloud and mobile kernels (`Google COS`/`kCTF`, `Android GKI`, `Talos`) add Clang `KCFI`, `SLAB_VIRTUAL`, and mainline Rust drivers (`CONFIG_RUST=y`).
+* **Trusted Computing Base (TCB):** CPU MMU and control registers (`CR4.SMEP`, `CR4.SMAP`, `CR4.CET`, `ARM64` `SCTLR_EL1` `PAN`/`PXN`/`PAC`/`GCS`), `LLVM`/`Clang` or `GCC` plus `rustc` compiler toolchains, `mm/slub.c`, `arch/x86/kernel/alternative.c`, and audited `unsafe` FFI wrapper blocks inside `rust/kernel/` and `rust/pin-init/`.
+* **Integration Seam & Handoff:** Contains C memory-corruption primitives and eliminates spatial, temporal, and concurrency bugs in safe Rust modules (`Binder`, `Asahi`, `rnull`, `Nova`) so `struct cred` and `lsm_static_calls_table` cannot be silently overwritten; hands off intact Ring 0 enforcement to stacked `LSM` policies in [Chapter 7](07-stacked-lsms-landlock.md).
 
 ## Problem Statement & Threat Model
 
-Every cryptographic control examined thus far (`UEFI Secure Boot`, `UKI`, `dm-verity`, `IPE`, and `Kernel Lockdown`) verifies *who authored* the kernel binary before it enters Ring 0. None of those mechanisms help if that authentic, Linus-tagged, vendor-signed `vmlinux` binary contains a spatial buffer overflow, integer truncation, data race, or Use-After-Free (`UAF`) in its 35+ million lines of C code [51, 54, 56]. Because Linux is a monolithic kernel, filesystem parsers (`ext4`, `btrfs`, `OverlayFS`), network protocols (`nf_tables`, `TCP`, `TLS`, `TIPC`), asynchronous I/O rings (`io_uring`), and hundreds of device drivers all share a single privileged Ring 0 virtual address space with the scheduler, page tables, and RCU `struct cred` credentials [5, 51].
+Every cryptographic control examined across Part I and [Chapter 5](05-kernel-lockdown-modules.md) (`UEFI Secure Boot`, `UKI`, `dm-verity`, `IPE`, and `Kernel Lockdown`) verifies *who authored* a kernel image or loadable `.ko` module before its instructions enter Ring 0. None of those gates help if a legitimately signed `vmlinux` binary contains an out-of-bounds write, integer truncation, data race, or Use-After-Free (`UAF`) inside its 35+ million lines of C code [32, 33, 229]. Because Linux is a monolithic kernel, filesystems (`ext4`, `btrfs`, `xfs`, `OverlayFS`), packet filters (`nf_tables`), socket families (`TLS`, `TIPC`, `AF_PACKET`), asynchronous I/O (`io_uring`), and peripheral drivers share one privileged Ring 0 virtual address space with the scheduler, page tables, and RCU `struct cred` credentials [229, 230].
 
-Over the past decade, kernel exploit engineering evolved in lockstep with early mitigations [51, 54]. In the early 2010s, triggering any NULL-pointer dereference or stack overflow let an exploit jump straight to a shellcode function (`commit_creds(prepare_kernel_cred(0))`) sitting in Ring 3 user memory! Once hardware blocked user-page execution (`SMEP` / `PXN`) and user-page dereferences (`SMAP` / `PAN`), attackers pivoted to Return-Oriented and Jump-Oriented Programming (`ROP`/`JOP`) inside kernel `.text`, using timing side channels (`EntryBleed` [58]) or slab infoleaks to defeat Kernel Address Space Layout Randomization (`KASLR`). And as `Clang` Kernel Control-Flow Integrity (`KCFI`) began sealing function pointers, offensive researchers shifted overwhelmingly toward *pure data-only cross-cache Use-After-Free exploits* [54, 83]: freeing a victim object in Slab Cache A, returning its physical page to the page allocator, reclaiming that exact address with an elastic attacker-controlled byte spray (`struct msg_msg`, `pipe_buffer`, `sk_buff`, or xattr buffers) in Slab Cache B, and directly overwriting `task->cred->uid = 0` or `pipe_buffer.flags = PIPE_BUF_FLAG_CAN_MERGE` (`Dirty Pipe`) without ever diverting a single control-flow instruction!
+Over fifteen years, kernel exploitation evolved in lockstep with incremental mitigations [32, 229, 231]. Before 2013, triggering a `NULL` dereference or function-pointer overwrite let Ring 0 execute `commit_creds(prepare_kernel_cred(NULL))` shellcode mapped directly inside Ring 3 pages. Once silicon blocked supervisor execution of user pages (`CR4.SMEP`, `ARM64` `PXN`) and supervisor dereferences of user memory (`CR4.SMAP`, `ARM64` `PAN`) [88, 89, 232], adversaries pivoted to Return-Oriented and Jump-Oriented Programming (`ROP`/`JOP`) inside `.text`, defeating Kernel Address Space Layout Randomization (`KASLR`) via slab pointer leaks or prefetch timing side channels (`EntryBleed`, `CVE-2022-4543` [97, 233]).
 
-Defending Ring 0 against a local unprivileged syscall attacker (often armed with `CLONE_NEWUSER` from [Chapter 9](09-capabilities-userns.md)), a remote network attacker, or a malicious USB/PCIe/hypervisor peer therefore requires a two-pronged strategy spearheaded by the *Kernel Self Protection Project* (`KSPP` [51]) and *Rust for Linux* [56]: hardening the existing C kernel across MMU isolation, Control-Flow Integrity, and virtual-address-isolated slab allocators while writing new drivers and parsers in memory-safe Rust so spatial and temporal bugs fail to compile in the first place.
+As Clang Kernel Control-Flow Integrity (`KCFI` [234]), x86 `FineIBT` [235], and hardware Shadow Stacks (`Intel CET` and `ARM64 GCS` [236, 237]) sealed code pointers, offensive research shifted overwhelmingly toward *data-only heap and page-table attacks* [32, 231, 238, 239]. Attackers either overlap freed slots in generic `kmalloc-*` slabs with elastic `struct msg_msg` or `struct pipe_buffer` payloads [238, 240], or drain a victim slab page back to the buddy allocator and reclaim that physical frame as a *Ring 3 last-level Page Table (`PTE`) page* (`Dirty Pagetable` [231] and `SLUBStick` [239]). Mutating 8 bytes in a reclaimed `PTE` shifts its Physical Frame Number (`PFN`) to map kernel physical memory read-write into userspace, bypassing `KCFI`, `FineIBT`, Shadow Stacks, `SMAP`, and `KASLR` without taking one anomalous branch.
+
+Defending Ring 0 against local unprivileged threads, network peers, or untrusted hypervisors ([Chapter 18](18-confidential-vms-svsm.md)) requires the two-pronged architecture of the *Kernel Self Protection Project* (`KSPP` [229]) and *Rust for Linux* [33]: containing C defects via MMU gates, compiler bounds passes, hardware `CFI`, and virtual-address-isolated slab arenas (`SLAB_VIRTUAL` [241]), while writing new subsystems (`Android Binder`, `Nova`, `Asahi`, `rnull`) in safe Rust so spatial, temporal, and race bugs fail at compile time [242, 243, 244, 245].
 
 ## Kernel & Userspace Mechanics
 
-### MMU Isolation, `KASLR`, and `EntryBleed`
+### MMU Privilege Barriers (`SMEP`/`SMAP`, `PXN`/`PAN`), Compiler Hardening, and `EntryBleed`
 
-At the page-table foundation, modern Linux enforces strict `W^X` (`CONFIG_STRICT_KERNEL_RWX=y` and `CONFIG_STRICT_MODULE_RWX=y`), mapping kernel `.text` read-execute (`NX = 0, RW = 0`) and `.rodata` / slab heaps non-executable (`NX = 1`), including `ro_after_init` sections (`__ro_after_init` covering `security_hook_heads` so LSM hooks become read-only in page tables once `init` finishes!) [51, 61]. Hardware Supervisor Mode Execution Prevention (`CR4.SMEP` on x86_64, `PXN` Privileged Execute-Never on ARM64) faults immediately if `%rip`/`PC` ever fetches an instruction from a Ring 3 page (`U/S = 1`), while Supervisor Mode Access Prevention (`CR4.SMAP` on x86_64, `PAN` Privileged Access-Never on ARM64) faults if Ring 0 reads or writes any Ring 3 virtual address outside explicit `copy_from_user()` / `copy_to_user()` windows bracketed by `STAC` and `CLAC` [3, 4, 51]. Stack overflows are bounded by `CONFIG_VMAP_STACK=y` (allocating every 16 KiB kernel thread stack in `vmalloc` space bookended by unmapped guard pages so stack exhaustion triggers a clean `#PF` oops rather than silently trampling an adjacent `task_struct`), paired with `CONFIG_ZERO_CALL_USED_REGS=y` and `CONFIG_STACKLEAK` to scrub caller-saved registers and stack frames on syscall exit [51, 60].
+Ring 0 self-protection starts at page-table permission bits [88, 89, 229]. With `CONFIG_STRICT_KERNEL_RWX=y` and `CONFIG_STRICT_MODULE_RWX=y`, Linux enforces `W^X` across kernel mappings: `.text` is read-only executable (`RW = 0, NX = 0`), `.data` and heaps are non-executable (`RW = 1, NX = 1`), and write-once structures (`lsm_static_calls_table`, syscall tables, core ops structures) reside in `__ro_after_init` so `mark_rodata_ro()` strips PTE write bits before `/sbin/init` runs [229].
 
-`KASLR` (`CONFIG_RANDOMIZE_BASE=y`) randomizes the base virtual offset of kernel `.text`, `vmalloc`, and `vmemmap` at boot (~9 bits of `.text` entropy on x86_64: 512 slots of $2\text{ MiB}$ inside a $1\text{ GiB}$ window, extended per-function by `FGKASLR`) [51, 58]. Yet 9 bits of entropy is purely probabilistic and repeatedly bypassed by microarchitectural side channels: most famously, `EntryBleed` (`CVE-2022-4543` [58]) showed that even with Meltdown-era Kernel Page Table Isolation (`KPTI`) unmapping nearly all kernel pages in user mode, the minimal `entry_SYSCALL_64` trampoline *must* remain mapped in the user `%cr3` shadow table with global TLB entries (`_PAGE_GLOBAL`). Executing unprivileged `PREFETCHT0` instructions across candidate $2\text{ MiB}$ offsets and timing execution with `RDTSC` leaked the exact `entry_SYSCALL_64` TLB hit in milliseconds on Intel CPUs without triggering any kernel bug [58]! `KASLR` therefore acts only as speed bump, never a standalone boundary; true control-flow defense requires deterministic Control-Flow Integrity (`CFI`).
+To isolate Ring 0 from Ring 3 pages, x86_64 sets `CR4.SMEP` (bit 20) and `CR4.SMAP` (bit 21) during CPU bring-up, while ARM64 sets `SCTLR_EL1.WXN`, `PXN` (Privileged Execute-Never), and `PSTATE.PAN` (Privileged Access-Never) [88, 89, 232]. Under `SMEP`/`PXN`, fetching any instruction from a user page (`U/S = 1`) raises an immediate fatal fault at `CPL = 0` / `EL1`. Under `SMAP`/`PAN`, Ring 0 loads or stores to `U/S = 1` addresses fault outside explicit `arch/x86/include/asm/smap.h` copy helpers (`_copy_from_user()`, `_copy_to_user()`) bracketed by `STAC` (`EFLAGS.AC = 1`) and `CLAC` (`EFLAGS.AC = 0`), or ARM64 `LDTR`/`STTR` unprivileged instructions [232]. Hardware exception entry saves `RFLAGS`/`SPSR_EL1` and clears `AC = 0` (`PAN = 1`), ensuring nested interrupts arriving mid-copy never execute with `SMAP` disabled [88, 232].
 
-### Forward-Edge `KCFI` / `FineIBT` and Backward-Edge Shadow Stacks
+Compiler and stack mitigations scrub spatial and uninitialized-memory primitives [229, 246, 247]. `CONFIG_VMAP_STACK=y` places each 16 KiB kernel stack in `vmalloc` space bookended by unmapped guard pages, converting stack exhaustion into a clean `#PF` oops rather than trampling adjacent `task_struct` allocations [229]. `CONFIG_INIT_STACK_ALL_ZERO=y` (`-ftrivial-auto-var-init=zero`) zeroes every local stack variable and struct-padding byte on entry at $<1\%$ CPU cost [247], while `CONFIG_ZERO_CALL_USED_REGS=y` clears caller-saved registers before `RET`, starving speculative gadgets and cutting usable ROP state [229]. For spatial bounds, Kees Cook modernized `CONFIG_FORTIFY_SOURCE=y` (`include/linux/fortify-string.h`) around `__builtin_dynamic_object_size(ptr, 1)` (`__bdos`) and the `__counted_by(len_field)` C attribute on flexible-array members [246]:
 
-Control-flow hijacking splits into two geometric directions: *forward-edge* indirect calls/jumps (`call *%rax` through C function pointers inside `struct file_operations`, `proto_ops`, or `bpf_map_ops`) and *backward-edge* function returns (`ret` popping a saved return address from the stack) [52, 53, 57].
+```c
+struct msg_blob {
+    u32 flags;
+    size_t count;
+    u8 payload[] __counted_by(count); /* Runtime bound tracked by __bdos! */
+};
+```
+
+Whereas legacy `__builtin_object_size(ptr, 0)` knew only compile-time constant sizes and silently passed trailing flexible arrays, `__bdos(..., 1)` evaluates `blob->count * sizeof(u8)` dynamically and enforces intra-struct field bounds across `memcpy()`, `memmove()`, and `strscpy()`, calling `fortify_panic()` on overflow [246].
+
+Why can `KASLR` (`CONFIG_RANDOMIZE_BASE=y`) never stand alone? On x86_64, `KASLR` slides `.text` across $512 = 2^9$ slots of $2\text{ MiB}$ inside a $1\text{ GiB}$ window [97, 229]. Building on Daniel Gruss et al.'s discovery that x86 `PREFETCH` instructions leak TLB state without faulting on supervisor addresses [233], Will Liu demonstrated `EntryBleed` (`CVE-2022-4543` [97]). Even under Meltdown-era Kernel Page Table Isolation (`KPTI`), the `entry_SYSCALL_64` trampoline must remain mapped in user `%cr3` (`_PAGE_GLOBAL`) to handle `SYSCALL`. Timing `PREFETCHT0` with `RDTSC` across all 512 candidate $2\text{ MiB}$ slots pinpointed the cached `entry_SYSCALL_64` TLB hit and leaked the exact `KASLR` slide in $<10\text{ ms}$ on Intel CPUs [97].
+
+### Forward-Edge `KCFI` / `FineIBT` and Backward-Edge Hardware Shadow Stacks (`CET` & `GCS`)
+
+Control-flow hijacking splits into *forward-edge* indirect calls (`call *%rax` via `file_operations`, `proto_ops`, or `bpf_map_ops`) and *backward-edge* returns (`ret` popping saved return pointers) [234, 235, 237].
 
 ![Figure: Pairing forward-edge type-hash Control-Flow Integrity (Clang KCFI and x86_64 FineIBT landing pads) with backward-edge hardware Supervisor Shadow Stacks (Intel CET) and ARM64 Pointer Authentication (PAC).](diagrams/06-kernel-cfi-shadow-stack.svg)
 
-Merged in Linux 6.1, Clang Kernel CFI (`CONFIG_CFI_CLANG=y`, `KCFI` [53]) replaces older jump-table CFI with zero-indirection type-hash verification. For every C function prototype $T$ (incorporating return type and exact parameter types), the compiler computes a 32-bit `xxHash` digest $H(T)$ and emits `__kcfi_typeid_<fn>` four bytes *immediately preceding* the function's machine-code entry point (`*(u32 *)(fn - 4) == H(T)`). Before executing `call *%rax`, the caller loads `-H(T)` and checks `cmpl -4(%rax), %r10d; je 1f; ud2; 1: call *%rax`, trapping deterministically into a `ud2` `#UD` CFI panic handler if `%rax` points mid-instruction (killing all ROP/JOP gadgets!) or points to a function with a mismatched prototype [53]. On modern Intel (`Tiger Lake+`) and AMD (`Zen 4+` IBT) x86_64 CPUs supporting hardware Indirect Branch Tracking (`CR4.CET` `IBT`), Linux 6.2+ runtime-patches `KCFI` call sites into `FineIBT` (`CONFIG_FINEIBT=y` [52]): the caller simply loads the 32-bit prototype hash into `%r10d` (`movl $hash, %r10d; call *%rax`), hardware `IBT` raises an instant `#CP` Control-Protection exception if the target address does not begin with an `ENDBR64` (`f3 0f 1e fa`) instruction, and a 16-byte callee prologue right after `ENDBR64` executes `subl $hash, %r10d; je +2; ud2`, fusing hardware landing-pad enforcement with fine-grained C type matching while avoiding speculative indirect-target reads from `.text` [52]!
+Merged in Linux 6.1, Clang `KCFI` (`CONFIG_CFI_CLANG=y`, `-fsanitize=kcfi` [234]) enforces prototype-level forward-edge integrity without writable tables. For each C function prototype $T$, Clang computes a 32-bit `xxHash` (`__kcfi_typeid_<fn> = H(T)`) emitted four bytes *immediately before* the function prologue in read-only `.text` (`*(u32 *)(fn - 4) == H(T)`), verifying it inline before every indirect call [234]:
 
-On the backward edge, ARM64 Linux uses ARMv8.3 Pointer Authentication (`CONFIG_ARM64_PTR_AUTH_KERNEL=y`), executing `PACIASP` on function entry to store a cryptographic `QARMA` MAC over `(LR, SP)` inside the upper unused bits of the `X30` link register and verifying it via `AUTIASP` prior to `RET` [4, 57]. On x86_64, Intel Control-flow Enforcement Technology (`CET`) and AMD Shadow Stack provide hardware *Supervisor Shadow Stacks* (`CR4.CET`, PTE encodings `RW = 0, Dirty = 1` writable solely by hardware `CALL` and `WRSS` instructions): every `CALL` pushes `%rip` onto both the normal `%rsp` data stack and the protected `%ssp` shadow stack, and `RET` raises `#CP` if the two return addresses differ by a single bit [3, 57].
+```c
+movl   $-H_expected, %r10d       /* Load negated 32-bit prototype xxHash     */
+addl   -4(%rax), %r10d           /* Compare against 4-byte prefix before fn  */
+je     .Lvalid_target            /* Zero iff *(u32*)(%rax - 4) == H_expected */
+ud2                              /* Trap -> #UD -> handle_cfi_failure()      */
+.Lvalid_target:
+call   *%rax
+```
 
-### Defeating Heap UAF and Cross-Cache Attacks: `RANDOM_KMALLOC_CACHES` and `SLAB_VIRTUAL`
+Pointing `%rax` mid-instruction or at a mismatched prototype executes `ud2`, trapping into `handle_cfi_failure()` [234]. On Intel Tiger Lake+ and AMD Zen 4+ CPUs supporting Indirect Branch Tracking (`CR4.CET` `MSR_IA32_S_CET.ENDBR_EN`), `CONFIG_X86_KERNEL_IBT=y` places `ENDBR64` (`f3 0f 1e fa`) at indirect targets and runs `objtool --ibt` at link time to seal non-address-taken functions into `NOP4` [237]. Linux 6.2+ then applies `FineIBT` (`apply_fineibt()` in `arch/x86/kernel/alternative.c` [235]), patching caller sites to `movl $H_expected, %r10d; call *%rax` and verifying `subl $H_expected, %r10d; je +2; ud2` right after `ENDBR64` in a 16-byte callee preamble, fusing hardware `#CP` landing pads with 32-bit type hashes without reading `.text` as data [235].
 
-Once `FineIBT`/`KCFI` and Shadow Stacks block code-pointer hijacking, attackers target heap lifecycle bugs in the `SLUB` allocator (`mm/slub.c`) [54]. Baseline `SLUB` defenses scramble singly linked free-object pointers (`CONFIG_SLAB_FREELIST_HARDENED=y`), randomize initial slab slot order (`CONFIG_SLAB_FREELIST_RANDOM=y`), zero allocations (`init_on_alloc=1` killing uninitialized-memory leaks [60]), isolate `struct cred` in a dedicated `cred_jar` cache (`SLAB_ACCOUNT`), and enable `KFENCE` (`CONFIG_KFENCE=y` [55]), a low-overhead ($\approx 0.1\%$ CPU) production sampler that places periodic slab allocations adjacent to an unmapped MMU guard page to catch out-of-bounds and UAF bugs across millions of fleet hours.
+On the backward edge, `ARM64` `CONFIG_ARM64_PTR_AUTH_KERNEL=y` executes `PACIASP`/`AUTIASP` (`QARMA` MACs over `(X30, SP)` keyed by `APIAKey_EL1` in upper `X30` bits) and pairs on ARMv9.3 silicon with *Guarded Control Stack* (`GCS`, `Documentation/arch/arm64/gcs.rst` [89, 236]), maintaining `GCSPR_EL1`/`GCSPR_EL0` shadow pages writable solely by `BL` and `GCSPUSHM`. On `x86_64`, Intel `CET` and AMD Shadow Stack enforce *Supervisor Shadow Stacks* (`CR4.CET`, `MSR_IA32_PL0_SSP`, `MSR_IA32_INTERRUPT_SSP_TABLE_ADDR`) using `RW = 0, Dirty = 1` PTEs: `CALL` pushes `%rip` to both `%rsp` and `%ssp`, and `RET` raises `#CP` on any mismatch [88, 237].
 
-Yet two devastating heap primitives bypassed baseline `SLUB` hardening in Google `kCTF` exploit competitions [54, 83]. First, thousands of disparate kernel subsystems allocate structs via generic size-bucketed `kmalloc(size, GFP_KERNEL)` (`kmalloc-64` through `kmalloc-8k`), allowing a UAF in obscure driver struct $X$ (`128` bytes) to overlap deterministically with `struct msg_msg` (`128` bytes) in the exact same `kmalloc-128` slab! Linux 6.6 merged `CONFIG_RANDOM_KMALLOC_CACHES=y` [54], splitting each generic `kmalloc` size class into $16$ distinct caches (`kmalloc-rnd-01-128` .. `kmalloc-rnd-16-128`) and routing each static `kmalloc()` C callsite to a bucket computed from a compile-time source-location macro hash XORed with a random per-boot 64-bit seed:
+### `SLUB` Internals, Elastic/Page-Table Heap Attacks, and `SLAB_VIRTUAL`
 
-$$\text{bucket}(\text{callsite}) = \operatorname{Hash}_{64}\!\left(\texttt{\_\_FILE\_\_},\; \texttt{\_\_LINE\_\_},\; K_{\text{boot}}\right) \bmod 16$$
+With code pointers sealed, attackers target object lifecycles in `mm/slub.c` [230]. Each `struct kmem_cache` serves fast-path requests from lockless per-CPU object arrays (`slub_percpu_sheaves` / `kmem_cache_cpu`) backed by per-node `node_barn` pools and `kmem_cache_node` `partial` slab lists [230]. Within a slab folio, free slots form an intrusive singly linked list storing `freeptr_t` at `object + s->offset`.
 
-Second, attackers defeated dedicated caches (`cred_jar`, `filp`) via *cross-cache page reuse* [54]: draining an entire slab page of `struct file` objects so `SLUB` freed the underlying `order-0` physical page back to the buddy page allocator, then spraying `pipe_buffer` or page-table pages to reclaim that exact physical frame at the *identical kernel direct-map virtual address* (`page_address(page)`), causing the dangling `struct file *` pointer to alias attacker bytes! Google's `SLAB_VIRTUAL` mitigation [54] severs virtual-from-physical aliasing permanently: instead of allocating slab objects inside the global linear direct map, `SLAB_VIRTUAL` allocates slabs out of a dedicated virtual address arena where *each virtual page address is permanently bound to a single `kmem_cache` type for the entire uptime of the machine*. When a drained slab's *physical* DRAM frame returns to the buddy allocator, its `SLAB_VIRTUAL` PTE is unmapped; even if an attacker reclaims that physical frame for `msg_msg` or page tables, dereferencing the old dangling `struct cred *` or `struct file *` virtual pointer hits either an unmapped `#PF` page fault or exclusively another genuine object of the *exact same* `kmem_cache` type [54]!
+`KSPP` hardens `mm/slub.c` with two baseline freelist defenses [229, 230]: `CONFIG_SLAB_FREELIST_RANDOM=y` Fisher-Yates shuffles initial slot order (`init_cache_random_seq()`), and `CONFIG_SLAB_FREELIST_HARDENED=y` mangles pointers via `freelist_ptr_encode()` while trapping consecutive double-frees (`BUG_ON(object == fp)`):
+
+```c
+static inline freeptr_t freelist_ptr_encode(const struct kmem_cache *s,
+                                            void *ptr, unsigned long ptr_addr)
+{
+    unsigned long encoded = (unsigned long)ptr ^ s->random ^ swab(ptr_addr);
+    return (freeptr_t){ .v = encoded };
+}
+```
+
+Byte-reversing `ptr_addr` via `swab()` shifts low intra-page offset bits (`0..11`) into the top byte (`56..63`), ensuring partial 1- or 2-byte little-endian overflows corrupt upper canonical address bits unless the attacker leaks both `s->random` and exact `ptr_addr` [230]. Complementing freelist mangling, `init_on_alloc=1` zeroes allocations before return, and `CONFIG_KFENCE=y` samples live allocations adjacent to unmapped MMU guard pages at $\approx 0.1\%$ CPU cost [229].
+
+Adversaries bypassed baseline `SLUB` hardening in two waves. First, *same-cache elastic sprays* (`CVE-2021-26708` [240] and `CVE-2021-22555` [238]) exploited subsystems sharing generic `kmalloc-64`..`kmalloc-4k` caches with `msgsnd(2)`'s `struct msg_msg` (`48`-byte header plus arbitrary payload up to $4048$ bytes) and `pipe_buffer`. Linux 6.6 answered with `CONFIG_RANDOM_KMALLOC_CACHES=y` [32], partitioning each size class into `16` caches (`kmalloc-rnd-01-*` .. `kmalloc-rnd-16-*`) keyed by caller `_RET_IP_` and a per-boot `random_kmalloc_seed`, paired with `CONFIG_SLAB_BUCKETS` isolating dynamic `msg_msg`/`memdup_user` allocations:
+
+$$\text{bucket}(\text{callsite}) = \operatorname{Hash}_{64}\!\left(\texttt{\_RET\_IP\_},\; K_{\text{boot}}\right) \bmod 16$$
+
+Second, attackers defeated dedicated caches (`filp`, `cred_jar`) and `RANDOM_KMALLOC_CACHES` via *cross-cache buddy reclamation* and *Dirty Pagetable* (`CVE-2023-21400` by Nicolas Wu and Ye Zhang [231], Seth Jenkins's `CVE-2022-42703` [248], and Lukas Maar et al.'s `SLUBStick` [239]):
+
+![Figure: Contrasting Dirty Pagetable cross-cache physical frame reclamation (where a freed struct file slab page returns to the buddy allocator and is reclaimed as a user last-level PTE table at the identical linear direct-map virtual address) against SLAB_VIRTUAL permanent virtual-address quarantine.](diagrams/06-extra-dirty-pagetable-vs-slab-virtual.svg)
+
+In standard Linux, slab pages use virtual addresses inside the global linear direct map (`physmap`). When an attacker holds a dangling `struct file *` UAF, drains sibling `filp` slots (assisted to $>99\%$ success by `SLUBStick` fastpath/slowpath timing oracles [239]) so `discard_slab()` frees physical frame $P$ to the buddy allocator, and faults dense `mmap()` regions, `pte_alloc_one()` reclaims frame $P$ as a *Ring 3 last-level `PTE` page* at the *identical `physmap` virtual address* [231]! A stale `f_count` atomic increment or field write on the dangling `struct file *` directly modifies an 8-byte `PTE` entry, shifting its `PFN` bits so userspace maps physical kernel `.text` or `struct cred` read-write [231, 239].
+
+Google's `SLAB_VIRTUAL` (`CONFIG_SLAB_VIRTUAL=y` by Matteo Rizzo and Jann Horn [32, 241]) severs this aliasing permanently: slabs allocate from a dedicated multi-terabyte virtual arena outside `physmap` where each virtual page $V_c$ is *bound to a single `kmem_cache` for the entire system uptime*. Freeing an empty slab unmaps $V_{\text{filp}}$'s PTE before returning physical frame $P$ to the buddy allocator; even if frame $P$ becomes a user `PTE` page elsewhere, dereferencing $V_{\text{filp}}$ hits either an unmapped `#PF` trap or exclusively another genuine `struct file` [32, 241].
 
 ![Figure: Defending kernel heap lifecycles through RANDOM_KMALLOC_CACHES, SLAB_VIRTUAL virtual-address quarantine against cross-cache page reuse, and compile-time-verified Rust-for-Linux driver boundaries.](diagrams/06-slab-hardening-rust-boundary.svg)
 
-### Rust-for-Linux: Eliminating Lifecycle and Concurrency Bugs at the Source
+### Rust-for-Linux: Pinned Initialization (`PinInit`), Lock-Bound State, and Mainline Drivers
 
-Allocator mitigations contain C memory bugs after they occur; writing kernel components in Rust prevents spatial, temporal, and data-race bugs at compile time [56, 59]. Merged initially in Linux 6.1 (`CONFIG_RUST=y`, `rust/` [56]) and now powering production mainline components including the rewritten Android `Binder` IPC driver (`drivers/android/binder/`, previously one of the most heavily exploited C UAF surfaces in Linux history!), `DRM` GPU drivers (`Asahi`, `Nova` NVIDIA driver, `Tyr` Mali), `PHY` network transceivers, `rnull`/`block` drivers, and filesystem bindings [59], Rust-for-Linux exploits a profound architectural asymmetry of monolithic kernels: *the core scheduler, MMU, and VFS represent a small fraction of kernel code, whereas device drivers and leaf subsystems account for over 65% of source lines and the majority of CVEs* [56].
+While `SLAB_VIRTUAL` contains C bugs post-trigger, `Rust-for-Linux` (`CONFIG_RUST=y` [33]) prevents spatial, temporal, and data-race bugs at compile time across device drivers and leaf subsystems (which represent $>65\%$ of kernel source lines and most Ring 0 CVEs [33, 242]).
 
-Rather than sprinkling raw `unsafe { bindings::... }` calls inside every driver, Rust-for-Linux enforces a strict *two-layer safety contract* [56, 59]. Core subsystem maintainers author and audit a compact `rust/kernel/` abstraction crate (~hundreds of lines per subsystem) wrapping C pointers, intrusive doubly linked lists (`struct list_head`, which requires `Pin<KBox<T>>` in Rust because moving a struct in memory invalidates neighbor pointers!), `spinlock_t` / `Mutex<T>` (binding data *inside* the lock type `Mutex<State>` rather than adjacent comments so touching `State` without locking fails to compile!), reference-counted `ARef<T>` / `Arc<T>`, and RCU lifetimes. Leaf driver authors then write 100% safe `#![forbid(unsafe_code)]` Rust code: array indexing is bounds-checked (panicking cleanly or returning `Result<T, Error>` on `-ENOMEM` via custom fallible `KBox::new(val, GFP_KERNEL)?` allocators, since kernel code may never abort on OOM!), `Drop` traits release DMA mappings and IRQ registrations deterministically in reverse order on every error return path (eliminating C `goto err_free_foo;` cleanup leaks!), and `Send`/`Sync` auto-traits statically reject unlocked cross-CPU sharing [56, 59].
+Adapting Rust to Ring 0 required solving three foundational kernel constraints [33, 249, 250]. First, because OOM panics in Ring 0 cause Denial-of-Service, `rust/kernel/alloc/` enforces fallible allocation (`KBox::new(v, GFP_KERNEL)?`, `KVec::push(v, GFP_ATOMIC)?`, `Arc::new(v, GFP_KERNEL)?`) returning `Result<T, AllocError>`. Second, C kernel primitives (`struct mutex`, `raw_spinlock_t`, intrusive `struct list_head`) contain self-referential internal pointers that corrupt if moved in memory from stack to heap. Benno Lossin's `pin-init` crate (`rust/pin-init/` [249]) enforces *pinned in-place construction* (`#[pin_data]`, `PinInit<Self, Error>`, `try_pin_init!`), initializing locks directly inside their final heap slot:
+
+```rust
+use kernel::{prelude::*, sync::{Arc, SpinLock}, new_spinlock};
+
+#[pin_data]
+struct DeviceChannel {
+    #[pin]
+    state: SpinLock<ChannelRing>, /* Protected data owned INSIDE SpinLock! */
+    irq_line: u32,
+}
+
+impl DeviceChannel {
+    fn try_create(irq: u32) -> Result<Arc<Self>> {
+        Arc::pin_init(try_pin_init!(Self {
+            state <- new_spinlock!(ChannelRing::empty(), "dev_chan_lock"),
+            irq_line: irq,
+        }), GFP_KERNEL)
+    }
+}
+```
+
+Third, `rust/kernel/sync/lock.rs` (`Lock<T, B>` [250]) wraps protected state *inside* `UnsafeCell<T>` rather than beside a bare C `spinlock_t`: `#![forbid(unsafe_code)]` drivers cannot read or mutate `ChannelRing` without acquiring `Guard<'a, T, B>` via `self.state.lock()`, and `Send`/`Sync` bounds statically reject unlocked cross-CPU aliasing [250].
+
+Four mainline Rust subsystems demonstrate these guarantees in production [242, 243, 244, 245]. In `drivers/android/binder/` (`Wedson Almeida Filho` and `Alice Ryhl` [242]), Google rewrote Android's heavily exploited C Binder IPC driver using intrusive `ListArc<T>` and `ListLinksSelfPtr` smart pointers that statically prevent work-queue double-insertion and UAFs at full throughput. Equally important, `rust_binder` replaces manual C `_copy_from_user()` pointer arithmetic with `kernel::uaccess::UserSliceReader` and `UserSliceWriter` [242]: reading untrusted Ring 3 payloads into owned or single-pass slices prevents classic *double-fetch* `TOCTOU` vulnerabilities where C kernel code validates a user-memory header field on the first read and trusts a mutated value on the second read! In the `Asahi` Apple AGX DRM driver [243], Asahi Lina bound GPU firmware buffer lifetimes to hardware completion fences, eliminating host kernel UAFs even when Ring 3 clients crash mid-render. Meanwhile, `drivers/block/rnull/` (`Andreas Hindborg` [244]) wraps multi-queue `blk-mq` `GenDisk`, `TagSet`, and `ARef<mq::Request<Self>>` ownership safely, and Red Hat's `Nova` GPU driver (`drivers/gpu/nova-core/` by `Danilo Krummrich` [245]) drives NVIDIA GSP-based (`Turing` through `Blackwell`) GPUs using `CoherentAllocation` DMA wrappers (statically enforcing device `DmaMask` bounds and index safety on shared PCIe rings) plus deterministic reverse-declaration-order `Drop` teardown replacing fragile C `goto err_*` unwind chains.
 
 ## Distro, Immutable-OS, & Cloud Trade-Offs
 
-Kernel hardening carries measurable compile-time and runtime trade-offs across deployment profiles. Enabling `init_on_alloc=1`, `SLAB_FREELIST_HARDENED`, `SMEP`/`SMAP`, and `FineIBT`/`KCFI` adds roughly $1\%$ to $2\%$ aggregate CPU overhead on syscall-heavy benchmarks and is now standard or rapidly rolling out across `Ubuntu 24.04+`, `Fedora`, `RHEL`, and `Talos` [51, 52, 53]. By contrast, `init_on_free=1` adds $3\%$ to $7\%$ overhead on network/allocator-intensive workloads (often left off when `init_on_alloc=1` + `SLAB_VIRTUAL` are present), and Clang `KCFI` requires compiling the entire kernel and all out-of-tree `.ko` modules with `LLVM=1` (`Clang`/`LLD`), which slowed adoption on historically `GCC`-built enterprise distributions until `GCC` CFI parity and `Rust` (`rustc` + `bindgen`) toolchain packaging matured [53, 56].
+Deploying Ring 0 memory and control-flow mitigations requires balancing CPU latency, compiler toolchain standardization (`GCC` vs. `LLVM/Clang` + `rustc`/`bindgen`), and out-of-tree `.ko` module compatibility across distinct Linux operating profiles [32, 33, 229, 241]:
+
+| Mitigation / Mechanism | Overhead & Build Requirement | Enterprise (`RHEL 9/10`, `Ubuntu 24.04+`) | Hardened Cloud / Mobile (`COS`, `Android GKI`, `Talos`) |
+|---|---|---|---|
+| `SMEP`/`SMAP` (`PXN`/`PAN`) + `VMAP_STACK` | Near-zero ($<0.3\%$); CPU + MMU baseline | Enabled unconditionally | Enabled unconditionally |
+| `INIT_STACK_ALL_ZERO` + `init_on_alloc=1` | $\approx 0.5\text{ to }1.5\%$ CPU; zeros stack & heap allocs | Enabled by default (`init_on_free=0` for perf) | Enabled (`Talos` additionally sets `init_on_free=1`) |
+| `FORTIFY_SOURCE` (`__bdos` + `__counted_by`) | $<0.2\%$; compile + dynamic sub-object traps | Enabled across mainline `6.8+` kernels | Enabled with panic-on-warn (`oops=panic`) |
+| `KCFI` / `FineIBT` + `CET` / `PAC` / `GCS` | $\approx 0.5\text{ to }1.5\%$; `KCFI` requires `LLVM=1` Clang build | `IBT` + `PAC` enabled; `FineIBT`/`KCFI` rolling out | `Clang KCFI` + `FineIBT`/`PAC` strictly enforced |
+| `RANDOM_KMALLOC_CACHES` + `SLAB_BUCKETS` | Negligible CPU; slight slab memory footprint increase | Enabled in `Ubuntu 24.04+` and `Fedora 40+` (`6.6+`) | Enabled alongside `SLAB_VIRTUAL` quarantine |
+| `Rust-for-Linux` (`CONFIG_RUST=y`) | Zero runtime tax; pins `rustc` + `bindgen` at build | Enabled in `Ubuntu 24.04+`, `Fedora`, `Debian` | Production `rust_binder` (`Android`), `Nova`/`rnull` |
+
+Notice three recurring operational trade-offs in this matrix [229, 234, 241]. First, enterprise servers running high-packet-rate workloads enable `init_on_alloc=1` (which zeroes freed bytes right before reuse while keeping CPU L1/L2 caches warm for the new caller) rather than `init_on_free=1` ($3\%$ to $7\%$ overhead on network benchmarks), whereas zero-trust immutable OSes (`Talos` [45]) accept `init_on_free=1` plus `slab_nomerge` so freed cryptographic keys or session structures never linger in physical RAM waiting for future allocation. Second, Clang `KCFI` (`CONFIG_CFI_CLANG=y`) requires compiling `vmlinux` and every loadable `.ko` module with `LLVM=1` (`Clang`, `LLD`, and `CONFIG_CALL_PADDING`) so 32-bit `__kcfi_typeid_*` hashes match across module boundaries; distributions historically standardized on `GCC` (`RHEL`, `SUSE`) leaned first on hardware `CONFIG_X86_KERNEL_IBT` (`ENDBR64`) while cloud and mobile kernels (`Android GKI`, `Google COS`) moved straight to `LLVM=1` `KCFI` + `FineIBT` [234, 235, 237]. Third, on `ARM64` silicon supporting ARMv8.5-A Memory Tagging Extension (`MTE`), production Android devices pair `KFENCE` with hardware-assisted `CONFIG_KASAN_HW_TAGS`, storing 4-bit probabilistic allocation tags inside upper pointer bits (`TBI`) and physical DRAM tag granules to trap spatial and temporal slab bugs synchronously in silicon, albeit with a `16`-tag ($6.25\%$ false-negative) entropy bound that still benefits from deterministic `SLAB_VIRTUAL` type quarantine [89, 241].
 
 ## Seam Failures, CVEs, & Structural Bounds
 
-Even heavily hardened kernels face side-channel KASLR leaks, type-confused functions sharing identical C prototypes, data-only page-cache corruption, and bugs inside `unsafe` C/Rust FFI boundaries.
+Even on a modern kernel armed with `SMAP`, `FineIBT`, `CET` Shadow Stacks, `SLAB_FREELIST_HARDENED`, and `CONFIG_RUST=y`, real-world exploitation probes four narrow architectural seams: microarchitectural `KASLR` leaks, cross-cache `PTE` reclamation where `SLAB_VIRTUAL` is absent, valid-prototype callback bending, and unsound preconditions inside `unsafe` C-to-Rust FFI wrappers.
 
 | Incident / CVE | Year | Subsystem | Broken Assumption | Exploit Mechanism | Architectural Fix |
 |---|---|---|---|---|---|
-| EntryBleed (`CVE-2022-4543`) | 2022 | x86 `KPTI` + `KASLR` | Unmapping kernel pages under `KPTI` hides `KASLR` slide from Ring 3 | Unprivileged `PREFETCHT0` timing side channel locates global `entry_SYSCALL_64` TLB page in milliseconds | Treat `KASLR` as defense-in-depth only; enforce deterministic `FineIBT`/`KCFI` + `SLAB_VIRTUAL` [52, 54, 58] |
-| Cross-Cache `msg_msg` / `pipe_buffer` UAFs (`kCTF` wave) | 2021-2024 | `SLUB` buddy-page recycling | Dedicated slab caches (`cred_jar`, `filp`) prevent cross-type UAF aliasing | Drains victim slab page to buddy allocator and reclaims identical linear virtual address with `pipe_buffer` | Deploy `RANDOM_KMALLOC_CACHES` and `SLAB_VIRTUAL` virtual-address quarantine [54, 83] |
-| Coarse-Prototype `KCFI` Gadget Bending | 2023-2024 | `KCFI` `void (*)(struct work_struct *)` | Prototype-hash CFI uniquely identifies intended callee | Thousands of `workqueue` and `timer_list` callbacks share identical `void (*)(struct work_struct *)` signatures | Pair `KCFI` with heap integrity (`SLAB_VIRTUAL`) and type-safe Rust closures [53, 54, 56] |
-| First Mainline Rust CVE (`CVE-2025-68260` class / FFI precondition bug) | 2025 | C-to-Rust `unsafe` boundary | `CONFIG_RUST=y` eliminates all bugs even across raw C callbacks | Incorrect concurrency assumption inside an `unsafe` C list/driver wrapper violated Rust aliasing invariants | Audit minimal `rust/kernel/` `unsafe` wrappers formally while keeping leaf drivers `#![forbid(unsafe_code)]` [56, 59] |
+| `CVE-2021-26708` (`vsock` Race) | 2021 | `net/vmw_vsock/` + `SLUB` | `SLAB_FREELIST_HARDENED` stops heap UAF exploitation | Lock-Drop race in `vsock` reclaimed via `struct msg_msg` in shared `kmalloc-64` for KASLR leak and arb write | Fix `vsock` socket locking; isolate `msg_msg` via `SLAB_BUCKETS` and `RANDOM_KMALLOC_CACHES` [32, 240] |
+| `CVE-2021-22555` (`Netfilter` OOB) | 2021 | `net/netfilter/x_tables.c` | 2-byte zero write (`\x00\x00`) in `kmalloc-4k` is unexploitable | Redirects `msg_msg->m_list.next` to overlap secondary `msg_msg` with `pipe_buffer` ops vtable | Deploy `RANDOM_KMALLOC_CACHES`, `FineIBT`/`KCFI`, and restrict `CLONE_NEWUSER` [32, 235, 238] |
+| EntryBleed (`CVE-2022-4543`) | 2022 | x86 `KPTI` + `KASLR` | Unmapping kernel pages under `KPTI` hides `KASLR` slide from Ring 3 | Unprivileged `PREFETCHT0` + `RDTSC` timing locates global `entry_SYSCALL_64` TLB entry in $<10\text{ ms}$ | Treat `KASLR` as speed-bump only; rely on deterministic `FineIBT`/`KCFI` + `SLAB_VIRTUAL` [97, 233, 241] |
+| `CVE-2022-42703` (`anon_vma` Reuse) | 2022 | `mm/rmap.c` + Page Tables | Dedicated `anon_vma` slab cache isolates lifecycle bugs | Cross-cache physical page reuse turns pointer/stack corruption into deterministic page-table control | Fix `anon_vma` leaf tracking and quarantine virtual slab ranges via `SLAB_VIRTUAL` [241, 248] |
+| Dirty Pagetable (`CVE-2023-21400`) | 2023 | `io_uring` + Buddy `PTE` | `KCFI`, `PAC`, and `PAN` on Pixel 7 prevent UAF-to-root | Drains freed slab page to buddy allocator, reclaims as user `PTE` table, and mutates `PFN` bits for physical R/W | Enable `SLAB_VIRTUAL` virtual-address quarantine and restrict `io_uring` [32, 231, 241] |
+| `SLUBStick` Cross-Cache Side Channel | 2024 | `mm/slub.c` + `PTE` Spray | Cross-cache buddy reclamation is noisy and crashes targets | Uses `SLUB` fastpath vs. slowpath timing oracle to hit $>99\%$ slab-drain precision for `PTE` overwrite | Sever slab virtual addresses from linear direct map via `SLAB_VIRTUAL` [239, 241] |
+| Coarse-Prototype `KCFI` Bending | 2023-2025 | `KCFI` `work_func_t` / `file_operations` | 32-bit prototype hash uniquely identifies intended callee | Thousands of `void (*)(struct work_struct *)` callbacks share identical `KCFI` hash (`run_cmd` gadgets) | Pair `KCFI` with `SLAB_VIRTUAL` heap integrity and strongly typed Rust closures [33, 234, 241] |
+| C/Rust FFI Boundary Bug (`CVE-2025-68260` class) | 2025 | C-to-Rust `unsafe` wrapper | `CONFIG_RUST=y` prevents memory bugs across raw C callbacks | Violated concurrency/aliasing precondition inside `unsafe` C list wrapper broke Rust `&mut T` exclusivity | Keep `rust/kernel/` `unsafe` surface minimal and formally audited; enforce `#![forbid(unsafe_code)]` in drivers [33, 250] |
 
-Row 3 and Row 4 highlight the exact theoretical limits of Ring 0 exploit mitigations [53, 56]. First, *prototype-based CFI cannot stop valid-target bending across ubiquitous callback signatures* (`file_operations.unlocked_ioctl`, `work_func_t`, `rcu_callback_t`) or pure non-control-data corruption (`cred->uid`, `inode->i_mode`). Second, *Rust's soundness holds strictly up to the soundness of its `unsafe` FFI boundary*: whenever C code mutates memory concurrently without honoring Rust's exclusive `&mut T` aliasing rule, undefined behavior re-enters. Shrinking the reachable kernel surface from untrusted processes requires confining what VFS objects, sockets, and syscalls a task may touch in the first place via stacked `Linux Security Modules` ([Chapter 7](07-stacked-lsms-landlock.md)).
+### Theoretical Bounds of Ring 0 Mitigations and `unsafe` FFI Soundness
+
+Rows 5 through 8 crystallize four hard mathematical limits governing all Ring 0 memory defenses [33, 231, 234, 241]. First, *Control-Flow Integrity (`KCFI`, `FineIBT`, `CET`, `PAC`, `GCS`) is completely blind to pure non-control-data corruption*: overwriting `cred->uid = cred->euid = 0`, flipping `selinux_state.enforcing`, zeroing `addr_limit` on legacy kernels, or altering a user `PTE`'s Physical Frame Number (`Dirty Pagetable` [231]) executes $100\%$ legitimate kernel instruction streams with balanced `CALL`/`RET` shadow-stack frames. Even under `SLAB_VIRTUAL`, defenders must also protect the linear direct map (`physmap`) against stray physical/direct-map write primitives so an attacker cannot bypass virtual slab quarantine by computing a target page's `physmap` alias [241].
+
+Second, *type-based forward-edge CFI is bounded by static equivalence-class width*: in the Linux C kernel, generic callback typedefs such as `work_func_t` (`void (*)(struct work_struct *)`), `timer_list` callbacks, and `rcu_callback_t` collapse thousands of distinct functions across subsystems into a single shared 32-bit `__kcfi_typeid` hash [234]. Notably, `call_usermodehelper_exec_work()` (which spawns Ring 3 root binaries from `struct subprocess_info`) carries the exact `void (*)(struct work_struct *)` signature, turning any corruptible `work_struct` adjacent to controllable arguments into a valid-prototype `KCFI`/`FineIBT` gadget unless heap isolation (`SLAB_VIRTUAL` and `RANDOM_KMALLOC_CACHES`) blocks object overlap first [32, 234].
+
+Third, *Rust's compile-time memory safety holds strictly up to the soundness of its `unsafe` C FFI contracts* [33, 249, 250]. Whenever a C subsystem invokes a Rust `extern "C"` vtable callback (`file_operations`, `blk_mq_ops`, or `drm_driver`) while another CPU mutates the underlying C struct without synchronization, or frees a refcounted C object prematurely before Rust's `ARef<T>` or RCU read-side critical section (`rust/kernel/sync/rcu.rs`) drops, Rust's aliasing model (`&mut T` uniqueness and `&T` immutability outside `UnsafeCell` / `Opaque<T>`) is violated across the language seam [33, 250]. Wrapping every raw C struct inside `kernel::types::Opaque<bindings::foo>` (which disables Rust's `noalias` compiler assumptions on C-owned bytes) and concentrating `unsafe` blocks inside heavily reviewed `rust/kernel/` core abstractions ensures that leaf driver authors cannot accidentally introduce FFI UB. Fourth, even a $100\%$ memory-safe kernel willingly executes destructive actions if an untrusted process holds excessive ambient object access; confining *which* files, sockets, `ioctl`s, and IPC channels a process can name or open is the job of stacked `Linux Security Modules` in [Chapter 7](07-stacked-lsms-landlock.md).
 
 ## Inspecting on a Live Linux Host
 
-Inspect CPU hardware Ring 0 mitigations (`smap`, `smep`, `ibt`, `shstk` on x86_64; `pan`, `paca` on ARM64) and active microarchitectural vulnerability mitigations:
+Operational verification of Ring 0 self-protection audits four layers: active CPU silicon features, compile-time kernel hardening flags (`CFI`, `FORTIFY`, zeroing, Rust), live `SLUB` cache randomization (`kmalloc-rnd-*`), and `KFENCE` production guard-page sampling.
+
+Verify active hardware privilege barriers (`smep`, `smap`, `ibt`, `shstk` on `x86_64`; `pan`, `paca`, `gcs` on `ARM64`) and CPU side-channel mitigations:
 
 ```bash
-grep -m 1 -E "flags|Features" /proc/cpuinfo | tr ' ' '\n' | grep -E "^(smep|smap|ibt|shstk|cet|pan|paca)$"
-grep . /sys/devices/system/cpu/vulnerabilities/* 2>/dev/null | head -n 10
+grep -m 1 -E "flags|Features" /proc/cpuinfo | tr ' ' '\n' | grep -E "^(smep|smap|ibt|shstk|pan|paca|gcs)$" | sort -u
+head -n 6 /sys/devices/system/cpu/vulnerabilities/* 2>/dev/null | head -n 12
 ```
 
-Verify compile-time CFI, slab hardening, stack guard, zeroing, and Rust support in the active kernel configuration:
+Representative output on a modern Intel/AMD `x86_64` server with `CET` silicon:
 
-```bash
-grep -E "CONFIG_(CFI_CLANG|FINEIBT|SLAB_FREELIST_HARDENED|RANDOM_KMALLOC_CACHES|SLAB_VIRTUAL|KFENCE|INIT_ON_ALLOC_DEFAULT_ON|RUST)=" /boot/config-$(uname -r) 2>/dev/null
+```text
+ibt
+shstk
+smap
+smep
+==> /sys/devices/system/cpu/vulnerabilities/meltdown <==
+Not affected
 ```
 
-Check whether randomized `kmalloc-rnd-*` slab caches and `KFENCE` sampling are active at runtime:
+Audit compile-time Control-Flow Integrity (`CFI_CLANG`, `FINEIBT`, `X86_KERNEL_IBT`), stack/heap zeroing (`INIT_STACK_ALL_ZERO`, `INIT_ON_ALLOC`), `FORTIFY_SOURCE`, `SLUB` hardening, and `CONFIG_RUST` in the running kernel's config:
 
 ```bash
-# Reading /proc/slabinfo and /sys/kernel/debug/kfence requires root / run0
-grep -c "^kmalloc-rnd-" /proc/slabinfo 2>/dev/null || true
+grep -E "CONFIG_(STRICT_KERNEL_RWX|VMAP_STACK|INIT_STACK_ALL_ZERO|INIT_ON_ALLOC_DEFAULT_ON|FORTIFY_SOURCE)=" /boot/config-$(uname -r) 2>/dev/null
+grep -E "CONFIG_(CFI_CLANG|FINEIBT|X86_KERNEL_IBT|ARM64_PTR_AUTH_KERNEL|RUST)=" /boot/config-$(uname -r) 2>/dev/null
+grep -E "CONFIG_(SLAB_FREELIST_RANDOM|SLAB_FREELIST_HARDENED|RANDOM_KMALLOC_CACHES|SLAB_BUCKETS|SLAB_VIRTUAL|KFENCE)=" /boot/config-$(uname -r) 2>/dev/null
+```
+
+Expected output on a hardened `6.12+` distribution kernel:
+
+```text
+CONFIG_STRICT_KERNEL_RWX=y
+CONFIG_VMAP_STACK=y
+CONFIG_INIT_STACK_ALL_ZERO=y
+CONFIG_INIT_ON_ALLOC_DEFAULT_ON=y
+CONFIG_FORTIFY_SOURCE=y
+CONFIG_X86_KERNEL_IBT=y
+CONFIG_RUST=y
+CONFIG_SLAB_FREELIST_RANDOM=y
+CONFIG_SLAB_FREELIST_HARDENED=y
+CONFIG_RANDOM_KMALLOC_CACHES=y
+CONFIG_SLAB_BUCKETS=y
+CONFIG_KFENCE=y
+```
+
+Confirm at runtime that `CONFIG_RANDOM_KMALLOC_CACHES` instantiated `16` distinct `kmalloc-rnd-*` buckets per size class and check `KFENCE` guard-page sampling statistics:
+
+```bash
+# Reading /proc/slabinfo and /sys/kernel/debug/kfence requires root or run0
+grep -E "^kmalloc-rnd-[0-9]+-128 " /proc/slabinfo 2>/dev/null | wc -l
 cat /sys/module/kfence/parameters/sample_interval 2>/dev/null || true
+grep -E "total_allocs|currently allocated" /sys/kernel/debug/kfence/stats 2>/dev/null || true
 ```
+
+When `RANDOM_KMALLOC_CACHES` is active, counting `kmalloc-rnd-*-128` returns `16` (`kmalloc-rnd-01-128` through `kmalloc-rnd-16-128`), confirming per-callsite hash partitioning against generic `msg_msg` overlap; a non-zero `sample_interval` (typically `100` milliseconds on distro builds) confirms live fleet guard-page UAF detection.
+
+Verify boot-time `FineIBT` / `KCFI` alternative patching and inspect compiled `Rust-for-Linux` module metadata (`rnull_mod`, `nova_core`, or `rust_binder`) when present:
+
+```bash
+# Inspecting early boot alternative-patching logs requires root or adm group
+journalctl -kb -g "FineIBT|KCFI|CET|Shadow Stack" --no-pager 2>/dev/null | head -n 6 || true
+modinfo rnull_mod nova_core 2>/dev/null | grep -E "^(filename|description|author|intree):" || true
+```
+
+On `LLVM=1` `x86_64` hosts with `CET` silicon, `journalctl` records `Last level dTLB entries` alongside `FineIBT: enabled` (`arch/x86/kernel/alternative.c`), confirming that caller/callee prototype-hash checks were patched over `ENDBR64` landing pads before userspace started. When auditing custom cloud or appliance kernels, confirming `CONFIG_SLAB_VIRTUAL=y` (or out-of-line `SLAB_BUCKETS` usercopy isolation) alongside `CONFIG_CFI_CLANG=y` and `CONFIG_RUST=y` verifies that both forward-edge code pointers and cross-cache page lifecycles are deterministically hardened inside Ring 0.
+

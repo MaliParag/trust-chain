@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 615" width="900" height="615">
+<rect x="0" y="0" width="900" height="615" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="482.8" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">LEGITIMATE DESK UNLOCK (&lt; 3 M)</text>
+<rect x="550.0" y="74.0" width="324.0" height="482.8" rx="8.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#6e1f2b" text-anchor="middle">TWO-ATTACKER CAFE RELAY (&gt; 15 M)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="560.8" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">AUTO UNLOCK PHYSICAL DISTANCE BOUNDING: SPEED-OF-LIGHT TOF VS. RELAY ATTACK</text>
+<rect x="42.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">WRIST STATE</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Passcode-Unlocked Watch on Skin</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Optical/capacitive wrist-detect sensor holds</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">pairwise SEP Continuity keys active</text>
+<rect x="42.0" y="289.8" width="292.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="56.0" y="311.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">802.11MC FTM / UWB</text>
+<text x="56.0" y="327.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Hardware Timestamp Exchange</text>
+<text x="56.0" y="343.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">(t1..t4)</text>
+<text x="56.0" y="361.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Mac logs TX t1 &amp; RX t4; Watch SEP/PHY signs</text>
+<text x="56.0" y="376.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">turnaround delta (t3 - t2) in hardware</text>
+<rect x="42.0" y="451.3" width="292.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="56.0" y="472.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">PHYSICAL VERDICT</text>
+<text x="56.0" y="488.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Air RTT &lt;= ~20 ns (d &lt;= 3 m): UNLOCK</text>
+<text x="56.0" y="507.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">c * ((t4 - t1) - (t3 - t2)) / 2 confirms Watch is</text>
+<text x="56.0" y="521.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">physically beside the Mac</text>
+<rect x="566.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">PROXY BRIDGE</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Attacker A Near Mac; Attacker B in</text>
+<text x="580.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Cafe</text>
+<text x="580.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Colluding SDR / BLE-Wi-Fi transceivers</text>
+<text x="580.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">forward encrypted frames across coax or</text>
+<text x="580.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">WLAN</text>
+<rect x="566.0" y="289.8" width="292.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="580.0" y="311.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">UNFORGEABLE PHYSICS</text>
+<text x="580.0" y="327.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Cannot Compress Propagation Time</text>
+<text x="580.0" y="345.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Cryptographic timestamps prevent forging</text>
+<text x="580.0" y="360.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">t2/t3; RF cable/air + SDR adds &gt;= 100 ns</text>
+<rect x="566.0" y="451.3" width="292.0" height="87.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="580.0" y="472.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">PHYSICAL VERDICT</text>
+<text x="580.0" y="488.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Measured d &gt; 3 m Budget: ABORT</text>
+<text x="580.0" y="507.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">sharingd rejects unlock despite valid BLE</text>
+<text x="580.0" y="521.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">auth and intact AES-GCM tags</text>
+<text x="450.0" y="586.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Cryptographic authentication proves WHICH Watch answered; nanosecond Time-of-Flight ranging proves WHERE that Watch physically sits.</text>
+<line x1="188.0" y1="231.8" x2="188.0" y2="283.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,289.8 192.0,281.3 184.0,281.3" fill="#4a5568"/>
+<line x1="188.0" y1="393.3" x2="188.0" y2="444.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,451.3 192.0,442.8 184.0,442.8" fill="#4a5568"/>
+<line x1="712.0" y1="231.8" x2="712.0" y2="283.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,289.8 716.0,281.3 708.0,281.3" fill="#4a5568"/>
+<line x1="712.0" y1="393.3" x2="712.0" y2="444.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,451.3 716.0,442.8 708.0,442.8" fill="#4a5568"/>
+<line x1="334.0" y1="341.5" x2="559.5" y2="341.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="566.0,341.5 557.5,337.5 557.5,345.5" fill="#365378"/>
+<rect x="119.4" y="247.9" width="137.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="259.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">BLE wake -&gt; Wi-Fi FTM</text>
+<rect x="138.0" y="409.4" width="100.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="420.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">passes ToF gate</text>
+<rect x="658.2" y="247.9" width="107.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="259.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">relays ciphertext</text>
+<rect x="664.3" y="409.4" width="95.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="420.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">fails ToF bound</text>
+<rect x="356.4" y="49.0" width="187.1" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">Nanosecond Time-of-Flight Gate</text>
+<rect x="358.4" y="332.1" width="164.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="343.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">speed-of-light c = 0.30 m/ns</text>
+</svg>

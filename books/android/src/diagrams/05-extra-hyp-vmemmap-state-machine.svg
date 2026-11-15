@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 629" width="920" height="629">
+<rect x="0" y="0" width="920" height="629" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PKVM HYP_VMEMMAP &amp; STAGE-2 PAGE OWNERSHIP STATE MACHINE (MEM_PROTECT.C)</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">POST-DEPRIVILEGE BASELINE (__PKVM_PROT_FINALIZE)</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Host Exclusively Owns Frame (host_state = PKVM_PAGE_OWNED)</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Host Stage-2 PTE: valid RWX idmap · Hyp Stage-1: PKVM_NOPAGE · Guest Stage-2: PKVM_NOPAGE</text>
+<rect x="26.0" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">HVC: __PKVM_HOST_DONATE_GUEST</text>
+<text x="40.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Exclusive pVM Guest Frame</text>
+<text x="40.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Host S2 PTE invalidated (owner=GUEST +</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">GFN) + TLBI; Guest S2 mapped</text>
+<text x="40.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">PKVM_PAGE_OWNED (0b00)</text>
+<rect x="321.3" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="335.3" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">HVC: __PKVM_HOST_DONATE_HYP</text>
+<text x="335.3" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Exclusive EL2 Hypervisor Frame</text>
+<text x="335.3" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Host S2 PTE invalidated (owner=HYP); EL2</text>
+<text x="335.3" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">S1 mapped PAGE_HYP (hyp_state =</text>
+<text x="335.3" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">PKVM_PAGE_OWNED)</text>
+<rect x="616.7" y="183.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="630.7" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">HVC: __PKVM_HOST_SHARE_HYP</text>
+<text x="630.7" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Pinned Host-to-EL2 Shared Frame</text>
+<text x="630.7" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Host = PKVM_PAGE_SHARED_OWNED (0b01);</text>
+<text x="630.7" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Hyp = PKVM_PAGE_SHARED_BORROWED</text>
+<text x="630.7" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">(0b10) with refcount</text>
+<rect x="26.0" y="342.2" width="454.7" height="101.2" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="40.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">GUEST HVC: __PKVM_GUEST_SHARE_HOST</text>
+<text x="40.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Controlled VirtIO Bounce Window (swiotlb)</text>
+<text x="40.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Guest marks bounce page SHARED_OWNED (0b01) and lends Host</text>
+<text x="40.0" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">SHARED_BORROWED (0b10); revoked via unshare</text>
+<rect x="498.7" y="342.2" width="395.3" height="101.2" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="512.7" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">HOST VIOLATION (ESR_EL2 TRAP)</text>
+<text x="512.7" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Host Reads Donated Guest/Hyp PA</text>
+<text x="512.7" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">CPU Stage-2 or SMMUv3 faults into EL2;</text>
+<text x="512.7" y="412.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">handle_host_mem_abort() injects synchronous Data Abort into</text>
+<text x="512.7" y="426.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">EL1</text>
+<rect x="26.0" y="501.5" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="523.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">VM TEARDOWN (__PKVM_RECLAIM_DYING_GUEST_PAGE)</text>
+<text x="460.0" y="539.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Mandatory EL2 Zero-Scrub Before Host Reclaim</text>
+<text x="460.0" y="557.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">EL2 unmaps Guest S2, zeroes all 4,096 bytes + cleans dcache to PoC, and only then restores Host PKVM_PAGE_OWNED</text>
+<text x="460.0" y="600.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Every transition acquires ordered component spinlocks (Host -&gt; Hyp -&gt; Guest) in arch/arm64/kvm/hyp/nvhe/mem_protect.c.</text>
+<line x1="164.7" y1="125.0" x2="164.7" y2="176.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="164.7,183.0 168.7,174.5 160.7,174.5" fill="#2b6a4c"/>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#5c4282"/>
+<line x1="755.3" y1="125.0" x2="755.3" y2="176.5" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="755.3,183.0 759.3,174.5 751.3,174.5" fill="#236b66"/>
+<line x1="164.7" y1="284.2" x2="164.7" y2="335.7" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="164.7,342.2 168.7,333.7 160.7,333.7" fill="#b07926"/>
+<line x1="514.7" y1="284.2" x2="514.7" y2="335.7" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="4,3"/>
+<polygon points="514.7,342.2 518.7,333.7 510.7,333.7" fill="#8d2d3b"/>
+<line x1="253.3" y1="443.5" x2="253.3" y2="495.0" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="253.3,501.5 257.3,493.0 249.3,493.0" fill="#2b6a4c"/>
+<rect x="120.0" y="141.1" width="89.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">donate to pVM</text>
+<rect x="415.9" y="141.1" width="88.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">donate to EL2</text>
+<rect x="713.1" y="141.1" width="84.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">share w/ EL2</text>
+<rect x="121.1" y="300.4" width="87.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">VirtIO bounce</text>
+<rect x="468.8" y="300.4" width="91.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="514.7" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">rogue EL1 read</text>
+<rect x="198.5" y="459.6" width="109.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="253.3" y="471.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">unshare + destroy</text>
+</svg>

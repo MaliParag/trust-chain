@@ -29,26 +29,53 @@
     "back-matter/70-references.md",
     "back-matter/90-colophon.md"
   ],
+  "interior": {
+    "name": "Warm Slate & Forged Amber Schematic",
+    "paperLight": "#f9f8f6",
+    "paperDark": "#0d1015",
+    "accentLight": "#c26d27",
+    "accentDark": "#e5954b",
+    "bodyFont": "Charter, Iowan Old Style, Source Serif 4, Georgia, serif",
+    "headingFont": "Inter, -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif",
+    "cardStyle": "top-rule-ledger",
+    "tableStyle": "open-horizontal-hairlines"
+  },
   "audit": {
-    "required_h2": null,
+    "required_h2": [
+      "Overview",
+      "Problem Statement & Threat Model",
+      "Kernel & Userspace Mechanics",
+      "Distro, Immutable-OS, & Cloud Trade-Offs",
+      "Seam Failures, CVEs, & Structural Bounds",
+      "Inspecting on a Live Linux Host"
+    ],
     "overview_heading": "Overview",
-    "overview_keys": [],
-    "required_table_header": null,
-    "diagnostics_h2": null,
+    "overview_keys": [
+      "**Link in the Chain:**",
+      "**Core Security Invariant:**",
+      "**Deployment Profile Matrix:**",
+      "**Trusted Computing Base (TCB):**",
+      "**Integration Seam & Handoff:**"
+    ],
+    "required_table_header": "| Incident / CVE | Year | Subsystem | Broken Assumption | Exploit Mechanism | Architectural Fix |",
+    "diagnostics_h2": "Inspecting on a Live Linux Host",
     "max_cmd_lines": 4,
     "forbid_em_dash": true,
     "forbid_emojis": true,
     "forbid_body_lists": true,
     "require_figure_prefix": "Figure: ",
     "special_unnumbered_chapters": [
-      "00-prologue.md"
+      "00-prologue.md",
+      "00b-foundations.md"
     ],
     "allow_lead_bold_pages": [
       "00-title.md",
+      "80-glossary.md",
       "90-colophon.md"
     ],
     "list_exempt_pages": [
       "70-references.md",
+      "95-index.md",
       "SUMMARY.md"
     ]
   }

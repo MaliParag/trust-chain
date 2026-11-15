@@ -29,26 +29,53 @@
     "back-matter/70-references.md",
     "back-matter/90-colophon.md"
   ],
+  "interior": {
+    "name": "Alabaster, Brushed Titanium, & Glacier Blueprint",
+    "paperLight": "#f8f9fb",
+    "paperDark": "#0b1017",
+    "accentLight": "#1e5fa8",
+    "accentDark": "#7cc4f8",
+    "bodyFont": "Charter, Iowan Old Style, Source Serif 4, Georgia, serif",
+    "headingFont": "Inter, -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif",
+    "cardStyle": "top-rule-ledger",
+    "tableStyle": "open-horizontal-hairlines"
+  },
   "audit": {
-    "required_h2": null,
+    "required_h2": [
+      "Overview",
+      "Threat Model & Design Tension",
+      "Silicon & System Mechanics",
+      "Platform Forks Across Apple OSes",
+      "In-the-Wild Failures & Architectural Bounds",
+      "Verification & Forensic Artifacts"
+    ],
     "overview_heading": "Overview",
-    "overview_keys": [],
-    "required_table_header": null,
-    "diagnostics_h2": null,
+    "overview_keys": [
+      "**Link in the Chain:**",
+      "**Core Security Invariant:**",
+      "**Platform Matrix:**",
+      "**Trusted Computing Base (TCB):**",
+      "**Failure Horizon & Handoff:**"
+    ],
+    "required_table_header": "| Case / Mechanism | Year | Platform Scope | Boundary Tested | Root Cause | Architectural Response |",
+    "diagnostics_h2": "Verification & Forensic Artifacts",
     "max_cmd_lines": 4,
     "forbid_em_dash": true,
     "forbid_emojis": true,
     "forbid_body_lists": true,
     "require_figure_prefix": "Figure: ",
     "special_unnumbered_chapters": [
-      "00-prologue.md"
+      "00-prologue.md",
+      "00b-foundations.md"
     ],
     "allow_lead_bold_pages": [
       "00-title.md",
+      "80-glossary.md",
       "90-colophon.md"
     ],
     "list_exempt_pages": [
       "70-references.md",
+      "95-index.md",
       "SUMMARY.md"
     ]
   }

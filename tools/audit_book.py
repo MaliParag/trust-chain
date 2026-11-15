@@ -132,7 +132,7 @@ def audit_file(path: str, src_dir: str, cfg: dict, valid_refs: set, is_core_chap
         max_cmd = cfg.get("max_cmd_lines", 4)
         if diag_h2 and f"## {diag_h2}" in text:
             after = text.split(f"## {diag_h2}", 1)[1]
-            for m in re.finditer(r"```(?:powershell|cmd|batch|bash|sh)\n([\s\S]*?)```", after, flags=re.I):
+            for m in re.finditer(r"```(?:powershell|cmd|batch|bash|sh|zsh)\n([\s\S]*?)```", after, flags=re.I):
                 cmds = [l for l in m.group(1).strip().splitlines() if l.strip() and not l.strip().startswith("#")]
                 if len(cmds) > max_cmd:
                     errors.append(f"Diagnostic block exceeds {max_cmd} lines ({len(cmds)})")

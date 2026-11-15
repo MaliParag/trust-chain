@@ -14,11 +14,17 @@
     return { root: relToBook, active: 'windows' };
   }
 
+  var earlyCtx = resolveSiteRoot();
+  if (document.documentElement) {
+    document.documentElement.setAttribute('data-volume', earlyCtx.active);
+  }
+
   function addBanner() {
     var main = document.querySelector('main');
     if (!main || document.getElementById('preview-banner')) return;
 
     var ctx = resolveSiteRoot();
+    document.documentElement.setAttribute('data-volume', ctx.active);
     var r = ctx.root;
     var vols = [
       { slug: 'windows', label: 'Vol. I · Windows', href: r + 'index.html' },

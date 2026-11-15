@@ -51,6 +51,17 @@
     "back-matter/90-colophon.md",
     "back-matter/95-index.md"
   ],
+  "interior": {
+    "name": "Warm Parchment & Brass Monograph",
+    "paperLight": "#fbfaf6",
+    "paperDark": "#0f141d",
+    "accentLight": "#8a5a12",
+    "accentDark": "#d4a843",
+    "bodyFont": "Georgia, Baskerville, Iowan Old Style, serif",
+    "headingFont": "Georgia, Baskerville, serif",
+    "cardStyle": "left-accent-bar",
+    "tableStyle": "classic-grid"
+  },
   "audit": {
     "required_h2": [
       "Overview",

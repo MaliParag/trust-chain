@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Builds the publication-grade PDF edition of "The Windows Trust Chain"
- * (7.00 in x 9.25 in technical monograph trim) from ./book/print.html,
- * complete with full-bleed vector Front Cover (src/cover.svg), hyperlinked
- * Contents, Part/Chapter rubrics, KaTeX math, 68 vector SVG diagrams,
- * native PDF bookmark outline, and full-bleed vector Back Cover (src/back-cover.svg).
+ * Builds the publication-grade PDF edition of any Platform Trust Chain volume
+ * (7.00 in x 9.25 in technical monograph trim) from its rendered print.html,
+ * complete with full-bleed vector Front Cover (cover.svg), hyperlinked
+ * Contents, Part/Chapter rubrics, KaTeX math, vector SVG diagrams,
+ * native PDF bookmark outline, and full-bleed vector Back Cover (back-cover.svg).
  *
- * Usage: node tools/build-pdf.mjs [output-pdf-path]
+ * Usage: node tools/build-pdf.mjs [--book <slug>] [--out <output-pdf-path>]
  */
 import http from 'node:http';
 import { spawn, execSync } from 'node:child_process';
@@ -16,10 +16,31 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const BOOK_DIR = path.join(ROOT, 'book');
-const SRC_DIR = path.join(ROOT, 'src');
+const REGISTRY = JSON.parse(readFileSync(path.join(ROOT, 'tools', 'books.json'), 'utf8'));
+
+const cliArgs = process.argv.slice(2);
+const bIdx = cliArgs.indexOf('--book');
+const BOOK_SLUG = bIdx >= 0 ? cliArgs[bIdx + 1] : 'windows';
+const oIdx = cliArgs.indexOf('--out');
+const OUT_FLAG = oIdx >= 0 ? cliArgs[oIdx + 1] : null;
+const posArgs = cliArgs.filter(
+  (a, i) =>
+    a !== '--book' &&
+    a !== '--out' &&
+    (bIdx < 0 || i !== bIdx + 1) &&
+    (oIdx < 0 || i !== oIdx + 1)
+);
+
+const VOL = REGISTRY.volumes.find((v) => v.slug === BOOK_SLUG);
+if (!VOL) throw new Error(`Unknown book slug: ${BOOK_SLUG}`);
+const HOUSE = JSON.parse(readFileSync(path.join(ROOT, VOL.dir, 'house.json'), 'utf8'));
+const BOOK_TITLE_STR = HOUSE.title || VOL.title;
+
+const BOOK_DIR = VOL.mount ? path.join(ROOT, 'book', VOL.mount) : path.join(ROOT, 'book');
+const SRC_DIR = path.join(ROOT, VOL.dir, 'src');
 const KATEX_DIR = path.join(ROOT, 'node_modules', 'katex', 'dist');
-const OUT_PDF = path.resolve(ROOT, process.argv[2] || path.join('book', 'the-windows-trust-chain.pdf'));
+const DEFAULT_PDF_NAME = HOUSE.pdfFilename || `the-${BOOK_SLUG}-trust-chain.pdf`;
+const OUT_PDF = path.resolve(ROOT, OUT_FLAG || posArgs[0] || path.join(BOOK_DIR, DEFAULT_PDF_NAME));
 
 function findChrome() {
   if (process.env.CHROME_BIN && existsSync(process.env.CHROME_BIN)) {
@@ -198,11 +219,13 @@ function buildPdfHtml() {
     return `<div class="pdf-ch-rubric">${rubric}</div>\n${full}`;
   });
 
-  // Insert hyperlinked Table of Contents right before Preface
-  bodyContent = bodyContent.replace(
-    /<div style="break-before: page; page-break-before: always;"><\/div>\s*<div class="pdf-ch-rubric">Front Matter<\/div>\s*<h1 id="preface">/,
-    `${buildTocHtml()}\n<div style="break-before: page; page-break-before: always;"></div>\n<div class="pdf-ch-rubric">Front Matter</div>\n<h1 id="preface">`
-  );
+  // Insert hyperlinked Table of Contents right before Preface when building the Windows volume
+  if (BOOK_SLUG === 'windows') {
+    bodyContent = bodyContent.replace(
+      /<div style="break-before: page; page-break-before: always;"><\/div>\s*<div class="pdf-ch-rubric">Front Matter<\/div>\s*<h1 id="preface">/,
+      `${buildTocHtml()}\n<div style="break-before: page; page-break-before: always;"></div>\n<div class="pdf-ch-rubric">Front Matter</div>\n<h1 id="preface">`
+    );
+  }
 
   const trustchainCss = readFileSync(path.join(ROOT, 'theme', 'trustchain.css'), 'utf8');
   const frontSvg = namespaceSvgIds(readFileSync(path.join(SRC_DIR, 'cover.svg'), 'utf8'), 'fc');
@@ -212,7 +235,7 @@ function buildPdfHtml() {
 <html lang="en" class="light">
 <head>
   <meta charset="utf-8">
-  <title>The Windows Trust Chain - Parag Mali</title>
+  <title>${BOOK_TITLE_STR} - Parag Mali</title>
   <link rel="stylesheet" href="/_katex/katex.min.css">
   <style>
 ${trustchainCss}
@@ -222,7 +245,7 @@ ${trustchainCss}
   size: 7in 9.25in;
   margin: 0.68in 0.62in 0.72in 0.62in;
   @top-left {
-    content: "THE WINDOWS TRUST CHAIN";
+    content: "${BOOK_TITLE_STR.toUpperCase()}";
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     font-size: 7.0pt;
     letter-spacing: 0.08em;

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1850" width="1400" height="1850">
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b12"/>
+      <stop offset="52%" stop-color="#0d1523"/>
+      <stop offset="100%" stop-color="#070a11"/>
+    </linearGradient>
+    <radialGradient id="accGlow" cx="55%" cy="58%" r="48%">
+      <stop offset="0%" stop-color="#7cc4f8" stop-opacity="0.09"/>
+      <stop offset="65%" stop-color="#2b4c7e" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#070b12" stop-opacity="0.0"/>
+    </radialGradient>
+    <linearGradient id="accRule" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7cc4f8" stop-opacity="0.95"/>
+      <stop offset="65%" stop-color="#7cc4f8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7cc4f8" stop-opacity="0.0"/>
+    </linearGradient>
+    <pattern id="archGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#8fa8c8" stroke-width="0.6" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="1400" height="1850" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1400" height="1850" fill="url(#accGlow)"/>
+  <rect x="64" y="64" width="1272" height="1722" fill="url(#archGrid)"/>
+  <rect x="56" y="56" width="1288" height="1738" fill="none" stroke="#223046" stroke-width="1.5"/>
+  <rect x="68" y="68" width="1264" height="1714" fill="none" stroke="#7cc4f8" stroke-width="0.8" stroke-opacity="0.30"/>
+  <path d="M 56 96 L 56 56 L 96 56 M 1304 56 L 1344 56 L 1344 96 M 56 1754 L 56 1794 L 96 1794 M 1304 1794 L 1344 1794 L 1344 1754"
+        fill="none" stroke="#7cc4f8" stroke-width="2.0" stroke-opacity="0.75"/>
+
+<text x="136" y="162" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" font-weight="600" letter-spacing="1.5px" fill="#7cc4f8" text-anchor="start">THE APPLE TRUST CHAIN  ·  ARCHITECTURAL BLUEPRINT</text>
+<line x1="136" y1="184" x2="1264" y2="184" stroke="#233248" stroke-width="1.2"/>
+<text x="136" y="248" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="32" font-weight="700" fill="#f7f4ed" text-anchor="start">One silicon architecture across five operating systems.</text>
+<text x="136" y="294" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="28" font-weight="400" font-style="italic" fill="#7cc4f8" text-anchor="start">Every guarantee is personalized in hardware or intentionally relaxed by owner policy.</text>
+<text x="136" y="364" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">Since the transition to Apple Silicon, iOS, iPadOS, macOS, watchOS, and visionOS share one</text>
+<text x="136" y="398" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">vertical chain of cryptographic invariants: immutable Boot ROM and per-device Image4 tickets</text>
+<text x="136" y="432" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">verify boot stages, the Secure Enclave Processor (SEP) isolates biometric and key material</text>
+<text x="136" y="466" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">behind UID fuses, SPTM and Pointer Authentication harden XNU memory, Signed System Volumes</text>
+<text x="136" y="500" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">seal the OS, and Private Cloud Compute extends attestation to cloud AI.</text>
+<text x="136" y="552" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">Rather than treating Apple's platforms as disconnected products, this volume traces their</text>
+<text x="136" y="586" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">shared Darwin spine once and highlights the exact forks where threat models diverge: closed</text>
+<text x="136" y="620" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">iPhone TXM enforcement versus macOS 1TR LocalPolicy and Notarization, visionOS R1 spatial</text>
+<text x="136" y="654" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">sensor isolation, and mercenary zero-click exploit chains.</text>
+<text x="136" y="722" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.4px" fill="#7cc4f8" text-anchor="start">PLANNED ARCHITECTURE OF THIS VOLUME</text>
+<rect x="136" y="742" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="742" width="5" height="92" rx="2" fill="#7cc4f8"/>
+<text x="160" y="777" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#7cc4f8" text-anchor="start">PART I · SILICON</text>
+<text x="160" y="804" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 1 to 4</text>
+<text x="434" y="781" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Boot ROM, Image4/TSS personalization, macOS 1TR LocalPolicy, SEP/sepOS,</text>
+<text x="434" y="806" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">PAC, SPTM, and EMTE</text>
+<rect x="136" y="846" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="846" width="5" height="92" rx="2" fill="#7cc4f8"/>
+<text x="160" y="881" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#7cc4f8" text-anchor="start">PART II · XNU &amp; CODE</text>
+<text x="160" y="908" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 5 to 8</text>
+<text x="434" y="885" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">APFS Signed System Volume, AMFI, TXM vs. Gatekeeper/Notarization,</text>
+<text x="434" y="910" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Seatbelt, BlastDoor, TCC, and ESF</text>
+<rect x="136" y="950" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="950" width="5" height="92" rx="2" fill="#7cc4f8"/>
+<text x="160" y="985" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#7cc4f8" text-anchor="start">PART III · DATA &amp; KEYS</text>
+<text x="160" y="1012" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 9 to 12</text>
+<text x="434" y="989" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">APFS per-file Data Protection, BFU/AFU forensics, Stolen Device</text>
+<text x="434" y="1014" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Protection, Passkeys, and DDM</text>
+<rect x="136" y="1054" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="1054" width="5" height="92" rx="2" fill="#7cc4f8"/>
+<text x="160" y="1089" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#7cc4f8" text-anchor="start">PART IV · CLOUD &amp; PCC</text>
+<text x="160" y="1116" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 13 to 16</text>
+<text x="434" y="1093" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">iCloud HSM recovery, Advanced Data Protection, iMessage PQ3 + KT, Find My,</text>
+<text x="434" y="1118" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">and Private Cloud Compute</text>
+<rect x="136" y="1158" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="1158" width="5" height="92" rx="2" fill="#df5a67"/>
+<text x="160" y="1193" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#df5a67" text-anchor="start">FINALE · THE SEAMS</text>
+<text x="160" y="1220" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapter 17</text>
+<text x="434" y="1197" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">FORCEDENTRY, Operation Triangulation MMIO, macOS TCC bypasses, and</text>
+<text x="434" y="1222" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">sovereign ADP compulsion</text>
+<line x1="136" y1="1648" x2="1264" y2="1648" stroke="#233248" stroke-width="1.2"/>
+<text x="136" y="1696" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="30" font-weight="700" fill="#f7f4ed" text-anchor="start">Parag Mali</text>
+<text x="136" y="1728" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="15.5" font-weight="400" fill="#8cb0db" text-anchor="start">The Platform Trust Chain Series</text>
+<rect x="846" y="1668" width="418" height="72" rx="5" fill="#0d1728" stroke="#7cc4f8" stroke-width="1.1" stroke-opacity="0.55"/>
+<text x="1055.0" y="1698" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.1px" fill="#7cc4f8" text-anchor="middle">OPEN TECHNICAL SERIES  ·  2026</text>
+<text x="1055.0" y="1721" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="11.8" font-weight="500" letter-spacing="0.8px" fill="#9fb0c7" text-anchor="middle">CC BY-NC-SA 4.0  ·  SYSTEMS SECURITY</text>
+</svg>

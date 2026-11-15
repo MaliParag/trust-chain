@@ -1,5 +1,6 @@
 # Build output
 /book/
+/books/*/book/
 
 # Dependencies / tooling
 /node_modules/

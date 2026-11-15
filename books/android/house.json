@@ -1,0 +1,55 @@
+{
+  "slug": "android",
+  "volume": "Volume IV",
+  "status": "in-preparation",
+  "title": "The Android Trust Chain",
+  "subtitle": "From Verified Boot 2.0, StrongBox, and pKVM Through SELinux and Keystore to Play Integrity and Private Compute",
+  "author": "Parag Mali",
+  "description": "How Android transforms the Linux kernel with AVB 2.0, StrongBox/KeyMint, Protected KVM (AVF), mandatory SELinux, per-app UID sandboxing, and hardware Key Attestation, and where multi-vendor mobile chains break.",
+  "pdfFilename": "the-android-trust-chain.pdf",
+  "siteSubpath": "android",
+  "front": [
+    [
+      "front-matter/00-title.md",
+      "Title Page"
+    ],
+    [
+      "front-matter/01-copyright.md",
+      "Copyright"
+    ]
+  ],
+  "specials": [
+    [
+      "chapters/00-prologue.md",
+      "Prologue"
+    ]
+  ],
+  "parts": [],
+  "back": [
+    "back-matter/70-references.md",
+    "back-matter/90-colophon.md"
+  ],
+  "audit": {
+    "required_h2": null,
+    "overview_heading": "Overview",
+    "overview_keys": [],
+    "required_table_header": null,
+    "diagnostics_h2": null,
+    "max_cmd_lines": 4,
+    "forbid_em_dash": true,
+    "forbid_emojis": true,
+    "forbid_body_lists": true,
+    "require_figure_prefix": "Figure: ",
+    "special_unnumbered_chapters": [
+      "00-prologue.md"
+    ],
+    "allow_lead_bold_pages": [
+      "00-title.md",
+      "90-colophon.md"
+    ],
+    "list_exempt_pages": [
+      "70-references.md",
+      "SUMMARY.md"
+    ]
+  }
+}

@@ -110,7 +110,7 @@ Human review catches nuance, voice, and argument structure; deterministic script
 
 ## Part II · House Sheet for *The Windows Trust Chain*
 
-*(When adapting Part I to a new book, replace only this section with that book's domain-specific structure, conventions, and chapter map.)*
+*(When adapting Part I to a new book, replace only this section with that book's domain-specific structure, conventions, and chapter map; in this monorepo, each volume's machine-checked configuration lives in `books/<slug>/house.json` and is registered in `tools/books.json`.)*
 
 * **Core Thesis:** Every security guarantee in modern Windows is inherited upward from immutable silicon roots (`Boot Guard`, `UEFI`, `TPM 2.0`, `Pluton`) through hypervisor `SLAT` isolation (`VTL0`/`VTL1`), kernel code integrity, local tokens and data vaults, Active Directory and passkey protocols, `ETW` telemetry, and cloud `Zero Trust` / `Confidential VM` enforcement; the chain snaps whenever a higher layer mistakes cryptographic validity for delegated authorization.
 * **Target Audience:** Systems security architects, principal detection engineers, incident responders, and OS/cloud platform engineers.

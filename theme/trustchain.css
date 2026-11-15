@@ -1,4 +1,4 @@
-/* The Windows Trust Chain — mdBook theme overrides.
+/* The Platform Trust Chain Series - mdBook theme overrides.
    Ports the print book's designed components (trust ledger, named callouts,
    evidence certificates, figures) that tools/mdbook-trustchain.mjs emits, using
    mdBook's per-theme variables so light (light, rust) and dark (navy, coal, ayu)
@@ -34,18 +34,40 @@
     --tc-ov-div: rgba(120, 165, 215, 0.16);
 }
 
-/* --- Preview banner: injected on every page by theme/preview-banner.js. ---- */
+/* --- Series & preview banner: injected on every page by theme/preview-banner.js. */
 #preview-banner {
     margin: 0 0 1.6rem;
-    padding: 0.6rem 1rem;
+    padding: 0.65rem 1rem;
     border: 1px solid var(--tc-emu-ink);
     border-left: 4px solid var(--tc-emu-ink);
     border-radius: 6px;
     background: var(--tc-emu-bg);
-    font-size: 0.9em;
+    font-size: 0.88em;
     line-height: 1.5;
 }
 #preview-banner strong { color: var(--tc-emu-ink); }
+#preview-banner .series-switcher {
+    margin-top: 0.35rem;
+    padding-top: 0.35rem;
+    border-top: 1px solid rgba(138, 90, 18, 0.22);
+    font-size: 0.92em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+}
+#preview-banner .series-switcher a.vol-pill {
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(138, 90, 18, 0.35);
+    text-decoration: none;
+    font-weight: 600;
+}
+#preview-banner .series-switcher a.vol-pill.active {
+    background: var(--tc-emu-ink);
+    color: var(--bg, #111);
+    border-color: var(--tc-emu-ink);
+}
 @media print {
     #preview-banner { display: none; }
 }

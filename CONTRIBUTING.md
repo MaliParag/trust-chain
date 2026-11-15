@@ -1,51 +1,22 @@
 # Contributing
 
-Thank you for helping improve *The Windows Trust Chain*. Technical corrections,
-primary-source updates, and diagnostic refinements are welcome.
+Thank you for helping improve *The Platform Trust Chain Series*. Technical corrections, primary-source updates, and diagnostic refinements across the Windows, Apple, Linux, and Android volumes are welcome.
 
-## Ways to Help
+## Editorial Ground Rules
 
-- **Fix technical inaccuracies:** Data-structure details, protocol fields, build
-  behavior changes, broken reference URLs, or typos.
-- **Refine live diagnostics:** Keep PowerShell, Win32, WMI/CIM, and cloud CLI
-  verification queries concise, read-only, and accurate on current Windows 11
-  and Windows Server releases.
-- **Improve the web edition:** mdBook styling, SVG diagram legibility,
-  accessibility, or build scripts.
+All volumes share the portable craft standards in [`editorial.md`](editorial.md), parameterized per volume via `books/<slug>/house.json`:
 
-## Editorial and Structural Ground Rules
+1. **Sustained book prose:** Write body sections in connected narrative paragraphs rather than bulleted slide outlines; house opening chapter coordinates inside structured `Overview` cards where configured.
+2. **Primary-source citations:** Anchor non-trivial claims to numbered entries (`[N]`) in `books/<slug>/src/back-matter/70-references.md`, keeping verbatim quotations exact.
+3. **Clean typography & zero leaks:** Keep prose, headings, tables, and SVG diagrams free of em-dashes (`U+2014`), emojis, inline paragraph/table boldface, and leaked repository paths.
+4. **Architectural gap analysis:** Present offensive techniques strictly as boundary gap analysis isolating why an invariant failed and what closed it.
 
-Every chapter adheres to the standards codified in [`editorial.md`](editorial.md):
+## Workflow
 
-1. **Predictable chapter progression:** Each numbered chapter follows the same
-   seven `H2` sections: `Overview` (five standardized coordinates), `Core
-   Engineering Problem & Threat Model`, `Architectural Deep Dive`, `Attack
-   Catalog & Gap Analysis` (including the six-column summary table), `Theoretical
-   Limits & Structural Invariants`, `Inspecting and Verifying on a Running
-   System`, and `Summary & Handoff`.
-2. **Diagnostics stay in Section 6:** All PowerShell/CLI inspection blocks live
-   inside `Inspecting and Verifying on a Running System` and stay concise (1 to
-   4 lines per command block).
-3. **No exploit tutorials:** Offensive techniques appear strictly as architectural
-   gap analysis isolating why a boundary failed and what closed it.
-4. **Primary-source citations:** Anchor claims to numbered entries (`[N]`) in
-   `src/back-matter/70-references.md`, keeping verbatim quotations exact.
-5. **Clean typography:** Keep all prose, tables, and headings free of em-dashes
-   (`U+2014`) and emojis.
+1. Edit the relevant volume under `books/<windows|apple|linux|android>/src/`.
+2. Preview a single volume with `mdbook serve books/<slug> --open`, or build the entire multi-volume site into `./book` with `npm run build`.
+3. If chapter titles or reading order change in `books/<slug>/house.json`, run `npm run summary`.
+4. Run `npm run audit` (`python3 tools/audit_book.py`) to verify all volumes pass editorial, citation, and link checks.
+5. Open a pull request naming the primary specification or live OS build used to verify the change.
 
-## Making a Change
-
-1. Edit the relevant Markdown source under `src/`.
-2. Preview locally with `mdbook serve --open` or build `./book` via `mdbook build`.
-3. If chapter titles or reading order change, run `node tools/gen-summary.mjs` to
-   update `src/SUMMARY.md`.
-4. Run `npm run audit` (`python3 tools/audit_book.py`) to verify editorial,
-   typographic, citation, and cross-reference rules.
-5. Open a pull request describing the change and the primary source or live
-   Windows build used to verify it.
-
-By contributing, you agree that your contributions are licensed under the
-project's [CC BY-NC-SA 4.0](LICENSE) terms. In addition, you grant Parag Mali a
-perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use,
-reproduce, adapt, publish, and distribute your contribution for any purpose,
-including commercial editions of this book.
+By contributing, you agree that your contributions are licensed under the project's [CC BY-NC-SA 4.0](LICENSE) terms, and grant Parag Mali a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, reproduce, adapt, publish, and distribute your contribution for any purpose, including commercial editions.

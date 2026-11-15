@@ -9,6 +9,11 @@ unreferenced SVGs from src/diagrams/.
 import glob
 import os
 import re
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "tools")))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from gen_diagrams_p1 import generate_part1
 from gen_diagrams_p2 import generate_part2
 

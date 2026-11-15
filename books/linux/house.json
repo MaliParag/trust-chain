@@ -1,0 +1,55 @@
+{
+  "slug": "linux",
+  "volume": "Volume III",
+  "status": "in-preparation",
+  "title": "The Linux Trust Chain",
+  "subtitle": "From UEFI, Unified Kernel Images, and dm-verity Through LSMs, eBPF, and Containers to Confidential Cloud",
+  "author": "Parag Mali",
+  "description": "How modern Linux composes UEFI shim, Unified Kernel Images, TPM2, dm-verity, LSMs, eBPF, namespaces, and Confidential Computing into an end-to-end chain of trust, and where attackers break the seams.",
+  "pdfFilename": "the-linux-trust-chain.pdf",
+  "siteSubpath": "linux",
+  "front": [
+    [
+      "front-matter/00-title.md",
+      "Title Page"
+    ],
+    [
+      "front-matter/01-copyright.md",
+      "Copyright"
+    ]
+  ],
+  "specials": [
+    [
+      "chapters/00-prologue.md",
+      "Prologue"
+    ]
+  ],
+  "parts": [],
+  "back": [
+    "back-matter/70-references.md",
+    "back-matter/90-colophon.md"
+  ],
+  "audit": {
+    "required_h2": null,
+    "overview_heading": "Overview",
+    "overview_keys": [],
+    "required_table_header": null,
+    "diagnostics_h2": null,
+    "max_cmd_lines": 4,
+    "forbid_em_dash": true,
+    "forbid_emojis": true,
+    "forbid_body_lists": true,
+    "require_figure_prefix": "Figure: ",
+    "special_unnumbered_chapters": [
+      "00-prologue.md"
+    ],
+    "allow_lead_bold_pages": [
+      "00-title.md",
+      "90-colophon.md"
+    ],
+    "list_exempt_pages": [
+      "70-references.md",
+      "SUMMARY.md"
+    ]
+  }
+}

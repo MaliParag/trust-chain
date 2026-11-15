@@ -1,0 +1,52 @@
+{
+  "seriesTitle": "The Platform Trust Chain Series",
+  "seriesSubtitle": "How Modern Operating Systems Build Verifiable Trust from Silicon to Cloud, and Where Attackers Break It",
+  "author": "Parag Mali",
+  "repoUrl": "https://github.com/MaliParag/windows-trust-chain",
+  "volumes": [
+    {
+      "slug": "windows",
+      "dir": "books/windows",
+      "mount": "",
+      "volume": "Volume I",
+      "shortName": "Windows",
+      "title": "The Windows Trust Chain",
+      "subtitle": "How Modern Windows Builds Trust from Silicon to Cloud, and Where Attackers Break It",
+      "accent": "#d4a843",
+      "status": "Complete · 23 Chapters"
+    },
+    {
+      "slug": "apple",
+      "dir": "books/apple",
+      "mount": "apple",
+      "volume": "Volume II",
+      "shortName": "Apple",
+      "title": "The Apple Trust Chain",
+      "subtitle": "From Boot ROM and Secure Enclave Across iOS, macOS, iPadOS, watchOS, and visionOS to Private Cloud Compute",
+      "accent": "#7cc4f8",
+      "status": "Blueprint · 17 Planned Chapters"
+    },
+    {
+      "slug": "linux",
+      "dir": "books/linux",
+      "mount": "linux",
+      "volume": "Volume III",
+      "shortName": "Linux",
+      "title": "The Linux Trust Chain",
+      "subtitle": "From UEFI, Unified Kernel Images, and dm-verity Through LSMs, eBPF, and Containers to Confidential Cloud",
+      "accent": "#e5954b",
+      "status": "Blueprint · 16 Planned Chapters"
+    },
+    {
+      "slug": "android",
+      "dir": "books/android",
+      "mount": "android",
+      "volume": "Volume IV",
+      "shortName": "Android",
+      "title": "The Android Trust Chain",
+      "subtitle": "From Verified Boot 2.0, StrongBox, and pKVM Through SELinux and Keystore to Play Integrity and Private Compute",
+      "accent": "#57c98c",
+      "status": "Blueprint · 16 Planned Chapters"
+    }
+  ]
+}

@@ -1,122 +1,67 @@
-# The Windows Trust Chain
+# The Platform Trust Chain Series
 
-How modern Windows builds a verifiable chain of trust from silicon to cloud, and where attackers break it.
+How modern operating systems build verifiable chains of trust from silicon reset vectors to cloud control planes, and where attackers break them.
 
-> **Preview edition.** Content is actively maintained. Technical corrections and
-> reproductions are welcome via
-> [issues](https://github.com/MaliParag/windows-trust-chain/issues) and
-> [pull requests](CONTRIBUTING.md).
+> **Read online:**
+> - **Series Overview:** <https://maliparag.github.io/windows-trust-chain/series/>
+> - **Volume I · The Windows Trust Chain (Complete · 23 Chapters, 379-Page PDF):** <https://maliparag.github.io/windows-trust-chain/>
+> - **Volume II · The Apple Trust Chain (Blueprint & Prologue):** <https://maliparag.github.io/windows-trust-chain/apple/>
+> - **Volume III · The Linux Trust Chain (Blueprint & Prologue):** <https://maliparag.github.io/windows-trust-chain/linux/>
+> - **Volume IV · The Android Trust Chain (Blueprint & Prologue):** <https://maliparag.github.io/windows-trust-chain/android/>
 
-This repository holds the source manuscript for an open, primary-source-grounded
-systems security book written for security architects, principal detection
-engineers, incident responders, and platform engineers. It traces how trust is
-*inherited* link by link, from UEFI firmware and the TPM up through the Hyper-V
-Secure Kernel, code integrity, access tokens, Active Directory cryptography,
-passkeys, `ETW` telemetry, and cloud attestation, and analyzes the exact seams
-where real-world adversaries break each link.
+This monorepo houses an open, primary-source-grounded series of systems security monographs written for security architects, principal detection engineers, incident responders, and platform engineers, sharing one publishing, diagramming, PDF, and editorial verification engine.
 
-> **Read it online:** <https://maliparag.github.io/windows-trust-chain/>
+## Volumes in This Repository
 
-## What Is Inside
+| Volume | Directory | Status | Scope |
+|---|---|---|---|
+| **Vol. I · Windows** | [`books/windows/`](books/windows/) | Complete (23 chapters, 76 SVG figures, 912 primary sources, 379-page PDF) | `UEFI Secure Boot`, `TPM 2.0`, `Pluton`, `Measured Boot`, `Attestation`, `Hyper-V VBS/VTL1`, `HVCI`/`WDAC`, `PPL`, `CET`/`CFG`, `Tokens`/`MIC`, `BitLocker`/`DPAPI`/`Recall` enclaves, `Credential Guard`, `NTLM` sunset, `Kerberos`/`krbtgt`, `AD CS`/`dMSA`, `PRT`, `Passkeys`, `ETW`, `Zero Trust`, `CAE`, `Agent Workspace` & `Entra Agent ID`, `Confidential VMs`, and `Storm-0558` |
+| **Vol. II · Apple** | [`books/apple/`](books/apple/) | Blueprint & Prologue (17 planned chapters) | Unified Apple Silicon (`A`/`M`/`S`/`R1`) across `iOS`, `iPadOS`, `macOS`, `watchOS`, and `visionOS`: `Boot ROM`, `Image4`/`TSS`, `macOS` `1TR` `LocalPolicy`, `SEP`/`sepOS`, `PAC`/`SPTM`/`EMTE`, `SSV`, `AMFI` & `TXM` vs. `Notarization`, `Seatbelt`/`BlastDoor`, `TCC` & `EndpointSecurity`, `APFS` Data Protection, `Stolen Device Protection`, `iCloud ADP`, `PQ3`, and `Private Cloud Compute` |
+| **Vol. III · Linux** | [`books/linux/`](books/linux/) | Blueprint & Prologue (16 planned chapters) | Composable open-source trust: `UEFI`/`shim`/`SBAT`, `Unified Kernel Images` (`UKI`) & `systemd-pcrlock` (`TPM2`), `LUKS2`, `dm-verity`/`fs-verity`, `IMA`/`Keylime`, `Kernel Lockdown`, `SELinux`/`AppArmor`/`Landlock`, `eBPF` verifier, `capabilities`/`user_namespaces`, `Polkit`, `seccomp-BPF` containers, `Firecracker`/`Kata`, `SPIFFE`/`SPIRE`, `COCONUT-SVSM`, and `XZ Utils` |
+| **Vol. IV · Android** | [`books/android/`](books/android/) | Blueprint & Prologue (16 planned chapters) | Zero-ambient-session mobile isolation: SoC `Boot ROM`, `AVB 2.0` `VBMeta` & rollback indexes, `dm-verity`, `TrustZone` `KeyMint` & `StrongBox` (`Titan M2`), `Protected KVM` (`pKVM` / `AVF`), enforcing `SELinux`, `Arm MTE`, per-app `UID` & `Binder` IPC, `File-Based Encryption`, `Credential Manager` Passkeys, `Key Attestation`/`Play Integrity`, and `Private Compute Core` |
 
-- **23 numbered core chapters** (plus a Prologue and a Foundations
-  primer) organized into four architectural parts, an observability interlude,
-  and a finale:
-  - **Part I · Silicon (Chapters 1 to 5):** Secure Boot, The TPM, Pluton,
-    Measured Boot, and Attestation.
-  - **Part II · Kernel & Code (Chapters 6 to 9):** The Secure Kernel and VBS,
-    Code Integrity and Application Control, Protected Process Light, and Process
-    Mitigation Policies.
-  - **Part III · Credentials & Access (Chapters 10 to 17):** Windows Access
-    Control, Integrity Levels, and Impersonation; Data Protection and Local
-    Secret Custody; Credential Guard and LSASS Isolation; The Death of NTLM;
-    Kerberos and Ticket Forgery; Enterprise PKI, Service Identities, and Hybrid
-    Bridges; Pass-the-Hash to Pass-the-PRT; and Windows Hello and Passkeys.
-  - **Interlude · Watching the Chain (Chapter 18):** ETW: The EDR Substrate.
-  - **Part IV · Cloud (Chapters 19 to 22):** Zero Trust, Continuous Access
-    Evaluation, Workload and AI Agent Security, and Confidential VMs.
-  - **Finale · When the Chain Snaps (Chapter 23):** When the Chain Snaps:
-    Storm-0558.
-- **Uniform eight-part chapter progression:** Overview (`Role`,
-  `Invariant`, `TCB`, `Failure Modes`, `Handoff`), Core Engineering Problem &
-  Threat Model, Architectural Deep Dive, six-column Attack Catalog & Gap
-  Analysis, Theoretical Limits & Structural Invariants, live non-destructive
-  PowerShell/CLI verification (`Inspecting and Verifying on a Running System`),
-  and Summary & Handoff.
-- **912 primary-source references** linking every claim to normative vendor
-  specifications, RFCs, peer-reviewed security papers, and public incident
-  reports.
+## Build, Audit, and Author Locally
 
-The web edition is built with [mdBook](https://rust-lang.github.io/mdBook/) and
-KaTeX, providing fast full-text search, responsive SVG figures with captions,
-and light/dark reading themes.
-
-## Read or Build Locally
-
-You need [mdBook](https://rust-lang.github.io/mdBook/) (`0.4.43+` or `0.5.x`)
-and Node.js (`18+`, used by the build-time preprocessor and SEO generator).
+Requires [mdBook](https://rust-lang.github.io/mdBook/) (`0.4.43+`), Node.js (`20+`), Python 3, and `rsvg-convert` (only when regenerating cover PNGs).
 
 ```bash
 npm install
-mdbook serve --open   # live-reload preview at http://localhost:3000
-mdbook build          # static site into ./book
-```
-
-Production deployments additionally run the post-build SEO pass (canonical URLs,
-Open Graph and Twitter cards, `schema.org/Book` JSON-LD, `sitemap.xml`, and
-`robots.txt`):
-
-```bash
-SITE_URL=https://maliparag.github.io/windows-trust-chain node tools/gen-seo.mjs
-node tools/build-pdf.mjs   # writes ./book/the-windows-trust-chain.pdf
-```
-
-If you modify chapter titles or reading order, regenerate `src/SUMMARY.md`:
-
-```bash
-node tools/gen-summary.mjs
+npm run audit                        # run editorial, citation, & link checks across all volumes
+npm run summary                      # regenerate SUMMARY.md for all volumes (or -- --book apple)
+npm run build                        # build all 4 volumes + series portal into ./book
+npm run pdf -- --book windows        # build 7 x 9.25 in PDF edition with full-bleed vector covers
+mdbook serve books/apple --open      # live-reload preview while authoring a specific volume
 ```
 
 ## Repository Layout
 
 ```text
 .
-├── src/
-│   ├── SUMMARY.md          Table of contents (generated in canonical reading order)
-│   ├── front-matter/       Title, copyright, preface, reading guide
-│   ├── chapters/           Prologue, Foundations, and 23 numbered core chapters
-│   ├── back-matter/        References, glossary, about, colophon, index
-│   └── diagrams/           SVG architectural figures referenced by chapters
-├── theme/                  Custom CSS and preview banner script
+├── books/
+│   ├── windows/            Volume I: The Windows Trust Chain (23 chapters, diagrams, covers, PDF)
+│   ├── apple/              Volume II: The Apple Trust Chain (iOS, macOS, iPadOS, watchOS, visionOS)
+│   ├── linux/              Volume III: The Linux Trust Chain
+│   └── android/            Volume IV: The Android Trust Chain
+├── editorial.md            Portable Book-Craft Playbook (Part I universal + Part II house sheet)
+├── theme/                  Shared mdBook CSS, KaTeX head partial, and series volume switcher
 ├── tools/
-│   ├── gen-summary.mjs       Regenerates src/SUMMARY.md in canonical reading order
-│   ├── gen_diagrams.py       Regenerates and collision-checks all 76 SVG diagrams
-│   ├── gen_covers.py         Generates vector and PNG front and back covers
-│   ├── build-pdf.mjs         Builds the 7 x 9.25 in PDF edition with full-bleed covers
-│   ├── mdbook-trustchain.mjs mdBook preprocessor (KaTeX math, callouts, figures)
-│   └── gen-seo.mjs           Post-build SEO metadata, JSON-LD, sitemap, and robots
-├── book.toml               mdBook configuration
-└── .github/workflows/      Automated build and GitHub Pages deployment
+│   ├── books.json            Declarative registry of all volumes in the series
+│   ├── audit_book.py         Multi-volume editorial, prose-cadence, citation, and link verifier
+│   ├── diagram_lib.py        Shared 7-way collision- and alignment-verified SVG diagram engine
+│   ├── gen-summary.mjs       Generates src/SUMMARY.md per volume from house.json
+│   ├── mdbook-trustchain.mjs Preprocessor (KaTeX math, Overview cards, callouts, figures, [N] links)
+│   ├── gen-seo.mjs           Builds secondary volumes, series/index.html, SEO metadata, & table layout
+│   ├── gen_series_covers.py  Generates 1400x1850 vector/PNG covers for upcoming volumes
+│   └── build-pdf.mjs         Compiles 7 x 9.25 in print/PDF editions via headless Chrome
+└── book.toml               Root mdBook entry point (preserves existing CI and Windows root URLs)
 ```
 
-## Contributing
+## Editorial Standard & Contributing
 
-Corrections, clarifications, and reproductions are welcome. See
-[CONTRIBUTING.md](CONTRIBUTING.md). Keep the house style: zero em-dashes, zero
-emojis, primary-source `[N]` citations, and verbatim preservation of quoted
-standards and advisories.
+Every volume follows the universal book-craft principles in [`editorial.md`](editorial.md), pairing shared typographic, prose-cadence, citation, and diagram-geometry invariants with a per-volume [`house.json`](books/windows/house.json) so each operating system retains its own natural chapter structure. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-Everything in this repository (prose, diagrams, and build tooling) is licensed
-under
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-(`CC BY-NC-SA 4.0`). See [LICENSE](LICENSE). Commercial rights are reserved by
-the author.
-
-Verbatim quotations from vendors, researchers, and standards bodies, and any
-trademarks, remain the property of their respective owners.
-
-## Author
+Licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) (`CC BY-NC-SA 4.0`). See [LICENSE](LICENSE). Commercial rights are reserved by the author.
 
 Written by Parag Mali.

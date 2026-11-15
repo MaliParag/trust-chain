@@ -18,7 +18,7 @@ from html.parser import HTMLParser
 from difflib import SequenceMatcher
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TIMING_DIR = os.path.join(REPO, "reader-timing")
+TIMING_DIR = os.environ.get("TIMING_DIR", os.path.join(REPO, "books", "windows", "reader-timing"))
 AUDIO_BASE = os.environ.get(
     "AUDIO_BASE",
     "https://github.com/MaliParag/windows-trust-chain/releases/download/audio-v1")

@@ -2,7 +2,7 @@
 title = "The Windows Trust Chain"
 authors = ["Parag Mali"]
 description = "How modern Windows builds a verifiable chain of trust from silicon to cloud, and where attackers break it. An open, evidence-based technical book."
-src = "src"
+src = "books/windows/src"
 language = "en"
 
 [build]
@@ -18,7 +18,7 @@ default-theme = "navy"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/MaliParag/windows-trust-chain"
 # git-repository-icon = "fa-github"
-edit-url-template = "https://github.com/MaliParag/windows-trust-chain/edit/main/{path}"
+edit-url-template = "https://github.com/MaliParag/windows-trust-chain/edit/main/books/windows/src/{path}"
 additional-css = ["theme/trustchain.css"]
 additional-js = ["theme/preview-banner.js"]
 # For a GitHub Pages *project* site served at /<repo>/. Change if hosted elsewhere.

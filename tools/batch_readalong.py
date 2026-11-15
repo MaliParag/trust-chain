@@ -7,7 +7,7 @@ import os, re, sys, glob, json, subprocess
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOOK = os.path.join(REPO, "book")
-TIMING = os.path.join(REPO, "reader-timing")
+TIMING = os.environ.get("TIMING_DIR", os.path.join(REPO, "books", "windows", "reader-timing"))
 INJECT = os.path.join(REPO, "tools", "inject_readalong.py")
 
 

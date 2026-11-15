@@ -1,0 +1,39 @@
+[book]
+title = "The Android Trust Chain"
+authors = ["Parag Mali"]
+description = "How Android transforms the Linux kernel with AVB 2.0, StrongBox/KeyMint, Protected KVM (AVF), mandatory SELinux, per-app UID sandboxing, and hardware Key Attestation, and where multi-vendor mobile chains break."
+src = "src"
+language = "en"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[preprocessor.trustchain]
+command = "node ../../tools/mdbook-trustchain.mjs"
+renderers = ["html"]
+
+[output.html]
+theme = "../../theme"
+default-theme = "navy"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/MaliParag/windows-trust-chain"
+edit-url-template = "https://github.com/MaliParag/windows-trust-chain/edit/main/books/android/src/{path}"
+additional-css = ["../../theme/trustchain.css"]
+additional-js = ["../../theme/preview-banner.js"]
+site-url = "/windows-trust-chain/android/"
+no-section-label = false
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+
+[output.html.print]
+enable = true

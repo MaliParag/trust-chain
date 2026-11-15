@@ -2,141 +2,156 @@
 
 ## A Shared Systems Vocabulary
 
-The Windows trust chain spans four engineering disciplines: platform firmware and
-silicon, operating-system kernel architecture, enterprise authentication
-protocols, and cloud control planes. Few practitioners work simultaneously in all
-four. A firmware engineer fluent in `PCR` bank allocations may rarely inspect a
-Kerberos `[MS-PAC]` checksum; an identity architect designing Conditional Access
-policies may never trace a `VTL0`-to-`VTL1` `VMCALL`. This chapter establishes the
-compact baseline vocabulary shared across the twenty-three chapters ahead.
+The Windows trust chain spans four engineering disciplines that rarely sit at the
+same table: platform firmware and silicon, operating-system kernel architecture,
+enterprise authentication protocols, and cloud control planes. A firmware
+engineer fluent in `PCR` bank allocations may seldom inspect a Kerberos
+`[MS-PAC]` checksum, while an identity architect designing Conditional Access
+policies may never trace a `VTL0`-to-`VTL1` `VMCALL`. Before [Chapter 1](16-secure-boot.md)
+begins at the CPU reset vector, this primer establishes the shared concepts and
+vocabulary that connect all twenty-three chapters into a single argument.
 
-## 1. Trust, the TCB, and Serviced Boundaries
+## Trust, the TCB, and Serviced Boundaries
 
-**Trusted Computing Base (`TCB`).** The complete set of hardware, firmware, and
-software components whose malfunction or compromise breaks a specific security
-invariant. Shrinking the `TCB` is the primary design lever of modern Windows:
-Credential Guard ([Chapter 12](08-credential-guard.md)) removes the multi-million-line `VTL0` NT kernel
-and third-party driver ecosystem from the `TCB` protecting domain password hashes,
-replacing them with the Hyper-V hypervisor, the tiny `VTL1` Secure Kernel, and
-`LsaIso.exe`.
+Every chapter in this book evaluates mechanisms through three structural ideas:
+the Trusted Computing Base, the root of trust, and the serviced security
+boundary. The *Trusted Computing Base* (`TCB`) is the complete set of hardware,
+firmware, and software components whose malfunction or compromise breaks a
+specific security invariant. Shrinking the `TCB` for high-value secrets is the
+central architectural lever of modern Windows. When Credential Guard
+([Chapter 12](08-credential-guard.md)) moves domain password hashes out of `lsass.exe`, it removes
+the multi-million-line `VTL0` NT kernel and every third-party kernel driver from
+the `TCB` protecting those credentials, leaving only the Hyper-V hypervisor, the
+compact `VTL1` Secure Kernel, and the `LsaIso.exe` trustlet.
 
-**Root of Trust.** A foundational component whose integrity must be assumed
-rather than verified by lower software because nothing executes beneath it. Hardware
-roots of trust (`Intel Boot Guard`, `AMD Hardware Validated Boot`, `TPM 2.0`,
-`Microsoft Pluton`) anchor verification in immutable mask ROM and one-time-programmable
-silicon fuses.
+Every `TCB` terminates downward in a *root of trust*: a foundational component
+whose integrity must be assumed rather than verified by lower software because
+nothing executes beneath it. On contemporary x86 and ARM64 PCs, roots of trust
+live in immutable mask ROM and one-time-programmable silicon fuses (`Intel Boot
+Guard`, `AMD Hardware Validated Boot`, `TPM 2.0`, and `Microsoft Pluton`),
+anchoring verification before mutable flash code runs.
 
-**Security Boundary.** An isolation wall defined in the *Microsoft Security
-Servicing Criteria* across domains of distinct trust (`Ring 3` user mode to
-`Ring 0` kernel mode, guest VM to hypervisor, `VTL0` to `VTL1`, and cross-machine
-network interfaces). A vulnerability crossing a serviced security boundary earns
-a CVE and a mandatory security patch; crossing a non-boundary feature requires
-compensating architectural layers.
+Surrounding those components are *security boundaries* as defined in the
+Microsoft Security Servicing Criteria. A serviced boundary separates domains of
+distinct trust: `Ring 3` user processes from `Ring 0` kernel memory, guest
+virtual machines from the host hypervisor, `VTL0` normal world from `VTL1` secure
+world, and cross-machine network interfaces. Vulnerabilities that cross a
+serviced boundary receive mandatory security patches and CVEs; features that sit
+inside a single trust domain (such as default same-user `UAC` or discretionary
+`AppLocker` rules against a local administrator) provide defense in depth only
+when backed by a true boundary beneath them.
 
-## 2. The Silicon Tier
+## Silicon and Pre-OS Roots
 
-**UEFI Secure Boot (`PK`, `KEK`, `DB`, `DBX`).** Firmware policy enforcing that
-pre-OS UEFI images (`bootmgfw.efi`, `winload.efi`, Option ROMs) carry valid
-`Authenticode` signatures chaining to `DB` while absent from the `DBX` revocation
-list ([Chapter 1](16-secure-boot.md)). Secure Boot *prevents* unauthorized pre-OS code execution.
+Platform startup divides responsibility between active prevention and passive
+measurement. `UEFI Secure Boot` ([Chapter 1](16-secure-boot.md)) acts as the pre-OS gatekeeper,
+requiring every EFI binary (`bootmgfw.efi`, `winload.efi`, and PCIe Option ROMs)
+to carry a valid `Authenticode` signature chaining to the allowlist database
+(`DB`) while remaining absent from the revocation database (`DBX`), governed up
+to the Platform Key (`PK`) and Key Exchange Keys (`KEK`).
 
-**Trusted Platform Module (`TPM 2.0`) and `Pluton`.** Tamper-resistant
-cryptoprocessors (`ISO/IEC 11889`) generating non-exportable keys, enforcing
-anti-hammering dictionary-attack lockouts, and maintaining Platform
-Configuration Registers (`PCRs`, [Chapter 2](01-tpm.md) and [Chapter 3](02-pluton.md)). Discrete `dTPMs` sit on
-external `SPI`/`LPC` buses; firmware `fTPMs` execute in CPU secure enclaves;
-`Microsoft Pluton` integrates the security processor directly onto the CPU die.
-
-**Measured Boot (`Extend`), Sealing, and Attestation.** Unlike `Secure Boot`
-(which blocks), `Measured Boot` ([Chapter 4](03-measured-boot.md)) *records* every boot component
-into `TPM` `PCRs` via one-way hash chaining:
+Whereas Secure Boot decides whether early code may run, the `Trusted Platform
+Module` (`TPM 2.0`, [Chapter 2](01-tpm.md)) and on-die `Microsoft Pluton` processor
+([Chapter 3](02-pluton.md)) provide tamper-resistant key custody, dictionary-attack
+lockouts, and `Platform Configuration Registers` (`PCRs`). Across `Measured Boot`
+([Chapter 4](03-measured-boot.md)), each stage hashes the next before transferring control and
+extends that digest irreversibly into `TPM` `PCRs`:
 
 $$\text{PCR}_{\text{new}} = H(\text{PCR}_{\text{old}} \parallel \text{digest})$$
 
-Sealing binds a secret (such as a BitLocker Volume Master Key) so the `TPM`
-unseals it only when `PCRs` match an expected boot profile. Remote Attestation
-([Chapter 5](04-attestation.md)) signs `PCR` values and the `WBCL` event log with a hardware-rooted
-Attestation Identity Key (`AIK`) so an external verifier can audit boot health.
+Local *sealing* binds secrets (such as a `BitLocker` Volume Master Key) to an
+expected `PCR` digest so the `TPM` releases the key only when the boot sequence
+matches. *Remote attestation* ([Chapter 5](04-attestation.md)) signs those `PCR` values alongside
+the Windows Boot Configuration Log (`WBCL`) using a hardware-rooted Attestation
+Identity Key (`AIK`), turning local boot history into cryptographic evidence a
+remote verifier can appraise.
 
-## 3. The Kernel and Code-Integrity Tier
+## Kernel Isolation and Code Integrity
 
-**Privilege Rings vs. Virtual Trust Levels (`VTL0` / `VTL1`).** On x86-64,
-applications run in `Ring 3` (user mode) and `ntoskrnl.exe` plus drivers run in
-`Ring 0` (kernel mode). Because a single vulnerable `Ring 0` driver compromises
-all of normal kernel memory, Virtualization-Based Security (`VBS`, [Chapter 6](05-secure-kernel.md))
-uses the Hyper-V hypervisor and CPU Second-Level Address Translation (`SLAT`)
-to partition a single OS into orthogonal Virtual Trust Levels: `VTL0`
-(normal `ntoskrnl.exe` and apps) and `VTL1` (`securekernel.exe` and Isolated
-User Mode trustlets such as `LsaIso.exe` and `BioIso.exe`). Even `Ring 0` code
-in `VTL0` cannot read or execute `VTL1` pages.
+On classic x86-64 hardware, applications execute in `Ring 3` and `ntoskrnl.exe`
+shares `Ring 0` with every loaded device driver, meaning a single memory-corrupting
+third-party driver compromises all of traditional kernel RAM. `Virtualization-Based
+Security` (`VBS`, [Chapter 6](05-secure-kernel.md)) breaks that all-or-nothing kernel model by
+placing the Hyper-V hypervisor beneath the OS and using Second-Level Address
+Translation (`SLAT`) to partition a single machine into orthogonal Virtual Trust
+Levels. Normal `ntoskrnl.exe` and applications inhabit `VTL0`, while
+`securekernel.exe` and Isolated User Mode (`IUM`) trustlets (`LsaIso.exe`,
+`BioIso.exe`, `KeyIso`, and `VBS Enclaves`) inhabit `VTL1`, whose physical memory
+pages are unmapped in `VTL0`'s nested page tables.
 
-**`Authenticode`, `HVCI`, and Application Control (`WDAC`).** `Authenticode`
-([Chapter 7](06-code-integrity.md)) signs Portable Executable (`PE`) structural hashes inline or via
-detached `.cat` catalog files. Hypervisor-Protected Code Integrity (`HVCI`)
-moves kernel page-permission enforcement into `VTL1` (`W^X` across `SLAT` tables),
-while App Control for Business (`WDAC`) restricts user- and kernel-mode
-execution to explicitly trusted publishers and hashes, countered offensively by
-Bring Your Own Vulnerable Driver (`BYOVD`).
+Atop `VBS`, `Code Integrity` ([Chapter 7](06-code-integrity.md)) validates `Authenticode` Portable
+Executable (`PE`) signatures and `.cat` catalogs. `Hypervisor-Protected Code
+Integrity` (`HVCI`) moves kernel `W^X` page-permission enforcement into `VTL1` so
+even an arbitrary `VTL0` kernel write cannot mint executable shellcode, while `App
+Control for Business` (`WDAC`) restricts user and kernel binaries to approved
+publishers, leaving Bring Your Own Vulnerable Driver (`BYOVD`) as the primary
+residual battleground. Within `VTL0` user mode, `Protected Process Light` (`PPL`,
+[Chapter 8](18-ppl.md)) ranks sensitive system and antimalware processes inside
+`_EPROCESS.Protection` to strip `PROCESS_VM_READ` and `PROCESS_VM_WRITE` from
+unprotected administrative handles, while `Process Mitigation Policies`
+([Chapter 9](19-mitigations.md)) enforce `ACG`, forward-edge `CFG`/`XFG`, and hardware `CET` Shadow
+Stacks against in-process memory corruption.
 
-**Protected Process Light (`PPL`) and Exploit Mitigations.** `PPL`
-([Chapter 8](18-ppl.md)) assigns signer-ranked protection levels (`WinTcb`, `Lsa`,
-`Antimalware`) inside `_EPROCESS`, stripping `PROCESS_VM_READ`/`WRITE` from
-unprotected administrative handles. Process Mitigation Policies ([Chapter 9](19-mitigations.md),
-including `ACG`, `CFG`, and hardware `CET` Shadow Stacks) constrain memory
-corruption exploitation inside individual processes.
+## Access Control, Data Custody, and Credentials
 
-## 4. The Access-Control and Credential Tier
+Once code is running, the kernel Security Reference Monitor governs local object
+access through `SeAccessCheck` ([Chapter 10](25-access-control.md)). Every process and thread
+carries an Access Token encoding user and group Security Identifiers (`SIDs`),
+privileges such as `SeDebugPrivilege` and `SeImpersonatePrivilege`, `AppContainer`
+sandbox capabilities, and a Mandatory Integrity Level (`Low`, `Medium`, `High`,
+or `System`) evaluated ahead of Discretionary Access Control Lists (`DACLs`).
+Persistent data and application keys rest on `BitLocker` (`fvevol.sys`), `DPAPI`
+and `DPAPI-NG`, and `VTL1`-backed `CNG KeyIso` ([Chapter 11](30-data-protection.md)).
 
-**`SIDs`, Access Tokens, `DACLs`, Integrity Levels (`MIC`), and Impersonation.**
-Every principal holds a Security Identifier (`SID`). Upon logon, the kernel
-attaches an Access Token listing user/group `SIDs`, Privileges (such as
-`SeDebugPrivilege` and `SeImpersonatePrivilege`), and a Mandatory Integrity
-Level (`Low`, `Medium`, `High`, `System`) evaluated before Discretionary Access
-Control Lists (`DACLs`) via `SeAccessCheck` ([Chapter 10](25-access-control.md)). Volume sectors at rest and local application key containers are protected by `BitLocker` (`fvevol.sys`), `DPAPI` / `DPAPI-NG`, and `VTL1` `CNG KeyIso` ([Chapter 11](30-data-protection.md)).
+Network authentication flows through pluggable Security Support Providers (`SSPs`)
+hosted inside `lsass.exe` and split across `VTL1` by `Credential Guard`
+([Chapter 12](08-credential-guard.md)). Legacy `NTLM` (`msv1_0.dll`, [Chapter 13](09-ntlm.md)) computes
+challenge-response proofs directly over the unsalted `MD4(UTF-16LE(password))`
+`NTOWF` hash, making stored hashes password-equivalent (`Pass-the-Hash`) and
+exposing unbound sessions to relay until `IAKerb` and `Local KDC` complete its
+retirement. Active Directory `Kerberos` (`kerberos.dll`, [Chapter 14](10-kerberos.md)) replaces
+hash challenges with Key Distribution Center (`KDC`) tickets carrying `[MS-PAC]`
+authorization data signed under the realm `krbtgt` (`RID 502`) key, operating
+alongside `AD CS` public-key infrastructure (`PKINIT`), `Windows LAPS`, and
+managed service accounts (`gMSA` and `dMSA`) in [Chapter 15](31-enterprise-pki.md). For hybrid
+and cloud single sign-on, `cloudap.dll` ([Chapter 16](11-pth-prt.md)) brokers `TPM`-bound
+Primary Refresh Tokens (`PRTs`), while `Windows Hello` and `WebAuthn` passkeys
+([Chapter 17](12-hello.md)) replace shared secrets altogether with gesture-gated asymmetric
+signatures bound to relying-party origins.
 
-**`LSASS`, `SSPs`, `NTLM`, `Kerberos`, and `AD CS`.** `lsass.exe` hosts pluggable
-Security Support Providers (`SSPs`) ([Chapter 12](08-credential-guard.md)):
-* **`msv1_0.dll` (`NTLM`, [Chapter 13](09-ntlm.md)):** Challenge-response over the unsalted
-  `MD4(UTF-16LE(password))` `NTOWF` hash, making the stored hash directly
-  password-equivalent (`Pass-the-Hash`) and vulnerable to cross-protocol relay.
-* **`kerberos.dll` (`Kerberos`, [Chapter 14](10-kerberos.md)) and `AD CS` ([Chapter 15](31-enterprise-pki.md)):** Key Distribution Center (`KDC`)
-  three-phase ticket protocol (`AS`, `TGS`, `AP`) carrying `[MS-PAC]` group `SIDs`
-  signed under `krbtgt` (`RID 502`), paired with Enterprise PKI (`PKINIT`) and
-  managed service accounts (`gMSA` and `dMSA`).
-* **`cloudap.dll` (`CloudAP`, [Chapter 16](11-pth-prt.md)):** Brokers Microsoft Entra ID
-  Primary Refresh Tokens (`PRTs`) paired with `TPM`-protected session keys.
-* **Windows Hello (`NGC`) and `WebAuthn` Passkeys ([Chapter 17](12-hello.md)):** Replace
-  shared remote secrets with local gesture-gated (`PIN` or `ESS` biometric)
-  asymmetric signatures bound to `TPM 2.0` and relying-party origins (`rpId`).
+## Telemetry, Cloud Policy, AI Agents, and Confidential Compute
 
-## 5. Telemetry and the Cloud Tier
+Across all host layers, `Event Tracing for Windows` (`ETW`, [Chapter 18](28-etw.md)) feeds
+lock-free per-CPU kernel ring buffers, combining user-mode runtime providers
+(`AMSI`, `PowerShell`, `.NET`) with kernel-emitted
+`Microsoft-Windows-Threat-Intelligence` (`EtwTi`) syscall sensors and modern
+out-of-kernel endpoint security APIs.
 
-**Event Tracing for Windows (`ETW` and `EtwTi`).** High-throughput, per-CPU
-kernel ring-buffer event bus ([Chapter 18](28-etw.md)) uniting user-mode providers (`AMSI`,
-`PowerShell`, `.NET`) with kernel-emitted `Microsoft-Windows-Threat-Intelligence`
-(`EtwTi`) memory-syscall telemetry gated behind `Antimalware-PPL` + `ELAM`.
+Part IV lifts those host guarantees into the cloud. `Microsoft Entra Conditional
+Access` ([Chapter 19](13-zero-trust.md)) acts as a `NIST SP 800-207` Policy Decision Point (`PDP`)
+evaluating identity, `PRT` device binding, MDM compliance, and Defender XDR risk
+at token issuance (`t = 0`), while `Continuous Access Evaluation` (`CAE`,
+[Chapter 20](14-cae.md)) pushes mid-session revocations (`t > 0`) to Resource Providers via
+`HTTP 401` claims challenges. Because non-human workloads and nondeterministic AI
+agents break interactive human session assumptions, Windows 11 `Agent Workspace`
+and `Microsoft Entra Agent ID` ([Chapter 21](32-agent-security.md)) isolate agent execution and
+bound `On-Behalf-Of` delegation against confused-deputy prompt injection. Finally,
+`Azure Confidential VMs` ([Chapter 22](29-confidential-vms.md)) pair `AMD SEV-SNP` and `Intel TDX`
+memory encryption with `OpenHCL` `vTPM` attestation to exclude the cloud host
+hypervisor from the guest memory `TCB`, setting the stage for [Chapter 23](15-storm0558.md)'s
+analysis of `Storm-0558`, where a compromised cloud signing key and an omitted
+issuer check snapped the top of the chain while every lower link held.
 
-**Zero Trust (`PDP`/`PEP`), `CAE`, AI Agents, and Confidential VMs.** Microsoft Entra
-Conditional Access ([Chapter 19](13-zero-trust.md)) acts as a `NIST SP 800-207` Policy Decision
-Point (`PDP`) evaluating identity, `PRT` device binding, Intune compliance, and
-Defender XDR risk at token issuance (`t = 0`). Continuous Access Evaluation
-(`CAE`, [Chapter 20](14-cae.md)) pushes mid-session revocations (`t > 0`) to Resource
-Providers via `HTTP 401` claims challenges; Windows 11 `Agent Workspace` and
-`Microsoft Entra Agent ID` ([Chapter 21](32-agent-security.md)) bound non-human workloads and AI
-agents against confused-deputy prompt injection; and Azure Confidential VMs
-([Chapter 22](29-confidential-vms.md)) use `AMD SEV-SNP` and `Intel TDX` inline memory encryption plus
-`OpenHCL` `vTPM` attestation to remove the cloud host hypervisor from the guest
-`TCB`.
+## Primary Sources and Live Verification
 
-## 6. Primary Sources and Live Verification
-
-Every architectural claim in this book is referenced inline (`[N]`) to the
-master bibliography ([References](../back-matter/70-references.md)), prioritizing normative specifications (`UEFI`,
-`TCG TPM 2.0`, `IETF RFCs`, `W3C WebAuthn`, `NIST SPs`, `[MS-KILE]`/`[MS-PAC]`,
-and `Microsoft Learn`), peer-reviewed papers, and federal incident reviews
-(`CSRB`, `CISA`). Rather than asking you to trust prose descriptions of Windows
-internals, Section 6 of every chapter (*Inspecting and Verifying on a Running
-System*) provides concise, read-only PowerShell, Win32, registry, and cloud CLI
-commands so you can inspect each boundary directly on a live endpoint or tenant.
+Every architectural claim in this book is cited inline (`[N]`) to the master
+bibliography in the [References](../back-matter/70-references.md), prioritizing normative specifications
+(`UEFI`, `TCG TPM 2.0`, `IETF RFCs`, `W3C WebAuthn`, `NIST SPs`, `[MS-*]`
+protocol documents, and `Microsoft Learn`), peer-reviewed papers, and official
+incident post-mortems (`CSRB`, `CISA`). Rather than asking you to take prose
+descriptions on faith, the sixth section of every chapter (*Inspecting and
+Verifying on a Running System*) provides concise, read-only PowerShell, Win32,
+registry, and cloud CLI queries so you can verify live enforcement state on your
+own systems.
 
 ![Figure: The trust chain as one spine: a map of this book. Each part inherits its security from the part below it: Silicon roots the chain at the foundation; the Kernel and its code sit above it; Credentials and Access spend the trust those layers protect; and Cloud rides near the top, where the machine boundary becomes one signal among many. The Interlude observes every link from the side, and the Finale is what happens when a link inherits more authority than the link below it meant to grant. The argument of the entire book is the direction of the arrows: trust is inherited, never asserted.](diagrams/trust-chain-map.svg)

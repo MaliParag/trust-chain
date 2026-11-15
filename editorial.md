@@ -57,9 +57,14 @@ Every chapter follows a strict, predictable structural progression:
 * **Instead:** Present diagnostic commands cleanly, accompanied by expected output schemas, registry paths, and programmatic verification logic.
 
 ### Typographic Restraint (No Inline Prose or Table Bolding)
-* **Rule:** Reserve boldface (`**...**`) strictly for structural labels: leading labels on bulleted or numbered list items (`* **Role in the Chain:**`), callout titles (`> **Key idea.**`), and standalone glossary/definition headings.
-* **Avoid:** Bolding technical terms, numbers, CVEs, code spans (`**\`code\`**`), table cells, or entire thesis clauses inside body paragraphs.
+* **Rule:** Reserve boldface (`**...**`) strictly for structural labels: leading labels on the 5 `Overview` list items (`* **Role in the Chain:**`), occasional compact ordered-step labels, callout titles (`> **Key idea.**`), and standalone glossary headings in `80-glossary.md`.
+* **Avoid:** Bolding technical terms, numbers, CVEs, code spans (`**\`code\`**`), table cells, paragraph-opening dictionary labels in narrative chapters, or entire thesis clauses inside body paragraphs.
 * **Instead:** Let sentence structure carry emphasis, use monospace backticks (`\`symbol\``) for identifiers, and reserve *italics* sparingly for genuine one- or two-word semantic contrast.
+
+### Prose-First Narrative Flow (Book Cadence Over Slide Outlines)
+* **Rule:** Write chapters primarily in sustained, connected paragraphs (`>= 65%` of chapter text, `<= 18%` in lists, and at most `11` total list items per chapter including the 5 `Overview` bullets).
+* **Avoid:** Stringing together long `80+`-word `* **Bold Lead:**` pseudo-paragraphs across `Core Engineering Problem`, `Architectural Deep Dive`, `Attack Catalog & Gap Analysis`, `Theoretical Limits`, or `Summary & Handoff`, which creates a fragmented slide-deck or wiki cadence.
+* **Instead:** Reserve lists strictly for the 5-item `Overview` ledger and at most one compact, genuinely sequential protocol or gate enumeration per chapter. Convert multi-part analyses, failure progressions, theoretical invariants, and chapter handoffs into cohesive narrative paragraphs bridged by logical transitions and `###` subheadings where appropriate.
 
 ---
 

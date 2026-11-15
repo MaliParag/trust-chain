@@ -14,7 +14,7 @@ All volumes share the portable craft standards in [`editorial.md`](editorial.md)
 ## Workflow
 
 1. Edit the relevant volume under `books/<windows|apple|linux|android>/src/`.
-2. Preview a single volume with `mdbook serve books/<slug> --open`, or build the entire multi-volume site into `./book` with `npm run build`.
+2. Preview a single volume with `(cd books/<slug> && mdbook serve --open)`, or build the entire multi-volume site into `./book` with `npm run build`.
 3. If chapter titles or reading order change in `books/<slug>/house.json`, run `npm run summary`.
 4. Run `npm run audit` (`python3 tools/audit_book.py`) to verify all volumes pass editorial, citation, and link checks.
 5. Open a pull request naming the primary specification or live OS build used to verify the change.

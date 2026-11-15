@@ -30,7 +30,7 @@ npm run audit                        # run editorial, citation, & link checks ac
 npm run summary                      # regenerate SUMMARY.md for all volumes (or -- --book apple)
 npm run build                        # build all 4 volumes + series portal into ./book
 npm run pdf -- --book windows        # build 7 x 9.25 in PDF edition with full-bleed vector covers
-mdbook serve books/apple --open      # live-reload preview while authoring a specific volume
+(cd books/apple && mdbook serve --open) # live-reload preview while authoring a specific volume
 ```
 
 ## Repository Layout

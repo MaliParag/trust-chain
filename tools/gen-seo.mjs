@@ -29,8 +29,9 @@ for (const vol of REGISTRY.volumes) {
   if (!vol.mount) continue;
   const volBookToml = path.join(ROOT, vol.dir, 'book.toml');
   if (!existsSync(volBookToml)) continue;
+  const volDir = path.join(ROOT, vol.dir);
   const destDir = path.join(BOOK_DIR, vol.mount);
-  execFileSync('mdbook', ['build', path.join(ROOT, vol.dir), '-d', destDir], { stdio: 'inherit' });
+  execFileSync('mdbook', ['build', '-d', destDir], { cwd: volDir, stdio: 'inherit' });
 }
 
 function esc(s) {

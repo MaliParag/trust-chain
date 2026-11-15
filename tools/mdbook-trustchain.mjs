@@ -87,6 +87,58 @@ function wrapDiv(classes, innerLines) {
   return ['', `<div class="${classes.join(' ')}">`, '', ...trimBlankLines(innerLines), '', '</div>', ''];
 }
 
+// Convert `## Overview` + `* **Label:** value` items into a designed, colored
+// outlined `<div class="chapter-overview">` specification card with zero bullet
+// dots, while keeping blank-line boundaries so mdBook's CommonMark parser still
+// processes `## Overview` (`id="overview"`), `.md` links, and inline code.
+function convertOverview(lines) {
+  const out = [];
+  let i = 0;
+  while (i < lines.length) {
+    if (/^##\s+Overview\s*$/.test(lines[i])) {
+      const headingLine = lines[i];
+      i++;
+      const block = [];
+      while (i < lines.length && !/^##\s+/.test(lines[i])) {
+        block.push(lines[i]);
+        i++;
+      }
+      // Parse contiguous `* **Key:** Value` items (supporting wrapped continuation lines)
+      const items = [];
+      for (const bl of block) {
+        const m = bl.match(/^\s*[-*]\s+\*\*(.+?):?\*\*:?\s*(.*)$/);
+        if (m) {
+          items.push({ key: m[1].replace(/:$/, '').trim(), val: m[2].trim() });
+        } else if (items.length > 0 && bl.trim() !== '') {
+          items[items.length - 1].val += ' ' + bl.trim();
+        }
+      }
+      if (items.length > 0) {
+        out.push('', '<div class="chapter-overview">', '', headingLine, '', '<div class="overview-grid">');
+        for (const it of items) {
+          out.push(
+            '<div class="overview-row">',
+            `<div class="overview-key">${escapeHtml(it.key)}</div>`,
+            '<div class="overview-val">',
+            '',
+            it.val,
+            '',
+            '</div>',
+            '</div>'
+          );
+        }
+        out.push('</div>', '</div>', '');
+        continue;
+      }
+      out.push(headingLine, ...block);
+      continue;
+    }
+    out.push(lines[i]);
+    i++;
+  }
+  return out;
+}
+
 // Convert `::: trust-ledger ... :::` fenced divs to HTML div wrappers.
 function convertTrustLedger(lines) {
   const out = [];
@@ -282,6 +334,7 @@ function transform(content, chPath = '') {
   content = linkCitations(content, chPath);
   content = renderMath(content);
   let lines = content.split('\n');
+  lines = convertOverview(lines);
   lines = convertTrustLedger(lines);
   lines = convertBlockquotes(lines);
   let text = lines.join('\n');

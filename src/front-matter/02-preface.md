@@ -23,8 +23,8 @@ cannot design compensating controls above it.
 
 ## Audience and Scope
 
-This book is written for **systems security architects, principal detection
-engineers, incident responders, and platform engineers** who need an exact,
+This book is written for systems security architects, principal detection
+engineers, incident responders, and platform engineers who need an exact,
 mechanism-level model of what modern Windows protects and why. It is neither an
 offensive exploitation manual nor an introductory administration guide. When
 offensive tradecraft appears in these pages, from UEFI bootkits and vulnerable

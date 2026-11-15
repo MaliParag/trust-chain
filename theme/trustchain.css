@@ -12,6 +12,12 @@
     --tc-def: #2b5d8a;
     --tc-quote: #6a7b52;
     --tc-warn-ink: #a23b2c; --tc-warn-bg: #f7ece9;
+    --tc-ov-bg: #f2f6fb;
+    --tc-ov-hdr: #e4eef8;
+    --tc-ov-border: #366393;
+    --tc-ov-accent: #234b76;
+    --tc-ov-key: #1e446b;
+    --tc-ov-div: rgba(45, 88, 134, 0.16);
 }
 .navy, .coal, .ayu {
     --tc-cap-ink: #6fcf97; --tc-cap-bg: #13241a;
@@ -20,6 +26,12 @@
     --tc-def: #6c9cc7;
     --tc-quote: #9bb06f;
     --tc-warn-ink: #d98a7e; --tc-warn-bg: #241412;
+    --tc-ov-bg: #121e2f;
+    --tc-ov-hdr: #18283e;
+    --tc-ov-border: #4373a8;
+    --tc-ov-accent: #689fd8;
+    --tc-ov-key: #8cbbf0;
+    --tc-ov-div: rgba(120, 165, 215, 0.16);
 }
 
 /* --- Preview banner: injected on every page by theme/preview-banner.js. ---- */
@@ -36,6 +48,65 @@
 #preview-banner strong { color: var(--tc-emu-ink); }
 @media print {
     #preview-banner { display: none; }
+}
+
+/* --- Chapter Overview: colored, outlined 5-coordinate specification card. -- */
+.chapter-overview {
+    margin: 1.5rem 0 2rem;
+    border: 1.5px solid var(--tc-ov-border);
+    border-left: 5px solid var(--tc-ov-accent);
+    border-radius: 7px;
+    background: var(--tc-ov-bg);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.chapter-overview > h2 {
+    margin: 0 !important;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.78rem !important;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--tc-ov-hdr);
+    border-bottom: 1px solid var(--tc-ov-div);
+    color: var(--tc-ov-key);
+}
+.chapter-overview > h2 a.header {
+    color: inherit !important;
+    text-decoration: none;
+}
+.overview-grid {
+    display: flex;
+    flex-direction: column;
+}
+.overview-row {
+    display: grid;
+    grid-template-columns: 13.5rem 1fr;
+    gap: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-bottom: 1px solid var(--tc-ov-div);
+    align-items: baseline;
+    font-size: 0.94em;
+    line-height: 1.5;
+}
+.overview-row:last-child {
+    border-bottom: 0;
+}
+.overview-key {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--tc-ov-key);
+}
+.overview-val p {
+    margin: 0;
+}
+@media (max-width: 640px) {
+    .overview-row {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
 }
 
 /* --- Trust ledger: the signature boxed sidebar opening each chapter. ------ */

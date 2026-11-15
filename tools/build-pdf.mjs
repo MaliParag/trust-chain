@@ -443,6 +443,53 @@ td code, th code {
   word-break: break-word !important;
 }
 
+/* Chapter Overview Box (Print PDF) */
+.chapter-overview {
+  margin: 10pt 0 14pt 0;
+  border: 1pt solid #366393;
+  border-left: 3.6pt solid #1f466e;
+  border-radius: 5pt;
+  background: #f3f7fc;
+  overflow: hidden;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.chapter-overview > h2 {
+  margin: 0 !important;
+  padding: 5pt 10pt !important;
+  font-size: 7.6pt !important;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #e5eff9;
+  border-bottom: 0.6pt solid #c6d8ec !important;
+  color: #1e446b !important;
+}
+.overview-row {
+  display: grid;
+  grid-template-columns: 1.55in 1fr;
+  gap: 8pt;
+  padding: 4.5pt 10pt;
+  border-bottom: 0.5pt solid #d5e2f0;
+  align-items: baseline;
+  font-size: 8.7pt;
+  line-height: 1.38;
+}
+.overview-row:last-child {
+  border-bottom: 0;
+}
+.overview-key {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 7.2pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1e446b;
+}
+.overview-val p {
+  margin: 0;
+}
+
 /* Trust-Chain Ledger & Callouts */
 .trust-ledger {
   margin: 10pt 0 12pt 0;

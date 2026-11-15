@@ -62,9 +62,9 @@ Every chapter follows a strict, predictable structural progression:
 * **Instead:** Let sentence structure carry emphasis, use monospace backticks (`\`symbol\``) for identifiers, and reserve *italics* sparingly for genuine one- or two-word semantic contrast.
 
 ### Prose-First Narrative Flow (Book Cadence Over Slide Outlines)
-* **Rule:** Write chapters primarily in sustained, connected paragraphs (`>= 65%` of chapter text, `<= 18%` in lists, and at most `11` total list items per chapter including the 5 `Overview` bullets).
-* **Avoid:** Stringing together long `80+`-word `* **Bold Lead:**` pseudo-paragraphs across `Core Engineering Problem`, `Architectural Deep Dive`, `Attack Catalog & Gap Analysis`, `Theoretical Limits`, or `Summary & Handoff`, which creates a fragmented slide-deck or wiki cadence.
-* **Instead:** Reserve lists strictly for the 5-item `Overview` ledger and at most one compact, genuinely sequential protocol or gate enumeration per chapter. Convert multi-part analyses, failure progressions, theoretical invariants, and chapter handoffs into cohesive narrative paragraphs bridged by logical transitions and `###` subheadings where appropriate.
+* **Rule:** Outside the 5-coordinate `## Overview` specification box (and reference back matter such as `70-references.md` and `95-index.md`), write the entire book in sustained, connected narrative paragraphs (`0` bulleted or numbered lists in front matter, `Prologue`, `Foundations`, chapter bodies, or `About`).
+* **Avoid:** Bullet lists or numbered lists anywhere in `Core Engineering Problem`, `Architectural Deep Dive`, `Attack Catalog & Gap Analysis`, `Theoretical Limits`, `Inspecting and Verifying`, `Summary & Handoff`, or front matter, even for multi-step protocols or architectural gates.
+* **Instead:** Walk through protocol exchanges, verification gates, failure progressions, theoretical invariants, and chapter handoffs in cohesive paragraphs connected by clear transitions (*"First, ..."*, *"Once the digest is computed, ..."*, *"At the third stage, ..."*) and `###` subheadings where appropriate.
 
 ---
 

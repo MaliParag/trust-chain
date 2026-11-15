@@ -29,7 +29,7 @@ accepts no liability for any loss or damage arising from its use.
 
 All trademarks are the property of their respective owners. *Windows*, *Azure*,
 *Entra*, *Hyper-V*, *Active Directory*, and related names are trademarks of
-Microsoft Corporation. This book is an independent work and is **not affiliated
-with, authorized by, or endorsed by Microsoft Corporation.**
+Microsoft Corporation. This book is an independent work and is not affiliated
+with, authorized by, or endorsed by Microsoft Corporation.
 
 First edition · 2026

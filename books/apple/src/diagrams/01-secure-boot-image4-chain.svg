@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 389" width="920" height="389">
+<rect x="0" y="0" width="920" height="389" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">APPLE SILICON SECURE BOOT PIPELINE &amp; IMAGE4 MANIFEST VERIFICATION</text>
+<rect x="24.0" y="54.0" width="148.8" height="98.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="98.4" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">STAGE 0 · MASK ROM</text>
+<text x="98.4" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Boot ROM</text>
+<text x="98.4" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Immutable silicon code</text>
+<text x="98.4" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">&amp; Apple Root CA</text>
+<text x="98.4" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">pubkey hash</text>
+<rect x="204.8" y="54.0" width="148.8" height="98.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="279.2" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">STAGE 1 · NOR/ANS</text>
+<text x="279.2" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">LLB</text>
+<text x="279.2" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Low-Level Bootloader</text>
+<text x="279.2" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">verified via Image4</text>
+<text x="279.2" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">IM4M</text>
+<rect x="385.6" y="54.0" width="148.8" height="98.0" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="460.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">STAGE 2 · LOADER</text>
+<text x="460.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">iBoot</text>
+<text x="460.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Configures</text>
+<text x="460.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">AppleDART, loads SEP</text>
+<text x="460.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">fw &amp; BootKC/XNU</text>
+<rect x="566.4" y="54.0" width="148.8" height="98.0" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="640.8" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="middle">STAGE 3 · MONITORS</text>
+<text x="640.8" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">SPTM &amp; TXM</text>
+<text x="640.8" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Initializes GL2 page</text>
+<text x="640.8" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">tables &amp; static trust</text>
+<text x="640.8" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">caches</text>
+<rect x="747.2" y="54.0" width="148.8" height="98.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="821.6" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">STAGE 4 · KERNEL</text>
+<text x="821.6" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">XNU &amp; SSV</text>
+<text x="821.6" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Verifies APFS root</text>
+<text x="821.6" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">seal hash from Image4</text>
+<text x="821.6" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">ticket</text>
+<rect x="169.2" y="210.0" width="220.0" height="126.8" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="279.2" y="231.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">PER-DEVICE IMAGE4 CONTAINER</text>
+<text x="279.2" y="246.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">IMG4 = IM4P (Payload) + IM4M</text>
+<text x="279.2" y="261.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">(TSS Signed Manifest) + IM4R</text>
+<text x="279.2" y="276.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">(BNCH Nonce)</text>
+<text x="279.2" y="293.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Binds payload SHA-384 digest to</text>
+<text x="279.2" y="306.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">chip ECID, board/chip ID, security</text>
+<text x="279.2" y="320.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">domain, and boot nonce</text>
+<text x="460.0" y="360.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Every stage refuses to execute the next unless its IM4M signature chains to the Boot ROM root and matches this chip's ECID.</text>
+<line x1="172.8" y1="103.0" x2="198.3" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="204.8,103.0 196.3,99.0 196.3,107.0" fill="#365378"/>
+<line x1="353.6" y1="103.0" x2="379.1" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="385.6,103.0 377.1,99.0 377.1,107.0" fill="#365378"/>
+<line x1="534.4" y1="103.0" x2="559.9" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="566.4,103.0 557.9,99.0 557.9,107.0" fill="#365378"/>
+<line x1="715.2" y1="103.0" x2="740.7" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="747.2,103.0 738.7,99.0 738.7,107.0" fill="#365378"/>
+<line x1="279.2" y1="210.0" x2="279.2" y2="158.5" stroke="#8d2d3b" stroke-width="1.6"/>
+<polygon points="279.2,152.0 275.2,160.5 283.2,160.5" fill="#8d2d3b"/>
+<rect x="220.3" y="175.0" width="117.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="279.2" y="186.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">evaluates DER tags</text>
+</svg>

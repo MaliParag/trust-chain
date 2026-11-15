@@ -2,10 +2,11 @@
   "scripts": {
     "audit": "python3 tools/audit_book.py",
     "summary": "node tools/gen-summary.mjs",
-    "diagrams": "python3 books/windows/tools/gen_diagrams.py",
+    "diagrams": "python3 books/windows/tools/gen_diagrams.py && python3 books/apple/tools/gen_diagrams.py && python3 books/linux/tools/gen_diagrams.py && python3 books/android/tools/gen_diagrams.py",
     "covers": "python3 books/windows/tools/gen_covers.py && python3 tools/gen_series_covers.py",
     "build": "mdbook build && SITE_URL=https://maliparag.github.io/windows-trust-chain node tools/gen-seo.mjs && python3 tools/batch_readalong.py",
-    "pdf": "node tools/build-pdf.mjs"
+    "pdf": "node tools/build-pdf.mjs",
+    "pdfs": "node tools/build-pdf.mjs --book windows && node tools/build-pdf.mjs --book apple && node tools/build-pdf.mjs --book linux && node tools/build-pdf.mjs --book android"
   },
   "dependencies": {
     "katex": "^0.17.0"

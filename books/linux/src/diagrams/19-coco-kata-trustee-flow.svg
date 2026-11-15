@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 603" width="900" height="603">
+<rect x="0" y="0" width="900" height="603" fill="#ffffff"/>
+<line x1="127.5" y1="132.6" x2="127.5" y2="544.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="132.6" x2="342.5" y2="544.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="132.6" x2="557.5" y2="544.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="132.6" x2="772.5" y2="544.2" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="235.0" y1="72.0" x2="235.0" y2="544.2" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CONFIDENTIAL CONTAINERS (COCO): ENCLAVE-PER-POD BOOT AND TRUSTEE ATTESTATION</text>
+<rect x="34.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="127.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Untrusted Worker</text>
+<text x="127.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Kubelet + Kata Shim</text>
+<rect x="249.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="342.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Pod CVM Enclave</text>
+<text x="342.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Kata Agent + CDH + AA</text>
+<rect x="464.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="557.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Hardware TEE</text>
+<text x="557.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">SEV-SNP / TDX Silicon</text>
+<rect x="679.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="772.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Trustee (KBS)</text>
+<text x="772.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Remote Verifier &amp; Key Vault</text>
+<text x="450.0" y="574.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Container images are pulled and decrypted ONLY inside guest TEE memory; host Kubelet cannot inspect layers, env vars, or exec shells.</text>
+<line x1="127.5" y1="203.0" x2="336.0" y2="203.0" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="342.5,203.0 334.0,199.0 334.0,207.0" fill="#b07926"/>
+<line x1="342.5" y1="249.8" x2="766.0" y2="249.8" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="772.5,249.8 764.0,245.8 764.0,253.8" fill="#236b66"/>
+<line x1="772.5" y1="296.6" x2="349.0" y2="296.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="342.5,296.6 351.0,300.6 351.0,292.6" fill="#2b6a4c"/>
+<line x1="342.5" y1="369.0" x2="551.0" y2="369.0" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="557.5,369.0 549.0,365.0 549.0,373.0" fill="#5c4282"/>
+<line x1="557.5" y1="428.6" x2="349.0" y2="428.6" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,428.6 351.0,432.6 351.0,424.6" fill="#5c4282"/>
+<line x1="342.5" y1="475.4" x2="766.0" y2="475.4" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="772.5,475.4 764.0,471.4 764.0,479.4" fill="#236b66"/>
+<line x1="772.5" y1="522.2" x2="349.0" y2="522.2" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="342.5,522.2 351.0,526.2 351.0,518.2" fill="#2b6a4c"/>
+<rect x="128.4" y="50.9" width="213.2" height="18.2" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="235.0" y="62.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.5" font-weight="700" fill="#8d2d3b" text-anchor="middle">Untrusted Host / Encrypted Pod TEE</text>
+<rect x="146.1" y="150.5" width="177.8" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="161.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Launch encrypted Kata VM with</text>
+<text x="235.0" y="174.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">measured UKI + signed Initdata</text>
+<text x="235.0" y="187.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">digest</text>
+<rect x="392.1" y="223.5" width="330.8" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="234.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Attestation Agent (AA) requests RATS challenge over HTTPS</text>
+<rect x="461.9" y="270.3" width="191.2" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="281.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Return fresh cryptographic nonce</text>
+<rect x="359.3" y="316.5" width="181.3" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="327.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Request hardware quote binding</text>
+<text x="450.0" y="340.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">launch measurement + Initdata +</text>
+<text x="450.0" y="353.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">nonce</text>
+<rect x="365.2" y="389.2" width="169.7" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="400.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Return VCEK/PCK-signed</text>
+<text x="450.0" y="413.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">SEV-SNP Report / TDX Quote</text>
+<rect x="364.6" y="449.1" width="385.8" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="460.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Submit TEE Evidence; Trustee evaluates Reference Values + OPA policy</text>
+<rect x="358.0" y="495.9" width="398.9" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="507.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Release wrapped OCI layer decryption key to Confidential Data Hub (CDH)</text>
+</svg>

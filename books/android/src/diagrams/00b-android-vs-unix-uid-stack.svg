@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+<rect x="0" y="0" width="900" height="600" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="467.3" rx="8.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#6e1f2b" text-anchor="middle">DESKTOP UNIX (HUMAN-PER-UID)</text>
+<rect x="550.0" y="74.0" width="324.0" height="467.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">ANDROID MODEL (APP-PER-UID)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="545.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">AMBIENT-USER DESKTOP POSIX VS. ANDROID MUTUAL-DISTRUST APP ARCHITECTURE</text>
+<rect x="42.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">SHARED PRINCIPAL</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">All User Apps Run as UID 1000</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Game, PDF viewer, terminal, and browser</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">share one discretionary POSIX user identity</text>
+<rect x="42.0" y="259.8" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">AMBIENT FILE ACCESS</text>
+<text x="56.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Unmediated Home-Directory</text>
+<text x="56.0" y="313.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Read/Write</text>
+<text x="56.0" y="331.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Any compromised user binary reads ~/.ssh,</text>
+<text x="56.0" y="346.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">browser cookies, and personal documents</text>
+<rect x="42.0" y="405.5" width="292.0" height="117.8" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="56.0" y="427.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">DISCRETIONARY ROOT</text>
+<text x="56.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Unrestricted UID 0 Superuser</text>
+<text x="56.0" y="461.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Root processes commonly mount or modify</text>
+<text x="56.0" y="476.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">/usr and kernel modules unless extra MAC is</text>
+<text x="56.0" y="490.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">configured</text>
+<rect x="566.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">ISOLATED PRINCIPAL</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Distinct Kernel UID per App (u0_a* /</text>
+<text x="580.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">u0_i*)</text>
+<text x="580.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">PackageManager assigns unique AID at install;</text>
+<text x="580.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">WebView renderers run in zero-permission</text>
+<text x="580.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">u0_i* UIDs</text>
+<rect x="566.0" y="259.8" width="292.0" height="117.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="580.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">MANDATORY MEDIATION</text>
+<text x="580.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Enforcing SELinux + Binder + Scoped</text>
+<text x="580.0" y="313.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Storage</text>
+<text x="580.0" y="331.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">CTS neverallow rules, kernel Binder</text>
+<text x="580.0" y="346.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">caller-UID stamping, and fscrypt per-profile</text>
+<text x="580.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">CE/DE keys</text>
+<rect x="566.0" y="405.5" width="292.0" height="117.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="580.0" y="427.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CONSTRAINED ROOT</text>
+<text x="580.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">AVB 2.0 dm-verity + Domain-Split</text>
+<text x="580.0" y="459.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Daemons</text>
+<text x="580.0" y="477.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">UID 0 daemons carry zero ambient</text>
+<text x="580.0" y="492.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">capabilities where unneeded and cannot</text>
+<text x="580.0" y="506.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">mutate verified /system blocks</text>
+<text x="450.0" y="571.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">On Android, Linux UID isolation separates mutually distrusting applications belonging to the same human owner.</text>
+<line x1="188.0" y1="231.8" x2="188.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,259.8 192.0,251.3 184.0,251.3" fill="#4a5568"/>
+<line x1="188.0" y1="377.5" x2="188.0" y2="399.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,405.5 192.0,397.0 184.0,397.0" fill="#4a5568"/>
+<line x1="712.0" y1="231.8" x2="712.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,259.8 716.0,251.3 708.0,251.3" fill="#4a5568"/>
+<line x1="712.0" y1="377.5" x2="712.0" y2="399.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,405.5 716.0,397.0 708.0,397.0" fill="#4a5568"/>
+<line x1="334.0" y1="172.9" x2="559.5" y2="172.9" stroke="#365378" stroke-width="1.6"/>
+<polygon points="566.0,172.9 557.5,168.9 557.5,176.9" fill="#365378"/>
+<line x1="334.0" y1="318.7" x2="559.5" y2="318.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="566.0,318.7 557.5,314.7 557.5,322.7" fill="#2b6a4c"/>
+<rect x="380.4" y="49.0" width="139.2" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">Architectural Inversion</text>
+<rect x="374.2" y="163.5" width="133.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="175.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">inverts UID semantics</text>
+<rect x="358.5" y="309.3" width="164.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="320.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">replaces DAC with MAC+IPC</text>
+</svg>

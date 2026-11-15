@@ -28,50 +28,49 @@
   <path d="M 56 96 L 56 56 L 96 56 M 1304 56 L 1344 56 L 1344 96 M 56 1754 L 56 1794 L 96 1794 M 1304 1794 L 1344 1794 L 1344 1754"
         fill="none" stroke="#57c98c" stroke-width="2.0" stroke-opacity="0.75"/>
 
-<text x="136" y="162" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" font-weight="600" letter-spacing="1.5px" fill="#57c98c" text-anchor="start">THE ANDROID TRUST CHAIN  ·  ARCHITECTURAL BLUEPRINT</text>
+<text x="136" y="162" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="15" font-weight="600" letter-spacing="1.5px" fill="#57c98c" text-anchor="start">THE ANDROID TRUST CHAIN  ·  ARCHITECTURAL OVERVIEW</text>
 <line x1="136" y1="184" x2="1264" y2="184" stroke="#233248" stroke-width="1.2"/>
 <text x="136" y="248" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="32" font-weight="700" fill="#f7f4ed" text-anchor="start">Every installed application is treated as a mutually distrusting principal from day one.</text>
 <text x="136" y="294" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="28" font-weight="400" font-style="italic" fill="#57c98c" text-anchor="start">Hardware-backed Verified Boot, SELinux, and pKVM turn Linux into a zero-root mobile OS.</text>
 <text x="136" y="364" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">Android re-engineered the Linux kernel around a radically different premise than desktop</text>
-<text x="136" y="398" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">Unix: there is no ambient multi-app user session, persistent root partitions are immutable</text>
-<text x="136" y="432" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">under dm-verity and Android Verified Boot 2.0 (VBMeta), every app runs as an isolated UID</text>
-<text x="136" y="466" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">confined by mandatory SELinux policy and mediated Binder IPC, and cryptographic keys live</text>
-<text x="136" y="500" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">inside TrustZone KeyMint or discrete StrongBox silicon (Titan M2).</text>
-<text x="136" y="552" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">With Android Virtualization Framework (pKVM) moving hypervisor isolation beneath the host</text>
-<text x="136" y="586" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">kernel and Arm Memory Tagging Extension (MTE) hardening native heaps, this volume traces how</text>
-<text x="136" y="620" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">Android constructs hardware-attested mobile trust and where GPU drivers, basebands, and</text>
-<text x="136" y="654" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">multi-vendor OEM update pipelines still fracture the chain.</text>
-<text x="136" y="722" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.4px" fill="#57c98c" text-anchor="start">PLANNED ARCHITECTURE OF THIS VOLUME</text>
-<rect x="136" y="742" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
-<rect x="136" y="742" width="5" height="92" rx="2" fill="#57c98c"/>
-<text x="160" y="777" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART I · VERIFIED BOOT</text>
-<text x="160" y="804" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 1 to 4</text>
-<text x="434" y="781" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">SoC ROM, Bootloader lock state, AVB 2.0 VBMeta, rollback indexes,</text>
-<text x="434" y="806" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">dm-verity, and StrongBox/KeyMint</text>
-<rect x="136" y="846" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
-<rect x="136" y="846" width="5" height="92" rx="2" fill="#57c98c"/>
-<text x="160" y="881" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART II · pKVM &amp; KERNEL</text>
-<text x="160" y="908" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 5 to 8</text>
-<text x="434" y="885" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Protected KVM (AVF), TrustZone/Trusty TEEs, universal enforcing SELinux,</text>
-<text x="434" y="910" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">GKI, KCFI, and Arm MTE</text>
-<rect x="136" y="950" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
-<rect x="136" y="950" width="5" height="92" rx="2" fill="#57c98c"/>
-<text x="160" y="985" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART III · SANDBOX &amp; DATA</text>
-<text x="160" y="1012" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 9 to 12</text>
-<text x="434" y="989" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Per-app UIDs, Binder IPC &amp; permissions, File-Based Encryption (FBE),</text>
-<text x="434" y="1014" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">BiometricPrompt, and Passkeys</text>
-<rect x="136" y="1054" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
-<rect x="136" y="1054" width="5" height="92" rx="2" fill="#57c98c"/>
-<text x="160" y="1089" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART IV · CLOUD &amp; AI</text>
-<text x="160" y="1116" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 13 to 15</text>
-<text x="434" y="1093" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Hardware Key Attestation, Play Integrity, E2EE Google Backup HSMs, and</text>
-<text x="434" y="1118" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Private Compute Core</text>
-<rect x="136" y="1158" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
-<rect x="136" y="1158" width="5" height="92" rx="2" fill="#df5a67"/>
-<text x="160" y="1193" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#df5a67" text-anchor="start">FINALE · THE SEAMS</text>
-<text x="160" y="1220" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapter 16</text>
-<text x="434" y="1197" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">GPU/vendor driver chains, Exynos/Qualcomm baseband boundaries,</text>
-<text x="434" y="1222" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Accessibility abuse, and OEM lag</text>
+<text x="136" y="398" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">Unix: there is no ambient multi-app user session, persistent OS partitions are sealed under</text>
+<text x="136" y="432" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">dm-verity and Android Verified Boot 2.0 (VBMeta), every app runs as an isolated UID confined</text>
+<text x="136" y="466" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">by mandatory SELinux neverallow rules and Binder IPC, and keys reside in StrongBox.</text>
+<text x="136" y="518" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">With Protected KVM (pKVM) moving isolation beneath both Linux and TrustZone, Arm MTE</text>
+<text x="136" y="552" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">hardening native heaps, Intrusion Logging preserving tamper-evident forensics, and Private</text>
+<text x="136" y="586" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">AI Compute extending attestation to cloud TPUs, this volume traces mobile trust end to end</text>
+<text x="136" y="620" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="22.0" font-weight="400" fill="#d0d9e6" text-anchor="start">and examines where GPUs, basebands, USB drivers, and OEM patch lag fracture the chain.</text>
+<text x="136" y="688" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.4px" fill="#57c98c" text-anchor="start">ARCHITECTURE OF THIS VOLUME</text>
+<rect x="136" y="708" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="708" width="5" height="92" rx="2" fill="#57c98c"/>
+<text x="160" y="743" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART I · VERIFIED BOOT</text>
+<text x="160" y="770" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 1 to 4</text>
+<text x="434" y="747" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">SoC ROM, Green/Yellow/Orange lock states, AVB 2.0 VBMeta, dm-verity/APEX,</text>
+<text x="434" y="772" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">StrongBox, and KeyMint/Weaver</text>
+<rect x="136" y="812" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="812" width="5" height="92" rx="2" fill="#57c98c"/>
+<text x="160" y="847" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART II · pKVM &amp; KERNEL</text>
+<text x="160" y="874" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 5 to 8</text>
+<text x="434" y="851" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Protected KVM (AVF/Microdroid), enforcing SELinux neverallow, Project</text>
+<text x="434" y="876" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Treble/GKI, Rust, and Arm MTE</text>
+<rect x="136" y="916" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="916" width="5" height="92" rx="2" fill="#57c98c"/>
+<text x="160" y="951" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART III &amp; INTERLUDE</text>
+<text x="160" y="978" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 9 to 14</text>
+<text x="434" y="955" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Per-app UIDs &amp; Binder, Advanced Protection, FBE &amp; Identity Check,</text>
+<text x="434" y="980" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Passkeys, and E2EE Intrusion Logging</text>
+<rect x="136" y="1020" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="1020" width="5" height="92" rx="2" fill="#57c98c"/>
+<text x="160" y="1055" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#57c98c" text-anchor="start">PART IV · CLOUD &amp; AI</text>
+<text x="160" y="1082" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapters 15 to 19</text>
+<text x="434" y="1059" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">RKP Key Attestation, Play Integrity vs. keyboxes, Work Profiles,</text>
+<text x="434" y="1084" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">AICore/AppFunctions, and Private AI Compute</text>
+<rect x="136" y="1124" width="1128" height="92" rx="6" fill="#0d1728" stroke="#22324a" stroke-width="1.2"/>
+<rect x="136" y="1124" width="5" height="92" rx="2" fill="#df5a67"/>
+<text x="160" y="1159" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="14.5" font-weight="700" letter-spacing="1.0px" fill="#df5a67" text-anchor="start">FINALE · THE SEAMS</text>
+<text x="160" y="1186" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.5" font-weight="400" fill="#8ea2bd" text-anchor="start">Chapter 20</text>
+<text x="434" y="1163" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">Mali/Adreno GPU chains, Exynos/Shannon baseband RCE, TrustZone trustlets,</text>
+<text x="434" y="1188" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="17.4" font-weight="400" fill="#eef2f7" text-anchor="start">and the multi-tier OEM patch gap</text>
 <line x1="136" y1="1648" x2="1264" y2="1648" stroke="#233248" stroke-width="1.2"/>
 <text x="136" y="1696" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="30" font-weight="700" fill="#f7f4ed" text-anchor="start">Parag Mali</text>
 <text x="136" y="1728" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="15.5" font-weight="400" fill="#8cb0db" text-anchor="start">The Platform Trust Chain Series</text>

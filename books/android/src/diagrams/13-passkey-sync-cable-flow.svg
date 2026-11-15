@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 514" width="900" height="514">
+<rect x="0" y="0" width="900" height="514" fill="#ffffff"/>
+<line x1="127.5" y1="132.6" x2="127.5" y2="455.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="132.6" x2="342.5" y2="455.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="132.6" x2="557.5" y2="455.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="132.6" x2="772.5" y2="455.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="450.0" y1="72.0" x2="450.0" y2="455.8" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CREDENTIAL MANAGER PASSKEYS: E2EE VAULT SYNC &amp; CTAP2.2 CABLE PROXIMITY FLOW</text>
+<rect x="34.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="127.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Desktop Browser</text>
+<text x="127.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Relying Party Origin</text>
+<rect x="249.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="342.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Android Handset</text>
+<text x="342.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Credential Manager + BLE</text>
+<rect x="464.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="557.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">GPM Security Domain</text>
+<text x="557.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">E2EE Passkey Vault</text>
+<rect x="679.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="772.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Titan Cloud HSM</text>
+<text x="772.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">LSKF Recovery Escrow</text>
+<text x="450.0" y="485.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Origin binding (rpIdHash) stops real-time adversary-in-the-middle phishing; BLE proximity proves physical co-location.</text>
+<line x1="127.5" y1="190.2" x2="336.0" y2="190.2" stroke="#365378" stroke-width="1.6"/>
+<polygon points="342.5,190.2 334.0,186.2 334.0,194.2" fill="#365378"/>
+<line x1="342.5" y1="301.8" x2="551.0" y2="301.8" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="557.5,301.8 549.0,297.8 549.0,305.8" fill="#236b66"/>
+<line x1="342.5" y1="361.4" x2="134.0" y2="361.4" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="127.5,361.4 136.0,365.4 136.0,357.4" fill="#2b6a4c"/>
+<line x1="557.5" y1="433.8" x2="766.0" y2="433.8" stroke="#5c4282" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="772.5,433.8 764.0,429.8 764.0,437.8" fill="#5c4282"/>
+<rect x="324.7" y="50.9" width="250.5" height="18.2" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="62.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.5" font-weight="700" fill="#8d2d3b" text-anchor="middle">Plaintext Passkey Never Leaves Client/HSM</text>
+<rect x="137.1" y="150.8" width="195.8" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="162.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Scan QR -&gt; BLE proximity advert +</text>
+<text x="235.0" y="174.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">noise-encrypted caBLE tunnel</text>
+<rect x="239.8" y="212.4" width="205.5" height="31.6" rx="4" fill="#f4f1ea" stroke="#2b6a4c" stroke-width="0.9"/>
+<text x="342.5" y="223.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Verify Class 3 Biometric / LSKF via</text>
+<text x="342.5" y="236.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">BiometricPrompt</text>
+<rect x="357.5" y="262.4" width="184.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="273.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Unwrap RP-scoped ECDSA P-256</text>
+<text x="450.0" y="286.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">passkey private key locally</text>
+<rect x="141.3" y="322.0" width="187.4" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="333.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Sign challenge || SHA-256(rpId) -&gt;</text>
+<text x="235.0" y="345.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">phishing-resistant assertion</text>
+<rect x="573.5" y="381.3" width="182.9" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="392.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">New-device recovery:</text>
+<text x="665.0" y="405.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">LSKF-wrapped sync key verified</text>
+<text x="665.0" y="417.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">inside Titan HSM</text>
+</svg>

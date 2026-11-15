@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 564" width="900" height="564">
+<rect x="0" y="0" width="900" height="564" fill="#ffffff"/>
+<line x1="127.5" y1="106.6" x2="127.5" y2="505.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="106.6" x2="342.5" y2="505.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="106.6" x2="557.5" y2="505.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="106.6" x2="772.5" y2="505.4" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">FLEET SSH AUTHENTICATION: SHORT-LIVED CERTIFICATES + FIDO2 RESIDENT KEYS</text>
+<rect x="34.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="127.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">FIDO2 Token</text>
+<text x="127.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Hardware Key (UV + Touch)</text>
+<rect x="249.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="342.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Engineer Client</text>
+<text x="342.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">ssh-keygen / OIDC Client</text>
+<rect x="464.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="557.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">SSH CA + IdP</text>
+<text x="557.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">OIDC + Cert Authority</text>
+<rect x="679.0" y="50.0" width="187.0" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="772.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Linux Host sshd</text>
+<text x="772.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">TrustedUserCAKeys Only</text>
+<text x="450.0" y="535.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Eliminates static ~/.ssh/authorized_keys sprawl, TOFU MITM prompts, and key theft (private key never leaves FIDO2 silicon).</text>
+<line x1="342.5" y1="164.2" x2="551.0" y2="164.2" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="557.5,164.2 549.0,160.2 549.0,168.2" fill="#236b66"/>
+<line x1="557.5" y1="223.8" x2="349.0" y2="223.8" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="342.5,223.8 351.0,227.8 351.0,219.8" fill="#236b66"/>
+<line x1="342.5" y1="270.6" x2="766.0" y2="270.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="772.5,270.6 764.0,266.6 764.0,274.6" fill="#2b6a4c"/>
+<line x1="772.5" y1="317.4" x2="349.0" y2="317.4" stroke="#365378" stroke-width="1.6"/>
+<polygon points="342.5,317.4 351.0,321.4 351.0,313.4" fill="#365378"/>
+<line x1="342.5" y1="377.0" x2="134.0" y2="377.0" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="127.5,377.0 136.0,381.0 136.0,373.0" fill="#5c4282"/>
+<line x1="127.5" y1="436.6" x2="336.0" y2="436.6" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,436.6 334.0,432.6 334.0,440.6" fill="#5c4282"/>
+<line x1="342.5" y1="483.4" x2="766.0" y2="483.4" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="772.5,483.4 764.0,479.4 764.0,487.4" fill="#2b6a4c"/>
+<rect x="353.0" y="124.8" width="193.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Authenticate via OIDC + WebAuthn</text>
+<text x="450.0" y="148.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">MFA &amp; send sk-ssh-ed25519 pubkey</text>
+<rect x="355.8" y="184.4" width="188.3" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Issue short-lived User Cert (TTL</text>
+<text x="450.0" y="208.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">= 8h, principals, source-address)</text>
+<rect x="371.7" y="244.3" width="371.5" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="255.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Connect &amp; verify sshd Host Cert against @cert-authority (no TOFU)</text>
+<rect x="410.6" y="291.1" width="293.8" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="302.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Send session-bound challenge H over SSHv2 transport</text>
+<rect x="137.6" y="337.6" width="194.8" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="349.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">CTAP2 GetAssertion(app='ssh:', H,</text>
+<text x="235.0" y="361.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">user-presence + PIN)</text>
+<rect x="150.5" y="397.2" width="168.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="408.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Hardware Ed25519 signature +</text>
+<text x="235.0" y="421.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">presence/UV counter flags</text>
+<rect x="380.5" y="457.1" width="354.0" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="468.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Present User Cert + FIDO2 signature -&gt; PAM/SSSD session open</text>
+</svg>

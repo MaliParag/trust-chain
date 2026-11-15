@@ -171,8 +171,64 @@ const TOC_GROUPS = [
   },
 ];
 
-function buildTocHtml() {
-  const sections = TOC_GROUPS.map((g) => {
+function buildDynamicStructure(bodyContent) {
+  if (BOOK_SLUG === 'windows') {
+    return { rubrics: CHAPTER_RUBRICS, tocGroups: TOC_GROUPS, titleId: 'the-windows-trust-chain' };
+  }
+  const pageChunks = bodyContent.split(/<div style="break-before:\s*page;\s*page-break-before:\s*always;"><\/div>/i);
+  const pageH1s = pageChunks.map((ch) => {
+    const m = ch.match(/<h1 id="([^"]+)">([\s\S]*?)<\/h1>/i);
+    if (!m) return null;
+    const plain = m[2].replace(/<[^>]+>/g, '').trim();
+    return { id: m[1], title: plain };
+  }).filter(Boolean);
+
+  const rubrics = new Map();
+  const tocGroups = [];
+  let idx = 0;
+  const titleId = pageH1s[0] ? pageH1s[0].id : '';
+
+  const openingItems = [];
+  for (let i = 0; i < (HOUSE.front || []).length && idx < pageH1s.length; i++, idx++) {
+    const h = pageH1s[idx];
+    rubrics.set(h.id, i === 0 ? 'Title Page' : 'Front Matter');
+    if (i >= 2) openingItems.push([h.title, h.id]);
+  }
+  for (let i = 0; i < (HOUSE.specials || []).length && idx < pageH1s.length; i++, idx++) {
+    const h = pageH1s[idx];
+    rubrics.set(h.id, `Opening  ·  ${h.title}`);
+    openingItems.push([h.title, h.id]);
+  }
+  if (openingItems.length > 0) {
+    tocGroups.push({ heading: 'Front Matter & Opening', items: openingItems });
+  }
+
+  let chNum = 0;
+  for (const part of HOUSE.parts || []) {
+    const pItems = [];
+    const pTitle = part.title.replace(/:\s+/, ' · ');
+    for (let i = 0; i < (part.items || []).length && idx < pageH1s.length; i++, idx++) {
+      chNum++;
+      const h = pageH1s[idx];
+      rubrics.set(h.id, `${pTitle}  ·  Chapter ${chNum}`);
+      pItems.push([`${chNum}. ${h.title}`, h.id]);
+    }
+    if (pItems.length > 0) tocGroups.push({ heading: pTitle, items: pItems });
+  }
+
+  const backItems = [];
+  for (let i = 0; i < (HOUSE.back || []).length && idx < pageH1s.length; i++, idx++) {
+    const h = pageH1s[idx];
+    rubrics.set(h.id, `Back Matter  ·  ${h.title}`);
+    backItems.push([h.title, h.id]);
+  }
+  if (backItems.length > 0) tocGroups.push({ heading: 'Back Matter', items: backItems });
+
+  return { rubrics, tocGroups, titleId };
+}
+
+function buildTocHtml(tocGroups = TOC_GROUPS) {
+  const sections = tocGroups.map((g) => {
     const lis = g.items
       .map(([label, id]) => `<li><a href="#${id}">${label}</a></li>`)
       .join('\n');
@@ -210,29 +266,54 @@ function buildPdfHtml() {
 
   // Strip any interactive audio read-along bars and web-only PDF self-download link
   bodyContent = bodyContent.replace(/<div class="ra-bar"[\s\S]*?<\/div>\s*<\/div>/g, '');
-  bodyContent = bodyContent.replace(/,\s*or download the <a href="[^"]*the-windows-trust-chain\.pdf">PDF Edition<\/a>/g, '');
+  bodyContent = bodyContent.replace(/,\s*or download the <a href="[^"]*the-[a-z-]+-trust-chain\.pdf">PDF Edition<\/a>/g, '');
+
+  const { rubrics, tocGroups, titleId } = buildDynamicStructure(bodyContent);
 
   // Prepend Part/Chapter rubrics above every top-level <h1 id="...">
   bodyContent = bodyContent.replace(/<h1 id="([^"]+)">/g, (full, id) => {
-    const rubric = CHAPTER_RUBRICS.get(id);
-    if (!rubric || id === 'the-windows-trust-chain') return full;
+    const rubric = rubrics.get(id);
+    if (!rubric || id === titleId) return full;
     return `<div class="pdf-ch-rubric">${rubric}</div>\n${full}`;
   });
 
-  // Insert hyperlinked Table of Contents right before Preface when building the Windows volume
-  if (BOOK_SLUG === 'windows') {
+  // Insert hyperlinked Table of Contents right before Preface whenever Preface is present
+  if (tocGroups.length > 1) {
     bodyContent = bodyContent.replace(
       /<div style="break-before: page; page-break-before: always;"><\/div>\s*<div class="pdf-ch-rubric">Front Matter<\/div>\s*<h1 id="preface">/,
-      `${buildTocHtml()}\n<div style="break-before: page; page-break-before: always;"></div>\n<div class="pdf-ch-rubric">Front Matter</div>\n<h1 id="preface">`
+      `${buildTocHtml(tocGroups)}\n<div style="break-before: page; page-break-before: always;"></div>\n<div class="pdf-ch-rubric">Front Matter</div>\n<h1 id="preface">`
     );
   }
 
   const trustchainCss = readFileSync(path.join(ROOT, 'theme', 'trustchain.css'), 'utf8');
   const frontSvg = namespaceSvgIds(readFileSync(path.join(SRC_DIR, 'cover.svg'), 'utf8'), 'fc');
   const backSvg = namespaceSvgIds(readFileSync(path.join(SRC_DIR, 'back-cover.svg'), 'utf8'), 'bc');
+  const volAccent = (HOUSE.interior && HOUSE.interior.accentLight) || '#2b547e';
+  const volPrintOverrides = BOOK_SLUG === 'windows' ? '' : `
+html[data-volume="${BOOK_SLUG}"] body {
+  font-family: Charter, "Iowan Old Style", Georgia, serif;
+}
+html[data-volume="${BOOK_SLUG}"] .pdf-ch-rubric {
+  color: ${volAccent};
+  border-bottom-color: #cbd5e1;
+}
+html[data-volume="${BOOK_SLUG}"] a,
+html[data-volume="${BOOK_SLUG}"] a.cite-ref {
+  color: ${volAccent};
+}
+html[data-volume="${BOOK_SLUG}"] .chapter-overview {
+  border-left-width: 1pt !important;
+  border-top: 2pt solid ${volAccent} !important;
+}
+html[data-volume="${BOOK_SLUG}"] .pdf-interior table th,
+html[data-volume="${BOOK_SLUG}"] .pdf-interior table td {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+`;
 
   return `<!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="light" data-volume="${BOOK_SLUG}">
 <head>
   <meta charset="utf-8">
   <title>${BOOK_TITLE_STR} - Parag Mali</title>
@@ -632,6 +713,7 @@ figcaption {
 /* KaTeX print sizing */
 .katex { font-size: 1.02em; }
 .katex-display { margin: 8pt 0; overflow: visible; break-inside: avoid; }
+${volPrintOverrides}
   </style>
 </head>
 <body>

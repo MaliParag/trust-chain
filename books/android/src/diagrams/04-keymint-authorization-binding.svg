@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+<rect x="0" y="0" width="900" height="600" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="467.3" rx="8.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#284163" text-anchor="middle">KEYSTORE2 DAEMON (EL0 RUST)</text>
+<rect x="550.0" y="74.0" width="324.0" height="467.3" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">KEYMINT HARDWARE (TEE/TITAN)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="545.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">KEYMINT HARDWARE-ENFORCED VS. KEYSTORE2 DAEMON-ENFORCED AUTHORIZATION TAGS</text>
+<rect x="42.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">NAMESPACE &amp; CALLER ACL</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">App UID Ownership &amp; Grant SQLite</text>
+<text x="56.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">DB</text>
+<text x="56.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Maps (domain, namespace, alias) -&gt; encrypted</text>
+<text x="56.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">key_blob on /data/misc/keystore2; enforces</text>
+<text x="56.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Binder UID</text>
+<rect x="42.0" y="259.8" width="292.0" height="117.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="56.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">SOFTWARE-ENFORCED METADATA</text>
+<text x="56.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">TAG_CREATION_DATETIME &amp; App</text>
+<text x="56.0" y="313.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Attestation ID</text>
+<text x="56.0" y="331.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Recorded in softwareEnforced</text>
+<text x="56.0" y="346.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">AuthorizationList because StrongBox/TEE</text>
+<text x="56.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">lacks untrusted wall-clock trust</text>
+<rect x="42.0" y="405.5" width="292.0" height="117.8" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="56.0" y="427.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">CIPHERTEXT CUSTODY ONLY</text>
+<text x="56.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Holds AES-GCM Wrapped Key Blobs</text>
+<text x="56.0" y="461.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Never sees raw key material; compromise of</text>
+<text x="56.0" y="476.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">host OS allows online use of NO_AUTH keys</text>
+<text x="56.0" y="490.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">only</text>
+<rect x="566.0" y="114.0" width="292.0" height="117.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CRYPTOGRAPHIC USAGE POLICY</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">PURPOSE, ALGORITHM, DIGEST, &amp;</text>
+<text x="580.0" y="167.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">PADDING</text>
+<text x="580.0" y="186.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Baked into AEAD Associated Data (AAD) of</text>
+<text x="580.0" y="200.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">key blob; signing key can never be invoked to</text>
+<text x="580.0" y="214.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">decrypt</text>
+<rect x="566.0" y="259.8" width="292.0" height="117.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="580.0" y="281.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">USER AUTH &amp; FRESHNESS GATE</text>
+<text x="580.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">USER_SECURE_ID &amp; AUTH_TIMEOUT</text>
+<text x="580.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Requires fresh HMAC-verified</text>
+<text x="580.0" y="330.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">HardwareAuthToken from</text>
+<text x="580.0" y="344.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Gatekeeper/Weaver or Class 3 Biometric</text>
+<rect x="566.0" y="405.5" width="292.0" height="117.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="580.0" y="427.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">BOOT &amp; VERSION SEALING</text>
+<text x="580.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">RootOfTrust + OS / VENDOR /</text>
+<text x="580.0" y="459.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">BOOT_PATCHLEVEL</text>
+<text x="580.0" y="477.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Derives KEK from HBK + VerifiedBootKey +</text>
+<text x="580.0" y="492.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Locked state; ORANGE unlock or patch</text>
+<text x="580.0" y="506.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">downgrade refuses unwrap</text>
+<text x="450.0" y="571.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Every tag in teeEnforced is cryptographically authenticated inside the AEAD key blob and attested via X.509 OID .17.</text>
+<line x1="188.0" y1="231.8" x2="188.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,259.8 192.0,251.3 184.0,251.3" fill="#4a5568"/>
+<line x1="188.0" y1="377.5" x2="188.0" y2="399.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,405.5 192.0,397.0 184.0,397.0" fill="#4a5568"/>
+<line x1="712.0" y1="231.8" x2="712.0" y2="253.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,259.8 716.0,251.3 708.0,251.3" fill="#4a5568"/>
+<line x1="712.0" y1="377.5" x2="712.0" y2="399.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,405.5 716.0,397.0 708.0,397.0" fill="#4a5568"/>
+<line x1="334.0" y1="172.9" x2="559.5" y2="172.9" stroke="#365378" stroke-width="1.6"/>
+<polygon points="566.0,172.9 557.5,168.9 557.5,176.9" fill="#365378"/>
+<polyline points="334.0,464.4 476.0,464.4 476.0,318.7 559.5,318.7" fill="none" stroke="#236b66" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="566.0,318.7 557.5,314.7 557.5,322.7" fill="#236b66"/>
+<rect x="353.0" y="49.0" width="194.0" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">Binder/SPI KeyMint HAL Boundary</text>
+<rect x="373.9" y="163.5" width="133.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="175.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">begin(keyBlob, params)</text>
+<rect x="396.2" y="382.1" width="159.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="476.0" y="393.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">passes HardwareAuthToken</text>
+</svg>

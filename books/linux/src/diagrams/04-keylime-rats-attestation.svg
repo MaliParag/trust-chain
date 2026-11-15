@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 582" width="900" height="582">
+<rect x="0" y="0" width="900" height="582" fill="#ffffff"/>
+<line x1="127.5" y1="119.8" x2="127.5" y2="523.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="119.8" x2="342.5" y2="523.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="119.8" x2="557.5" y2="523.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="119.8" x2="772.5" y2="523.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CONTINUOUS REMOTE ATTESTATION WITH KEYLIME AND IETF RATS (RFC 9334)</text>
+<rect x="34.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="127.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Linux Attester</text>
+<text x="127.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">TPM 2.0 + Rust Keylime Agent</text>
+<rect x="249.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="342.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Keylime Registrar</text>
+<text x="342.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">EK / AK Identity Directory</text>
+<rect x="464.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="557.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Keylime Verifier</text>
+<text x="557.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">RATS Policy &amp; IMA Engine</text>
+<rect x="679.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="772.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Relying Party</text>
+<text x="772.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Workload / Secret</text>
+<text x="772.5" y="103.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Orchestrator</text>
+<text x="450.0" y="553.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Hardware MakeCredential/ActivateCredential binds the signing AK to genuine TPM silicon before any PCR[10] runtime quote is trusted.</text>
+<line x1="127.5" y1="177.4" x2="336.0" y2="177.4" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,177.4 334.0,173.4 334.0,181.4" fill="#5c4282"/>
+<line x1="342.5" y1="237.0" x2="134.0" y2="237.0" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="127.5,237.0 136.0,241.0 136.0,233.0" fill="#5c4282"/>
+<line x1="127.5" y1="296.6" x2="336.0" y2="296.6" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,296.6 334.0,292.6 334.0,300.6" fill="#5c4282"/>
+<line x1="557.5" y1="343.4" x2="134.0" y2="343.4" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="127.5,343.4 136.0,347.4 136.0,339.4" fill="#236b66"/>
+<line x1="127.5" y1="390.2" x2="551.0" y2="390.2" stroke="#365378" stroke-width="1.6"/>
+<polygon points="557.5,390.2 549.0,386.2 549.0,394.2" fill="#365378"/>
+<line x1="557.5" y1="501.8" x2="766.0" y2="501.8" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="772.5,501.8 764.0,497.8 764.0,505.8" fill="#2b6a4c"/>
+<rect x="146.0" y="138.0" width="178.1" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="149.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Register EK cert + Attestation</text>
+<text x="235.0" y="161.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Key (AK) pubkey</text>
+<rect x="142.7" y="197.6" width="184.5" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="209.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">TPM2_MakeCredential encrypted</text>
+<text x="235.0" y="221.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">challenge to EK</text>
+<rect x="141.5" y="257.2" width="186.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="268.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">TPM2_ActivateCredential proves</text>
+<text x="235.0" y="281.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">AK resides in TPM</text>
+<rect x="203.7" y="317.1" width="277.5" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="342.5" y="328.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Send fresh cryptographic nonce for periodic quote</text>
+<rect x="194.7" y="363.9" width="295.6" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="342.5" y="375.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Signed TPM2_Quote(PCR[0..11], PCR[10]) + IMA delta log</text>
+<rect x="442.3" y="412.4" width="230.3" height="31.6" rx="4" fill="#f4f1ea" stroke="#236b66" stroke-width="0.9"/>
+<text x="557.5" y="423.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">Replay TCG &amp; IMA logs against reference</text>
+<text x="557.5" y="436.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">values</text>
+<rect x="569.0" y="462.4" width="191.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="473.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Emit Attestation Result / trigger</text>
+<text x="665.0" y="486.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">revocation webhook</text>
+</svg>

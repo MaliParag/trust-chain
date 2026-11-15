@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 646" width="900" height="646">
+<rect x="0" y="0" width="900" height="646" fill="#ffffff"/>
+<line x1="127.5" y1="121.9" x2="127.5" y2="520.7" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="121.9" x2="342.5" y2="520.7" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="121.9" x2="557.5" y2="520.7" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="121.9" x2="772.5" y2="520.7" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">MACOS PLATFORM SINGLE SIGN-ON: BINDING CLOUD IDENTITY TO SEP HARDWARE</text>
+<rect x="34.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="127.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">macOS LoginWindow</text>
+<text x="127.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">AuthPlugin &amp; Local Account</text>
+<rect x="249.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="342.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Platform SSO</text>
+<text x="342.5" y="87.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Extension</text>
+<text x="342.5" y="105.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Entra ID / Okta Broker</text>
+<rect x="464.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="557.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Secure Enclave (SEP)</text>
+<text x="557.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Device &amp; User P-256 Keys</text>
+<rect x="679.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="772.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Enterprise IdP</text>
+<text x="772.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">OIDC / WS-Trust / Kerberos</text>
+<rect x="60.0" y="536.7" width="780.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="450.0" y="558.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">PASS-THE-PRT MITIGATION ON MACOS</text>
+<text x="450.0" y="574.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Cloud Session Proof-of-Possession Keys Remain Non-Exportable Inside the Mac's Secure Enclave</text>
+<text x="450.0" y="592.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Exfiltrating broker cache files from ~/Library cannot replay Enterprise PRT assertions from an attacker's machine without SEP</text>
+<text x="450.0" y="607.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">signing access.</text>
+<line x1="342.5" y1="179.5" x2="551.0" y2="179.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="557.5,179.5 549.0,175.5 549.0,183.5" fill="#2b6a4c"/>
+<line x1="342.5" y1="226.3" x2="766.0" y2="226.3" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="772.5,226.3 764.0,222.3 764.0,230.3" fill="#5c4282"/>
+<line x1="127.5" y1="285.9" x2="336.0" y2="285.9" stroke="#365378" stroke-width="1.6"/>
+<polygon points="342.5,285.9 334.0,281.9 334.0,289.9" fill="#365378"/>
+<line x1="342.5" y1="345.5" x2="551.0" y2="345.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="557.5,345.5 549.0,341.5 549.0,349.5" fill="#2b6a4c"/>
+<line x1="342.5" y1="392.3" x2="766.0" y2="392.3" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="772.5,392.3 764.0,388.3 764.0,396.3" fill="#5c4282"/>
+<line x1="772.5" y1="439.1" x2="349.0" y2="439.1" stroke="#5c4282" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="342.5,439.1 351.0,443.1 351.0,435.1" fill="#5c4282"/>
+<line x1="342.5" y1="498.7" x2="134.0" y2="498.7" stroke="#236b66" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="127.5,498.7 136.0,502.7 136.0,494.7" fill="#236b66"/>
+<rect x="358.4" y="140.2" width="183.1" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="151.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Generate non-exportable Device</text>
+<text x="450.0" y="164.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Signing &amp; Encryption Keys</text>
+<rect x="400.0" y="200.0" width="314.9" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="211.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Register device public keys + ACME MDA attestation cert</text>
+<rect x="157.6" y="246.6" width="154.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="257.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">User authenticates at</text>
+<text x="235.0" y="270.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">LoginWindow / Lock Screen</text>
+<rect x="360.8" y="306.2" width="178.5" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="317.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Sign OIDC / PRT assertion JWT</text>
+<text x="450.0" y="330.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">with SEP Device Key</text>
+<rect x="396.3" y="366.0" width="322.4" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="377.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Exchange hardware-signed assertion for PRT / SSO tokens</text>
+<rect x="377.9" y="412.8" width="359.1" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="424.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Return encrypted PRT session key wrapped to SEP Encryption Key</text>
+<rect x="141.8" y="459.4" width="186.3" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="470.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Unlock FileVault/Keychain &amp; mint</text>
+<text x="235.0" y="483.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">optional Kerberos TGT</text>
+</svg>

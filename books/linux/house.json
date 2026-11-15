@@ -1,7 +1,7 @@
 {
   "slug": "linux",
   "volume": "Volume III",
-  "status": "in-preparation",
+  "status": "complete",
   "title": "The Linux Trust Chain",
   "subtitle": "From UEFI, Unified Kernel Images, and dm-verity Through LSMs, eBPF, and Containers to Confidential Cloud",
   "author": "Parag Mali",
@@ -16,18 +16,84 @@
     [
       "front-matter/01-copyright.md",
       "Copyright"
+    ],
+    [
+      "front-matter/02-preface.md",
+      "Preface"
+    ],
+    [
+      "front-matter/03-how-to-read.md",
+      "How to Read This Book"
     ]
   ],
   "specials": [
     [
       "chapters/00-prologue.md",
       "Prologue"
+    ],
+    [
+      "chapters/00b-foundations.md",
+      "Foundations"
     ]
   ],
-  "parts": [],
+  "parts": [
+    {
+      "title": "Part I: Verified Boot & Immutable Root",
+      "items": [
+        "01-uefi-shim-sbat",
+        "02-uki-systemd-pcrlock",
+        "03-luks2-verity",
+        "04-ima-ipe-keylime"
+      ]
+    },
+    {
+      "title": "Part II: Kernel Self-Protection & Stacked LSMs",
+      "items": [
+        "05-kernel-lockdown-modules",
+        "06-kernel-memory-rust",
+        "07-stacked-lsms-landlock"
+      ]
+    },
+    {
+      "title": "Interlude: Runtime Visibility & Enforcement",
+      "items": [
+        "08-ebpf-dual-edge"
+      ]
+    },
+    {
+      "title": "Part III: Userspace Privilege, Secrets, & Identity",
+      "items": [
+        "09-capabilities-userns",
+        "10-suid-to-run0",
+        "11-systemd-dbus-sandboxing",
+        "12-keyrings-systemd-creds",
+        "13-pam-ssh-fido2"
+      ]
+    },
+    {
+      "title": "Part IV: Containers, Agentic AI Sandboxes, & Confidential Cloud",
+      "items": [
+        "14-containers-escapes",
+        "15-gvisor-microvms",
+        "16-workload-identity-spiffe",
+        "17-ai-agent-sandboxes",
+        "18-confidential-vms-svsm",
+        "19-confidential-containers"
+      ]
+    },
+    {
+      "title": "Finale: Open-Source Supply-Chain Subversion",
+      "items": [
+        "20-xz-supply-chain-provenance"
+      ]
+    }
+  ],
   "back": [
     "back-matter/70-references.md",
-    "back-matter/90-colophon.md"
+    "back-matter/80-glossary.md",
+    "back-matter/85-about.md",
+    "back-matter/90-colophon.md",
+    "back-matter/95-index.md"
   ],
   "interior": {
     "name": "Warm Slate & Forged Amber Schematic",

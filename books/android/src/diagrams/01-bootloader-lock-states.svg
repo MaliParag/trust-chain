@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 379" width="900" height="379">
+<rect x="0" y="0" width="900" height="379" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ANDROID VERIFIED BOOT 2.0 BOOTLOADER LOCK &amp; VERIFICATION STATE MATRIX</text>
+<text x="450.0" y="48.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">How Boot ROM fuse roots, custom avb_custom_key roots, and unlock state propagate into KeyMint and UI warnings</text>
+<rect x="28.0" y="66.0" width="216.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="40.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#524c44" text-anchor="start">Row / Column</text>
+<rect x="244.0" y="66.0" width="157.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="322.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Bootloader Gate</text>
+<text x="322.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Signature Check</text>
+<rect x="401.0" y="66.0" width="157.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="479.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Boot Warning UI</text>
+<text x="479.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Pre-OS Screen</text>
+<rect x="558.0" y="66.0" width="157.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="636.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">KeyMint Boot State</text>
+<text x="636.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">RootOfTrust Claim</text>
+<rect x="715.0" y="66.0" width="157.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="793.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Play vs. Direct Attest</text>
+<text x="793.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Relying-Party Policy</text>
+<rect x="28.0" y="120.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="140.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">GREEN (Locked)</text>
+<text x="40.0" y="155.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">OEM / SoC OTP Root Key</text>
+<rect x="244.0" y="120.0" width="157.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="322.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Enforced (OTP Key)</text>
+<rect x="401.0" y="120.0" width="157.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="479.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Silent Normal Boot</text>
+<rect x="558.0" y="120.0" width="157.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="636.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">VERIFIED (Locked)</text>
+<rect x="715.0" y="120.0" width="157.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="793.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Passes STRONG + Direct</text>
+<rect x="28.0" y="166.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="186.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">YELLOW (Locked Custom)</text>
+<text x="40.0" y="201.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">User avb_custom_key Root</text>
+<rect x="244.0" y="166.0" width="157.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="322.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Enforced (Custom Key)</text>
+<rect x="401.0" y="166.0" width="157.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="479.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Yellow Key Fingerprint</text>
+<rect x="558.0" y="166.0" width="157.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="636.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">SELF_SIGNED (Locked)</text>
+<rect x="715.0" y="166.0" width="157.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="793.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Fails Play; Passes Pinning</text>
+<rect x="28.0" y="212.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="232.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">ORANGE (Unlocked)</text>
+<text x="40.0" y="247.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Verification Skipped</text>
+<rect x="244.0" y="212.0" width="157.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="322.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Bypassed (Any Image)</text>
+<rect x="401.0" y="212.0" width="157.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="479.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Orange Unlock Warning</text>
+<rect x="558.0" y="212.0" width="157.0" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="636.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">UNVERIFIED (Unlocked)</text>
+<rect x="715.0" y="212.0" width="157.0" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="793.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">Fails Hardware Integrity</text>
+<rect x="28.0" y="258.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="278.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">RED (Corrupt / Failed)</text>
+<text x="40.0" y="293.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Hash or Signature Mismatch</text>
+<rect x="244.0" y="258.0" width="157.0" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="322.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">Halted / No Boot</text>
+<rect x="401.0" y="258.0" width="157.0" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="479.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">Red Corruption Halt</text>
+<rect x="558.0" y="258.0" width="157.0" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="636.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">FAILED (No OS Handoff)</text>
+<rect x="715.0" y="258.0" width="157.0" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="793.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">OS Never Reached</text>
+<text x="28.0" y="322.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#3a352f" text-anchor="start">Transitioning Locked &lt;-&gt; Unlocked forces a mandatory hardware-gated userdata cryptographic wipe (blocked if FRP bit = 1).</text>
+<text x="450.0" y="350.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">YELLOW preserves full cryptographic AVB + dm-verity + locked bootloader guarantees for custom OSes such as GrapheneOS.</text>
+</svg>

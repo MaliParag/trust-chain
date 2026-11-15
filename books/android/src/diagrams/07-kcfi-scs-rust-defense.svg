@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 379" width="960" height="379">
+<rect x="0" y="0" width="960" height="379" fill="#ffffff"/>
+<text x="480.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CONTROL-FLOW INTEGRITY &amp; MEMORY-SAFE LANGUAGES ACROSS AOSP &amp; GKI</text>
+<text x="480.0" y="48.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Layered mitigations eliminating or containing C/C++ memory corruption in userspace daemons and Ring 0</text>
+<rect x="28.0" y="66.0" width="216.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="40.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#524c44" text-anchor="start">Row / Column</text>
+<rect x="244.0" y="66.0" width="172.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="330.0" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Bug Class</text>
+<text x="330.0" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Primary Target</text>
+<rect x="416.0" y="66.0" width="172.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="502.0" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Enforcement</text>
+<text x="502.0" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Compile vs. CPU</text>
+<rect x="588.0" y="66.0" width="172.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="674.0" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Deterministic?</text>
+<text x="674.0" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Bypass Bound</text>
+<rect x="760.0" y="66.0" width="172.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="846.0" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Residual Seam</text>
+<text x="846.0" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Attacker Pivot</text>
+<rect x="28.0" y="120.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="140.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Rust in AOSP &amp; GKI</text>
+<text x="40.0" y="155.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">keystore2, UWB, Binder</text>
+<rect x="244.0" y="120.0" width="172.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="330.0" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Spatial &amp; Temporal</text>
+<rect x="416.0" y="120.0" width="172.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="502.0" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Compile-Time Check</text>
+<rect x="588.0" y="120.0" width="172.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="674.0" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Yes (Safe Rust)</text>
+<rect x="760.0" y="120.0" width="172.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="846.0" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">C/C++ BSP Drivers</text>
+<rect x="28.0" y="166.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="186.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Clang KCFI</text>
+<text x="40.0" y="201.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Forward-Edge Type Hash</text>
+<rect x="244.0" y="166.0" width="172.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="330.0" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Forward-Edge JOP</text>
+<rect x="416.0" y="166.0" width="172.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="502.0" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Inline Type Hash</text>
+<rect x="588.0" y="166.0" width="172.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="674.0" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Type-Class Bound</text>
+<rect x="760.0" y="166.0" width="172.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="846.0" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Data-Only Attacks</text>
+<rect x="28.0" y="212.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="232.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Shadow Call Stack</text>
+<text x="40.0" y="247.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">ARM64 x18 Return Stack</text>
+<rect x="244.0" y="212.0" width="172.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="330.0" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Backward-Edge ROP</text>
+<rect x="416.0" y="212.0" width="172.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="502.0" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">x18 Shadow Stack</text>
+<rect x="588.0" y="212.0" width="172.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="674.0" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Yes (Isolated x18)</text>
+<rect x="760.0" y="212.0" width="172.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="846.0" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Heap Data Attacks</text>
+<rect x="28.0" y="258.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="278.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Pointer Auth (PAC)</text>
+<text x="40.0" y="293.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">ARMv8.3+ Crypto MAC</text>
+<rect x="244.0" y="258.0" width="172.0" height="46.0" rx="0.0" fill="#efeaf7" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="330.0" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#452e66" text-anchor="middle">ROP / JOP Pointers</text>
+<rect x="416.0" y="258.0" width="172.0" height="46.0" rx="0.0" fill="#efeaf7" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="502.0" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#452e66" text-anchor="middle">PACIASP CPU MAC</text>
+<rect x="588.0" y="258.0" width="172.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="674.0" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Probabilistic MAC</text>
+<rect x="760.0" y="258.0" width="172.0" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="846.0" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">Signing Oracles</text>
+<text x="28.0" y="322.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#3a352f" text-anchor="start">Android's vulnerability telemetry shows memory-safety bugs dropped from 76% (2019) to ~24% (2024) as new code shifted to Rust.</text>
+<text x="480.0" y="350.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">KCFI and SCS raise exploit cost in existing C code; Rust eliminates spatial and temporal memory bugs at compile time.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 486" width="920" height="486">
+<rect x="0" y="0" width="920" height="486" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">APFS SIGNED SYSTEM VOLUME (SSV) MERKLE SEAL &amp; CRYPTEX GRAFTING</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">IMAGE4 ROOT ANCHOR</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">TSS-Personalized OS Manifest (IM4M)</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Signed by Apple Root CA (Full Security) or SEP OIHR (LocalPolicy); embeds expected 384-bit APFS Seal Hash</text>
+<rect x="26.0" y="183.0" width="425.0" height="87.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">IMMUTABLE BOOT SNAPSHOT</text>
+<text x="40.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">APFS Sealed System Snapshot Root</text>
+<text x="40.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Mounted strictly read-only at /; live System volume vnodes are never</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">writable even by UID 0</text>
+<rect x="469.0" y="183.0" width="425.0" height="87.1" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="483.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">OUT-OF-BAND GRAFT</text>
+<text x="483.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Personalized Cryptex1 (OS / Safari / ANE)</text>
+<text x="483.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Independent DMG + APFS volume verified via its own TSS Image4</text>
+<text x="483.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">ticket and grafted onto System namespace</text>
+<rect x="26.0" y="328.1" width="277.3" height="103.0" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="40.0" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">METADATA TREE</text>
+<text x="40.0" y="365.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Catalog B-Tree &amp; Extended</text>
+<text x="40.0" y="381.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Attributes</text>
+<text x="40.0" y="400.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">SHA-256/384 hashes over paths, modes,</text>
+<text x="40.0" y="414.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">xattrs, and extent maps</text>
+<rect x="321.3" y="328.1" width="277.3" height="103.0" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="335.3" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">DATA EXTENTS</text>
+<text x="335.3" y="365.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">4 KB Physical File Blocks</text>
+<text x="335.3" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Verified on every page-in from NVMe flash</text>
+<text x="335.3" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">before reaching buffer cache</text>
+<rect x="616.7" y="328.1" width="277.3" height="103.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="630.7" y="349.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">MUTABLE SIBLING</text>
+<text x="630.7" y="365.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">APFS Data Volume</text>
+<text x="630.7" y="381.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">(/System/Volumes/Data)</text>
+<text x="630.7" y="400.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Firmlinked for /Users, /Library,</text>
+<text x="630.7" y="414.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">/private/var; unsealed &amp; Data-Protected</text>
+<text x="460.0" y="457.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Any single-bit flash modification under / fails SSV page-in verification and triggers an immediate kernel panic or recovery force-restore.</text>
+<line x1="238.5" y1="125.0" x2="238.5" y2="176.5" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="238.5,183.0 242.5,174.5 234.5,174.5" fill="#236b66"/>
+<line x1="681.5" y1="125.0" x2="681.5" y2="176.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="681.5,183.0 685.5,174.5 677.5,174.5" fill="#5c4282"/>
+<line x1="164.7" y1="270.1" x2="164.7" y2="321.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="164.7,328.1 168.7,319.6 160.7,319.6" fill="#236b66"/>
+<line x1="435.0" y1="270.1" x2="435.0" y2="321.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="435.0,328.1 439.0,319.6 431.0,319.6" fill="#236b66"/>
+<line x1="755.3" y1="270.1" x2="755.3" y2="321.6" stroke="#b07926" stroke-width="1.6" stroke-dasharray="4,3"/>
+<polygon points="755.3,328.1 759.3,319.6 751.3,319.6" fill="#b07926"/>
+<rect x="189.1" y="141.1" width="98.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="238.5" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">pins root digest</text>
+<rect x="632.5" y="141.1" width="97.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="681.5" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">Cryptex1 ticket</text>
+<rect x="120.5" y="286.2" width="88.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">Merkle branch</text>
+<rect x="390.7" y="286.2" width="88.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="435.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">extent hashes</text>
+<rect x="705.8" y="286.2" width="99.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">firmlink overlay</text>
+</svg>

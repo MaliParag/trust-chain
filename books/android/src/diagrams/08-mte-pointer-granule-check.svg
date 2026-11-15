@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 625" width="900" height="625">
+<rect x="0" y="0" width="900" height="625" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ARMV8.5-A MEMORY TAGGING EXTENSION (MTE): LOCK-AND-KEY POINTER VS. GRANULE CHECK</text>
+<rect x="34.0" y="48.0" width="440.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">LOGICAL POINTER (KEY)</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">64-Bit Address with 4-Bit Tag in Bits [59:56]</text>
+<text x="48.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Scudo inserts pseudorandom tag (1..15) via IRG/ADDG using ARM</text>
+<text x="48.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Top-Byte-Ignore (TBI) address bits</text>
+<rect x="34.0" y="193.5" width="440.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="48.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">ALLOCATION GRANULE (LOCK)</text>
+<text x="48.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">16-Byte Physical Memory Granule + 4-Bit Tag RAM</text>
+<text x="48.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">STG / STZG instructions write matching 4-bit tag into dedicated tag</text>
+<text x="48.0" y="263.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">storage (~3.125% DRAM overhead)</text>
+<rect x="34.0" y="339.0" width="440.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="48.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CPU LOAD / STORE GATE</text>
+<text x="48.0" y="376.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Hardware Compares Pointer[59:56] == GranuleTag</text>
+<text x="48.0" y="395.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Checked on every tagged memory access against spatial overflow into</text>
+<text x="48.0" y="409.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">neighbor chunk or UAF after re-tag</text>
+<rect x="612.0" y="340.5" width="260.0" height="84.6" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="362.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">ENTROPY CEILING</text>
+<text x="626.0" y="377.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">1/16 (6.25%) Guess Bound</text>
+<text x="626.0" y="394.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">4-bit tag space requires crash intolerance</text>
+<text x="626.0" y="408.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">or speculative-oracle defenses (TIKTAG)</text>
+<rect x="34.0" y="484.5" width="440.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="506.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">TAG MISMATCH MODE</text>
+<text x="48.0" y="522.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SYNC (Immediate SEGV_MTESERR) vs. ASYNC (TFSR_EL1)</text>
+<text x="48.0" y="540.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">SYNC stops offending instruction before corruption lands; ASYMM</text>
+<text x="48.0" y="555.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">runs SYNC on reads and ASYNC on writes</text>
+<text x="450.0" y="596.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Advanced Protection enables MTE continuously across eligible apps; bootloader one-shot mode upgrades ASYNC-&gt;SYNC after a crash.</text>
+<line x1="254.0" y1="135.5" x2="254.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,193.5 258.0,185.0 250.0,185.0" fill="#4a5568"/>
+<line x1="254.0" y1="281.0" x2="254.0" y2="332.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,339.0 258.0,330.5 250.0,330.5" fill="#4a5568"/>
+<line x1="474.0" y1="382.8" x2="605.5" y2="382.8" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,382.8 603.5,378.8 603.5,386.8" fill="#8d2d3b"/>
+<line x1="254.0" y1="426.5" x2="254.0" y2="478.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,484.5 258.0,476.0 250.0,476.0" fill="#4a5568"/>
+<rect x="193.9" y="151.6" width="120.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">paired at alloc/free</text>
+<rect x="202.4" y="297.1" width="103.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="308.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">every LDR / STR</text>
+<rect x="503.5" y="373.4" width="62.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="384.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">4-bit tag</text>
+<rect x="214.6" y="442.7" width="78.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="454.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">on mismatch</text>
+</svg>

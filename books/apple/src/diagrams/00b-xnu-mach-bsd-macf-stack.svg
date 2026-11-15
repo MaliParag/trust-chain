@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 694" width="900" height="694">
+<rect x="0" y="0" width="900" height="694" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="436.5" rx="8.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#284163" text-anchor="middle">MACH MICROKERNEL CORE (OSFMK/)</text>
+<rect x="550.0" y="74.0" width="324.0" height="436.5" rx="8.0" fill="#f4f1ea" stroke="#787167" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#524c44" text-anchor="middle">BSD PERSONALITY &amp; VFS LAYER (BSD/)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="514.5" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">XNU HYBRID ARCHITECTURE: MACH CAPABILITIES VS. BSD POSIX &amp; MACF</text>
+<rect x="42.0" y="114.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">EXECUTION UNIT</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">task_t &amp; thread_t</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Virtual address space (vm_map_t), IPC port</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">namespace, and ledger quotas</text>
+<rect x="42.0" y="259.5" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="281.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">CAPABILITY RIGHTS</text>
+<text x="56.0" y="297.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">mach_port_t &amp; XPC Channels</text>
+<text x="56.0" y="315.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Unforgeable kernel-managed send, send-once,</text>
+<text x="56.0" y="329.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">and receive rights</text>
+<rect x="42.0" y="405.0" width="292.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="56.0" y="426.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">PEER IDENTITY</text>
+<text x="56.0" y="442.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">audit_token_t</text>
+<text x="56.0" y="461.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Kernel-stamped {uid, gid, pid, pidversion, asid}</text>
+<text x="56.0" y="475.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">immune to PID reuse</text>
+<rect x="566.0" y="114.0" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">POSIX PROCESS</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">proc_t &amp; kauth_cred_t</text>
+<text x="580.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">PID table, UID/GID credentials, signal masks,</text>
+<text x="580.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">sockets, and file descriptors</text>
+<rect x="566.0" y="259.5" width="292.0" height="87.5" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="281.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">STORAGE &amp; LOADER</text>
+<text x="580.0" y="297.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">VFS, APFS, &amp; Mach-O execve</text>
+<text x="580.0" y="315.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Mounts SSV/Data volumes, parses Mach-O</text>
+<text x="580.0" y="329.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">load commands, maps dyld</text>
+<rect x="566.0" y="405.0" width="292.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="580.0" y="426.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">POLICY CALLOUTS</text>
+<text x="580.0" y="442.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">MACF (mac_policy_ops)</text>
+<text x="580.0" y="461.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Mandatory hooks on vnode, proc, cred, port,</text>
+<text x="580.0" y="475.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">and mmap operations</text>
+<rect x="66.0" y="568.5" width="768.0" height="73.3" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="450.0" y="590.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">LOADED MACF POLICY MODULES</text>
+<text x="450.0" y="606.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">AppleMobileFileIntegrity (AMFI) · Sandbox.kext (Seatbelt) · Quarantine · EndpointSecurity</text>
+<text x="450.0" y="624.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Every POSIX syscall and gated Mach trap must pass all registered MACF policy modules before XNU commits the operation</text>
+<text x="450.0" y="665.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Mach provides capability-based IPC while BSD provides POSIX semantics; MACF unifies mandatory policy across both.</text>
+<line x1="188.0" y1="201.5" x2="188.0" y2="253.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,259.5 192.0,251.0 184.0,251.0" fill="#4a5568"/>
+<line x1="188.0" y1="347.0" x2="188.0" y2="398.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,405.0 192.0,396.5 184.0,396.5" fill="#4a5568"/>
+<line x1="712.0" y1="201.5" x2="712.0" y2="253.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,259.5 716.0,251.0 708.0,251.0" fill="#4a5568"/>
+<line x1="712.0" y1="347.0" x2="712.0" y2="398.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,405.0 716.0,396.5 708.0,396.5" fill="#4a5568"/>
+<line x1="340.5" y1="157.8" x2="559.5" y2="157.8" stroke="#365378" stroke-width="1.6"/>
+<polygon points="566.0,157.8 557.5,153.8 557.5,161.8" fill="#365378"/>
+<polygon points="334.0,157.8 342.5,161.8 342.5,153.8" fill="#365378"/>
+<line x1="340.5" y1="303.3" x2="559.5" y2="303.3" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,303.3 557.5,299.3 557.5,307.3" fill="#236b66"/>
+<polygon points="334.0,303.3 342.5,307.3 342.5,299.3" fill="#236b66"/>
+<line x1="334.0" y1="448.8" x2="559.5" y2="448.8" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="566.0,448.8 557.5,444.8 557.5,452.8" fill="#b07926"/>
+<line x1="188.0" y1="568.5" x2="188.0" y2="517.0" stroke="#875a14" stroke-width="1.5"/>
+<polygon points="188.0,510.5 184.0,519.0 192.0,519.0" fill="#875a14"/>
+<line x1="712.0" y1="568.5" x2="712.0" y2="517.0" stroke="#2b6a4c" stroke-width="1.5"/>
+<polygon points="712.0,510.5 708.0,519.0 716.0,519.0" fill="#2b6a4c"/>
+<rect x="140.4" y="217.6" width="95.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="229.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">owns IPC space</text>
+<rect x="142.0" y="363.1" width="92.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="374.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">stamps trailer</text>
+<rect x="663.0" y="217.6" width="98.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="229.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">resolves vnodes</text>
+<rect x="668.9" y="363.1" width="86.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="374.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">invokes hooks</text>
+<rect x="374.2" y="49.0" width="151.5" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">Shared EL1 Address Space</text>
+<rect x="400.1" y="148.4" width="99.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="159.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">1:1 task &lt;-&gt; proc</text>
+<rect x="392.0" y="293.9" width="116.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="305.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">port &lt;-&gt; fd / vnode</text>
+<rect x="374.3" y="439.4" width="132.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="450.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">mpo_port / cred check</text>
+<rect x="135.0" y="533.6" width="105.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="188.0" y="545.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#875a14" text-anchor="middle">verifies CS flags</text>
+<rect x="648.5" y="533.6" width="127.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="712.0" y="545.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">enforces SBPL &amp; ESF</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 703" width="760" height="703">
+<rect x="0" y="0" width="760" height="703" fill="#ffffff"/>
+<text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CONFIDENTIAL LINUX VM ARCHITECTURE WITH AMD SEV-SNP / INTEL TDX AND COCONUT-SVSM</text>
+<rect x="145.0" y="48.0" width="470.0" height="103.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">VMPL1 / TD GUEST RING 0 &amp; 3</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Confidential Linux Guest + Encrypted UKI &amp; LUKS2/dm-verity</text>
+<text x="159.0" y="101.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Root</text>
+<text x="159.0" y="120.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Measures boot into vTPM and establishes SPDM encrypted PCIe session with</text>
+<text x="159.0" y="134.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">NVIDIA H100/B200 Confidential GPU</text>
+<rect x="145.0" y="209.5" width="470.0" height="103.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="159.0" y="231.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">VMPL0 / ENCLAVE PARAVISOR (MOST PRIVILEGED GUEST RING)</text>
+<text x="159.0" y="247.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">COCONUT-SVSM (Open-Source Memory-Safe Rust Service</text>
+<text x="159.0" y="263.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Module)</text>
+<text x="159.0" y="281.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Isolated from guest kernel via VMPL0 RMP permissions; hosts measured TPM</text>
+<text x="159.0" y="295.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">2.0 emulator (vTPM) and UEFI services</text>
+<rect x="145.0" y="371.0" width="470.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="159.0" y="392.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">SILICON TRUSTED EXECUTION ROOT</text>
+<text x="159.0" y="408.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">AMD Secure Processor + RMP / Intel TDX SEAM Module +</text>
+<text x="159.0" y="424.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">MKTME</text>
+<text x="159.0" y="443.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">AES-XTS per-VM memory encryption + Reverse Map Table / TDMR prevents</text>
+<text x="159.0" y="457.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">host hypervisor from reading, remapping, or replaying guest pages</text>
+<rect x="145.0" y="532.5" width="470.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="159.0" y="554.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">UNTRUSTED HOST HYPERVISOR (REMOVED FROM TCB)</text>
+<text x="159.0" y="570.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Cloud Provider KVM / QEMU Manages Scheduling and</text>
+<text x="159.0" y="586.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Encrypted Swap Only</text>
+<text x="159.0" y="604.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Host root reading guest DRAM sees ciphertext; tampering with guest GPA</text>
+<text x="159.0" y="619.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">mappings triggers immediate #PF / RMP fault</text>
+<text x="380.0" y="660.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">COCONUT-SVSM gives Linux guests a hardware-measured vTPM inside encrypted memory without trusting the cloud host</text>
+<text x="380.0" y="674.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">hypervisor.</text>
+<line x1="380.0" y1="151.5" x2="380.0" y2="203.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,209.5 384.0,201.0 376.0,201.0" fill="#4a5568"/>
+<line x1="380.0" y1="313.0" x2="380.0" y2="364.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,371.0 384.0,362.5 376.0,362.5" fill="#4a5568"/>
+<line x1="380.0" y1="474.5" x2="380.0" y2="526.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,532.5 384.0,524.0 376.0,524.0" fill="#4a5568"/>
+<rect x="316.2" y="167.6" width="127.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="179.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">SVSM_CALL protocol</text>
+<rect x="306.3" y="329.1" width="147.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="340.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">hardware page ownership</text>
+<rect x="294.6" y="490.7" width="170.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="502.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">ciphertext + SWIOTLB bounce</text>
+</svg>

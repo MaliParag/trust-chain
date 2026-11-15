@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 673" width="900" height="673">
+<rect x="0" y="0" width="900" height="673" fill="#ffffff"/>
+<line x1="127.5" y1="121.9" x2="127.5" y2="531.1" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="121.9" x2="342.5" y2="531.1" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="121.9" x2="557.5" y2="531.1" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="121.9" x2="772.5" y2="531.1" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PRIVATE CLOUD COMPUTE (PCC): VERIFIABLE STATELESS CLOUD INFERENCE FLOW</text>
+<rect x="34.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="127.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">User Device</text>
+<text x="127.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Foundation Models / Siri</text>
+<rect x="249.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="342.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Public Transparency</text>
+<text x="342.5" y="87.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Log</text>
+<text x="342.5" y="105.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Append-Only Image4 Ledger</text>
+<rect x="464.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="557.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Third-Party OHTTP</text>
+<text x="557.5" y="87.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Relay</text>
+<text x="557.5" y="105.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Fastly / Cloudflare Blind Hop</text>
+<rect x="679.0" y="50.0" width="187.0" height="71.9" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="772.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">PCC Apple Silicon Node</text>
+<text x="772.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Stateless SEP + No NVMe</text>
+<rect x="60.0" y="547.1" width="780.0" height="103.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="450.0" y="568.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">CRYPTOGRAPHIC NON-TARGETABILITY</text>
+<text x="450.0" y="584.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Client Devices Refuse to Encrypt Prompts to Any PCC Server Build Absent From the Public Transparency</text>
+<text x="450.0" y="600.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Log</text>
+<text x="450.0" y="619.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">Apple cannot deploy a secret logging build to one targeted user without publishing the backdoored binary to external security</text>
+<text x="450.0" y="633.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="middle">researchers first.</text>
+<line x1="772.5" y1="166.7" x2="349.0" y2="166.7" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,166.7 351.0,170.7 351.0,162.7" fill="#5c4282"/>
+<line x1="342.5" y1="226.3" x2="134.0" y2="226.3" stroke="#5c4282" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="127.5,226.3 136.0,230.3 136.0,222.3" fill="#5c4282"/>
+<line x1="127.5" y1="337.9" x2="551.0" y2="337.9" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="557.5,337.9 549.0,333.9 549.0,341.9" fill="#b07926"/>
+<line x1="557.5" y1="410.3" x2="766.0" y2="410.3" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="772.5,410.3 764.0,406.3 764.0,414.3" fill="#2b6a4c"/>
+<line x1="772.5" y1="509.1" x2="134.0" y2="509.1" stroke="#2b6a4c" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="127.5,509.1 136.0,513.1 136.0,505.1" fill="#2b6a4c"/>
+<rect x="380.4" y="140.4" width="354.3" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="151.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Publish signed PCC OS Image4 measurements before fleet rollout</text>
+<rect x="139.6" y="187.0" width="190.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="198.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Cache verified PCC Transparency</text>
+<text x="235.0" y="210.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Log roots &amp; allowed build digests</text>
+<rect x="10.0" y="248.5" width="237.8" height="31.6" rx="4" fill="#f4f1ea" stroke="#365378" stroke-width="0.9"/>
+<text x="128.9" y="260.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">Fetch attested PCC node ephemeral HPKE</text>
+<text x="128.9" y="272.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">keys; verify SEP chain &amp; Log inclusion</text>
+<rect x="144.8" y="298.6" width="395.4" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="342.5" y="309.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Send OHTTP request: Relay sees client IP, Prompt encrypted to PCC SEP</text>
+<text x="342.5" y="322.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">key</text>
+<rect x="570.2" y="357.9" width="189.6" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="369.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Forward blinded ciphertext: PCC</text>
+<text x="665.0" y="381.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">sees prompt after decrypt, never</text>
+<text x="665.0" y="394.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">client IP</text>
+<rect x="666.0" y="432.5" width="213.0" height="31.6" rx="4" fill="#f4f1ea" stroke="#2b6a4c" stroke-width="0.9"/>
+<text x="772.5" y="444.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Run inference in encrypted RAM; zero</text>
+<text x="772.5" y="456.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">persistent disk, zero operator shell</text>
+<rect x="262.1" y="482.8" width="375.9" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="494.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Return HPKE-encrypted response via OHTTP; wipe ephemeral context</text>
+</svg>

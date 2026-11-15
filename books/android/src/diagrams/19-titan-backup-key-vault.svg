@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 566" width="900" height="566">
+<rect x="0" y="0" width="900" height="566" fill="#ffffff"/>
+<line x1="127.5" y1="132.6" x2="127.5" y2="507.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="132.6" x2="342.5" y2="507.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="132.6" x2="557.5" y2="507.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="132.6" x2="772.5" y2="507.8" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="450.0" y1="72.0" x2="450.0" y2="507.8" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">END-TO-END ENCRYPTED CLOUD BACKUPS &amp; GOOGLE TITAN CLOUD KEY VAULT HSM</text>
+<rect x="34.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="127.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Android Client</text>
+<text x="127.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">BackupManager + Keystore</text>
+<rect x="249.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="342.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Google Backup Host</text>
+<text x="342.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Untrusted Cloud Storage</text>
+<rect x="464.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="557.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Titan Cloud Key Vault</text>
+<text x="557.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Custom HSM Cohort</text>
+<rect x="679.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="772.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Replacement Phone</text>
+<text x="772.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">LSKF Recovery Client</text>
+<text x="450.0" y="537.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Even a compromised cloud storage host or Insider cannot brute-force a 6-digit PIN: Titan HSM permanently bricks the vault after 10 misses.</text>
+<line x1="127.5" y1="229.4" x2="551.0" y2="229.4" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="557.5,229.4 549.0,225.4 549.0,233.4" fill="#5c4282"/>
+<line x1="127.5" y1="301.8" x2="336.0" y2="301.8" stroke="#365378" stroke-width="1.6"/>
+<polygon points="342.5,301.8 334.0,297.8 334.0,305.8" fill="#365378"/>
+<line x1="772.5" y1="361.4" x2="564.0" y2="361.4" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="557.5,361.4 566.0,365.4 566.0,357.4" fill="#236b66"/>
+<line x1="557.5" y1="485.8" x2="766.0" y2="485.8" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="772.5,485.8 764.0,481.8 764.0,489.8" fill="#2b6a4c"/>
+<rect x="307.6" y="50.9" width="284.8" height="18.2" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="62.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.5" font-weight="700" fill="#8d2d3b" text-anchor="middle">Hardware-Enforced Attempt Limit in Titan Silicon</text>
+<rect x="22.5" y="152.8" width="210.0" height="31.6" rx="4" fill="#f4f1ea" stroke="#2b6a4c" stroke-width="0.9"/>
+<text x="127.5" y="164.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Generate random 256-bit Application</text>
+<text x="127.5" y="177.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Backup Key; encrypt app data locally</text>
+<rect x="153.0" y="203.1" width="378.9" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="342.5" y="214.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Wrap Backup Key to verified Titan HSM cohort public key + LSKF claim</text>
+<rect x="156.9" y="249.3" width="156.2" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="260.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Upload AES-GCM backup</text>
+<text x="235.0" y="273.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">ciphertext (host holds zero</text>
+<text x="235.0" y="285.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">decryption key)</text>
+<rect x="569.3" y="322.0" width="191.4" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="333.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Recovery: submit noise-encrypted</text>
+<text x="665.0" y="345.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">LSKF proof to Titan HSM</text>
+<rect x="448.7" y="383.6" width="217.6" height="31.6" rx="4" fill="#f4f1ea" stroke="#5c4282" stroke-width="0.9"/>
+<text x="557.5" y="395.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">Verify signed HSM firmware &amp; enforce</text>
+<text x="557.5" y="407.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">strict &lt;= 10 lifetime attempt counter</text>
+<rect x="577.2" y="433.3" width="175.6" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="444.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Release wrapped Backup Key -&gt;</text>
+<text x="665.0" y="457.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">decrypt backup locally on new</text>
+<text x="665.0" y="469.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">phone</text>
+</svg>

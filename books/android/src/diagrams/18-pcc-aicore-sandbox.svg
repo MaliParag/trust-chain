@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 438" width="900" height="438">
+<rect x="0" y="0" width="900" height="438" fill="#ffffff"/>
+<rect x="26.0" y="74.0" width="324.0" height="305.5" rx="8.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="188.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#1e5139" text-anchor="middle">PRIVATE COMPUTE CORE (PCC)</text>
+<rect x="550.0" y="74.0" width="324.0" height="305.5" rx="8.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="712.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="700" letter-spacing="0.60px" fill="#19524e" text-anchor="middle">OPEN-SOURCE BRIDGE (PCS)</text>
+<line x1="450.0" y1="70.0" x2="450.0" y2="383.5" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PRIVATE COMPUTE CORE (PCC) &amp; AICORE: ZERO-AMBIENT-EGRESS ON-DEVICE INTELLIGENCE</text>
+<rect x="42.0" y="114.0" width="292.0" height="101.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="56.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">ISOLATED FOUNDATION MODEL</text>
+<text x="56.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">AICore + Gemini Nano (TPU / NPU)</text>
+<text x="56.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Processes sensitive notifications, call</text>
+<text x="56.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">summaries, &amp; Smart Reply inside SELinux</text>
+<text x="56.0" y="198.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">sandbox with zero INET sockets</text>
+<rect x="42.0" y="243.8" width="292.0" height="117.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="56.0" y="265.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">EPHEMERAL STATE</text>
+<text x="56.0" y="281.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Per-Caller Isolated Context &amp; LoRA</text>
+<text x="56.0" y="297.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Adapters</text>
+<text x="56.0" y="315.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Prevents cross-app prompt leakage; model</text>
+<text x="56.0" y="330.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">weights updated without exfiltrating user</text>
+<text x="56.0" y="344.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">inference inputs</text>
+<rect x="566.0" y="114.0" width="292.0" height="101.8" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="580.0" y="135.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">INSPECTABLE APK · GITHUB AOSP</text>
+<text x="580.0" y="151.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Private Compute Services (PCS)</text>
+<text x="580.0" y="170.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Tiny open-source package holding the sole</text>
+<text x="580.0" y="184.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">network path; reproducible/auditable by</text>
+<text x="580.0" y="198.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">external researchers</text>
+<rect x="566.0" y="243.8" width="292.0" height="117.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="580.0" y="265.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">PRIVACY-PRESERVING PROTOCOLS</text>
+<text x="580.0" y="281.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Federated Compute, SecAgg, &amp; PIR</text>
+<text x="580.0" y="299.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Enforces differential privacy, cryptographic</text>
+<text x="580.0" y="314.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">secure aggregation, and Private Information</text>
+<text x="580.0" y="328.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Retrieval</text>
+<text x="450.0" y="409.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">PCC components lack INTERNET permission at the kernel SELinux level; every byte crossing into PCS must traverse narrow privacy APIs.</text>
+<line x1="188.0" y1="215.8" x2="188.0" y2="237.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="188.0,243.8 192.0,235.3 184.0,235.3" fill="#4a5568"/>
+<line x1="712.0" y1="215.8" x2="712.0" y2="237.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="712.0,243.8 716.0,235.3 708.0,235.3" fill="#4a5568"/>
+<line x1="334.0" y1="164.9" x2="559.5" y2="164.9" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="566.0,164.9 557.5,160.9 557.5,168.9" fill="#2b6a4c"/>
+<line x1="334.0" y1="302.7" x2="559.5" y2="302.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="566.0,302.7 557.5,298.7 557.5,306.7" fill="#236b66"/>
+<rect x="344.2" y="49.0" width="211.6" height="18.0" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="60.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.4" font-weight="700" fill="#8d2d3b" text-anchor="middle">SELinux Neverallow Network Air-Gap</text>
+<rect x="374.9" y="155.5" width="131.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="167.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Typed Binder IPC Only</text>
+<rect x="359.1" y="293.3" width="163.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="440.7" y="304.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">DP / SecAgg Gradients Only</text>
+</svg>

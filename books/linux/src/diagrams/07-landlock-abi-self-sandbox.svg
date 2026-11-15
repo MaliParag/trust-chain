@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 655" width="760" height="655">
+<rect x="0" y="0" width="760" height="655" fill="#ffffff"/>
+<text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">UNPRIVILEGED PROCESS SELF-CONFINEMENT WITH LANDLOCK (ABI V1 THROUGH V7)</text>
+<rect x="145.0" y="48.0" width="470.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">STEP 1 · IRREVERSIBLE PRIVILEGE CEILING</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">prctl(PR_SET_NO_NEW_PRIVS, 1)</text>
+<text x="159.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Guarantees execve() can never gain SUID/SGID or file capabilities to</text>
+<text x="159.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">confuse restricted helper binaries</text>
+<rect x="145.0" y="193.5" width="470.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="159.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">STEP 2 · HANDLED ACCESS MASK</text>
+<text x="159.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">landlock_create_ruleset(attr, size, 0) -&gt; ruleset_fd</text>
+<text x="159.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Declares handled FS actions (v1-v3), TCP bind/connect (v4), device ioctl (v5),</text>
+<text x="159.0" y="263.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">IPC abstract/signal scope (v6), audit flags (v7)</text>
+<rect x="145.0" y="339.0" width="470.0" height="103.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="159.0" y="360.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">STEP 3 · EXPLICIT ALLOWLIST RULES</text>
+<text x="159.0" y="376.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">landlock_add_rule(ruleset_fd, PATH_BENEATH | NET_PORT,</text>
+<text x="159.0" y="392.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">...)</text>
+<text x="159.0" y="411.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Grants read-only /usr, read-write ./workspace fd, and outbound TCP 443;</text>
+<text x="159.0" y="425.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">everything unhandled-or-omitted defaults to deny</text>
+<rect x="145.0" y="500.5" width="470.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="522.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">STEP 4 · MONOTONIC DOMAIN COMMIT</text>
+<text x="159.0" y="538.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">landlock_restrict_self(ruleset_fd, 0)</text>
+<text x="159.0" y="556.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Attaches immutable merged ruleset tree (up to 16 stacked layers) to current</text>
+<text x="159.0" y="571.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">task cred and all future children</text>
+<text x="380.0" y="612.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Because Landlock requires zero privileges and composes up to 16 nested domains, any application can sandbox itself before</text>
+<text x="380.0" y="626.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">parsing untrusted input.</text>
+<line x1="380.0" y1="135.5" x2="380.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,193.5 384.0,185.0 376.0,185.0" fill="#4a5568"/>
+<line x1="380.0" y1="281.0" x2="380.0" y2="332.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,339.0 384.0,330.5 376.0,330.5" fill="#4a5568"/>
+<line x1="380.0" y1="442.5" x2="380.0" y2="494.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,500.5 384.0,492.0 376.0,492.0" fill="#4a5568"/>
+<rect x="334.1" y="151.6" width="91.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">no root needed</text>
+<rect x="312.7" y="297.1" width="134.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="308.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">populate fd/port rules</text>
+<rect x="320.4" y="458.7" width="119.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="470.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">irreversible commit</text>
+</svg>

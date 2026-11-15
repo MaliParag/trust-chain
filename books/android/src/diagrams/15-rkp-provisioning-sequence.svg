@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 633" width="900" height="633">
+<rect x="0" y="0" width="900" height="633" fill="#ffffff"/>
+<line x1="127.5" y1="132.6" x2="127.5" y2="575.0" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="132.6" x2="342.5" y2="575.0" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="132.6" x2="557.5" y2="575.0" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="132.6" x2="772.5" y2="575.0" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="235.0" y1="72.0" x2="235.0" y2="575.0" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">REMOTE KEY PROVISIONING (RKP): ELIMINATING FACTORY KEYBOXES VIA DICE BCC</text>
+<rect x="34.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="127.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Silicon / KeyMint</text>
+<text x="127.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">IRemotelyProvisionedComponent</text>
+<rect x="249.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="342.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">rkpd Daemon</text>
+<text x="342.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Mainline Userspace</text>
+<rect x="464.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="557.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Google RKP Backend</text>
+<text x="557.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Provisioning Authority</text>
+<rect x="679.0" y="76.0" width="187.0" height="56.6" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="772.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">App / Verifier</text>
+<text x="772.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Short-Lived Leaf Cert</text>
+<text x="450.0" y="605.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Factory batch keyboxes leaked repeatedly at ODM lines; RKP rotates short-lived pools and revokes compromised cohorts dynamically.</text>
+<line x1="342.5" y1="203.0" x2="551.0" y2="203.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="557.5,203.0 549.0,199.0 549.0,207.0" fill="#365378"/>
+<line x1="342.5" y1="262.6" x2="134.0" y2="262.6" stroke="#365378" stroke-width="1.6"/>
+<polygon points="127.5,262.6 136.0,266.6 136.0,258.6" fill="#365378"/>
+<line x1="127.5" y1="374.2" x2="336.0" y2="374.2" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="342.5,374.2 334.0,370.2 334.0,378.2" fill="#2b6a4c"/>
+<line x1="342.5" y1="433.8" x2="551.0" y2="433.8" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="557.5,433.8 549.0,429.8 549.0,437.8" fill="#5c4282"/>
+<line x1="557.5" y1="506.2" x2="349.0" y2="506.2" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,506.2 351.0,510.2 351.0,502.2" fill="#5c4282"/>
+<line x1="342.5" y1="553.0" x2="766.0" y2="553.0" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="772.5,553.0 764.0,549.0 764.0,557.0" fill="#236b66"/>
+<rect x="136.1" y="50.9" width="197.8" height="18.2" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="235.0" y="62.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.5" font-weight="700" fill="#8d2d3b" text-anchor="middle">Per-Die UDS Never Leaves Silicon</text>
+<rect x="366.2" y="150.5" width="167.6" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="161.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Fetch Geek (Google Endpoint</text>
+<text x="450.0" y="174.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Encryption Key) + server EEK</text>
+<text x="450.0" y="187.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">challenge</text>
+<rect x="119.2" y="223.2" width="231.6" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="234.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">generateKeyPair() +</text>
+<text x="235.0" y="247.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">generateCertificateRequestV2(challenge)</text>
+<rect x="10.0" y="284.8" width="242.5" height="31.6" rx="4" fill="#f4f1ea" stroke="#2b6a4c" stroke-width="0.9"/>
+<text x="131.3" y="296.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Sign MacedPublicKey pool using silicon UDS</text>
+<text x="131.3" y="309.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">-&gt; DICE Boot Certificate Chain (BCC)</text>
+<rect x="153.4" y="334.8" width="163.1" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="346.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Return COSE_Sign1 CSR +</text>
+<text x="235.0" y="358.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">encrypted UDS-derived BCC</text>
+<rect x="365.2" y="394.4" width="169.7" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="405.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Submit CSR over HTTPS (zero</text>
+<text x="450.0" y="418.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">factory batch keybox used)</text>
+<rect x="358.9" y="453.7" width="182.2" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="465.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Verify DICE silicon root &amp; patch</text>
+<text x="450.0" y="477.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">levels -&gt; issue short-lived</text>
+<text x="450.0" y="490.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">attestation certs</text>
+<rect x="371.2" y="526.7" width="372.7" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="557.5" y="538.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Assign per-app attestation key to sign X.509 OID .17 leaf certificate</text>
+</svg>

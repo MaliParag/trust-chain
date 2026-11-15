@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 529" width="900" height="529">
+<rect x="0" y="0" width="900" height="529" fill="#ffffff"/>
+<line x1="450.0" y1="104.1" x2="450.0" y2="430.4" stroke="#94a3b8" stroke-width="2.0"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ADVERSARIAL ESCALATION: ROOT HIDING &amp; KEYBOX SPOOFING VS. HARDWARE ATTESTATION</text>
+<text x="208.0" y="54.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#8d2d3b" text-anchor="middle">ROOT HIDING &amp; SPOOFING TRADECRAFT</text>
+<text x="692.0" y="54.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#2b6a4c" text-anchor="middle">PLATFORM &amp; ATTESTATION COUNTERMEASURES</text>
+<rect x="28.0" y="72.0" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="42.0" y="93.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">USERSPACE HIDING</text>
+<text x="42.0" y="108.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">MagiskHide Mount Namespaces</text>
+<text x="42.0" y="126.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Unmounts su/overlayfs inside target app mount namespace</text>
+<text x="42.0" y="139.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">and spoofs ro.boot.verifiedbootstate props</text>
+<rect x="512.0" y="72.0" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="93.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">HARDWARE SIGNAL</text>
+<text x="526.0" y="108.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">KeyMaster Boot-State Binding</text>
+<text x="526.0" y="126.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Bootloader passes locked/ORANGE state directly to TEE</text>
+<text x="526.0" y="139.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">before Linux kernel starts; userspace cannot reset</text>
+<rect x="28.0" y="174.1" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="42.0" y="195.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">IN-PROCESS INJECTION</text>
+<text x="42.0" y="210.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Zygisk, Shamiko, &amp; PlayIntegrityFix</text>
+<text x="42.0" y="228.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Hooks GMS DroidGuard process to downgrade attestation</text>
+<text x="42.0" y="241.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">fallback to basic fingerprint checks</text>
+<rect x="512.0" y="174.1" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="195.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">API RETIREMENT</text>
+<text x="526.0" y="210.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SafetyNet Sunset -&gt; Play Integrity API</text>
+<text x="526.0" y="228.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Mandates hardware-backed Key Attestation for</text>
+<text x="526.0" y="241.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">MEETS_DEVICE_INTEGRITY on Android 13+ devices</text>
+<rect x="28.0" y="276.2" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="42.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">KERNEL-MODE ROOT</text>
+<text x="42.0" y="313.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">KernelSU &amp; APatch</text>
+<text x="42.0" y="330.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Grants UID 0 via kernel kprobes/patches without touching</text>
+<text x="42.0" y="343.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">/system files, evading mount scanners</text>
+<rect x="512.0" y="276.2" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">AVB BOOT HASH</text>
+<text x="526.0" y="313.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Verified boot.img Digest in RootOfTrust</text>
+<text x="526.0" y="330.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Patching GKI kernel requires unlocked ORANGE bootloader,</text>
+<text x="526.0" y="343.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">immediately changing TEE verifiedBootState</text>
+<rect x="28.0" y="378.4" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="42.0" y="399.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">BINDER CERT SWAP</text>
+<text x="42.0" y="415.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">TrickyStore + Leaked OEM Keyboxes</text>
+<text x="42.0" y="432.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Intercepts keystore2 Binder replies in system_server and</text>
+<text x="42.0" y="445.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">re-signs leaf certs using stolen factory XML keyboxes</text>
+<rect x="512.0" y="378.4" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="399.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">DYNAMIC REVOCATION</text>
+<text x="526.0" y="415.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Mandatory RKP + Keybox Revocation Waves</text>
+<text x="526.0" y="432.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Revokes leaked factory keyboxes on status list and enforces</text>
+<text x="526.0" y="445.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">recent RKP-minted StrongBox/TEE chains</text>
+<text x="450.0" y="500.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Software heuristics always lose to Ring 0; only unrevoked RKP/StrongBox keys anchored in UDS resist host kernel spoofing.</text>
+<line x1="388.0" y1="114.1" x2="414.0" y2="114.1" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="114.1" x2="512.0" y2="114.1" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="216.2" x2="414.0" y2="216.2" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="216.2" x2="512.0" y2="216.2" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="318.3" x2="414.0" y2="318.3" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="318.3" x2="512.0" y2="318.3" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="420.4" x2="414.0" y2="420.4" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="420.4" x2="512.0" y2="420.4" stroke="#2b6a4c" stroke-width="1.4"/>
+<rect x="424.3" y="104.9" width="51.5" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="116.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">2016-19</text>
+<rect x="423.1" y="207.0" width="53.9" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="218.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">2021-23</text>
+<rect x="421.8" y="309.2" width="56.3" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="320.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">2023-24</text>
+<rect x="421.8" y="411.3" width="56.3" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="422.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">2024-26</text>
+</svg>

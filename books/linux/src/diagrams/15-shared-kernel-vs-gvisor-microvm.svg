@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 379" width="900" height="379">
+<rect x="0" y="0" width="900" height="379" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">CONTAINER ISOLATION SPECTRUM: SHARED KERNEL VS. USER-SPACE KERNEL VS. KVM MICRO-VM</text>
+<text x="450.0" y="48.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Trading thin syscall passthrough for dedicated syscall emulation or hardware Second-Level Address Translation (EPT/Stage-2)</text>
+<rect x="28.0" y="66.0" width="216.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="40.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#524c44" text-anchor="start">Row / Column</text>
+<rect x="244.0" y="66.0" width="209.3" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="348.7" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">runc / crun</text>
+<text x="348.7" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Shared Host Kernel</text>
+<rect x="453.3" y="66.0" width="209.3" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="558.0" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">gVisor (runsc)</text>
+<text x="558.0" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Go Sentry + Gofer</text>
+<rect x="662.7" y="66.0" width="209.3" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="767.3" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Firecracker / Kata</text>
+<text x="767.3" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">KVM Hardware Micro-VM</text>
+<rect x="28.0" y="120.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="140.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Primary Isolation Boundary</text>
+<text x="40.0" y="155.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">What stops Ring 0 escape</text>
+<rect x="244.0" y="120.0" width="209.3" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="348.7" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Namespaces + seccomp-BPF</text>
+<rect x="453.3" y="120.0" width="209.3" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="558.0" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Go Sentry + systrap</text>
+<rect x="662.7" y="120.0" width="209.3" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="767.3" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">VT-x/SVM + EPT/Stage-2</text>
+<rect x="28.0" y="166.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="186.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Host Syscall Exposure</text>
+<text x="40.0" y="201.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Reachable host kernel surface</text>
+<rect x="244.0" y="166.0" width="209.3" height="46.0" rx="0.0" fill="#f8eaec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="348.7" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#6e1f2b" text-anchor="middle">~300+ host syscalls</text>
+<rect x="453.3" y="166.0" width="209.3" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="558.0" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">~53 filtered syscalls</text>
+<rect x="662.7" y="166.0" width="209.3" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="767.3" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">KVM + ~35 VMM syscalls</text>
+<rect x="28.0" y="212.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="232.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Memory &amp; Boot Overhead</text>
+<text x="40.0" y="247.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Per-sandbox density cost</text>
+<rect x="244.0" y="212.0" width="209.3" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="348.7" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">&lt; 2 MiB / ~15 ms</text>
+<rect x="453.3" y="212.0" width="209.3" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="558.0" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">~15-25 MiB / ~50 ms</text>
+<rect x="662.7" y="212.0" width="209.3" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="767.3" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">~5-30 MiB / ~125 ms</text>
+<rect x="28.0" y="258.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="278.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Kernel-Module / GPU Compat</text>
+<text x="40.0" y="293.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Workload compatibility trade-off</text>
+<rect x="244.0" y="258.0" width="209.3" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="348.7" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Native host ABI</text>
+<rect x="453.3" y="258.0" width="209.3" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="558.0" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Emulated Linux ABI</text>
+<rect x="662.7" y="258.0" width="209.3" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="767.3" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Dedicated guest kernel</text>
+<text x="28.0" y="322.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#3a352f" text-anchor="start">Defense-in-depth rule: Untrusted multi-tenant code and autonomous AI sandboxes require gVisor or KVM micro-VM boundaries.</text>
+<text x="450.0" y="350.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Both gVisor and Firecracker wrap their host-facing monitor processes inside strict seccomp jails so even VMM bugs stay contained.</text>
+</svg>

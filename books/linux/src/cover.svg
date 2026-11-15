@@ -40,7 +40,7 @@
 <line x1="196" y1="1135" x2="404" y2="1135" stroke="#537299" stroke-width="1.3" stroke-dasharray="4,5"/>
 <line x1="196" y1="1315" x2="404" y2="1315" stroke="#537299" stroke-width="1.3" stroke-dasharray="4,5"/>
 <rect x="174" y="1040.0" width="44" height="370" rx="6" fill="#0c1422" stroke="#456184" stroke-width="1.2"/>
-<text x="201" y="1225.0" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" font-weight="700" letter-spacing="1.1px" fill="#8cb0db" text-anchor="middle" transform="rotate(-90 201 1225.0)">BPF &amp; AUDIT TELEMETRY</text>
+<text x="201" y="1225.0" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13" font-weight="700" letter-spacing="1.1px" fill="#8cb0db" text-anchor="middle" transform="rotate(-90 201 1225.0)">eBPF &amp; LSM MEDIATION</text>
 <line x1="478" y1="899" x2="478" y2="841" stroke="#df5a67" stroke-width="2.4" stroke-opacity="0.88"/>
 <polygon points="478,831 471,845 485,845" fill="#df5a67"/>
 <line x1="478" y1="1079" x2="478" y2="1021" stroke="#e5954b" stroke-width="2.4" stroke-opacity="0.88"/>
@@ -53,33 +53,33 @@
 <path d="M 460.0 728.0 A 50 50 0 0 1 524.0 793.0" transform="translate(7,-6)" fill="none" stroke="#df5a67" stroke-width="3.2"/>
 <line x1="440" y1="803" x2="520" y2="741" stroke="#df5a67" stroke-width="2.2" stroke-dasharray="7,5"/>
 <circle cx="478" cy="775" r="6.5" fill="#df5a67"/>
-<text x="564" y="753" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#df5a67" text-anchor="start">FINALE · CHAPTER 16</text>
-<text x="564" y="781" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">SUPPLY CHAIN &amp; INITRAMFS SEAMS</text>
-<text x="564" y="807" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">XZ Utils liblzma Backdoor  ·  Unmeasured Initramfs  ·  Container Breakouts</text>
+<text x="564" y="753" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#df5a67" text-anchor="start">FINALE · CHAPTER 20</text>
+<text x="564" y="781" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">UPSTREAM SUPPLY-CHAIN SUBVERSION</text>
+<text x="564" y="807" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">XZ Utils liblzma Backdoor  ·  Sigstore &amp; Rekor  ·  SLSA &amp; Reproducible Builds</text>
 <circle cx="478" cy="955" r="50" fill="#0e1726" stroke="#e5954b" stroke-width="2.8"/>
 <circle cx="478" cy="955" r="36" fill="none" stroke="#e5954b" stroke-width="1.0" stroke-opacity="0.45"/>
 <circle cx="478" cy="955" r="6.5" fill="#e5954b"/>
-<text x="564" y="933" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#e5954b" text-anchor="start">PART IV · CHAPTERS 13 TO 15</text>
-<text x="564" y="961" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">CONTAINERS, SPIFFE, &amp; CONFIDENTIAL VMs</text>
-<text x="564" y="987" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Namespaces &amp; Seccomp-BPF  ·  Kata &amp; Firecracker  ·  SPIFFE/SPIRE  ·  SVSM TEEs</text>
+<text x="564" y="933" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#e5954b" text-anchor="start">PART IV · CHAPTERS 14 TO 19</text>
+<text x="564" y="961" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">CONTAINERS, AI SANDBOXES, &amp; CONFIDENTIAL VMs</text>
+<text x="564" y="987" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Namespaces &amp; seccomp  ·  gVisor &amp; Firecracker  ·  SPIFFE/SPIRE  ·  SVSM &amp; CoCo</text>
 <circle cx="478" cy="1135" r="50" fill="#0e1726" stroke="#e5954b" stroke-width="2.8"/>
 <circle cx="478" cy="1135" r="36" fill="none" stroke="#e5954b" stroke-width="1.0" stroke-opacity="0.45"/>
 <circle cx="478" cy="1135" r="6.5" fill="#e5954b"/>
-<text x="564" y="1113" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#e5954b" text-anchor="start">PART III · CHAPTERS 9 TO 12</text>
-<text x="564" y="1141" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">CREDENTIALS, KEYRINGS, &amp; PRIVILEGE</text>
-<text x="564" y="1167" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Capabilities  ·  Polkit &amp; sudo  ·  Kernel Keyrings &amp; LUKS2  ·  PAM, SSSD, &amp; FIDO2</text>
+<text x="564" y="1113" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#e5954b" text-anchor="start">PART III · CHAPTERS 9 TO 13</text>
+<text x="564" y="1141" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">USERSPACE PRIVILEGE, SECRETS, &amp; IDENTITY</text>
+<text x="564" y="1167" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Capabilities &amp; userns  ·  systemd run0  ·  systemd-creds  ·  PAM, FIDO2, &amp; OpenSSH</text>
 <circle cx="478" cy="1315" r="50" fill="#0e1726" stroke="#e5954b" stroke-width="2.8"/>
 <circle cx="478" cy="1315" r="36" fill="none" stroke="#e5954b" stroke-width="1.0" stroke-opacity="0.45"/>
 <circle cx="478" cy="1315" r="6.5" fill="#e5954b"/>
-<text x="564" y="1293" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#e5954b" text-anchor="start">PART II · CHAPTERS 5 TO 8</text>
-<text x="564" y="1321" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">KERNEL INTEGRITY, LSMs, &amp; eBPF</text>
-<text x="564" y="1347" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Kernel Lockdown &amp; Module Signing  ·  SELinux, AppArmor, &amp; Landlock  ·  eBPF Verifier</text>
+<text x="564" y="1293" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#e5954b" text-anchor="start">PART II &amp; INTERLUDE · CH. 5 TO 8</text>
+<text x="564" y="1321" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">KERNEL HARDENING, LSMs, &amp; eBPF</text>
+<text x="564" y="1347" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Kernel Lockdown &amp; Rust  ·  SELinux, AppArmor, &amp; Landlock  ·  LSM-BPF vs. Verifier</text>
 <polygon points="523.0,1521.0 478.0,1547.0 433.0,1521.0 433.0,1469.0 478.0,1443.0 523.0,1469.0" fill="#101a2b" stroke="#e5954b" stroke-width="3.0"/>
 <rect x="458" y="1475" width="40" height="40" rx="4" fill="#162338" stroke="#e5954b" stroke-width="1.8"/>
 <circle cx="478" cy="1495" r="6.5" fill="#e5954b"/>
 <text x="564" y="1473" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#e5954b" text-anchor="start">PART I · CHAPTERS 1 TO 4</text>
 <text x="564" y="1501" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">UEFI, SHIM, UKI, &amp; VERIFIED ROOTFS</text>
-<text x="564" y="1527" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">shim &amp; MOK  ·  SBAT  ·  Unified Kernel Images (UKI)  ·  TPM2 PCR[11]  ·  dm-verity &amp; IMA</text>
+<text x="564" y="1527" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">shim &amp; SBAT  ·  Unified Kernel Images (UKI)  ·  systemd-pcrlock  ·  dm-verity, IPE, &amp; Keylime</text>
 <line x1="136" y1="1648" x2="1264" y2="1648" stroke="#233248" stroke-width="1.2"/>
 <text x="136" y="1716" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="42" font-weight="400" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">Parag Mali</text>
 </svg>

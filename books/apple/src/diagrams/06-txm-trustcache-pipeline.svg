@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 758" width="900" height="758">
+<rect x="0" y="0" width="900" height="758" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">MACH-O CODE SIGNING VERIFICATION: TRUST CACHES, TXM, AND PAGE-IN HASHES</text>
+<rect x="34.0" y="48.0" width="440.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">LOAD / FAULT</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Mach-O LC_CODE_SIGNATURE &amp; CS_CodeDirectory</text>
+<text x="48.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Embeds per-4KB-page SHA-256 hashes, DER entitlements slot (-7), and</text>
+<text x="48.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">CMS signature blob</text>
+<rect x="34.0" y="193.5" width="440.0" height="73.3" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="48.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GATE 1 · PLATFORM</text>
+<text x="48.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CDHash in Static Trust Cache (BootKC / SSV)?</text>
+<text x="48.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">TXM checks immutable sorted CDHash array baked into signed OS image</text>
+<rect x="34.0" y="324.8" width="440.0" height="89.3" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="48.0" y="346.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">GATE 2 · GRAFTS</text>
+<text x="48.0" y="362.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CDHash in Dynamic Trust Cache (Cryptex / Developer</text>
+<text x="48.0" y="378.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">DDI)?</text>
+<text x="48.0" y="396.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Checks Image4-authenticated runtime trust cache payloads</text>
+<rect x="34.0" y="472.0" width="440.0" height="87.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="48.0" y="493.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">GATE 3 · THIRD-PARTY</text>
+<text x="48.0" y="509.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CoreTrust + AMFI / TXM CMS &amp; Provisioning Evaluation</text>
+<text x="48.0" y="528.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Verifies Apple CA chain, App Store / Notarization / Provisioning</text>
+<text x="48.0" y="542.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Profile, and allowed DER entitlements</text>
+<rect x="612.0" y="473.5" width="260.0" height="84.6" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="495.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">REJECTED</text>
+<text x="626.0" y="510.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">SIGKILL (CS_INVALID)</text>
+<text x="626.0" y="527.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">EXEC_EXIT_REASON_CODESIGNING</text>
+<text x="626.0" y="541.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">aborts launch on bad CMS or entitlement</text>
+<rect x="34.0" y="617.5" width="440.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="48.0" y="639.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">RUNTIME VM ENFORCEMENT</text>
+<text x="48.0" y="655.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Page-Fault Hash Check + CS_HARD / CS_KILL</text>
+<text x="48.0" y="673.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">vm_fault verifies every executable page against CodeDirectory; invalid</text>
+<text x="48.0" y="688.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">pages send immediate SIGKILL</text>
+<text x="450.0" y="729.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Trust caches keep third-party X.509/CMS parsers off the critical path for first-party OS binaries.</text>
+<line x1="254.0" y1="135.5" x2="254.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,193.5 258.0,185.0 250.0,185.0" fill="#4a5568"/>
+<line x1="254.0" y1="266.8" x2="254.0" y2="318.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,324.8 258.0,316.3 250.0,316.3" fill="#4a5568"/>
+<line x1="254.0" y1="414.0" x2="254.0" y2="465.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,472.0 258.0,463.5 250.0,463.5" fill="#4a5568"/>
+<line x1="474.0" y1="515.8" x2="605.5" y2="515.8" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,515.8 603.5,511.8 603.5,519.8" fill="#8d2d3b"/>
+<line x1="254.0" y1="559.5" x2="254.0" y2="611.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,617.5 258.0,609.0 250.0,609.0" fill="#4a5568"/>
+<rect x="212.1" y="151.6" width="83.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">register blob</text>
+<rect x="188.8" y="282.9" width="130.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="294.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">miss -&gt; check dynamic</text>
+<rect x="197.8" y="430.1" width="112.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="441.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">miss -&gt; parse CMS</text>
+<rect x="510.5" y="506.4" width="48.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="517.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">invalid</text>
+<rect x="223.3" y="575.7" width="61.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="587.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">admitted</text>
+</svg>

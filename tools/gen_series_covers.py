@@ -27,16 +27,16 @@ SPECS = {
         "snap": "#df5a67",
         "rail_label": "UNIFIED DARWIN · PLATFORM FORKS",
         "nodes": [
-            (775,  "snap",   "FINALE · CHAPTER 17",          "ZERO-CLICK CHAINS & SOVEREIGN COMPULSION",
-             "FORCEDENTRY  ·  Operation Triangulation  ·  End-to-End Escrow Pressure"),
-            (955,  "ring",   "PART IV · CHAPTERS 13 TO 16",  "ZERO-KNOWLEDGE CLOUD & PRIVATE AI",
-             "iCloud Keychain HSMs  ·  Advanced Data Protection  ·  PQ3  ·  Private Cloud Compute"),
-            (1135, "ring",   "PART III · CHAPTERS 9 TO 12",  "DATA PROTECTION, KEYS, & CONTINUITY",
-             "APFS Classes A-D  ·  BFU vs. AFU  ·  Stolen Device Protection  ·  Passkeys"),
-            (1315, "ring",   "PART II · CHAPTERS 5 TO 8",    "XNU, ENTITLEMENTS, & SANDBOXES",
-             "Signed System Volume  ·  AMFI & TXM vs. Notarization  ·  Seatbelt  ·  TCC & ESF"),
+            (775,  "snap",   "FINALE · CHAPTER 20",          "ZERO-CLICK CHAINS & SOVEREIGN COMPULSION",
+             "FORCEDENTRY  ·  Operation Triangulation  ·  UK IPA Section 253 ADP Compulsion"),
+            (955,  "ring",   "PART IV · CHAPTERS 15 TO 19",  "ZERO-KNOWLEDGE CLOUD & AGENTIC AI",
+             "iCloud HSM Escrow & ADP  ·  PQ3 & KT  ·  App Intents & MCP  ·  Private Cloud Compute"),
+            (1135, "ring",   "PART III · CHAPTERS 10 TO 14", "DATA CUSTODY, ATTESTATION, & CONTINUITY",
+             "APFS BFU/AFU  ·  Stolen Device Protection  ·  App Attest & MDA  ·  Passkeys & DDM"),
+            (1315, "ring",   "PART II & INTERLUDE · CH. 5 TO 9", "XNU, CODE SIGNING, & OBSERVABILITY",
+             "APFS SSV  ·  AMFI & TXM vs. Notarization  ·  Seatbelt & BlastDoor  ·  TCC & ESF"),
             (1495, "anchor", "PART I · CHAPTERS 1 TO 4",     "APPLE SILICON & PERSONALIZED BOOT",
-             "Boot ROM  ·  Image4 & TSS  ·  macOS 1TR LocalPolicy  ·  SEP  ·  PAC & SPTM"),
+             "Boot ROM  ·  Image4 & TSS  ·  macOS 1TR LocalPolicy  ·  SEP  ·  PAC, SPTM, & EMTE"),
         ],
         "lead1": "One silicon architecture across five operating systems.",
         "lead2": "Every guarantee is personalized in hardware or intentionally relaxed by owner policy.",
@@ -44,21 +44,21 @@ SPECS = {
             "Since the transition to Apple Silicon, iOS, iPadOS, macOS, watchOS, and visionOS share "
             "one vertical chain of cryptographic invariants: immutable Boot ROM and per-device Image4 "
             "tickets verify boot stages, the Secure Enclave Processor (SEP) isolates biometric and "
-            "key material behind UID fuses, SPTM and Pointer Authentication harden XNU memory, Signed "
-            "System Volumes seal the OS, and Private Cloud Compute extends attestation to cloud AI."
+            "key material behind UID fuses, SPTM and Memory Integrity Enforcement (EMTE) harden XNU, "
+            "and Private Cloud Compute extends hardware attestation to cloud AI."
         ),
         "p2": (
             "Rather than treating Apple's platforms as disconnected products, this volume traces "
             "their shared Darwin spine once and highlights the exact forks where threat models "
-            "diverge: closed iPhone TXM enforcement versus macOS 1TR LocalPolicy and Notarization, "
-            "visionOS R1 spatial sensor isolation, and mercenary zero-click exploit chains."
+            "diverge: closed iPhone TXM enforcement versus macOS 1TR LocalPolicy, Notarization, and "
+            "MCP agent boundaries, visionOS R1 gaze isolation, and mercenary zero-click chains."
         ),
         "parts": [
-            ("PART I · SILICON", "Chapters 1 to 4", "Boot ROM, Image4/TSS personalization, macOS 1TR LocalPolicy, SEP/sepOS, PAC, SPTM, and EMTE"),
-            ("PART II · XNU & CODE", "Chapters 5 to 8", "APFS Signed System Volume, AMFI, TXM vs. Gatekeeper/Notarization, Seatbelt, BlastDoor, TCC, and ESF"),
-            ("PART III · DATA & KEYS", "Chapters 9 to 12", "APFS per-file Data Protection, BFU/AFU forensics, Stolen Device Protection, Passkeys, and DDM"),
-            ("PART IV · CLOUD & PCC", "Chapters 13 to 16", "iCloud HSM recovery, Advanced Data Protection, iMessage PQ3 + KT, Find My, and Private Cloud Compute"),
-            ("FINALE · THE SEAMS", "Chapter 17", "FORCEDENTRY, Operation Triangulation MMIO, macOS TCC bypasses, and sovereign ADP compulsion"),
+            ("PART I · SILICON", "Chapters 1 to 4", "Boot ROM, Image4/TSS, AppleDART, macOS 1TR LocalPolicy, SEP/sepOS, PAC, SPTM, Exclaves, and EMTE"),
+            ("PART II & INTERLUDE", "Chapters 5 to 9", "APFS SSV, AMFI, TXM vs. Gatekeeper/Notarization, XPC/Seatbelt/BlastDoor, TCC, ESF, and forensics"),
+            ("PART III · DATA & TRUST", "Chapters 10 to 14", "APFS Data Protection, Keychains, Stolen Device Protection, App Attest/MDA, Passkeys, and DDM/PSSO"),
+            ("PART IV · CLOUD & AI", "Chapters 15 to 19", "iCloud HSM escrow & ADP, iMessage PQ3 + KT, Find My, App Intents/MCP agents, and Private Cloud Compute"),
+            ("FINALE · THE SEAMS", "Chapter 20", "FORCEDENTRY, Operation Triangulation MMIO, WebKit-to-dyld chains, and UK IPA Section 253 compulsion"),
         ],
     },
     "linux": {
@@ -69,40 +69,40 @@ SPECS = {
         "sub2": "LSMs, eBPF, and Containers to Confidential Cloud",
         "accent": "#e5954b",
         "snap": "#df5a67",
-        "rail_label": "BPF & AUDIT TELEMETRY",
+        "rail_label": "eBPF & LSM MEDIATION",
         "nodes": [
-            (775,  "snap",   "FINALE · CHAPTER 16",          "SUPPLY CHAIN & INITRAMFS SEAMS",
-             "XZ Utils liblzma Backdoor  ·  Unmeasured Initramfs  ·  Container Breakouts"),
-            (955,  "ring",   "PART IV · CHAPTERS 13 TO 15",  "CONTAINERS, SPIFFE, & CONFIDENTIAL VMs",
-             "Namespaces & Seccomp-BPF  ·  Kata & Firecracker  ·  SPIFFE/SPIRE  ·  SVSM TEEs"),
-            (1135, "ring",   "PART III · CHAPTERS 9 TO 12",  "CREDENTIALS, KEYRINGS, & PRIVILEGE",
-             "Capabilities  ·  Polkit & sudo  ·  Kernel Keyrings & LUKS2  ·  PAM, SSSD, & FIDO2"),
-            (1315, "ring",   "PART II · CHAPTERS 5 TO 8",    "KERNEL INTEGRITY, LSMs, & eBPF",
-             "Kernel Lockdown & Module Signing  ·  SELinux, AppArmor, & Landlock  ·  eBPF Verifier"),
+            (775,  "snap",   "FINALE · CHAPTER 20",          "UPSTREAM SUPPLY-CHAIN SUBVERSION",
+             "XZ Utils liblzma Backdoor  ·  Sigstore & Rekor  ·  SLSA & Reproducible Builds"),
+            (955,  "ring",   "PART IV · CHAPTERS 14 TO 19",  "CONTAINERS, AI SANDBOXES, & CONFIDENTIAL VMs",
+             "Namespaces & seccomp  ·  gVisor & Firecracker  ·  SPIFFE/SPIRE  ·  SVSM & CoCo"),
+            (1135, "ring",   "PART III · CHAPTERS 9 TO 13",  "USERSPACE PRIVILEGE, SECRETS, & IDENTITY",
+             "Capabilities & userns  ·  systemd run0  ·  systemd-creds  ·  PAM, FIDO2, & OpenSSH"),
+            (1315, "ring",   "PART II & INTERLUDE · CH. 5 TO 8", "KERNEL HARDENING, LSMs, & eBPF",
+             "Kernel Lockdown & Rust  ·  SELinux, AppArmor, & Landlock  ·  LSM-BPF vs. Verifier"),
             (1495, "anchor", "PART I · CHAPTERS 1 TO 4",     "UEFI, SHIM, UKI, & VERIFIED ROOTFS",
-             "shim & MOK  ·  SBAT  ·  Unified Kernel Images (UKI)  ·  TPM2 PCR[11]  ·  dm-verity & IMA"),
+             "shim & SBAT  ·  Unified Kernel Images (UKI)  ·  systemd-pcrlock  ·  dm-verity, IPE, & Keylime"),
         ],
         "lead1": "On Linux, trust is assembled from composable mechanisms rather than dictated by one vendor.",
-        "lead2": "Every unsealed seam between bootloader, initramfs, and userspace breaks the chain.",
+        "lead2": "Every unsealed seam between bootloader, initramfs, kernel, and tarball breaks the chain.",
         "p1": (
-            "Unlike vertically integrated proprietary platforms, Linux must span laptops, immutable "
-            "appliances, hyperscale Kubernetes nodes, and confidential cloud guests. Closing the classic "
-            "gap between a signed kernel and an unverified initramfs required engineering shim/SBAT, "
-            "signed Unified Kernel Images (UKIs), systemd-cryptsetup TPM2 sealing, dm-verity/fs-verity "
-            "Merkle roots, and Linux Security Modules."
+            "Unlike vertically integrated proprietary platforms, Linux spans workstations, immutable "
+            "appliances, hyperscale Kubernetes nodes, AI execution sandboxes, and confidential cloud "
+            "guests. Closing the gap between a signed kernel and an unverified initramfs required "
+            "shim/SBAT, signed Unified Kernel Images (UKIs), systemd-pcrlock TPM2 policies, dm-verity, "
+            "Integrity Policy Enforcement (IPE), and stacked Linux Security Modules."
         ),
         "p2": (
             "This volume traces how modern Linux composes those primitives from reset vector to "
-            "multi-tenant cloud workloads, analyzing where container namespaces share a monolithic "
-            "kernel TCB, how the eBPF verifier serves simultaneously as observability engine and "
-            "attack surface, and how supply-chain attacks such as XZ Utils target userspace trust."
+            "confidential cloud, analyzing where user namespaces and shared kernels fail against "
+            "untrusted code, how eBPF acts as both enforcement substrate and attack surface, how "
+            "Firecracker and Landlock isolate AI agents, and how XZ Utils subverted upstream trust."
         ),
         "parts": [
-            ("PART I · VERIFIED BOOT", "Chapters 1 to 4", "UEFI shim, MOK, SBAT, Unified Kernel Images, systemd-stub TPM2 PCRs, LUKS2, dm-verity, and IMA"),
-            ("PART II · KERNEL & LSMs", "Chapters 5 to 8", "Kernel Lockdown, module signatures, CFI/KFENCE, SELinux, AppArmor, Landlock, and the eBPF verifier"),
-            ("PART III · USERSPACE AUTH", "Chapters 9 to 12", "POSIX capabilities, user namespaces, Polkit/sudo, kernel keyrings, PAM, SSH certificates, and FIDO2"),
-            ("PART IV · CLOUD NATIVE", "Chapters 13 to 15", "cgroups/seccomp-BPF containers, gVisor/Firecracker/Kata microVMs, SPIFFE/SPIRE, and COCONUT-SVSM"),
-            ("FINALE · THE SEAMS", "Chapter 16", "XZ Utils (CVE-2024-3094), unmeasured initramfs shells, Dirty Pipe/io_uring escapes, and distro drift"),
+            ("PART I · VERIFIED BOOT", "Chapters 1 to 4", "UEFI shim, MOK, SBAT, Unified Kernel Images, systemd-pcrlock TPM2 PCRs, LUKS2, dm-verity, IPE, and Keylime"),
+            ("PART II & INTERLUDE", "Chapters 5 to 8", "Kernel Lockdown, KCFI/CET/Rust, SELinux, AppArmor, unprivileged Landlock, and the eBPF dual edge"),
+            ("PART III · USERSPACE AUTH", "Chapters 9 to 13", "Capabilities & userns, systemd run0, D-Bus sandboxing, systemd-creds, PAM/SSSD, and OpenSSH/FIDO2"),
+            ("PART IV · CLOUD & AI", "Chapters 14 to 19", "OCI containers, gVisor & Firecracker AI sandboxes, SPIFFE/SPIRE, COCONUT-SVSM, and Confidential Containers"),
+            ("FINALE · SUPPLY CHAIN", "Chapter 20", "XZ Utils (CVE-2024-3094) IFUNC backdoor, dlopen() isolation, Reproducible Builds, SLSA, and Sigstore"),
         ],
     },
     "android": {
@@ -115,38 +115,37 @@ SPECS = {
         "snap": "#df5a67",
         "rail_label": "SELINUX & BINDER MEDIATION",
         "nodes": [
-            (775,  "snap",   "FINALE · CHAPTER 16",          "BASEBAND, GPU, & MERCENARY CHAINS",
-             "Mali/Adreno GPU Kernel Chains  ·  Cellular Baseband Isolation  ·  OEM Patch Lag"),
-            (955,  "ring",   "PART IV · CHAPTERS 13 TO 15",  "ATTESTATION & PRIVATE COMPUTE",
-             "Key Attestation  ·  Play Integrity  ·  Cloud Backup Vaults  ·  Private Compute Core"),
-            (1135, "ring",   "PART III · CHAPTERS 9 TO 12",  "APP SANDBOX, STORAGE, & PASSKEYS",
-             "Per-App UID Sandbox  ·  Binder IPC  ·  File-Based Encryption (FBE)  ·  Credential Manager"),
-            (1315, "ring",   "PART II · CHAPTERS 5 TO 8",    "pKVM, TRUSTZONE, & MANDATORY SELINUX",
-             "Protected KVM (AVF)  ·  TrustZone/Trusty TEE  ·  Enforcing SELinux  ·  MTE & KCFI"),
+            (775,  "snap",   "FINALE · CHAPTER 20",          "GPUs, BASEBANDS, & MULTI-VENDOR SEAMS",
+             "Mali & Adreno GPU Drivers  ·  Exynos/Shannon Baseband RCE  ·  The OEM Patch Gap"),
+            (955,  "ring",   "PART IV · CHAPTERS 15 TO 19",  "ATTESTATION, ENTERPRISE, & AGENTIC AI",
+             "Key Attestation & RKP  ·  Play Integrity  ·  AICore & AppFunctions  ·  Private AI Compute"),
+            (1135, "ring",   "PART III & INTERLUDE · CH. 9 TO 14", "APP SANDBOX, STORAGE, & FORENSICS",
+             "Per-App UID & Binder  ·  Advanced Protection  ·  FBE & Identity Check  ·  Intrusion Logging"),
+            (1315, "ring",   "PART II · CHAPTERS 5 TO 8",    "pKVM, SELINUX, GKI, & ARM MTE",
+             "Protected KVM (AVF)  ·  Enforcing SELinux neverallow  ·  Treble/GKI & Rust  ·  Arm MTE"),
             (1495, "anchor", "PART I · CHAPTERS 1 TO 4",     "BOOT ROM, AVB 2.0, & STRONGBOX",
-             "SoC Boot ROM  ·  AVB 2.0 VBMeta & Rollback Indexes  ·  dm-verity  ·  Titan M2 / StrongBox"),
+             "SoC Boot ROM  ·  AVB 2.0 VBMeta & Rollback Indexes  ·  dm-verity  ·  Titan M2 & KeyMint"),
         ],
         "lead1": "Every installed application is treated as a mutually distrusting principal from day one.",
         "lead2": "Hardware-backed Verified Boot, SELinux, and pKVM turn Linux into a zero-root mobile OS.",
         "p1": (
             "Android re-engineered the Linux kernel around a radically different premise than desktop "
-            "Unix: there is no ambient multi-app user session, persistent root partitions are immutable "
+            "Unix: there is no ambient multi-app user session, persistent OS partitions are sealed "
             "under dm-verity and Android Verified Boot 2.0 (VBMeta), every app runs as an isolated UID "
-            "confined by mandatory SELinux policy and mediated Binder IPC, and cryptographic keys live "
-            "inside TrustZone KeyMint or discrete StrongBox silicon (Titan M2)."
+            "confined by mandatory SELinux neverallow rules and Binder IPC, and keys reside in StrongBox."
         ),
         "p2": (
-            "With Android Virtualization Framework (pKVM) moving hypervisor isolation beneath the host "
-            "kernel and Arm Memory Tagging Extension (MTE) hardening native heaps, this volume traces "
-            "how Android constructs hardware-attested mobile trust and where GPU drivers, basebands, "
-            "and multi-vendor OEM update pipelines still fracture the chain."
+            "With Protected KVM (pKVM) moving isolation beneath both Linux and TrustZone, Arm MTE "
+            "hardening native heaps, Intrusion Logging preserving tamper-evident forensics, and Private "
+            "AI Compute extending attestation to cloud TPUs, this volume traces mobile trust end to end "
+            "and examines where GPUs, basebands, USB drivers, and OEM patch lag fracture the chain."
         ),
         "parts": [
-            ("PART I · VERIFIED BOOT", "Chapters 1 to 4", "SoC ROM, Bootloader lock state, AVB 2.0 VBMeta, rollback indexes, dm-verity, and StrongBox/KeyMint"),
-            ("PART II · pKVM & KERNEL", "Chapters 5 to 8", "Protected KVM (AVF), TrustZone/Trusty TEEs, universal enforcing SELinux, GKI, KCFI, and Arm MTE"),
-            ("PART III · SANDBOX & DATA", "Chapters 9 to 12", "Per-app UIDs, Binder IPC & permissions, File-Based Encryption (FBE), BiometricPrompt, and Passkeys"),
-            ("PART IV · CLOUD & AI", "Chapters 13 to 15", "Hardware Key Attestation, Play Integrity, E2EE Google Backup HSMs, and Private Compute Core"),
-            ("FINALE · THE SEAMS", "Chapter 16", "GPU/vendor driver chains, Exynos/Qualcomm baseband boundaries, Accessibility abuse, and OEM lag"),
+            ("PART I · VERIFIED BOOT", "Chapters 1 to 4", "SoC ROM, Green/Yellow/Orange lock states, AVB 2.0 VBMeta, dm-verity/APEX, StrongBox, and KeyMint/Weaver"),
+            ("PART II · pKVM & KERNEL", "Chapters 5 to 8", "Protected KVM (AVF/Microdroid), enforcing SELinux neverallow, Project Treble/GKI, Rust, and Arm MTE"),
+            ("PART III & INTERLUDE", "Chapters 9 to 14", "Per-app UIDs & Binder, Advanced Protection, FBE & Identity Check, Passkeys, and E2EE Intrusion Logging"),
+            ("PART IV · CLOUD & AI", "Chapters 15 to 19", "RKP Key Attestation, Play Integrity vs. keyboxes, Work Profiles, AICore/AppFunctions, and Private AI Compute"),
+            ("FINALE · THE SEAMS", "Chapter 20", "Mali/Adreno GPU chains, Exynos/Shannon baseband RCE, TrustZone trustlets, and the multi-tier OEM patch gap"),
         ],
     },
 }
@@ -275,7 +274,7 @@ def build_back(sp):
     lx, rx = 136, 1264
     cw = rx - lx
 
-    els.append(text_el(lx, 162, f'THE {sp["word1"]} {sp["word2"]}  ·  ARCHITECTURAL BLUEPRINT', font=SANS, size=15, fill=acc, weight="600", spacing=1.5))
+    els.append(text_el(lx, 162, f'THE {sp["word1"]} {sp["word2"]}  ·  ARCHITECTURAL OVERVIEW', font=SANS, size=15, fill=acc, weight="600", spacing=1.5))
     els.append(f'<line x1="{lx}" y1="184" x2="{rx}" y2="184" stroke="#233248" stroke-width="1.2"/>')
     els.append(text_el(lx, 248, sp["lead1"], font=SERIF, size=32, fill="#f7f4ed", weight="700"))
     els.append(text_el(lx, 294, sp["lead2"], font=SERIF, size=28, fill=acc, style="italic"))
@@ -287,7 +286,7 @@ def build_back(sp):
             cy += 34
         cy += 18
 
-    els.append(text_el(lx, cy + 16, "PLANNED ARCHITECTURE OF THIS VOLUME", font=SANS, size=14.5, fill=acc, weight="700", spacing=1.4))
+    els.append(text_el(lx, cy + 16, "ARCHITECTURE OF THIS VOLUME", font=SANS, size=14.5, fill=acc, weight="700", spacing=1.4))
     cy += 36
 
     row_h = 104

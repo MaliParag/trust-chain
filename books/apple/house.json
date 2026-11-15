@@ -1,7 +1,7 @@
 {
   "slug": "apple",
   "volume": "Volume II",
-  "status": "in-preparation",
+  "status": "complete",
   "title": "The Apple Trust Chain",
   "subtitle": "From Boot ROM and Secure Enclave Across iOS, macOS, iPadOS, watchOS, and visionOS to Private Cloud Compute",
   "author": "Parag Mali",
@@ -16,18 +16,84 @@
     [
       "front-matter/01-copyright.md",
       "Copyright"
+    ],
+    [
+      "front-matter/02-preface.md",
+      "Preface"
+    ],
+    [
+      "front-matter/03-how-to-read.md",
+      "How to Read This Book"
     ]
   ],
   "specials": [
     [
       "chapters/00-prologue.md",
       "Prologue"
+    ],
+    [
+      "chapters/00b-foundations.md",
+      "Foundations"
     ]
   ],
-  "parts": [],
+  "parts": [
+    {
+      "title": "Part I: Silicon & Personalized Boot",
+      "items": [
+        "01-secure-boot",
+        "02-mac-localpolicy",
+        "03-secure-enclave",
+        "04-silicon-memory-safety"
+      ]
+    },
+    {
+      "title": "Part II: XNU, Code Signing, & Containment",
+      "items": [
+        "05-apfs-ssv-dyld",
+        "06-amfi-txm-notarization",
+        "07-ipc-seatbelt-blastdoor",
+        "08-macos-tcc-sysext"
+      ]
+    },
+    {
+      "title": "Interlude: Observing a Closed & Open Stack",
+      "items": [
+        "09-esf-xprotect-forensics"
+      ]
+    },
+    {
+      "title": "Part III: Data Custody, Identity, & Fleet Trust",
+      "items": [
+        "10-apfs-data-protection",
+        "11-keychain-stolen-device",
+        "12-sep-app-device-attestation",
+        "13-accounts-passkeys-continuity",
+        "14-ddm-platform-sso"
+      ]
+    },
+    {
+      "title": "Part IV: Zero-Knowledge Cloud & Agentic AI",
+      "items": [
+        "15-icloud-hsm-adp",
+        "16-imessage-pq3-kt",
+        "17-find-my-anti-tracking",
+        "18-agentic-ai-workload-isolation",
+        "19-private-cloud-compute"
+      ]
+    },
+    {
+      "title": "Finale: When Vertical Integration Snaps",
+      "items": [
+        "20-mercenary-chains-compulsion"
+      ]
+    }
+  ],
   "back": [
     "back-matter/70-references.md",
-    "back-matter/90-colophon.md"
+    "back-matter/80-glossary.md",
+    "back-matter/85-about.md",
+    "back-matter/90-colophon.md",
+    "back-matter/95-index.md"
   ],
   "interior": {
     "name": "Alabaster, Brushed Titanium, & Glacier Blueprint",

@@ -1,7 +1,7 @@
 {
   "slug": "android",
   "volume": "Volume IV",
-  "status": "in-preparation",
+  "status": "complete",
   "title": "The Android Trust Chain",
   "subtitle": "From Verified Boot 2.0, StrongBox, and pKVM Through SELinux and Keystore to Play Integrity and Private Compute",
   "author": "Parag Mali",
@@ -16,18 +16,84 @@
     [
       "front-matter/01-copyright.md",
       "Copyright"
+    ],
+    [
+      "front-matter/02-preface.md",
+      "Preface"
+    ],
+    [
+      "front-matter/03-how-to-read.md",
+      "How to Read This Book"
     ]
   ],
   "specials": [
     [
       "chapters/00-prologue.md",
       "Prologue"
+    ],
+    [
+      "chapters/00b-foundations.md",
+      "Foundations"
     ]
   ],
-  "parts": [],
+  "parts": [
+    {
+      "title": "Part I · Silicon, Verified Boot, & Hardware KeyMint",
+      "items": [
+        "01-bootrom-avb-vbmeta",
+        "02-antirollback-verity-apex",
+        "03-trustzone-strongbox",
+        "04-keymint-weaver-throttling"
+      ]
+    },
+    {
+      "title": "Part II · De-Privileging the Kernel: pKVM, SELinux, & Memory Safety",
+      "items": [
+        "05-pkvm-avf-microdroid",
+        "06-selinux-seccomp",
+        "07-treble-gki-rust",
+        "08-arm-mte-scudo"
+      ]
+    },
+    {
+      "title": "Part III · App Sandbox, Storage, & Local Identity",
+      "items": [
+        "09-uid-zygote-binder",
+        "10-apk-signing-scoped-storage",
+        "11-accessibility-advanced-protection",
+        "12-fbe-usb-theft-protection",
+        "13-biometrics-passkeys"
+      ]
+    },
+    {
+      "title": "Interlude · Mobile Telemetry & Tamper-Evident Forensics",
+      "items": [
+        "14-play-protect-intrusion-logging"
+      ]
+    },
+    {
+      "title": "Part IV · Remote Attestation, Enterprise, & Agentic AI",
+      "items": [
+        "15-key-attestation-rkp",
+        "16-play-integrity-keybox-wars",
+        "17-android-enterprise",
+        "18-on-device-agentic-ai",
+        "19-e2ee-backups-private-ai-compute"
+      ]
+    },
+    {
+      "title": "Finale · Where the Multi-Vendor Chain Snaps",
+      "items": [
+        "20-multivendor-spyware-chains"
+      ]
+    }
+  ],
   "back": [
     "back-matter/70-references.md",
-    "back-matter/90-colophon.md"
+    "back-matter/80-glossary.md",
+    "back-matter/85-about.md",
+    "back-matter/90-colophon.md",
+    "back-matter/95-index.md"
   ],
   "interior": {
     "name": "Mineral Stone & Silicon Jade Schematic",

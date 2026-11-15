@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 427" width="900" height="427">
+<rect x="0" y="0" width="900" height="427" fill="#ffffff"/>
+<line x1="450.0" y1="104.1" x2="450.0" y2="328.3" stroke="#94a3b8" stroke-width="2.0"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">OFFLINE BEACON TENSION: ANTI-THEFT UNLINKABILITY VS. UNWANTED-STALKING DETECTION</text>
+<text x="208.0" y="54.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#8d2d3b" text-anchor="middle">PRIVACY / ANTI-THEFT DESIGN</text>
+<text x="692.0" y="54.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="700" letter-spacing="0.60px" fill="#2b6a4c" text-anchor="middle">ANTI-STALKING COUNTERMEASURES (DULT)</text>
+<rect x="28.0" y="72.0" width="360.0" height="84.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="42.0" y="93.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">FIND MY LAUNCH</text>
+<text x="42.0" y="108.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">15-Minute BLE Key &amp; MAC Rotation</text>
+<text x="42.0" y="126.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Prevents retail stores and passive RF sniffers from tracking</text>
+<text x="42.0" y="139.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">a passerby's MacBook or iPhone</text>
+<rect x="512.0" y="72.0" width="360.0" height="84.1" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="526.0" y="93.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">INHERENT TENSION</text>
+<text x="526.0" y="108.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Rapid Rotation Hides Rogue Trackers Too</text>
+<text x="526.0" y="126.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">If keys rotated every 15 minutes unconditionally, a victim</text>
+<text x="526.0" y="139.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">phone could not tell one hidden tracker followed it all day</text>
+<rect x="28.0" y="174.1" width="360.0" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="42.0" y="195.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">AIRTAG LAUNCH</text>
+<text x="42.0" y="210.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Separated-From-Owner State Split</text>
+<text x="42.0" y="228.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Near owner: fast rotation; separated from owner: slower 24h</text>
+<text x="42.0" y="241.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">window key so nearby victims correlate travel</text>
+<rect x="512.0" y="174.1" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="195.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">ACOUSTIC + IOS ALERT</text>
+<text x="526.0" y="210.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Chime + 'AirTag Found Moving With You'</text>
+<text x="526.0" y="228.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">On-device trajectory clustering triggers alert and UWB</text>
+<text x="526.0" y="241.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Precision Finding to locate hidden tag</text>
+<rect x="28.0" y="276.2" width="360.0" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="42.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">CROSS-ECOSYSTEM GAP</text>
+<text x="42.0" y="313.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Android Users Needed Manual Scan App</text>
+<text x="42.0" y="330.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Platform-specific beacon formats left non-Apple victims</text>
+<text x="42.0" y="343.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">without background stalking alerts</text>
+<rect x="512.0" y="276.2" width="360.0" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="526.0" y="297.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">IETF DULT STANDARD</text>
+<text x="526.0" y="313.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Joint iOS + Android Unwanted Tracker Spec</text>
+<text x="526.0" y="330.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Standardized separated-mode BLE flags enable native</text>
+<text x="526.0" y="343.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">cross-OS stalking alerts across AirTag and third-party tags</text>
+<text x="450.0" y="398.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Unlinkability and unwanted-tracker detection are mathematically opposed; separated-owner state switching balances both threat models.</text>
+<line x1="388.0" y1="114.1" x2="414.0" y2="114.1" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="114.1" x2="512.0" y2="114.1" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="216.2" x2="414.0" y2="216.2" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="216.2" x2="512.0" y2="216.2" stroke="#2b6a4c" stroke-width="1.4"/>
+<line x1="388.0" y1="318.3" x2="414.0" y2="318.3" stroke="#8d2d3b" stroke-width="1.4"/>
+<line x1="486.0" y1="318.3" x2="512.0" y2="318.3" stroke="#2b6a4c" stroke-width="1.4"/>
+<rect x="432.1" y="104.9" width="35.8" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="116.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">2019</text>
+<rect x="432.1" y="207.0" width="35.8" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="218.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">2021</text>
+<rect x="415.8" y="309.2" width="68.4" height="18.3" rx="4" fill="#edf1f6" stroke="#365378" stroke-width="0.9"/>
+<text x="450.0" y="320.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.6" font-weight="700" fill="#284163" text-anchor="middle">2024-2026</text>
+</svg>

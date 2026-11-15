@@ -1,0 +1,13 @@
+# About This Book
+
+## The Author
+
+Parag Mali is a systems and security engineer who writes about operating-system security architectures, hardware roots of trust, cryptographic protocols, and confidential computing across Windows, Apple, Linux, and Android platforms at paragmali.com.
+
+## Method and Editorial Standard
+
+*The Android Trust Chain* (Volume IV of *The Platform Trust Chain Series*) was written to unify an ecosystem whose primary technical documentation is split across disparate layers. Silicon reference manuals cover `ARMv8`/`ARMv9` Exception Levels, `TrustZone`, `SMMUv3`, and `MTE` without connecting them to `KeyMint` or `Zygote`; AOSP source trees document `libavb`, `pKVM`, `SELinux` `neverallow` macros, `Binder`, and `fscrypt` separately from Google Play's `RKP`, `Play Integrity`, and `Titanium Intelligence Enclave` infrastructure; and forensic reports on *Predator*, *Cellebrite* USB zero-days, and `AccessibilityService` banking trojans examine isolated exploit chains without situating them inside the platform's complete compatibility and hardware governance model. Practitioners defending fleets, designing mobile authentication backends, or auditing custom operating systems need one continuous, primary-source reference spanning all twenty links.
+
+Every chapter in this volume adheres to four strict engineering commitments. First, mechanism precedes abstraction: subsystems are traced directly to AOSP C, Rust, and `AIDL` structures (`AvbVBMetaImageHeader`, `HardwareAuthToken`, `flat_binder_object`, `KeyDescription`), cryptographic derivations (`HKDF`, `AES-256-XTS`, `AES-256-GCM`, `OpenProfile for DICE`, `HPKE`), and hardware registers, anchored to numbered primary citations in the [References](70-references.md). Second, ecosystem sovereignty is treated accurately: every chapter explicitly distinguishes behavior across `GREEN` locked stock OEM builds, `YELLOW` locked custom-root builds (`GrapheneOS` via `avb_custom_key`), and `ORANGE` unlocked builds rather than conflating open-source custom roots with compromised bootloaders. Third, offensive reality is analyzed candidly as structural gap analysis, pairing every layer with a six-column historical exploit table and rigorous mathematical or architectural bounds. Fourth, every claim is paired with concise, read-only `adb`, `fastboot`, `avbtool`, `apksigner`, and `openssl` verification commands so engineers can audit live handsets directly.
+
+Readers who identify an erratum, broken reference link, or platform behavior shift in newer AOSP or silicon releases are invited to open an issue on GitHub or reach the author via paragmali.com.

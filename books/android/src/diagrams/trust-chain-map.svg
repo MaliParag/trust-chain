@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 745" width="900" height="745">
+<rect x="0" y="0" width="900" height="745" fill="#ffffff"/>
+<rect x="656.0" y="201.3" width="212.0" height="524.0" rx="8.0" fill="#f4f1ea" stroke="#524c44" stroke-width="1.3" stroke-dasharray="5,3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">THE 20-CHAPTER ANDROID TRUST CHAIN</text>
+<text x="450.0" y="48.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Hardware roots, EL2 pKVM, mandatory SELinux, and RKP attestation across a multi-vendor ecosystem</text>
+<rect x="52.0" y="70.0" width="560.0" height="73.3" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="66.0" y="91.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">FINALE · CHAPTER 20</text>
+<text x="66.0" y="107.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Multi-Vendor Chain Breaks &amp; The Patch Gap</text>
+<text x="66.0" y="126.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">20. Mali &amp; Adreno GPU Drivers, Exynos/Shannon Basebands, Trustlets, &amp; OEM OTA Lag</text>
+<rect x="52.0" y="201.3" width="560.0" height="87.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="66.0" y="222.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">PART IV · CHAPTERS 15 TO 19</text>
+<text x="66.0" y="238.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Remote Attestation, Enterprise, &amp; Agentic AI</text>
+<text x="66.0" y="257.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">15. Key Attestation &amp; RKP · 16. Play Integrity &amp; Keyboxes · 17. Enterprise · 18. Agentic AI ·</text>
+<text x="66.0" y="271.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">19. E2EE &amp; TIE</text>
+<rect x="52.0" y="346.8" width="560.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="66.0" y="368.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">PART III · CHAPTERS 9 TO 13</text>
+<text x="66.0" y="384.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">App Sandbox, Storage, &amp; Local Identity</text>
+<text x="66.0" y="402.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">9. UID &amp; Binder · 10. APK Signing &amp; Storage · 11. Accessibility &amp; Adv. Protection · 12. FBE &amp;</text>
+<text x="66.0" y="417.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">USB · 13. Passkeys</text>
+<rect x="52.0" y="492.3" width="560.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="66.0" y="513.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">PART II · CHAPTERS 5 TO 8</text>
+<text x="66.0" y="529.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">De-Privileging the Kernel: pKVM, SELinux, &amp; MTE</text>
+<text x="66.0" y="548.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">5. pKVM &amp; AVF · 6. SELinux neverallow &amp; seccomp · 7. Treble, GKI, KCFI, &amp; Rust · 8. Arm MTE</text>
+<text x="66.0" y="562.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">&amp; Scudo</text>
+<rect x="52.0" y="637.8" width="560.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="66.0" y="659.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">PART I · CHAPTERS 1 TO 4</text>
+<text x="66.0" y="675.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Silicon, Verified Boot, &amp; Hardware KeyMint</text>
+<text x="66.0" y="694.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">1. Boot ROM &amp; AVB VBMeta · 2. Rollback, dm-verity, &amp; APEX · 3. TrustZone vs. StrongBox ·</text>
+<text x="66.0" y="708.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">4. KeyMint &amp; Weaver</text>
+<rect x="668.0" y="223.3" width="188.0" height="125.2" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="762.0" y="244.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="middle">INTERLUDE · CHAPTER 14</text>
+<text x="762.0" y="260.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Play Protect &amp; E2EE</text>
+<text x="762.0" y="274.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Intrusion Logging</text>
+<text x="762.0" y="292.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">No 3rd-party kernel hooks:</text>
+<text x="762.0" y="305.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Dynamic Signal Monitoring,</text>
+<text x="762.0" y="318.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">SecurityLog, and E2EE cloud</text>
+<text x="762.0" y="331.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">forensic logs</text>
+<text x="762.0" y="681.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="700" fill="#524c44" text-anchor="middle">Tamper-evident telemetry:</text>
+<text x="762.0" y="697.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" font-style="italic" fill="#524c44" text-anchor="middle">survives post-compromise wipe</text>
+<line x1="332.0" y1="201.3" x2="332.0" y2="149.8" stroke="#8d2d3b" stroke-width="1.8"/>
+<polygon points="332.0,143.3 328.0,151.8 336.0,151.8" fill="#8d2d3b"/>
+<line x1="332.0" y1="346.8" x2="332.0" y2="295.3" stroke="#146c4e" stroke-width="1.8"/>
+<polygon points="332.0,288.8 328.0,297.3 336.0,297.3" fill="#146c4e"/>
+<line x1="332.0" y1="492.3" x2="332.0" y2="440.8" stroke="#146c4e" stroke-width="1.8"/>
+<polygon points="332.0,434.3 328.0,442.8 336.0,442.8" fill="#146c4e"/>
+<line x1="332.0" y1="637.8" x2="332.0" y2="586.3" stroke="#146c4e" stroke-width="1.8"/>
+<polygon points="332.0,579.8 328.0,588.3 336.0,588.3" fill="#146c4e"/>
+<line x1="612.0" y1="245.0" x2="649.5" y2="245.0" stroke="#787167" stroke-width="1.2" stroke-dasharray="3,3"/>
+<polygon points="656.0,245.0 647.5,241.0 647.5,249.0" fill="#787167"/>
+<line x1="612.0" y1="390.5" x2="649.5" y2="390.5" stroke="#787167" stroke-width="1.2" stroke-dasharray="3,3"/>
+<polygon points="656.0,390.5 647.5,386.5 647.5,394.5" fill="#787167"/>
+<line x1="612.0" y1="536.0" x2="649.5" y2="536.0" stroke="#787167" stroke-width="1.2" stroke-dasharray="3,3"/>
+<polygon points="656.0,536.0 647.5,532.0 647.5,540.0" fill="#787167"/>
+<line x1="612.0" y1="681.5" x2="649.5" y2="681.5" stroke="#787167" stroke-width="1.2" stroke-dasharray="3,3"/>
+<polygon points="656.0,681.5 647.5,677.5 647.5,685.5" fill="#787167"/>
+<rect x="259.5" y="166.3" width="145.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="332.0" y="177.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">multi-vendor seam snaps</text>
+<rect x="234.2" y="311.8" width="195.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="332.0" y="323.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#146c4e" text-anchor="middle">attests silicon &amp; isolates cloud/AI</text>
+<rect x="224.2" y="457.4" width="215.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="332.0" y="468.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#146c4e" text-anchor="middle">enforces per-app &amp; CE/DE boundaries</text>
+<rect x="245.1" y="602.9" width="173.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="332.0" y="614.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#146c4e" text-anchor="middle">contains Ring 0 &amp; memory bugs</text>
+</svg>

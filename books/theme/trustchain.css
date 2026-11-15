@@ -1,0 +1,476 @@
+/* The Platform Trust Chain Series - mdBook theme overrides.
+   Ports the print book's designed components (trust ledger, named callouts,
+   evidence certificates, figures) that tools/mdbook-trustchain.mjs emits, using
+   mdBook's per-theme variables so light (light, rust) and dark (navy, coal, ayu)
+   themes both read well. */
+
+/* Provenance colors, keyed off mdBook's theme classes on <html>. */
+:root {
+    --tc-cap-ink: #15703b; --tc-cap-bg: #e9f3ec;
+    --tc-emu-ink: #8a5a12; --tc-emu-bg: #f6eeda;
+    --tc-doc-ink: #1f557f; --tc-doc-bg: #e7eff6;
+    --tc-def: #2b5d8a;
+    --tc-quote: #6a7b52;
+    --tc-warn-ink: #a23b2c; --tc-warn-bg: #f7ece9;
+    --tc-ov-bg: #f2f6fb;
+    --tc-ov-hdr: #e4eef8;
+    --tc-ov-border: #366393;
+    --tc-ov-accent: #234b76;
+    --tc-ov-key: #1e446b;
+    --tc-ov-div: rgba(45, 88, 134, 0.16);
+}
+.navy, .coal, .ayu {
+    --tc-cap-ink: #6fcf97; --tc-cap-bg: #13241a;
+    --tc-emu-ink: #d8a657; --tc-emu-bg: #241c10;
+    --tc-doc-ink: #7fb0d8; --tc-doc-bg: #101a24;
+    --tc-def: #6c9cc7;
+    --tc-quote: #9bb06f;
+    --tc-warn-ink: #d98a7e; --tc-warn-bg: #241412;
+    --tc-ov-bg: #121e2f;
+    --tc-ov-hdr: #18283e;
+    --tc-ov-border: #4373a8;
+    --tc-ov-accent: #689fd8;
+    --tc-ov-key: #8cbbf0;
+    --tc-ov-div: rgba(120, 165, 215, 0.16);
+}
+
+/* --- Series & preview banner: injected on every page by theme/preview-banner.js. */
+#preview-banner {
+    margin: 0 0 1.6rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--tc-emu-ink);
+    border-left: 4px solid var(--tc-emu-ink);
+    border-radius: 6px;
+    background: var(--tc-emu-bg);
+    font-size: 0.88em;
+    line-height: 1.5;
+}
+#preview-banner strong { color: var(--tc-emu-ink); }
+#preview-banner .series-switcher {
+    margin-top: 0.35rem;
+    padding-top: 0.35rem;
+    border-top: 1px solid rgba(138, 90, 18, 0.22);
+    font-size: 0.92em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+}
+#preview-banner .series-switcher a.vol-pill {
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(138, 90, 18, 0.35);
+    text-decoration: none;
+    font-weight: 600;
+}
+#preview-banner .series-switcher a.vol-pill.active {
+    background: var(--tc-emu-ink);
+    color: var(--bg, #111);
+    border-color: var(--tc-emu-ink);
+}
+@media print {
+    #preview-banner { display: none; }
+}
+
+/* --- Chapter Overview: colored, outlined 5-coordinate specification card. -- */
+.chapter-overview {
+    margin: 1.5rem 0 2rem;
+    border: 1.5px solid var(--tc-ov-border);
+    border-left: 5px solid var(--tc-ov-accent);
+    border-radius: 7px;
+    background: var(--tc-ov-bg);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.chapter-overview > h2 {
+    margin: 0 !important;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.78rem !important;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--tc-ov-hdr);
+    border-bottom: 1px solid var(--tc-ov-div);
+    color: var(--tc-ov-key);
+}
+.chapter-overview > h2 a.header {
+    color: inherit !important;
+    text-decoration: none;
+}
+.overview-grid {
+    display: flex;
+    flex-direction: column;
+}
+.overview-row {
+    display: grid;
+    grid-template-columns: 13.5rem 1fr;
+    gap: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-bottom: 1px solid var(--tc-ov-div);
+    align-items: baseline;
+    font-size: 0.94em;
+    line-height: 1.5;
+}
+.overview-row:last-child {
+    border-bottom: 0;
+}
+.overview-key {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--tc-ov-key);
+}
+.overview-val p {
+    margin: 0;
+}
+@media (max-width: 640px) {
+    .overview-row {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+}
+
+/* --- Trust ledger: the signature boxed sidebar opening each chapter. ------ */
+.trust-ledger {
+    margin: 1.8rem 0;
+    padding: 0.9rem 1.2rem 0.7rem;
+    border: 1px solid var(--quote-border, rgba(128, 128, 128, 0.3));
+    border-left: 4px solid var(--links, #4a86c7);
+    border-radius: 0 5px 5px 0;
+    background: var(--quote-bg, rgba(128, 128, 128, 0.1));
+    font-size: 0.95em;
+}
+.trust-ledger::before {
+    content: "Trust-Chain Ledger";
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--links, #4a86c7);
+    margin-bottom: 0.5rem;
+}
+.trust-ledger ul { margin: 0; padding-left: 1.1rem; list-style: none; }
+.trust-ledger li { margin: 0.3rem 0; }
+.trust-ledger li > strong:first-child { color: var(--links, #4a86c7); }
+
+/* --- Named callouts: colored left rule + soft tint. ---------------------- */
+.callout {
+    margin: 1.5rem 0;
+    padding: 0.7rem 1.1rem;
+    border-left: 3px solid var(--links, #4a86c7);
+    border-radius: 0 4px 4px 0;
+    background: var(--quote-bg, rgba(128, 128, 128, 0.1));
+}
+.callout > :first-child { margin-top: 0; }
+.callout > :last-child { margin-bottom: 0; }
+.callout-definition  { border-left-color: var(--tc-def); }
+.callout-foundations { border-left-color: var(--tc-def); }
+.callout-insight     { border-left-color: var(--links, #4a86c7); }
+.callout-aside       { border-left-color: var(--icons, #888); }
+.callout-note        { border-left-color: var(--icons, #888); }
+.callout-quote       { border-left-color: var(--tc-quote); font-style: italic; }
+.callout-warning {
+    border-left-color: var(--tc-warn-ink);
+    background: var(--tc-warn-bg);
+}
+
+/* --- Diagram-in-prose figure. -------------------------------------------- */
+.figure-prose {
+    margin: 1.6rem 0;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid var(--quote-border, rgba(128, 128, 128, 0.3));
+    border-radius: 5px;
+    text-align: center;
+}
+.figure-prose::before {
+    content: "Figure";
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--icons, #888);
+    margin-bottom: 0.4rem;
+}
+
+/* --- Evidence certificate: header band welded to the captured code block. - */
+.evidence {
+    margin: 1.6rem 0 0;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--quote-border, rgba(128, 128, 128, 0.3));
+    border-radius: 5px 5px 0 0;
+    font-size: 0.9em;
+}
+.evidence > :first-child { margin-top: 0; }
+.evidence > :last-child { margin-bottom: 0; }
+.evidence p { margin: 0.15rem 0; }
+
+/* The code block mdBook renders next is welded on (rounded only at the bottom).
+   `pre + pre` covers mdBook wrapping the code in a <pre class="playground">. */
+.evidence + pre {
+    margin-top: 0;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.evidence-captured   { background: var(--tc-cap-bg); border-color: var(--tc-cap-ink); border-left: 4px solid var(--tc-cap-ink); }
+.evidence-captured + pre   { border-left: 4px solid var(--tc-cap-ink); }
+.evidence-emulated   { background: var(--tc-emu-bg); border-color: var(--tc-emu-ink); border-left: 4px solid var(--tc-emu-ink); }
+.evidence-emulated + pre   { border-left: 4px solid var(--tc-emu-ink); }
+.evidence-documented { background: var(--tc-doc-bg); border-color: var(--tc-doc-ink); border-left: 4px solid var(--tc-doc-ink); }
+.evidence-documented + pre { border-left: 4px solid var(--tc-doc-ink); }
+
+/* An evidence header not welded to a code block gets full rounding + margin. */
+.evidence-standalone {
+    margin-bottom: 1.6rem;
+    border-radius: 5px;
+}
+
+/* --- Diagrams: print SVGs on a light card so dark strokes stay legible. --- */
+.content img[src$=".svg"] {
+    display: block;
+    max-width: 100%;
+    margin: 1.25rem auto;
+    background: #ffffff;
+    padding: 0.75rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.content figure { margin: 1.5rem 0; }
+.content figcaption {
+    font-size: 0.85em;
+    opacity: 0.75;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+/* Tables: fit cleanly inside the reading column without clipping or hidden horizontal scrollbars. */
+.content table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 0.88em;
+    line-height: 1.42;
+}
+.content th,
+.content td {
+    padding: 0.45rem 0.55rem;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+.content td code,
+.content th code {
+    font-size: 0.9em;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+@media (max-width: 640px) {
+    .content table { display: block; overflow-x: auto; table-layout: auto; }
+}
+
+/* --- Volume-Specific Interior Profiles (Apple, Linux, Android; Windows remains default) --- */
+html[data-volume="apple"],
+html[data-volume="linux"],
+html[data-volume="android"] {
+    --vol-sans: Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    --vol-serif: Charter, "Iowan Old Style", "Source Serif 4", Georgia, serif;
+    --vol-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* Volume II (Apple): Alabaster, Brushed Titanium, & Glacier Blueprint */
+html[data-volume="apple"] {
+    --vol-accent: #1e5fa8;
+    --vol-border: #cfd8e3;
+    --vol-row-div: #e2e8f0;
+    --vol-th-bg: #f1f5f9;
+    --tc-ov-bg: #f8fafc;
+    --tc-ov-hdr: #eef3f9;
+    --tc-ov-border: #cfd8e3;
+    --tc-ov-accent: #1e5fa8;
+    --tc-ov-key: #1e4b85;
+    --tc-ov-div: rgba(30, 95, 168, 0.13);
+    --tc-emu-ink: #1e5fa8;
+    --tc-emu-bg: #f1f6fc;
+}
+html[data-volume="apple"].light,
+html[data-volume="apple"].rust {
+    --bg: #f8f9fb;
+    --fg: #18202a;
+}
+html[data-volume="apple"].navy,
+html[data-volume="apple"].coal,
+html[data-volume="apple"].ayu {
+    --vol-accent: #7cc4f8;
+    --vol-border: rgba(148, 175, 206, 0.2);
+    --vol-row-div: rgba(148, 175, 206, 0.14);
+    --vol-th-bg: rgba(124, 196, 248, 0.08);
+    --tc-ov-bg: #101722;
+    --tc-ov-hdr: #152030;
+    --tc-ov-border: rgba(124, 196, 248, 0.26);
+    --tc-ov-accent: #7cc4f8;
+    --tc-ov-key: #8ecbff;
+    --tc-ov-div: rgba(124, 196, 248, 0.14);
+    --tc-emu-ink: #7cc4f8;
+    --tc-emu-bg: #111b28;
+}
+
+/* Volume III (Linux): Warm Slate & Forged Amber Schematic */
+html[data-volume="linux"] {
+    --vol-accent: #c26d27;
+    --vol-border: #dcd5cc;
+    --vol-row-div: #e7e1d8;
+    --vol-th-bg: #f5f1eb;
+    --tc-ov-bg: #faf8f5;
+    --tc-ov-hdr: #f3ede4;
+    --tc-ov-border: #d8cfc3;
+    --tc-ov-accent: #c26d27;
+    --tc-ov-key: #8f4c14;
+    --tc-ov-div: rgba(194, 109, 39, 0.15);
+    --tc-emu-ink: #a85a1b;
+    --tc-emu-bg: #f7f0e6;
+}
+html[data-volume="linux"].light,
+html[data-volume="linux"].rust {
+    --bg: #f9f8f6;
+    --fg: #1d1c1a;
+}
+html[data-volume="linux"].navy,
+html[data-volume="linux"].coal,
+html[data-volume="linux"].ayu {
+    --vol-accent: #e5954b;
+    --vol-border: rgba(229, 149, 75, 0.22);
+    --vol-row-div: rgba(229, 149, 75, 0.14);
+    --vol-th-bg: rgba(229, 149, 75, 0.08);
+    --tc-ov-bg: #171411;
+    --tc-ov-hdr: #211b15;
+    --tc-ov-border: rgba(229, 149, 75, 0.28);
+    --tc-ov-accent: #e5954b;
+    --tc-ov-key: #efb075;
+    --tc-ov-div: rgba(229, 149, 75, 0.15);
+    --tc-emu-ink: #e5954b;
+    --tc-emu-bg: #1d1711;
+}
+
+/* Volume IV (Android): Mineral Stone & Silicon Jade Schematic */
+html[data-volume="android"] {
+    --vol-accent: #146c4e;
+    --vol-border: #cddbd4;
+    --vol-row-div: #dfeae4;
+    --vol-th-bg: #eef5f1;
+    --tc-ov-bg: #f6faf8;
+    --tc-ov-hdr: #eaf3ee;
+    --tc-ov-border: #c6d9cf;
+    --tc-ov-accent: #146c4e;
+    --tc-ov-key: #0f563d;
+    --tc-ov-div: rgba(20, 108, 78, 0.14);
+    --tc-emu-ink: #146c4e;
+    --tc-emu-bg: #ecf5f0;
+}
+html[data-volume="android"].light,
+html[data-volume="android"].rust {
+    --bg: #f7f9f8;
+    --fg: #16211d;
+}
+html[data-volume="android"].navy,
+html[data-volume="android"].coal,
+html[data-volume="android"].ayu {
+    --vol-accent: #57c98c;
+    --vol-border: rgba(87, 201, 140, 0.22);
+    --vol-row-div: rgba(87, 201, 140, 0.14);
+    --vol-th-bg: rgba(87, 201, 140, 0.08);
+    --tc-ov-bg: #0f1915;
+    --tc-ov-hdr: #14231d;
+    --tc-ov-border: rgba(87, 201, 140, 0.28);
+    --tc-ov-accent: #57c98c;
+    --tc-ov-key: #7addaa;
+    --tc-ov-div: rgba(87, 201, 140, 0.15);
+    --tc-emu-ink: #57c98c;
+    --tc-emu-bg: #111e18;
+}
+
+/* Shared architectural typography, top-ruled spec ledger, & open tables for Volumes II-IV */
+html[data-volume="apple"] .content main,
+html[data-volume="linux"] .content main,
+html[data-volume="android"] .content main {
+    font-family: var(--vol-serif);
+    line-height: 1.68;
+}
+html[data-volume="apple"] .content h1,
+html[data-volume="apple"] .content h2,
+html[data-volume="apple"] .content h3,
+html[data-volume="linux"] .content h1,
+html[data-volume="linux"] .content h2,
+html[data-volume="linux"] .content h3,
+html[data-volume="android"] .content h1,
+html[data-volume="android"] .content h2,
+html[data-volume="android"] .content h3 {
+    font-family: var(--vol-sans);
+    font-weight: 600;
+    letter-spacing: -0.018em;
+}
+html[data-volume="apple"] .content code,
+html[data-volume="linux"] .content code,
+html[data-volume="android"] .content code {
+    font-family: var(--vol-mono);
+    border-radius: 5px;
+}
+html[data-volume="apple"] #preview-banner,
+html[data-volume="linux"] #preview-banner,
+html[data-volume="android"] #preview-banner {
+    font-family: var(--vol-sans);
+    border-left-width: 1px;
+    border-top: 2.5px solid var(--vol-accent);
+    border-radius: 8px;
+}
+html[data-volume="apple"] .chapter-overview,
+html[data-volume="linux"] .chapter-overview,
+html[data-volume="android"] .chapter-overview {
+    border: 1px solid var(--tc-ov-border);
+    border-top: 2.5px solid var(--tc-ov-accent);
+    border-radius: 9px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+html[data-volume="apple"] .chapter-overview > h2,
+html[data-volume="linux"] .chapter-overview > h2,
+html[data-volume="android"] .chapter-overview > h2,
+html[data-volume="apple"] .overview-key,
+html[data-volume="linux"] .overview-key,
+html[data-volume="android"] .overview-key {
+    font-family: var(--vol-sans);
+    letter-spacing: 0.07em;
+}
+html[data-volume="apple"] .content table,
+html[data-volume="linux"] .content table,
+html[data-volume="android"] .content table {
+    border-top: 1.5px solid var(--vol-accent);
+    border-bottom: 1.5px solid var(--vol-border);
+}
+html[data-volume="apple"] .content table th,
+html[data-volume="linux"] .content table th,
+html[data-volume="android"] .content table th {
+    font-family: var(--vol-sans);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--vol-th-bg);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--vol-border);
+}
+html[data-volume="apple"] .content table td,
+html[data-volume="linux"] .content table td,
+html[data-volume="android"] .content table td {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--vol-row-div);
+    background: transparent !important;
+}
+

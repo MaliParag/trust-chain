@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 210" width="920" height="210">
+<rect x="0" y="0" width="920" height="210" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ZERO-KEY AI AGENT SANDBOX: LANDLOCK / MICRO-VM + CREDENTIAL-INJECTING PROXY</text>
+<rect x="24.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="121.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">COMPUTE BOUNDARY</text>
+<text x="121.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Agent Sandbox</text>
+<text x="121.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Local Landlock + bwrap (RO</text>
+<text x="121.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">.git/hooks) or cloud</text>
+<text x="121.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Firecracker VM</text>
+<rect x="250.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="347.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">EGRESS FIREWALL</text>
+<text x="347.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Isolated NetNS / vsock</text>
+<text x="347.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Default-deny outbound IP &amp;</text>
+<text x="347.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">DNS; routes only to host proxy</text>
+<rect x="476.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="573.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="middle">HOST BROKER</text>
+<text x="573.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Credential Proxy</text>
+<text x="573.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Enforces domain/method policy</text>
+<text x="573.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">&amp; injects real Bearer token</text>
+<text x="573.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">outside VM</text>
+<rect x="702.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="799.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">EXTERNAL API</text>
+<text x="799.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">GitHub / LLM / Registry</text>
+<text x="799.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Receives authenticated TLS</text>
+<text x="799.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">call; agent never saw raw</text>
+<text x="799.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">secret</text>
+<text x="460.0" y="182.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Withholding raw credentials from the sandbox environment neutralizes prompt-injected key theft even under arbitrary guest RCE.</text>
+<line x1="218.0" y1="103.0" x2="243.5" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="250.0,103.0 241.5,99.0 241.5,107.0" fill="#365378"/>
+<line x1="444.0" y1="103.0" x2="469.5" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="476.0,103.0 467.5,99.0 467.5,107.0" fill="#365378"/>
+<line x1="670.0" y1="103.0" x2="695.5" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="702.0,103.0 693.5,99.0 693.5,107.0" fill="#365378"/>
+</svg>

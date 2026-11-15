@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 429" width="920" height="429">
+<rect x="0" y="0" width="920" height="429" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">UNIFIED KERNEL IMAGE (UKI) PE LAYOUT AND SYSTEMD-STUB PCR[11] EXTENSIONS</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">SINGLE AUTHENTICODE-SIGNED PE/COFF BINARY</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Unified Kernel Image (linux-6.12.efi) Verified Atomically by UEFI + shim</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Eliminates unauthenticated /boot initramfs CPIO and mutable GRUB kernel command-line edits</text>
+<rect x="26.0" y="159.0" width="164.0" height="84.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="180.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">PE CODE</text>
+<text x="40.0" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">systemd-stub</text>
+<text x="40.0" y="213.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">EFI entry point &amp;</text>
+<text x="40.0" y="226.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">measurer</text>
+<rect x="202.0" y="159.0" width="164.0" height="84.1" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="216.0" y="180.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">.LINUX</text>
+<text x="216.0" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">vmlinuz Image</text>
+<text x="216.0" y="213.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Compressed kernel</text>
+<text x="216.0" y="226.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">payload</text>
+<rect x="378.0" y="159.0" width="164.0" height="84.1" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="392.0" y="180.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">.INITRD</text>
+<text x="392.0" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Initramfs CPIO</text>
+<text x="392.0" y="213.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Early userspace &amp;</text>
+<text x="392.0" y="226.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">cryptsetup</text>
+<rect x="554.0" y="159.0" width="164.0" height="84.1" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="568.0" y="180.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">.CMDLINE</text>
+<text x="568.0" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Kernel Cmdline</text>
+<text x="568.0" y="213.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">roothash= &amp;</text>
+<text x="568.0" y="226.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">lockdown=integrity</text>
+<rect x="730.0" y="159.0" width="164.0" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="744.0" y="180.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">.PCRPKEY / .PCRSIG</text>
+<text x="744.0" y="195.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">PCR Policy Key</text>
+<text x="744.0" y="213.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Public key &amp; signed</text>
+<text x="744.0" y="226.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">PCR[11] JSON</text>
+<rect x="26.0" y="301.1" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="322.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">TPM 2.0 MEASUREMENT &amp; PHASE BINDING</text>
+<text x="460.0" y="338.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">PCR[11] Receives Section Digests + Boot-Phase Strings (enter-initrd -&gt; leave-initrd -&gt; sysinit -&gt; ready)</text>
+<text x="460.0" y="357.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">LUKS2 volume keys sealed to enter-initrd become cryptographically unreachable before untrusted workloads start</text>
+<text x="460.0" y="400.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Extending boot-phase transitions into PCR[11] time-bounds secret availability strictly to early initrd execution.</text>
+<line x1="108.0" y1="125.0" x2="108.0" y2="152.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="108.0,159.0 112.0,150.5 104.0,150.5" fill="#365378"/>
+<line x1="284.0" y1="125.0" x2="284.0" y2="152.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="284.0,159.0 288.0,150.5 280.0,150.5" fill="#365378"/>
+<line x1="460.0" y1="125.0" x2="460.0" y2="152.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="460.0,159.0 464.0,150.5 456.0,150.5" fill="#365378"/>
+<line x1="636.0" y1="125.0" x2="636.0" y2="152.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="636.0,159.0 640.0,150.5 632.0,150.5" fill="#365378"/>
+<line x1="812.0" y1="125.0" x2="812.0" y2="152.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="812.0,159.0 816.0,150.5 808.0,150.5" fill="#b07926"/>
+<line x1="108.0" y1="243.1" x2="108.0" y2="294.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="108.0,301.1 112.0,292.6 104.0,292.6" fill="#236b66"/>
+<line x1="460.0" y1="243.1" x2="460.0" y2="294.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,301.1 464.0,292.6 456.0,292.6" fill="#2b6a4c"/>
+<line x1="812.0" y1="243.1" x2="812.0" y2="294.6" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="812.0,301.1 816.0,292.6 808.0,292.6" fill="#b07926"/>
+<rect x="56.0" y="259.2" width="104.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="108.0" y="270.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">extends sections</text>
+<rect x="414.0" y="259.2" width="92.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="270.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">phase barriers</text>
+<rect x="759.4" y="259.2" width="105.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="812.0" y="270.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">authorizes policy</text>
+</svg>

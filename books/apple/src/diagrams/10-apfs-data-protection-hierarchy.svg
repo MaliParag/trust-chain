@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 453" width="920" height="453">
+<rect x="0" y="0" width="920" height="453" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">APFS PER-FILE DATA PROTECTION KEY HIERARCHY &amp; XTS-AES EXTENT ENCRYPTION</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">SEP KEYBAG ROOT INPUTS</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">256-Bit Silicon UID + Stretched User Passcode + Effaceable Storage Locker</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Hardware UID tangles brute-force attempts to this chip; passcode unlocks user keybag; effaceable locker enables instant wipe</text>
+<rect x="26.0" y="183.0" width="203.5" height="84.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="40.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CLASS A (COMPLETE)</text>
+<text x="40.0" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">UID + Passcode</text>
+<text x="40.0" y="237.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Evicted from RAM 10s after</text>
+<text x="40.0" y="250.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">screen lock</text>
+<rect x="247.5" y="183.0" width="203.5" height="84.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="261.5" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">CLASS B (UNLESSOPEN)</text>
+<text x="261.5" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">ECDH Public Write</text>
+<text x="261.5" y="237.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Creates encrypted files while</text>
+<text x="261.5" y="250.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">locked; read needs unlock</text>
+<rect x="469.0" y="183.0" width="203.5" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="483.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">CLASS C (FIRSTAUTH)</text>
+<text x="483.0" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Unavailable in BFU</text>
+<text x="483.0" y="237.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Resident in AFU for background</text>
+<text x="483.0" y="250.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">notifications &amp; mail</text>
+<rect x="690.5" y="183.0" width="203.5" height="84.1" rx="6.0" fill="#f4f1ea" stroke="#787167" stroke-width="1.4"/>
+<text x="704.5" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#524c44" text-anchor="start">CLASS D (NONE)</text>
+<text x="704.5" y="219.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">UID + Media Key</text>
+<text x="704.5" y="237.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Accessible in BFU for boot &amp;</text>
+<text x="704.5" y="250.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Wi-Fi; chip-bound</text>
+<rect x="26.0" y="325.1" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="346.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">STORAGE ENGINE ENFORCEMENT</text>
+<text x="460.0" y="362.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Per-File Random 256-Bit Key -&gt; Per-Extent XTS-AES Hardware Engine</text>
+<text x="460.0" y="381.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Each file inode stores its wrapped per-file key in APFS xattr; ANS/NVMe inline crypto engine derives tweak from block address</text>
+<text x="460.0" y="424.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Deleting a file destroys its per-file key in APFS metadata; erasing the device destroys the effaceable locker in milliseconds.</text>
+<line x1="127.8" y1="125.0" x2="127.8" y2="176.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="127.8,183.0 131.8,174.5 123.8,174.5" fill="#2b6a4c"/>
+<line x1="349.2" y1="125.0" x2="349.2" y2="176.5" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="349.2,183.0 353.2,174.5 345.2,174.5" fill="#236b66"/>
+<line x1="570.8" y1="125.0" x2="570.8" y2="176.5" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="570.8,183.0 574.8,174.5 566.8,174.5" fill="#b07926"/>
+<line x1="792.2" y1="125.0" x2="792.2" y2="176.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="792.2,183.0 796.2,174.5 788.2,174.5" fill="#365378"/>
+<line x1="127.8" y1="267.1" x2="127.8" y2="318.6" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="127.8,325.1 131.8,316.6 123.8,316.6" fill="#2b6a4c"/>
+<line x1="349.2" y1="267.1" x2="349.2" y2="318.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="349.2,325.1 353.2,316.6 345.2,316.6" fill="#236b66"/>
+<line x1="570.8" y1="267.1" x2="570.8" y2="318.6" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="570.8,325.1 574.8,316.6 566.8,316.6" fill="#b07926"/>
+<line x1="792.2" y1="267.1" x2="792.2" y2="318.6" stroke="#365378" stroke-width="1.6"/>
+<polygon points="792.2,325.1 796.2,316.6 788.2,316.6" fill="#365378"/>
+<rect x="92.7" y="141.1" width="70.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="127.8" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">UID + pass</text>
+<rect x="316.4" y="141.1" width="65.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="349.2" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">ECDH pub</text>
+<rect x="537.8" y="141.1" width="65.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">1st unlock</text>
+<rect x="760.1" y="141.1" width="64.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="792.2" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">UID + eff</text>
+<rect x="86.5" y="283.2" width="82.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="127.8" y="294.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">unwraps PFK</text>
+<rect x="308.0" y="283.2" width="82.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="349.2" y="294.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">unwraps PFK</text>
+<rect x="529.5" y="283.2" width="82.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="294.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">unwraps PFK</text>
+<rect x="751.0" y="283.2" width="82.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="792.2" y="294.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">unwraps PFK</text>
+</svg>

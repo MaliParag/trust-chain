@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 683" width="900" height="683">
+<rect x="0" y="0" width="900" height="683" fill="#ffffff"/>
+<line x1="127.5" y1="147.9" x2="127.5" y2="624.3" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="147.9" x2="342.5" y2="624.3" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="147.9" x2="557.5" y2="624.3" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="147.9" x2="772.5" y2="624.3" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="450.0" y1="72.0" x2="450.0" y2="624.3" stroke="#8d2d3b" stroke-width="1.6" stroke-dasharray="5,4"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ANDROID PROTECTED CONFIRMATION: HARDWARE-ATTESTED WYSIWYS TRANSACTION APPROVAL</text>
+<rect x="34.0" y="76.0" width="187.0" height="71.9" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="127.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Relying App</text>
+<text x="127.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">ConfirmationPrompt</text>
+<rect x="249.0" y="76.0" width="187.0" height="71.9" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="342.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Android OS</text>
+<text x="342.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">keystore2 / HAL</text>
+<rect x="464.0" y="76.0" width="187.0" height="71.9" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="557.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Trusted UI /</text>
+<text x="557.5" y="113.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">StrongBox</text>
+<text x="557.5" y="131.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Isolated Framebuffer + GPIO</text>
+<rect x="679.0" y="76.0" width="187.0" height="71.9" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="772.5" y="98.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Remote Verifier</text>
+<text x="772.5" y="115.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Medical / Banking Backend</text>
+<text x="450.0" y="654.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Even with Ring 0 control or Accessibility malware, an attacker cannot mint a valid signature without physical button confirmation.</text>
+<line x1="127.5" y1="205.5" x2="336.0" y2="205.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="342.5,205.5 334.0,201.5 334.0,209.5" fill="#365378"/>
+<line x1="342.5" y1="265.1" x2="551.0" y2="265.1" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="557.5,265.1 549.0,261.1 549.0,269.1" fill="#236b66"/>
+<line x1="557.5" y1="376.7" x2="349.0" y2="376.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="342.5,376.7 351.0,380.7 351.0,372.7" fill="#2b6a4c"/>
+<line x1="127.5" y1="449.1" x2="336.0" y2="449.1" stroke="#365378" stroke-width="1.6"/>
+<polygon points="342.5,449.1 334.0,445.1 334.0,453.1" fill="#365378"/>
+<line x1="342.5" y1="508.7" x2="551.0" y2="508.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="557.5,508.7 549.0,504.7 549.0,512.7" fill="#236b66"/>
+<line x1="557.5" y1="555.5" x2="134.0" y2="555.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="127.5,555.5 136.0,559.5 136.0,551.5" fill="#2b6a4c"/>
+<line x1="127.5" y1="602.3" x2="766.0" y2="602.3" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="772.5,602.3 764.0,598.3 764.0,606.3" fill="#5c4282"/>
+<rect x="336.8" y="50.9" width="226.4" height="18.2" rx="4" fill="#f8eaec" stroke="#8d2d3b" stroke-width="0.9"/>
+<text x="450.0" y="62.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.5" font-weight="700" fill="#8d2d3b" text-anchor="middle">Compromised Host Kernel Cannot Forge</text>
+<rect x="154.2" y="166.2" width="161.6" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="177.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">presentPrompt(promptText,</text>
+<text x="235.0" y="190.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">extraData)</text>
+<rect x="353.4" y="225.8" width="193.3" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="237.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Render prompt in hardware-locked</text>
+<text x="450.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">surface</text>
+<rect x="454.4" y="287.3" width="206.1" height="31.6" rx="4" fill="#f4f1ea" stroke="#2b6a4c" stroke-width="0.9"/>
+<text x="557.5" y="298.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">User presses physical Power button</text>
+<text x="557.5" y="311.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">(hardware GPIO)</text>
+<rect x="343.7" y="337.4" width="212.6" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="348.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">HMAC_ConfirmationKey('confirmation</text>
+<text x="450.0" y="361.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">token' || prompt || extra)</text>
+<rect x="156.8" y="396.7" width="156.5" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="235.0" y="408.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Signature.sign() using</text>
+<text x="235.0" y="420.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">CONFIRMATION_REQUIRED</text>
+<text x="235.0" y="433.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">KeyMint key</text>
+<rect x="359.1" y="469.4" width="181.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="480.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Verify confirmationToken HMAC</text>
+<text x="450.0" y="493.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">inside KeyMint</text>
+<rect x="201.4" y="529.2" width="282.2" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="342.5" y="540.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">ECDSA signature over payload + confirmationToken</text>
+<rect x="292.4" y="576.0" width="315.1" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="587.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Submit promptText + token + signature + Key Attestation</text>
+</svg>

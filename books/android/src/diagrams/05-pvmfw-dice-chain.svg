@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 374" width="920" height="374">
+<rect x="0" y="0" width="920" height="374" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">PVMFW &amp; OPENPROFILE FOR DICE: LAYERED SECRET DERIVATION FOR PROTECTED VMS</text>
+<rect x="24.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="121.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">LAYER 0 · SILICON</text>
+<text x="121.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Unique Device Secret</text>
+<text x="121.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Immutable per-chip UDS read</text>
+<text x="121.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">once by ROM/BL and latched</text>
+<text x="121.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">offline</text>
+<rect x="250.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="347.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="middle">LAYER 1 · BOOT</text>
+<text x="347.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Bootloader DICE</text>
+<text x="347.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">HKDF mixes AVB boot state +</text>
+<text x="347.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">pvmfw hash into CDI_Attest &amp;</text>
+<text x="347.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Seal</text>
+<rect x="476.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="573.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">LAYER 2 · GUEST GATE</text>
+<text x="573.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">pvmfw (Rust in EL1)</text>
+<text x="573.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Runs first inside pVM; verifies</text>
+<text x="573.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Microdroid + payload AVB</text>
+<text x="573.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">hashes</text>
+<rect x="702.0" y="54.0" width="194.0" height="98.0" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="799.0" y="75.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="middle">LAYER 3 · WORKLOAD</text>
+<text x="799.0" y="91.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Microdroid Payload</text>
+<text x="799.0" y="108.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Receives derived child BCC</text>
+<text x="799.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">cert chain &amp; stable sealing</text>
+<text x="799.0" y="135.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">secret</text>
+<rect x="449.0" y="210.0" width="248.0" height="112.0" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="573.0" y="231.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="middle">ZERO-KNOWLEDGE WIPE BEFORE JUMP</text>
+<text x="573.0" y="246.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">pvmfw Scrubs Parent CDIs from</text>
+<text x="573.0" y="261.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">RAM</text>
+<text x="573.0" y="278.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Compromised guest payload cannot forge</text>
+<text x="573.0" y="292.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">another pVM's identity or read parent</text>
+<text x="573.0" y="305.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">secrets</text>
+<text x="460.0" y="346.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">CDI_Seal remains stable across authorized payload updates (via signer pubkey + rollback floor), while CDI_Attest binds exact code hashes.</text>
+<line x1="218.0" y1="103.0" x2="243.5" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="250.0,103.0 241.5,99.0 241.5,107.0" fill="#365378"/>
+<line x1="444.0" y1="103.0" x2="469.5" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="476.0,103.0 467.5,99.0 467.5,107.0" fill="#365378"/>
+<line x1="670.0" y1="103.0" x2="695.5" y2="103.0" stroke="#365378" stroke-width="1.6"/>
+<polygon points="702.0,103.0 693.5,99.0 693.5,107.0" fill="#365378"/>
+<line x1="573.0" y1="210.0" x2="573.0" y2="158.5" stroke="#8d2d3b" stroke-width="1.6"/>
+<polygon points="573.0,152.0 569.0,160.5 577.0,160.5" fill="#8d2d3b"/>
+<rect x="524.0" y="175.0" width="98.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="573.0" y="186.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">zeroizes parent</text>
+</svg>

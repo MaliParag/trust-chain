@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 671" width="760" height="671">
+<rect x="0" y="0" width="760" height="671" fill="#ffffff"/>
+<text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">IMESSAGE PQ3 LEVEL-3 PROTOCOL: CLASSICAL + POST-QUANTUM CONTINUOUS RATCHET</text>
+<rect x="145.0" y="48.0" width="470.0" height="103.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">PREKEY BUNDLE (IDS)</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">P-256 Identity/Prekeys + ML-KEM-768 Post-Quantum Public</text>
+<text x="159.0" y="101.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Key</text>
+<text x="159.0" y="120.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Recipient uploads classical ECDH prekeys alongside lattice KEM</text>
+<text x="159.0" y="134.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">encapsulation keys signed by SEP/Identity key</text>
+<rect x="145.0" y="209.5" width="470.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="159.0" y="231.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">INITIAL HANDSHAKE</text>
+<text x="159.0" y="247.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Hybrid X3DH + ML-KEM-768 Key Establishment</text>
+<text x="159.0" y="265.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Combines classical ECDH shared secrets and ML-KEM secret via</text>
+<text x="159.0" y="279.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">HKDF-SHA256 to defeat harvest-now, decrypt-later</text>
+<rect x="145.0" y="355.0" width="470.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="376.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">SYMMETRIC &amp; DH RATCHET</text>
+<text x="159.0" y="392.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Per-Message Forward Secrecy Chain</text>
+<text x="159.0" y="411.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Advances sending/receiving chain keys on every message and classical P-256</text>
+<text x="159.0" y="425.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Diffie-Hellman ratchet on turn flips</text>
+<rect x="145.0" y="500.5" width="470.0" height="103.5" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="159.0" y="522.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">LEVEL-3 POST-QUANTUM HEAL</text>
+<text x="159.0" y="538.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Periodic ML-KEM-1024 Re-Encapsulation Every N Messages /</text>
+<text x="159.0" y="554.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Bytes</text>
+<text x="159.0" y="572.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Injects fresh post-quantum KEM entropy mid-session (amortized across</text>
+<text x="159.0" y="587.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">chunks) for post-compromise security against quantum adversaries</text>
+<text x="380.0" y="628.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Level-3 PQ3 goes beyond PQXDH initial key exchange by periodically healing compromised session state against future</text>
+<text x="380.0" y="642.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">quantum attackers.</text>
+<line x1="380.0" y1="151.5" x2="380.0" y2="203.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,209.5 384.0,201.0 376.0,201.0" fill="#4a5568"/>
+<line x1="380.0" y1="297.0" x2="380.0" y2="348.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,355.0 384.0,346.5 376.0,346.5" fill="#4a5568"/>
+<line x1="380.0" y1="442.5" x2="380.0" y2="494.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,500.5 384.0,492.0 376.0,492.0" fill="#4a5568"/>
+<rect x="327.0" y="167.6" width="106.0" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="179.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">0-RTT hybrid init</text>
+<rect x="329.9" y="313.1" width="100.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="324.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">message traffic</text>
+<rect x="319.9" y="458.7" width="120.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="470.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">periodic PQ ratchet</text>
+</svg>

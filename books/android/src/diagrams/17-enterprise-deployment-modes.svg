@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 379" width="940" height="379">
+<rect x="0" y="0" width="940" height="379" fill="#ffffff"/>
+<text x="470.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ANDROID ENTERPRISE MANAGEMENT MODES: PRIVACY VS. ADMINISTRATIVE CONTROL</text>
+<text x="470.0" y="48.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Hardware-anchored Zero-Touch provisioning and DevicePolicyManager boundaries across fleet models</text>
+<rect x="28.0" y="66.0" width="216.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="40.0" y="97.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#524c44" text-anchor="start">Row / Column</text>
+<rect x="244.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="327.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Zero-Touch</text>
+<text x="327.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Factory Lock</text>
+<rect x="411.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="494.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Personal Data</text>
+<text x="494.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">User 0 Privacy</text>
+<rect x="578.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="661.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">SecurityLog</text>
+<text x="661.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">Fleet Telemetry</text>
+<rect x="745.0" y="66.0" width="167.0" height="54.0" rx="0.0" fill="#f4f1ea" stroke="#bfb8ad" stroke-width="1.4"/>
+<text x="828.5" y="88.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Wipe Scope</text>
+<text x="828.5" y="105.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="middle">DPC Authority</text>
+<rect x="28.0" y="120.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="140.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">BYOD Work Profile</text>
+<text x="40.0" y="155.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Employee Handset</text>
+<rect x="244.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#edf1f6" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="327.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#284163" text-anchor="middle">No (Opt-In)</text>
+<rect x="411.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="494.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Full Isolation</text>
+<rect x="578.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="661.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Blocked</text>
+<rect x="745.0" y="120.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="828.5" y="148.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Work Only</text>
+<rect x="28.0" y="166.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="186.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">COPE (Work Profile)</text>
+<text x="40.0" y="201.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Corp-Owned Personal</text>
+<rect x="244.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="327.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Yes (HW Bound)</text>
+<rect x="411.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#e6f4ec" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="494.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#1e5139" text-anchor="middle">Isolated User 0</text>
+<rect x="578.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="661.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Device Policy</text>
+<rect x="745.0" y="166.0" width="167.0" height="46.0" rx="0.0" fill="#f9f1e1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="828.5" y="194.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#875a14" text-anchor="middle">Work or Factory</text>
+<rect x="28.0" y="212.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="232.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Fully Managed</text>
+<text x="40.0" y="247.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Corp-Only Handset</text>
+<rect x="244.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="327.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Yes (HW Bound)</text>
+<rect x="411.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#edf1f6" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="494.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#284163" text-anchor="middle">None (Work Only)</text>
+<rect x="578.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="661.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Full SecurityLog</text>
+<rect x="745.0" y="212.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="828.5" y="240.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Factory Reset</text>
+<rect x="28.0" y="258.0" width="216.0" height="46.0" rx="0.0" fill="#faf8f5" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="40.0" y="278.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.6" font-weight="700" fill="#1a1a1a" text-anchor="start">Dedicated (COSU)</text>
+<text x="40.0" y="293.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="400" fill="#57514a" text-anchor="start">Single-App Kiosk</text>
+<rect x="244.0" y="258.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="327.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Yes (HW Bound)</text>
+<rect x="411.0" y="258.0" width="167.0" height="46.0" rx="0.0" fill="#efeaf7" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="494.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#452e66" text-anchor="middle">Locked Task</text>
+<rect x="578.0" y="258.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="661.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Full Telemetry</text>
+<rect x="745.0" y="258.0" width="167.0" height="46.0" rx="0.0" fill="#e6f3f1" stroke="#d4cec3" stroke-width="1.4"/>
+<text x="828.5" y="286.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="700" fill="#19524e" text-anchor="middle">Factory Reset</text>
+<text x="28.0" y="322.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#3a352f" text-anchor="start">Zero-Touch Enrollment binds device hardware IDs in Google's provisioning service so factory reset re-enrolls MDM before setup.</text>
+<text x="470.0" y="350.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Hardware Key Attestation ID properties (IMEI/serial) are accessible only to authorized DPCs on corporate-provisioned devices.</text>
+</svg>

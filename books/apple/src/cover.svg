@@ -53,33 +53,33 @@
 <path d="M 460.0 728.0 A 50 50 0 0 1 524.0 793.0" transform="translate(7,-6)" fill="none" stroke="#df5a67" stroke-width="3.2"/>
 <line x1="440" y1="803" x2="520" y2="741" stroke="#df5a67" stroke-width="2.2" stroke-dasharray="7,5"/>
 <circle cx="478" cy="775" r="6.5" fill="#df5a67"/>
-<text x="564" y="753" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#df5a67" text-anchor="start">FINALE · CHAPTER 17</text>
+<text x="564" y="753" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#df5a67" text-anchor="start">FINALE · CHAPTER 20</text>
 <text x="564" y="781" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">ZERO-CLICK CHAINS &amp; SOVEREIGN COMPULSION</text>
-<text x="564" y="807" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">FORCEDENTRY  ·  Operation Triangulation  ·  End-to-End Escrow Pressure</text>
+<text x="564" y="807" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">FORCEDENTRY  ·  Operation Triangulation  ·  UK IPA Section 253 ADP Compulsion</text>
 <circle cx="478" cy="955" r="50" fill="#0e1726" stroke="#7cc4f8" stroke-width="2.8"/>
 <circle cx="478" cy="955" r="36" fill="none" stroke="#7cc4f8" stroke-width="1.0" stroke-opacity="0.45"/>
 <circle cx="478" cy="955" r="6.5" fill="#7cc4f8"/>
-<text x="564" y="933" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#7cc4f8" text-anchor="start">PART IV · CHAPTERS 13 TO 16</text>
-<text x="564" y="961" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">ZERO-KNOWLEDGE CLOUD &amp; PRIVATE AI</text>
-<text x="564" y="987" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">iCloud Keychain HSMs  ·  Advanced Data Protection  ·  PQ3  ·  Private Cloud Compute</text>
+<text x="564" y="933" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#7cc4f8" text-anchor="start">PART IV · CHAPTERS 15 TO 19</text>
+<text x="564" y="961" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">ZERO-KNOWLEDGE CLOUD &amp; AGENTIC AI</text>
+<text x="564" y="987" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">iCloud HSM Escrow &amp; ADP  ·  PQ3 &amp; KT  ·  App Intents &amp; MCP  ·  Private Cloud Compute</text>
 <circle cx="478" cy="1135" r="50" fill="#0e1726" stroke="#7cc4f8" stroke-width="2.8"/>
 <circle cx="478" cy="1135" r="36" fill="none" stroke="#7cc4f8" stroke-width="1.0" stroke-opacity="0.45"/>
 <circle cx="478" cy="1135" r="6.5" fill="#7cc4f8"/>
-<text x="564" y="1113" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#7cc4f8" text-anchor="start">PART III · CHAPTERS 9 TO 12</text>
-<text x="564" y="1141" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">DATA PROTECTION, KEYS, &amp; CONTINUITY</text>
-<text x="564" y="1167" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">APFS Classes A-D  ·  BFU vs. AFU  ·  Stolen Device Protection  ·  Passkeys</text>
+<text x="564" y="1113" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#7cc4f8" text-anchor="start">PART III · CHAPTERS 10 TO 14</text>
+<text x="564" y="1141" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">DATA CUSTODY, ATTESTATION, &amp; CONTINUITY</text>
+<text x="564" y="1167" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">APFS BFU/AFU  ·  Stolen Device Protection  ·  App Attest &amp; MDA  ·  Passkeys &amp; DDM</text>
 <circle cx="478" cy="1315" r="50" fill="#0e1726" stroke="#7cc4f8" stroke-width="2.8"/>
 <circle cx="478" cy="1315" r="36" fill="none" stroke="#7cc4f8" stroke-width="1.0" stroke-opacity="0.45"/>
 <circle cx="478" cy="1315" r="6.5" fill="#7cc4f8"/>
-<text x="564" y="1293" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#7cc4f8" text-anchor="start">PART II · CHAPTERS 5 TO 8</text>
-<text x="564" y="1321" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">XNU, ENTITLEMENTS, &amp; SANDBOXES</text>
-<text x="564" y="1347" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Signed System Volume  ·  AMFI &amp; TXM vs. Notarization  ·  Seatbelt  ·  TCC &amp; ESF</text>
+<text x="564" y="1293" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#7cc4f8" text-anchor="start">PART II &amp; INTERLUDE · CH. 5 TO 9</text>
+<text x="564" y="1321" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">XNU, CODE SIGNING, &amp; OBSERVABILITY</text>
+<text x="564" y="1347" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">APFS SSV  ·  AMFI &amp; TXM vs. Notarization  ·  Seatbelt &amp; BlastDoor  ·  TCC &amp; ESF</text>
 <polygon points="523.0,1521.0 478.0,1547.0 433.0,1521.0 433.0,1469.0 478.0,1443.0 523.0,1469.0" fill="#101a2b" stroke="#7cc4f8" stroke-width="3.0"/>
 <rect x="458" y="1475" width="40" height="40" rx="4" fill="#162338" stroke="#7cc4f8" stroke-width="1.8"/>
 <circle cx="478" cy="1495" r="6.5" fill="#7cc4f8"/>
 <text x="564" y="1473" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.2px" fill="#7cc4f8" text-anchor="start">PART I · CHAPTERS 1 TO 4</text>
 <text x="564" y="1501" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="23.5" font-weight="700" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">APPLE SILICON &amp; PERSONALIZED BOOT</text>
-<text x="564" y="1527" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Boot ROM  ·  Image4 &amp; TSS  ·  macOS 1TR LocalPolicy  ·  SEP  ·  PAC &amp; SPTM</text>
+<text x="564" y="1527" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13.0" font-weight="400" fill="#9fb0c7" text-anchor="start">Boot ROM  ·  Image4 &amp; TSS  ·  macOS 1TR LocalPolicy  ·  SEP  ·  PAC, SPTM, &amp; EMTE</text>
 <line x1="136" y1="1648" x2="1264" y2="1648" stroke="#233248" stroke-width="1.2"/>
 <text x="136" y="1716" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="42" font-weight="400" letter-spacing="0.4px" fill="#f7f4ed" text-anchor="start">Parag Mali</text>
 </svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 625" width="760" height="625">
+<rect x="0" y="0" width="760" height="625" fill="#ffffff"/>
+<text x="380.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">SEP HARDWARE KEY ATTESTATION &amp; X.509 POSTURE CERTIFICATE HIERARCHY</text>
+<rect x="145.0" y="48.0" width="470.0" height="87.5" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="159.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">ROOT OF TRUST</text>
+<text x="159.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Apple Attestation Root CA</text>
+<text x="159.0" y="104.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Offline Apple root public key pinned by enterprise MDM, ACME servers, and</text>
+<text x="159.0" y="118.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">relying parties</text>
+<rect x="145.0" y="193.5" width="470.0" height="73.3" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="159.0" y="215.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">PROVISIONED INTERMEDIATE</text>
+<text x="159.0" y="231.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Basic / Enterprise Attestation Authority (BAA)</text>
+<text x="159.0" y="249.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Device-class or factory-provisioned SEP intermediate certificate</text>
+<rect x="145.0" y="324.8" width="470.0" height="87.5" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="159.0" y="346.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">HARDWARE LEAF</text>
+<text x="159.0" y="362.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Non-Exportable SEP P-256 Attested Key</text>
+<text x="159.0" y="380.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Generated inside SEP for App Attest, ACME MDA, or Enterprise keypair;</text>
+<text x="159.0" y="395.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">private key never leaves enclave</text>
+<rect x="145.0" y="470.3" width="470.0" height="87.5" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="159.0" y="491.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">CUSTOM X.509 OIDS</text>
+<text x="159.0" y="507.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Cryptographic Claims Embedded in Leaf Certificate</text>
+<text x="159.0" y="526.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Encodes OS version, SIP/SSV status, Secure Boot tier, LLB/SEP firmware</text>
+<text x="159.0" y="540.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">hashes, and server freshness nonce</text>
+<text x="380.0" y="581.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Verifying the X.509 chain proves both that the private key lives inside genuine Apple SEP silicon and what OS posture booted</text>
+<text x="380.0" y="596.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">it.</text>
+<line x1="380.0" y1="135.5" x2="380.0" y2="187.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,193.5 384.0,185.0 376.0,185.0" fill="#4a5568"/>
+<line x1="380.0" y1="266.8" x2="380.0" y2="318.3" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,324.8 384.0,316.3 376.0,316.3" fill="#4a5568"/>
+<line x1="380.0" y1="412.3" x2="380.0" y2="463.8" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="380.0,470.3 384.0,461.8 376.0,461.8" fill="#4a5568"/>
+<rect x="323.3" y="151.6" width="113.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="163.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">signs intermediate</text>
+<rect x="315.3" y="282.9" width="129.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="294.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">certifies leaf + nonce</text>
+<rect x="339.5" y="428.4" width="81.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="380.0" y="439.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">embeds OIDs</text>
+</svg>

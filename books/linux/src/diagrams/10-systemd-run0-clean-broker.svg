@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 595" width="900" height="595">
+<rect x="0" y="0" width="900" height="595" fill="#ffffff"/>
+<line x1="127.5" y1="119.8" x2="127.5" y2="536.6" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="342.5" y1="119.8" x2="342.5" y2="536.6" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="557.5" y1="119.8" x2="557.5" y2="536.6" stroke="#cbd5e1" stroke-width="1.3"/>
+<line x1="772.5" y1="119.8" x2="772.5" y2="536.6" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">SUID-FREE PRIVILEGE ELEVATION WITH SYSTEMD RUN0 AND --EMPOWER</text>
+<rect x="34.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="127.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">run0 Client</text>
+<text x="127.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Unprivileged UID 1000 (No</text>
+<text x="127.5" y="103.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">SUID)</text>
+<rect x="249.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="342.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Polkit Daemon</text>
+<text x="342.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Out-of-Band Auth Agent</text>
+<rect x="464.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="557.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">systemd (PID 1)</text>
+<text x="557.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Clean-Room Service Manager</text>
+<rect x="679.0" y="50.0" width="187.0" height="69.8" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="772.5" y="72.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.0" font-weight="700" fill="#1a1a1a" text-anchor="middle">Transient Service</text>
+<text x="772.5" y="89.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="middle">Isolated PTY &amp; Fresh Creds</text>
+<text x="450.0" y="566.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Because PID 1 spawns the target from pristine state rather than mutating the caller, SUID environment/chroot attacks vanish.</text>
+<line x1="127.5" y1="164.6" x2="551.0" y2="164.6" stroke="#365378" stroke-width="1.6"/>
+<polygon points="557.5,164.6 549.0,160.6 549.0,168.6" fill="#365378"/>
+<line x1="557.5" y1="224.2" x2="349.0" y2="224.2" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="342.5,224.2 351.0,228.2 351.0,220.2" fill="#5c4282"/>
+<line x1="342.5" y1="283.8" x2="551.0" y2="283.8" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="557.5,283.8 549.0,279.8 549.0,287.8" fill="#5c4282"/>
+<line x1="557.5" y1="343.4" x2="766.0" y2="343.4" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="772.5,343.4 764.0,339.4 764.0,347.4" fill="#236b66"/>
+<line x1="557.5" y1="415.8" x2="766.0" y2="415.8" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="772.5,415.8 764.0,411.8 764.0,419.8" fill="#236b66"/>
+<line x1="127.5" y1="514.6" x2="766.0" y2="514.6" stroke="#2b6a4c" stroke-width="1.6" stroke-dasharray="5,3"/>
+<polygon points="772.5,514.6 764.0,510.6 764.0,518.6" fill="#2b6a4c"/>
+<rect x="160.3" y="138.3" width="364.3" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="342.5" y="149.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Varlink / D-Bus StartTransientUnit request (zero env inheritance)</text>
+<rect x="358.9" y="184.8" width="182.2" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="196.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Verify caller pidfd &amp; request</text>
+<text x="450.0" y="208.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">interactive Polkit authorization</text>
+<rect x="362.0" y="244.4" width="175.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="255.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">User authenticates on isolated</text>
+<text x="450.0" y="268.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Polkit agent -&gt; Auth OK</text>
+<rect x="568.0" y="304.0" width="193.9" height="31.1" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="315.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Fork clean child from PID 1 (fresh</text>
+<text x="665.0" y="327.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">env, fresh cgroup, fresh mount ns)</text>
+<rect x="583.4" y="363.3" width="163.1" height="43.6" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="665.0" y="374.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Allocate dedicated</text>
+<text x="665.0" y="387.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">pseudo-terminal (PTY) &amp; tint</text>
+<text x="665.0" y="399.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">background</text>
+<rect x="655.5" y="438.0" width="234.0" height="31.6" rx="4" fill="#f4f1ea" stroke="#2b6a4c" stroke-width="0.9"/>
+<text x="772.5" y="449.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Optional --empower: keep non-root UID +</text>
+<text x="772.5" y="462.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Ambient Capabilities only</text>
+<rect x="294.6" y="488.3" width="310.9" height="18.5" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="450.0" y="499.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.8" font-weight="400" fill="#1a1a1a" text-anchor="middle">Proxy pure byte I/O streams over IPC (no shared TTY fd)</text>
+</svg>

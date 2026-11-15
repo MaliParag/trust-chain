@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 587" width="920" height="587">
+<rect x="0" y="0" width="920" height="587" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">AVB 2.0 ROOT VBMETA STRUCT &amp; CHAINED PARTITION VERIFICATION TOPOLOGY</text>
+<rect x="26.0" y="52.0" width="868.0" height="73.0" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">IMMUTABLE SILICON ROOT</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">SoC Boot ROM (PBL) + OTP Public-Key Digest Fuses</text>
+<text x="460.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Verifies early vendor loaders (SBL / XBL / ABL) in SRAM before DRAM or fastboot runs</text>
+<rect x="26.0" y="183.0" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="204.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">CENTRAL SIGNED ANCHOR · AVBVBMETAIMAGEHEADER</text>
+<text x="460.0" y="220.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">vbmeta Partition (RSA-4096 Signature + rollback_index + Descriptors)</text>
+<text x="460.0" y="239.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Single OEM signature covers header, authentication block, and auxiliary partition descriptors</text>
+<rect x="26.0" y="314.0" width="277.3" height="87.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">AVBHASHDESCRIPTOR</text>
+<text x="40.0" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">boot &amp; init_boot</text>
+<text x="40.0" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Whole-partition SHA-256 verified into RAM</text>
+<text x="40.0" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">before Linux entry</text>
+<rect x="321.3" y="314.0" width="277.3" height="87.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="335.3" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">AVBHASHTREEDESCRIPTOR</text>
+<text x="335.3" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">vendor &amp; product</text>
+<text x="335.3" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Root digest seeds kernel dm-verity Merkle</text>
+<text x="335.3" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">tree on block reads</text>
+<rect x="616.7" y="314.0" width="277.3" height="87.1" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="630.7" y="335.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">AVBCHAINPARTITIONDESCRIPTOR</text>
+<text x="630.7" y="351.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">vbmeta_system</text>
+<text x="630.7" y="370.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Delegates /system &amp; system_ext to Google</text>
+<text x="630.7" y="384.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">GSI signing key + independent rollback slot</text>
+<rect x="26.0" y="459.1" width="868.0" height="73.0" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="460.0" y="480.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="middle">DELEGATED HASHTREE VERIFICATION</text>
+<text x="460.0" y="496.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">system &amp; system_ext Read-Only EROFS / ext4 Partitions</text>
+<text x="460.0" y="515.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Updated independently of vendor firmware while preserving end-to-end cryptographic binding to vbmeta</text>
+<text x="460.0" y="558.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Chained partitions let Google update /system (Project Treble) without possessing the OEM's root vbmeta private key.</text>
+<line x1="460.0" y1="125.0" x2="460.0" y2="176.5" stroke="#365378" stroke-width="1.6"/>
+<polygon points="460.0,183.0 464.0,174.5 456.0,174.5" fill="#365378"/>
+<line x1="164.7" y1="256.0" x2="164.7" y2="307.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="164.7,314.0 168.7,305.5 160.7,305.5" fill="#2b6a4c"/>
+<line x1="460.0" y1="256.0" x2="460.0" y2="307.5" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,314.0 464.0,305.5 456.0,305.5" fill="#2b6a4c"/>
+<line x1="755.3" y1="256.0" x2="755.3" y2="307.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="755.3,314.0 759.3,305.5 751.3,305.5" fill="#5c4282"/>
+<line x1="755.3" y1="401.1" x2="755.3" y2="452.6" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="755.3,459.1 759.3,450.6 751.3,450.6" fill="#5c4282"/>
+<rect x="368.3" y="141.1" width="183.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="152.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">verifies ABL -&gt; vbmeta RSA key</text>
+<rect x="106.9" y="272.1" width="115.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">whole-image digest</text>
+<rect x="408.2" y="272.1" width="103.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">Merkle root hash</text>
+<rect x="686.4" y="272.1" width="137.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="283.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">delegated pubkey + slot</text>
+<rect x="678.0" y="417.2" width="154.6" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="428.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">verifies /system hashtree</text>
+</svg>

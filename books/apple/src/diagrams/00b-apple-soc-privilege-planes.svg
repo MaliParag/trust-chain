@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 615" width="920" height="615">
+<rect x="0" y="0" width="920" height="615" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">APPLE SILICON SOC PRIVILEGE PLANES &amp; CO-PROCESSOR ISOLATION</text>
+<rect x="26.0" y="52.0" width="425.0" height="87.1" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="40.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">ARM64 EL0</text>
+<text x="40.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">User Processes &amp; Sandboxed Apps</text>
+<text x="40.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Safari WebContent, BlastDoor, UIKit/AppKit apps, DriverKit</text>
+<text x="40.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">daemons</text>
+<rect x="469.0" y="52.0" width="425.0" height="87.1" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="483.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">GUARDED GL0</text>
+<text x="483.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">TXM Thread Execution</text>
+<text x="483.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Trusted Execution Monitor evaluates trust caches and DER</text>
+<text x="483.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">entitlements</text>
+<rect x="26.0" y="197.1" width="425.0" height="87.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="40.0" y="218.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">ARM64 EL1</text>
+<text x="40.0" y="234.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">XNU Kernel (Mach + BSD + IOKit)</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Scheduling, IPC, VFS, networking; stripped of raw page-table write</text>
+<text x="40.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">authority</text>
+<rect x="469.0" y="197.1" width="425.0" height="87.1" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="483.0" y="218.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">GUARDED GL2 / EL2</text>
+<text x="483.0" y="234.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">SPTM &amp; Virtualization Hypervisor</text>
+<text x="483.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Owns physical page-type table and Stage-2/SPRR mappings above</text>
+<text x="483.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">XNU</text>
+<rect x="26.0" y="342.2" width="868.0" height="73.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="460.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">HARDWARE INTERCONNECT &amp; IOMMU</text>
+<text x="460.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Coherent SoC Fabric Governed by AppleDART &amp; SART</text>
+<text x="460.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Per-engine DMA translation blocks PCIe, USB, Wi-Fi, and GPU engines from reading kernel or SPTM frames</text>
+<rect x="26.0" y="473.2" width="277.3" height="87.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="40.0" y="494.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">ISOLATED ENCLAVE</text>
+<text x="40.0" y="510.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Secure Enclave (SEP)</text>
+<text x="40.0" y="529.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">sepOS microkernel, fused UID/GID AES</text>
+<text x="40.0" y="543.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">engine, SKS keybags, anti-replay</text>
+<rect x="321.3" y="473.2" width="277.3" height="87.1" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="335.3" y="494.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">TIGHTLY COUPLED</text>
+<text x="335.3" y="510.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Secure Exclaves</text>
+<text x="335.3" y="529.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Camera/mic indicator ledger &amp; sensor</text>
+<text x="335.3" y="543.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">pipelines isolated from XNU</text>
+<rect x="616.7" y="473.2" width="277.3" height="87.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="630.7" y="494.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">SPATIAL CO-PROCESSOR</text>
+<text x="630.7" y="510.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Vision Pro R1</text>
+<text x="630.7" y="529.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">12 ms photon-to-photon pipeline; isolates</text>
+<text x="630.7" y="543.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">raw eye-tracking cameras</text>
+<text x="460.0" y="586.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Even full EL1 XNU compromise cannot rewrite SPTM page tables in GL2 or extract UID-fused keys from SEP.</text>
+<line x1="238.5" y1="139.1" x2="238.5" y2="190.6" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="238.5,197.1 242.5,188.6 234.5,188.6" fill="#236b66"/>
+<line x1="681.5" y1="139.1" x2="681.5" y2="190.6" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="681.5,197.1 685.5,188.6 677.5,188.6" fill="#5c4282"/>
+<line x1="238.5" y1="284.2" x2="238.5" y2="335.7" stroke="#365378" stroke-width="1.6"/>
+<polygon points="238.5,342.2 242.5,333.7 234.5,333.7" fill="#365378"/>
+<line x1="681.5" y1="284.2" x2="681.5" y2="335.7" stroke="#365378" stroke-width="1.6"/>
+<polygon points="681.5,342.2 685.5,333.7 677.5,333.7" fill="#365378"/>
+<line x1="164.7" y1="415.2" x2="164.7" y2="466.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="164.7,473.2 168.7,464.7 160.7,464.7" fill="#2b6a4c"/>
+<line x1="460.0" y1="415.2" x2="460.0" y2="466.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,473.2 464.0,464.7 456.0,464.7" fill="#2b6a4c"/>
+<line x1="755.3" y1="415.2" x2="755.3" y2="466.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="755.3,473.2 759.3,464.7 751.3,464.7" fill="#236b66"/>
+<rect x="220.3" y="155.2" width="36.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="238.5" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">SVC</text>
+<rect x="642.6" y="155.2" width="77.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="681.5" y="166.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">guarded call</text>
+<rect x="197.5" y="300.4" width="81.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="238.5" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">DMA map req</text>
+<rect x="629.8" y="300.4" width="103.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="681.5" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">DART frame lock</text>
+<rect x="127.0" y="431.4" width="75.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="442.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">mailbox IPC</text>
+<rect x="429.2" y="431.4" width="61.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="442.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">xnuproxy</text>
+<rect x="705.2" y="431.4" width="100.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="442.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">compositor feed</text>
+</svg>

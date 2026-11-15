@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 468" width="920" height="468">
+<rect x="0" y="0" width="920" height="468" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">LINUX KERNEL KEYRING SCOPES, POSSESSION SEMANTICS, AND SECRET ISOLATION</text>
+<rect x="26.0" y="52.0" width="868.0" height="88.9" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="460.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="middle">NON-SWAPPABLE RING 0 KEY RETENTION (ADD_KEY / KEYCTL)</text>
+<text x="460.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">32-Bit Permission Mask Split Across Possessor [P] | User [U] | Group [G] | Other [O] (View, Read, Write, Search, Link,</text>
+<text x="460.0" y="105.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Setattr)</text>
+<text x="460.0" y="123.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Possession requires a live search path from the calling thread's active @t, @p, or @s keyrings</text>
+<rect x="26.0" y="198.9" width="203.5" height="84.1" rx="6.0" fill="#ffffff" stroke="#8c857b" stroke-width="1.4"/>
+<text x="40.0" y="220.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#4a453e" text-anchor="start">@T · THREAD</text>
+<text x="40.0" y="235.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Thread Keyring</text>
+<text x="40.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Cleared on thread exit or execve</text>
+<rect x="247.5" y="198.9" width="203.5" height="84.1" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="261.5" y="220.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">@P · PROCESS</text>
+<text x="261.5" y="235.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Process Keyring</text>
+<text x="261.5" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Shared by POSIX threads;</text>
+<text x="261.5" y="266.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">cleared on execve</text>
+<rect x="469.0" y="198.9" width="203.5" height="84.1" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="483.0" y="220.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">@S · SESSION</text>
+<text x="483.0" y="235.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Session Keyring</text>
+<text x="483.0" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Inherited across fork/exec</text>
+<text x="483.0" y="266.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">inside login/unit</text>
+<rect x="690.5" y="198.9" width="203.5" height="84.1" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="704.5" y="220.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">@U · USER</text>
+<text x="704.5" y="235.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">User Keyring</text>
+<text x="704.5" y="253.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">Shared by ALL processes of</text>
+<text x="704.5" y="266.3" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#433e38" text-anchor="start">same UID!</text>
+<rect x="26.0" y="341.0" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="362.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">KEY ISOLATION INVARIANT</text>
+<text x="460.0" y="378.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Store Service Secrets in Per-Unit @s Session Keyrings or Trusted/Encrypted Keys (Never Ambient @u User Keyrings)</text>
+<text x="460.0" y="397.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Trusted keys wrap payloads inside TPM 2.0 so raw key material never persists unencrypted on disk</text>
+<text x="460.0" y="440.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Possessor permissions prevent another process running under the same UID from reading secrets outside its session tree.</text>
+<line x1="127.8" y1="140.9" x2="127.8" y2="192.4" stroke="#365378" stroke-width="1.6"/>
+<polygon points="127.8,198.9 131.8,190.4 123.8,190.4" fill="#365378"/>
+<line x1="349.2" y1="140.9" x2="349.2" y2="192.4" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="349.2,198.9 353.2,190.4 345.2,190.4" fill="#236b66"/>
+<line x1="570.8" y1="140.9" x2="570.8" y2="192.4" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="570.8,198.9 574.8,190.4 566.8,190.4" fill="#5c4282"/>
+<line x1="792.2" y1="140.9" x2="792.2" y2="192.4" stroke="#b07926" stroke-width="1.6"/>
+<polygon points="792.2,198.9 796.2,190.4 788.2,190.4" fill="#b07926"/>
+<line x1="570.8" y1="283.0" x2="570.8" y2="334.5" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="570.8,341.0 574.8,332.5 566.8,332.5" fill="#5c4282"/>
+<line x1="792.2" y1="283.0" x2="792.2" y2="334.5" stroke="#b07926" stroke-width="1.6" stroke-dasharray="4,3"/>
+<polygon points="792.2,341.0 796.2,332.5 788.2,332.5" fill="#b07926"/>
+<rect x="92.9" y="157.0" width="69.7" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="127.8" y="168.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">narrowest</text>
+<rect x="306.6" y="157.0" width="85.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="349.2" y="168.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">thread-group</text>
+<rect x="530.6" y="157.0" width="80.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="168.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">session tree</text>
+<rect x="748.2" y="157.0" width="88.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="792.2" y="168.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">UID-wide risk</text>
+<rect x="512.3" y="299.1" width="116.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="570.8" y="310.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">recommended scope</text>
+<rect x="739.1" y="299.1" width="106.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="792.2" y="310.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#b07926" text-anchor="middle">ambient exposure</text>
+</svg>

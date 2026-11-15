@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 673" width="900" height="673">
+<rect x="0" y="0" width="900" height="673" fill="#ffffff"/>
+<text x="450.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">ANATOMY OF MULTI-VENDOR SPYWARE CHAINS: BASEBANDS, BROWSERS, &amp; GPU KERNEL DRIVERS</text>
+<rect x="34.0" y="48.0" width="440.0" height="103.5" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="48.0" y="69.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="start">ENTRY VECTOR A OR B</text>
+<text x="48.0" y="85.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">0-Click VoLTE SDP (CVE-2023-24033) OR 1-Click Chrome</text>
+<text x="48.0" y="101.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Renderer</text>
+<text x="48.0" y="120.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Exynos/Shannon cellular baseband RCE over carrier IMS, or Cytrox</text>
+<text x="48.0" y="134.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Predator V8 JIT bug inside u0_i* sandbox</text>
+<rect x="612.0" y="50.1" width="260.0" height="99.4" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="71.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="start">COUNTERMEASURE</text>
+<text x="626.0" y="86.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Adv. Protection &amp; Baseband</text>
+<text x="626.0" y="101.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Sandboxing</text>
+<text x="626.0" y="119.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Disables V8 JIT/WebGPU, turns off 2G, &amp;</text>
+<text x="626.0" y="132.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">isolates modem DMA via SMMUv3</text>
+<rect x="34.0" y="209.5" width="440.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="48.0" y="231.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">SANDBOX ESCAPE SEAM</text>
+<text x="48.0" y="247.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Vendor GPU Driver Bug (Mali CVE-2023-4211 / Adreno</text>
+<text x="48.0" y="263.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">CVE-2024-23380)</text>
+<text x="48.0" y="281.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">untrusted_app / renderer reaches /dev/mali0 or /dev/kgsl-3d0 ioctl -&gt;</text>
+<text x="48.0" y="295.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">GPU page-table UAF yields physical R/W</text>
+<rect x="612.0" y="211.6" width="260.0" height="99.4" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="626.0" y="233.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">COUNTERMEASURE</text>
+<text x="626.0" y="248.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Arm MTE + Rust Drivers + SELinux</text>
+<text x="626.0" y="263.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="start">xperm</text>
+<text x="626.0" y="280.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">Shrinks reachable ioctls and catches</text>
+<text x="626.0" y="294.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.2" font-weight="400" fill="#433e38" text-anchor="start">spatial/temporal corruption before R/W</text>
+<rect x="34.0" y="371.0" width="440.0" height="87.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="48.0" y="392.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">KERNEL PRIVILEGE</text>
+<text x="48.0" y="408.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Data-Only Patch of task_struct cred &amp; selinux_state</text>
+<text x="48.0" y="427.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Side-steps KCFI/SCS by overwriting data structures in kernel RAM</text>
+<text x="48.0" y="441.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">without hijacking code pointers</text>
+<rect x="34.0" y="516.5" width="440.0" height="103.5" rx="6.0" fill="#f8eaec" stroke="#8d2d3b" stroke-width="1.4"/>
+<text x="48.0" y="538.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#6e1f2b" text-anchor="start">IN-MEMORY IMPLANT</text>
+<text x="48.0" y="554.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">Exfiltrate AFU Messengers &amp; Mic Without Modifying</text>
+<text x="48.0" y="570.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="start">/system</text>
+<text x="48.0" y="588.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">Avoids tripping AVB dm-verity by living in RAM or re-triggering via</text>
+<text x="48.0" y="603.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.8" font-weight="400" fill="#433e38" text-anchor="start">non-persistent app/browser cache</text>
+<text x="450.0" y="644.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Every major commercial spyware chain avoids Android's Rust/AVB core and pivots through third-party C/C++ silicon vendor code.</text>
+<line x1="474.0" y1="99.8" x2="605.5" y2="99.8" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,99.8 603.5,95.8 603.5,103.8" fill="#8d2d3b"/>
+<line x1="254.0" y1="151.5" x2="254.0" y2="203.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,209.5 258.0,201.0 250.0,201.0" fill="#4a5568"/>
+<line x1="474.0" y1="261.3" x2="605.5" y2="261.3" stroke="#8d2d3b" stroke-width="1.5" stroke-dasharray="4,3"/>
+<polygon points="612.0,261.3 603.5,257.3 603.5,265.3" fill="#8d2d3b"/>
+<line x1="254.0" y1="313.0" x2="254.0" y2="364.5" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,371.0 258.0,362.5 250.0,362.5" fill="#4a5568"/>
+<line x1="254.0" y1="458.5" x2="254.0" y2="510.0" stroke="#4a5568" stroke-width="1.5"/>
+<polygon points="254.0,516.5 258.0,508.0 250.0,508.0" fill="#4a5568"/>
+<rect x="494.6" y="90.4" width="80.2" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="101.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">blocks entry</text>
+<rect x="194.0" y="167.6" width="120.1" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="179.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">reachable GPU ioctl</text>
+<rect x="492.3" y="251.9" width="84.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="534.7" y="263.4" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#8d2d3b" text-anchor="middle">hardens seam</text>
+<rect x="185.8" y="329.1" width="136.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="340.6" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">bypasses KCFI via data</text>
+<rect x="195.8" y="474.7" width="116.4" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="254.0" y="486.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#4a5568" text-anchor="middle">evades AVB at rest</text>
+</svg>

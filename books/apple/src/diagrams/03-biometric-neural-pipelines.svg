@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" width="920" height="470">
+<rect x="0" y="0" width="920" height="470" fill="#ffffff"/>
+<text x="460.0" y="24.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="11.0" font-weight="700" letter-spacing="0.90px" fill="#365378" text-anchor="middle">HARDWARE-ISOLATED BIOMETRIC PIPELINES ACROSS APPLE FORM FACTORS</text>
+<rect x="26.0" y="52.0" width="277.3" height="101.2" rx="6.0" fill="#edf1f6" stroke="#365378" stroke-width="1.4"/>
+<text x="40.0" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#284163" text-anchor="start">TOUCH ID (MAC / IPAD / SE)</text>
+<text x="40.0" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">Capacitive Ridge Sensor</text>
+<text x="40.0" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Mutually authenticated AES-wrapped SPI</text>
+<text x="40.0" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">channel directly from Touch ID sensor IC</text>
+<text x="40.0" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">(or Magic Keyboard enclave) to SEP</text>
+<rect x="321.3" y="52.0" width="277.3" height="101.2" rx="6.0" fill="#e6f3f1" stroke="#236b66" stroke-width="1.4"/>
+<text x="335.3" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#19524e" text-anchor="start">FACE ID (IPHONE / IPAD PRO)</text>
+<text x="335.3" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">TrueDepth IR + Flood Illuminator</text>
+<text x="335.3" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Dedicated MIPI/ISP path routes IR depth</text>
+<text x="335.3" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">frames through Secure Neural Engine</text>
+<text x="335.3" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">DMA-locked to SEP</text>
+<rect x="616.7" y="52.0" width="277.3" height="101.2" rx="6.0" fill="#efeaf7" stroke="#5c4282" stroke-width="1.4"/>
+<text x="630.7" y="73.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#452e66" text-anchor="start">OPTIC ID (APPLE VISION PRO)</text>
+<text x="630.7" y="89.5" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="start">IR LED + Eye Cameras via R1</text>
+<text x="630.7" y="108.0" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">Spatiotemporal iris capture routed through</text>
+<text x="630.7" y="122.1" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">R1 hardware isolation to SEP Neural Engine</text>
+<text x="630.7" y="136.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="start">descriptor</text>
+<rect x="26.0" y="211.2" width="868.0" height="73.0" rx="6.0" fill="#e6f4ec" stroke="#2b6a4c" stroke-width="1.4"/>
+<text x="460.0" y="232.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#1e5139" text-anchor="middle">SEP BIOMETRIC MATCHER (SEPOS)</text>
+<text x="460.0" y="248.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">Mathematical Descriptor Comparison &amp; Liveness Gate</text>
+<text x="460.0" y="267.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Compares incoming feature vector against SEP-encrypted enrollment template (never raw images); enforces 5-fail / 48-hour / BFU fallbacks</text>
+<rect x="26.0" y="342.2" width="868.0" height="73.0" rx="6.0" fill="#f9f1e1" stroke="#b07926" stroke-width="1.4"/>
+<text x="460.0" y="363.7" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="9.2" font-weight="700" letter-spacing="0.40px" fill="#875a14" text-anchor="middle">CRYPTOGRAPHIC CONSEQUENCE (NOT A BOOLEAN)</text>
+<text x="460.0" y="379.8" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="12.4" font-weight="700" fill="#1a1a1a" text-anchor="middle">SKS Releases Biometric-Bound Keybag / Keychain / Apple Pay Token</text>
+<text x="460.0" y="398.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.7" font-weight="400" fill="#433e38" text-anchor="middle">Match directly unwraps key material inside SEP; AP cannot forge a match bit to decrypt user secrets</text>
+<text x="460.0" y="441.2" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.5" font-weight="400" font-style="italic" fill="#57514a" text-anchor="middle">Biometric authentication succeeds only by releasing cryptographic keys inside SEP, never by returning a spoofable boolean to XNU.</text>
+<line x1="164.7" y1="153.2" x2="164.7" y2="204.7" stroke="#365378" stroke-width="1.6"/>
+<polygon points="164.7,211.2 168.7,202.7 160.7,202.7" fill="#365378"/>
+<line x1="460.0" y1="153.2" x2="460.0" y2="204.7" stroke="#236b66" stroke-width="1.6"/>
+<polygon points="460.0,211.2 464.0,202.7 456.0,202.7" fill="#236b66"/>
+<line x1="755.3" y1="153.2" x2="755.3" y2="204.7" stroke="#5c4282" stroke-width="1.6"/>
+<polygon points="755.3,211.2 759.3,202.7 751.3,202.7" fill="#5c4282"/>
+<line x1="460.0" y1="284.2" x2="460.0" y2="335.7" stroke="#2b6a4c" stroke-width="1.6"/>
+<polygon points="460.0,342.2 464.0,333.7 456.0,333.7" fill="#2b6a4c"/>
+<rect x="120.4" y="169.4" width="88.5" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="164.7" y="180.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#365378" text-anchor="middle">encrypted SPI</text>
+<rect x="412.3" y="169.4" width="95.3" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="180.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#236b66" text-anchor="middle">secure ANE bus</text>
+<rect x="701.9" y="169.4" width="106.9" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="755.3" y="180.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#5c4282" text-anchor="middle">R1 -&gt; SEP channel</text>
+<rect x="407.6" y="300.4" width="104.8" height="18.8" rx="4" fill="#ffffff" stroke="#dcd6cc" stroke-width="0.9"/>
+<text x="460.0" y="311.9" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif' font-size="10.0" font-weight="400" fill="#2b6a4c" text-anchor="middle">releases key slot</text>
+</svg>

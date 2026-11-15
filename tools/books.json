@@ -26,7 +26,7 @@
       "title": "The Apple Trust Chain",
       "subtitle": "From Boot ROM and Secure Enclave Across iOS, macOS, iPadOS, watchOS, and visionOS to Private Cloud Compute",
       "accent": "#7cc4f8",
-      "status": "Blueprint · 20 Planned Chapters"
+      "status": "Complete · 20 Chapters"
     },
     {
       "slug": "linux",
@@ -37,7 +37,7 @@
       "title": "The Linux Trust Chain",
       "subtitle": "From UEFI, Unified Kernel Images, and dm-verity Through LSMs, eBPF, and Containers to Confidential Cloud",
       "accent": "#e5954b",
-      "status": "Blueprint · 20 Planned Chapters"
+      "status": "Complete · 20 Chapters"
     },
     {
       "slug": "android",
@@ -48,7 +48,7 @@
       "title": "The Android Trust Chain",
       "subtitle": "From Verified Boot 2.0, StrongBox, and pKVM Through SELinux and Keystore to Play Integrity and Private Compute",
       "accent": "#57c98c",
-      "status": "Blueprint · 20 Planned Chapters"
+      "status": "Complete · 20 Chapters"
     }
   ]
 }

@@ -1,237 +1,133 @@
-# The Windows Trust Chain: Editorial and Writing Standards
+# Editorial and Book-Craft Playbook
 
-This document defines the architectural, structural, and editorial standards for *The Windows Trust Chain*. Every chapter in the book must adhere to these principles to maintain a consistent, authoritative, and world-class engineering standard.
-
----
-
-## 1. Chapter Structure and Opening Standard
-
-Every chapter follows a strict, predictable structural progression:
-
-1. **Chapter Title (`# Title`)**
-2. **Overview (`## Overview`)**: A standardized 5-bullet block that replaces custom markup:
-   * **Role in the Chain:** Where this subsystem sits in the stack and what lower links it builds on.
-   * **Core Security Invariant:** The formal, precise security guarantee this link provides to higher layers.
-   * **Trusted Computing Base (TCB):** The exact firmware, hardware, or software components that must remain uncompromised for this guarantee to hold.
-   * **Primary Failure Modes:** How this boundary has historically been bypassed or undermined in practice.
-   * **Handoff:** The unaddressed risks and responsibilities passed forward to subsequent chapters.
-3. **Core Engineering Problem & Threat Model**: Opening immediately with the concrete technical problem and architectural limitations of predecessor mechanisms.
-4. **Architectural Deep Dive**: Mechanism-level breakdown of the subsystem, data structures, and verification flows.
-5. **Attack Catalog & Gap Analysis**: Structured summary table of real-world historical bypasses followed by focused gap-analysis case studies.
-6. **Theoretical Limits & Structural Invariants**: Fundamental boundaries, trade-offs, and ecosystem dynamics.
-7. **Inspecting and Verifying on a Running System**: Unified section of diagnostic commands, scripts, and hardening practices.
-8. **Summary & Handoff**: Crisp verdict on what the link achieves and a transition to the next chapter.
+This document distills universal standards for authoring, editing, illustrating, and producing a rigorous technical book. Part I states portable principles of craft that apply to any technical monograph (systems, security, cryptography, compilers, distributed systems, algorithms, or AI) without forcing different books into identical surface templates. Part II records the specific house configuration chosen for *The Windows Trust Chain*.
 
 ---
 
-## 2. Voice, Tone, and Style
+## Part I · Universal Principles of Technical Book Craft
 
-### Direct Technical Grounding (No Fictional Storytelling)
-* **Rule:** Do not open chapters with dramatized or fictional vignettes (for example: *"Picture a small business owner in December 2010..."* or *"The 3:14 a.m. Mimikatz that returned an empty hash..."*).
-* **Instead:** Ground the chapter immediately in the technical reality and engineering threat model (for example: contrasting unauthenticated legacy BIOS sector-zero jumps with modern cryptographic firmware enforcement).
+### 1. Book Architecture and Scope Ownership
 
-### Eliminate Self-Conscious Meta-Commentary
-* **Rule:** Never narrate the chapter's own structure or lecture the reader about what other engineers supposedly miss.
-* **Prohibited patterns:**
-  * *"The conclusion is the part most engineers skip."*
-  * *"The technical content of this section is not the hard part. The social and operational content... is the rest of the chapter."*
-  * *"This is the chapter's mechanism-densest section, and the place a few key terms have to be exactly right."*
-  * *"We have walked the chain end to end. The next question is..."*
-  * *"This is the part you do today, on whatever Windows machine is in front of you."*
-* **Instead:** State the technical reality plainly. Write with quiet, unforced authority.
-
-### Eliminate Performative Honesty and Apologetic Posturing
-* **Rule:** Never boast about the book's truthfulness or apologize for lab limitations.
-* **Prohibited patterns:**
-  * *"When the chapter shows you a blue block, it is telling you the truth about its own limits. That is deliberate."*
-  * *"The captured block below is therefore deliberately modest."*
-* **Instead:** State what an API, command, or register reports directly. Document empirical facts without moralizing.
-
-### Prune Historical Overhang
-* **Rule:** Do not spend extensive prose on distant pre-history that predates modern Windows architecture (e.g. detailed retrospectives on 1980s DOS floppy-disk viruses).
-* **Instead:** Establish the legacy architectural limitation in one or two sharp paragraphs, then focus on modern implementations, specifications, and vulnerabilities.
-
-### Calibrate for Senior Practitioners
-* **Rule:** Maintain an audience level suited to security architects, detection engineers, and advanced researchers.
-* **Avoid:** Low-level helpdesk runbook phrasing (e.g. *"Open an elevated PowerShell prompt and type..."*).
-* **Instead:** Present diagnostic commands cleanly, accompanied by expected output schemas, registry paths, and programmatic verification logic.
-
-### Typographic Restraint (No Inline Prose or Table Bolding)
-* **Rule:** Reserve boldface (`**...**`) strictly for structural labels: leading labels on the 5 `Overview` list items (`* **Role in the Chain:**`), occasional compact ordered-step labels, callout titles (`> **Key idea.**`), and standalone glossary headings in `80-glossary.md`.
-* **Avoid:** Bolding technical terms, numbers, CVEs, code spans (`**\`code\`**`), table cells, paragraph-opening dictionary labels in narrative chapters, or entire thesis clauses inside body paragraphs.
-* **Instead:** Let sentence structure carry emphasis, use monospace backticks (`\`symbol\``) for identifiers, and reserve *italics* sparingly for genuine one- or two-word semantic contrast.
-
-### Prose-First Narrative Flow (Book Cadence Over Slide Outlines)
-* **Rule:** Outside the 5-coordinate `## Overview` specification box (and reference back matter such as `70-references.md` and `95-index.md`), write the entire book in sustained, connected narrative paragraphs (`0` bulleted or numbered lists in front matter, `Prologue`, `Foundations`, chapter bodies, or `About`).
-* **Avoid:** Bullet lists or numbered lists anywhere in `Core Engineering Problem`, `Architectural Deep Dive`, `Attack Catalog & Gap Analysis`, `Theoretical Limits`, `Inspecting and Verifying`, `Summary & Handoff`, or front matter, even for multi-step protocols or architectural gates.
-* **Instead:** Walk through protocol exchanges, verification gates, failure progressions, theoretical invariants, and chapter handoffs in cohesive paragraphs connected by clear transitions (*"First, ..."*, *"Once the digest is computed, ..."*, *"At the third stage, ..."*) and `###` subheadings where appropriate.
+* **Organize Around One Governing Spine, Not an Encyclopedia:** A great technical book advances one coherent argument from start to finish (for example: how trust is inherited across layers, how state scales under faults, or how reductions preserve hardness). Every chapter must earn its place by adding a distinct link, constraint, or abstraction to that spine.
+* **Single Canonical Ownership (No Forward Pre-emption, No Backward Recaps):** Every concept, algorithm, protocol, or historical failure belongs to *one* canonical home chapter.
+  * *Upstream:* Never spend pages previewing a downstream chapter's architecture, comparison tables, or case studies; hand off the open problem in one or two sentences and cross-reference forward.
+  * *Downstream:* When Chapter $N$ builds on a limitation established in Chapter $N-1$, state the inherited premise in a single sentence, link back, and proceed immediately to the new mechanism without re-narrating the history or failure stories.
+* **Synthesize Consolidations Around Shared Abstractions:** When merging overlapping drafts or closely coupled subtopics into one chapter, rewrite around their shared underlying model rather than concatenating separate mini-chapters end to end.
+* **Prioritize Deployed Reality Over Ghost Curiosities:** Dedicate the main narrative to constructions, protocols, and architectures that actually run in practice (or provably govern real systems). Confine unshipped proposals, abandoned standards, or speculative drafts to brief design-space contrasts explaining *why* practice chose a different trade-off.
+* **Direct-Ancestor History Only:** Include historical context only when it explains why a current design carries a specific constraint or interface today. Establish the legacy limitation in one or two sharp paragraphs, then move directly to the modern mechanism.
+* **Discipline the Scope Perimeter:** Exclude adjacent ecosystems, hardware subsystems, or policy debates unless understanding a core design decision in *this* book's subject is impossible without them.
 
 ---
 
-## 3. Scope Boundaries and Canonical Placement
+### 2. Chapter Rhythm Without Cookie-Cutter Templates
 
-### Strict Subsystem Ownership
-* **Rule:** Each chapter strictly owns its specific subsystem. When a subsystem runs parallel to or hands off to an adjacent link, acknowledge it in one or two concise paragraphs and refer to the dedicated chapter.
-* **Example:** Secure Boot owns signature verification (`LoadImage()`, authenticated variables, bootlib, LPE). It must NOT inline the full TPM extend mathematics, PCR allocation tables, or DRTM sequences; those belong exclusively to Chapter 4 (Measured Boot).
+A book should feel cohesive across its own chapters without looking stamped from the same mold as every other book. Separate the *functional arc* a reader needs from the *surface headings* a specific subject calls for:
 
-### Explain Once, Canonically (No Echo-Chamber Blocks)
-* **Rule:** Every technical mechanism, certificate detail, CVE, or update program must be explained once, deeply, in its canonical section.
-* **Avoid:** Introducing a fact in the body text, repeating it in an adjacent definition box, summarizing it in a table, and repeating it again in a standalone blockquote callout.
-* **Discipline for Callouts:**
-  * Reserve blockquote callouts (`> **...**`) exclusively for load-bearing architectural definitions, hard invariants (`> **Key idea.**`), or critical failure warnings (`> **Warning.**`).
-  * Never allow a callout to echo or summarize surrounding prose.
-
----
-
-## 4. Threat Modeling and Attack Catalogs
-
-Every major chapter must ground its theoretical claims in real-world adversarial history:
-
-1. **Structured Attack Summary Table:**
-   Include a table summarizing known bypasses and exploitation milestones with standard columns:
-   * **Attack / Tool**
-   * **Year**
-   * **Boundary Broken**
-   * **Prerequisite**
-   * **Adversary Mechanism**
-   * **Defense / Fix Path**
-2. **Gap Analysis Subsections:**
-   * Treat attacks as architectural gap analysis, not exploit tutorials.
-   * Explain *why* the defense failed: was the vulnerability due to a flawed implementation, a missing verification check, a signed-but-vulnerable downgrade, an unauthenticated parser below the verifier, or the lag between patching and revocation?
+* **Preserve a Clear Intellectual Arc:** Strong technical chapters guide the reader through a natural progression:
+  1. *Orient:* Establish where the chapter sits in the larger argument and what core question or invariant it owns.
+  2. *Motivate:* Frame the concrete engineering problem, workload constraint, or threat model before naming solutions.
+  3. *Construct:* Walk through the mechanism, data structures, equations, or protocol flows at full fidelity.
+  4. *Stress-Test:* Examine where the design breaks, degrades, or fails in the real world (failure modes, attacks, edge cases, or bottlenecks).
+  5. *Bound:* Isolate fundamental theoretical limits, impossibility results, and permanent trade-offs.
+  6. *Verify or Apply (When Relevant):* Show concisely how to observe, test, or reproduce the behavior in practice.
+  7. *Connect:* Close with what has been established and what remains open for the next chapter.
+* **Adapt Section Shapes to the Book's Genre:** Never copy another book's literal `H2` headings or summary tables blindly across genres.
+  * A *systems security* book naturally pairs an architectural deep dive with an attack gap analysis and live host verification.
+  * A *cryptography or formal methods* book naturally pairs formal game definitions and constructions with security reductions and implementation pitfalls.
+  * A *distributed systems or database* book naturally pairs storage/network mechanics with fault-injection scenarios, consistency anomalies, and latency/throughput trade-offs.
+  * An *algorithms or compilers* book naturally pairs problem formulation and invariants with worked transformations, complexity bounds, and pathological inputs.
+* **Enforce Causal Ordering:** Never introduce a mitigation, optimization, or refinement before introducing the failure mode, bottleneck, or attack that forced its creation.
+* **Quarantine Hands-On Mechanics from Conceptual Flow:** When a book includes terminal diagnostics, benchmark harnesses, or implementation exercises, place them in a dedicated section (or clearly bounded lab block) rather than breaking up architectural derivations mid-argument. Keep interactive commands short (`1-4` lines) so readers can run and read them at a glance rather than paging through boilerplate scripts.
 
 ---
 
-## 5. Operational Inspection and Diagnostic Commands
+### 3. Prose Cadence and Voice
 
-### Removal of Machine Evidence Ceremony
-* Remove all SHA-256 hashes, capture timestamps, lab VM hostnames, and provenance tags (`🟢 CAPTURED`, `🔵 DOCUMENTED`, `🟡 EMULATED`).
-* Remove dedicated "Proof on a live machine" or "Proof by documentation" headers.
-
-### Unified Inspection Section
-* Consolidate all diagnostic commands, inspection one-liners, and verification checks into a single section titled **"Inspecting and Verifying on a Running System"**.
-* Format commands as clean, standard markdown code blocks with clear commentary and expected output formats.
-* Keep commands concise and interactive (1 to 3 lines). Do not include large scripts, monolithic health-check automation, or sprawling parsing loops in the book text. Readers should be able to run each command directly in an interactive shell.
-
----
-
-## 6. Book Architecture and Chapter Map
-
-The consolidated manuscript contains 23 core chapters across 4 parts, an interlude, and a finale:
-
-### Part I · Silicon (Hardware Root of Trust)
-* **Chapter 1: Secure Boot** (Firmware verifier, UEFI variables, LoadImage, 2026 CA rollover, Trusted Boot handoff)
-* **Chapter 2: The TPM** (Platform cryptoprocessor, PCRs, key hierarchies, endorsement keys)
-* **Chapter 3: Pluton** (On-die security processor, bus-sniffing elimination, unified firmware servicing)
-* **Chapter 4: Measured Boot** (SRTM, DRTM, Secured-core DMA/SMM, TCG event logs, BitLocker sealing)
-* **Chapter 5: Attestation** (Remote attestation protocols, AIK, quotes, Health Attestation CSP)
-
-### Part II · Kernel & Code (Execution & Isolation Boundaries)
-* **Chapter 6: The Secure Kernel and VBS** (Hyper-V, SLAT, VTL0 vs VTL1, IUM trustlets, enclaves)
-* **Chapter 7: Code Integrity and Application Control** (Authenticode, catalog files, KMCS, HVCI, WDAC)
-* **Chapter 8: Protected Process Light** (PPL signer lattice, `RunAsPPL`, LSASS protection, kernel bypasses)
-* **Chapter 9: Process Mitigation Policies** (Exploit mitigations: ASLR, DEP, CFG, XFG, Intel CET)
-
-### Part III · Credentials & Access (Identity, Data Custody, & PKI)
-* **Chapter 10: Windows Access Control, Integrity Levels, and Impersonation** (Tokens, SIDs, DACLs, MIC, SeImpersonate)
-* **Chapter 11: Data Protection and Local Secret Custody** (BitLocker, XTS-AES, CNG KeyIso, DPAPI, App-Bound Encryption, Recall enclaves)
-* **Chapter 12: Credential Guard and LSASS Isolation** (LSASS threat model, LsaIso trustlet, Pass-the-Challenge)
-* **Chapter 13: The Death of NTLM** (NTLM wire protocol, NetNTLM/DNS reflection, Extended Protection for Authentication)
-* **Chapter 14: Kerberos and Ticket Forgery** (Kerberos protocol, PAC validation, KRBTGT, Golden/Diamond/Sapphire tickets)
-* **Chapter 15: Enterprise PKI, Service Identities, and Hybrid Bridges** (AD CS ESC1-16, Shadow Credentials, Windows LAPS, dMSA BadSuccessor, Entra Connect)
-* **Chapter 16: Pass-the-Hash to Pass-the-PRT** (Credential theft evolution, Primary Refresh Token in Entra ID)
-* **Chapter 17: Windows Hello and Passkeys** (Biometric pipeline, ESS, FIDO2/CTAP2 ceremonies, WebAuthn)
-
-### Interlude · Watching the Chain
-* **Chapter 18: ETW: The EDR Substrate** (Event Tracing for Windows, EtwTi, Windows Resiliency Initiative, telemetry evasion)
-
-### Part IV · Cloud (Enterprise Session, Agentic, & Confidential Enforcement)
-* **Chapter 19: Zero Trust** (Device health attestation, conditional access evaluation)
-* **Chapter 20: Continuous Access Evaluation** (Real-time token revocation, push vs pull session enforcement)
-* **Chapter 21: Workload and AI Agent Security** (Agent Workspace, local Agent SIDs, signed MCP, Microsoft Entra Agent ID, EchoLeak XPIA)
-* **Chapter 22: Confidential VMs** (Hardware-isolated VMs, AMD SEV-SNP, Intel TDX, vTPM attestation, Battering RAM)
-
-### Finale · When the Chain Snaps
-* **Chapter 23: When the Chain Snaps: Storm-0558** (MSA signing key compromise, CVE-2025-55241 Actor Tokens, July 2026 SFI completion)
+* **Write in Sustained Paragraphs, Not Slide Outlines:** Published books live in connected paragraphs (`>= 75%` of non-table text), not bullet lists.
+  * Do not string together `60-120`-word `* **Bold Heading:**` pseudo-paragraphs across body sections, and do not write narrative primers as strings of `**Term.**` dictionary blurbs (reserve alphabetical definitions for a Glossary).
+  * Even multi-step protocols, compilation passes, and verification gates usually read with greater clarity and authority when woven into cohesive paragraphs connected by explicit causal transitions (*"First, ..."*, *"Once the digest is computed, ..."*, *"Only after surviving both checks..."*).
+  * If chapters open with structured coordinates or metadata, house them in a purpose-built visual container (such as an outlined specification card or epigraph box) rather than raw bullet points, so the transition into continuous book prose is unmistakable.
+* **Open Directly in Technical Reality (No Fictional Vignettes):** Never open chapters or sections with invented characters, dramatized timestamps (*"It is 3:14 a.m. in a SOC..."*), or fictional war stories. Open immediately with the concrete technical tension or a documented, cited real-world event.
+* **Peer-to-Peer Authority (Zero Meta-Commentary):** Treat the reader as an experienced peer.
+  * *No structural narration:* Never write *"This is the chapter's densest section"*, *"The conclusion is the part most engineers skip"*, or *"We have walked the chain; next we ask..."*.
+  * *No performative honesty or apologies:* Never boast that the text is telling the truth or apologize for lab constraints (*"This example is deliberately modest"*). State what an interface, proof, or measurement shows and stop.
+  * *No rhetorical gimmicks or persona splits:* Avoid `Aha #1` labels, helpdesk hand-holding (*"Open a terminal window and type..."*), and fragmented endings addressed to role-play personas (*"For an executive... For a developer... For a researcher..."*).
+* **Make Every Callout Box Earn Its Border (No Echo Chambers):** Reserve callout blocks (`Key idea`, `Definition`, `Warning`, `Theorem`) strictly for load-bearing invariants, formal definitions, or subtle traps. Never use a callout to repeat, preview, or summarize a claim already stated in the adjacent paragraph, and never use callouts as editorial sticky notes (`Recap: owned by Chapter 4`).
+* **Canonical Case-Study Placement (No Name-Dropping Fatigue):** Do not drop the name of a famous failure, bug, or theorem ten times across opening sections before explaining it. Mention it briefly with a cross-reference where needed, and analyze it thoroughly once in its canonical section.
 
 ---
 
-## 7. Specific Anti-Patterns and Editorial Laws
+### 4. Typographic and Surface Hygiene
 
-These seventeen laws address specific failure modes identified across early manuscript drafts. They are absolute requirements for all chapter revisions:
+* **Typographic Restraint:** Let sentence structure and verb choice carry emphasis instead of typographic shouting.
+  * Avoid boldface (`**...**`) inside body paragraphs and table cells.
+  * Use monospace backticks (`` `identifier` ``) for code symbols, types, registers, wire messages, paths, and status codes.
+  * Reserve *italics* sparingly for genuine one- or two-word semantic contrast or first-use conceptual terms.
+  * Reserve boldface strictly for structural chrome (callout lead-ins, specification-card keys, or standalone glossary headwords).
+* **Clean Punctuation and Mathematical Notation:** Prefer crisp clauses, colons, semicolons, and parentheses over habitual em-dash chains or raw ASCII arrows (`->`) in prose. Typeset mathematical expressions, state transitions, and complexity or probability bounds cleanly in TeX math (`$...$` / `$$...$$`) with every variable defined in context.
+* **Zero Authoring or Pipeline Leaks:** Published prose must never leak repository file paths (`diagrams/foo.svg`, `src/ch04.md`), internal editorial rule numbers (`Law 16`), scraper/crawler artifacts (`HTTP 403`), provenance scaffolding, or internal build jargon (`manuscript`, `TODO`).
+* **Hyperlinked, Verified Cross-References:** Every cross-reference to another chapter, section, figure, glossary term, or bibliography entry should be a working link whose visible number or title matches the canonical table of contents.
 
-### Law 1: Forward Subsystem Pre-emption is Forbidden
-* **Anti-Pattern:** An upstream chapter writing extensive prose, architecture diagrams, or case studies for a subsystem owned by a downstream chapter (for example: Chapter 2 spending a third of its text detailing Pluton, or Chapter 1 inlining the full Measured Boot PCR allocation table).
-* **The Rule:** If a subsystem is covered in a subsequent chapter, reference it only as a one-sentence handoff. Never duplicate its architecture, comparison tables, or vendor politics. Let every chapter own its thesis exclusively.
+---
 
-### Law 2: Strict Section Sequencing (Probes Never Interrupt Architecture)
-* **Anti-Pattern:** Placing diagnostic commands, PowerShell snippets, or verification checks in the middle of architectural explanations or before attack breakdowns.
-* **The Rule:** All chapters must follow a single, immutable section order:
-  1. Overview
-  2. The Problem & Threat Model
-  3. Architecture & Core Mechanisms
-  4. Attack Catalog & Gap Analysis
-  5. Theoretical Limits & Invariants
-  6. Inspecting and Verifying on a Running System
-  7. Summary & Handoff
-  *Diagnostic inspection commands appear exclusively in Section 6.*
+### 5. Rigor, Evidence, and Attribution
 
-### Law 3: Causal Ordering (Threat Before Mitigation)
-* **Anti-Pattern:** Prescribing a hardening step or mentioning a mitigation before the adversary technique or vulnerability has been introduced.
-* **The Rule:** Never reference a countermeasure (e.g. preboot PIN for bus sniffing) before the underlying threat (LPC bus sniffing) has been analyzed in the threat model or attack catalog.
+* **Separate Mechanism Validity from System-Level Meaning:** Always distinguish what a primitive guarantees locally from what a larger system assumes globally:
+  * In *security*: cryptographic signature or hash validity (*"signed by key $K$"*) is never automatically authorization or safety (*"key $K$ is permitted to act on resource $R$"*).
+  * In *distributed systems*: protocol liveness or consensus under a fault model is never identical to end-to-end application correctness across unmodeled network or storage faults.
+  * In *algorithms and ML*: asymptotic or benchmark performance under i.i.d. assumptions is never identical to worst-case adversarial or cache/memory-hierarchy behavior.
+* **Primary-Source Citations Only:** Ground non-trivial claims in primary specifications, standards (`RFC`, `ISO`, `NIST`, `IEEE`, `W3C`), vendor architecture references, peer-reviewed papers, or official incident reports.
+* **Curated, Orphan-Free Bibliography:** Maintain sequential citation numbering, strip internal research notes from reference entries, verify well-formed URLs/DOIs, and prune uncited bibliography orphans on every build. Preserve verbatim quotations and their original punctuation exactly.
 
-### Law 4: Grounded in Deployed Windows Architecture (No Speculative Draft Math)
-* **Anti-Pattern:** Spending pages calculating byte-level parameter sizes of draft cryptographic standards (e.g. NIST ML-DSA buffer arithmetic in TPM NVRAM) that Windows does not currently ship or use.
-* **The Rule:** Focus strictly on how modern Windows builds, enforces, and verifies trust today. When discussing emerging frontiers (PQC, confidential computing, or future agent protocols), state the architectural challenge and migration path cleanly, avoiding detached mathematical derivations of unadopted draft standards.
+---
 
-### Law 5: Tone of Peer-to-Peer Authority (Ban Pedantic Gimmicks)
-* **Anti-Pattern:** Labeling insights as `> **Aha #1:**` or using rhetorical hand-holding (e.g. *"The conclusion is the part most engineers skip"*).
-* **The Rule:** Treat the reader as an engineering peer. State architectural takeaways plainly, frame key invariants neutrally as `> **Key idea.**`, and eliminate conversational gimmicks.
+### 6. Visual Architecture: Diagrams, Tables, Covers, and Print/PDF
 
-### Law 6: The Direct-Ancestor Historical Boundary
-* **Anti-Pattern:** Lengthy retrospectives on ancient computing lore, 1980s DOS boot viruses, or obsolete policy debates (e.g. 2002 Palladium vs Stallman DRM controversies).
-* **The Rule:** Historical context is permitted only when it directly explains why a current Windows security primitive exists in its present form. Limit pre-history to one or two sharp paragraphs that establish the legacy limitation, then transition immediately to modern architecture.
+* **Every Diagram Must Teach Structure Prose Cannot:** Include a diagram only when spatial partitioning, multi-actor protocol timing, state lattices, or multi-dimensional trade-off spaces become clearer visually than in prose. Never add decorative boxes that merely echo a simple linear paragraph, and keep every figure caption synchronized with the exact rows, columns, and labels shown in the current graphic.
+* **Strict Orthogonal Geometry and Zero Visual Collisions:**
+  * Route connectors strictly horizontally and vertically unless radial geometry requires otherwise.
+  * When a spanning summary layer connects to multiple columns above or below it, align outer widths and drop straight vertical arrows down each column's exact center rather than funneling through crooked doglegs or stepped T-junctions.
+  * In side-by-side domain diagrams, synchronize paired row heights so cross-boundary bridges run strictly horizontally.
+  * Mask edge labels inside opaque background pills with explicit clearance (`>= 3 px`) from arrowheads and box borders, and mechanically verify every diagram against text-on-text, line-through-text, pill-on-arrowhead, card-on-card, and parallel double-track overlaps.
+* **Proportional, Overflow-Free Tables:** Wide multi-column tables break both web layouts (via hidden horizontal clipping) and print/PDF engines (by triggering global shrink-to-fit downscaling across the entire book). Always combine `table-layout: fixed` and `width: 100%` with content-weighted `<colgroup>` column percentages and clean line-break opportunities (`<wbr>`) at path and identifier separators (`\`, `/`, `_`).
+* **Cohesive Covers and Print Pagination:**
+  * Design front and back covers around an architectural visual metaphor native to the book's thesis rather than stock clichés, keeping uppercase letter-spacing moderate (`<= 1.5 px`) so PDF text selection never splits words.
+  * Match PDF page trim (`7 x 9.25 in`, `6 x 9 in`, or `Letter`) to the cover's exact aspect ratio, render front and back covers on full-bleed `margin: 0` named pages with running headers/footers suppressed, prevent page splits inside callouts, figures, and table rows (`break-inside: avoid`), and generate native PDF bookmark outlines.
 
-### Law 7: Platform Scope Boundary (Windows Trust vs. Datacenter / Ecosystem Periphery)
-* **Anti-Pattern:** Detouring into out-of-band datacenter chassis security (BMCs, Project Cerberus, Caliptra) or non-Windows consumer architectures (Apple SEP, Google Titan) that do not directly participate in the Windows trust chain.
-* **The Rule:** Content must directly govern or support the Windows operating system trust model. Do not include out-of-band server hardware roots of trust or competing mobile ecosystems unless an architectural decision in Windows cannot be understood without it.
+---
 
-### Law 8: The Motivation Principle (Eliminate Historical Recaps)
-* **Anti-Pattern:** When Chapter N solves an architectural weakness identified in Chapter N-1, re-narrating the historical attacks, exploit mechanics, or tool histories in full detail.
-* **The Rule:** Never repeat historical attack narratives across consecutive chapters. State the invariant change in a single sentence (e.g. eliminating the exposed inter-chip bus by moving the security processor onto the CPU die), cross-reference the preceding chapter, and proceed immediately to the new mechanism.
+### 7. Mechanical Verification ("Enforce What You Care About")
 
-### Law 9: Concise Diagnostics over Monolithic Scripts
-* **Anti-Pattern:** Inlining large multi-page PowerShell scripts, custom parsing loops, or sprawling utility programs inside chapter text.
-* **The Rule:** Inspection examples must be simple 1-3 line terminal or PowerShell commands that an engineer or analyst can execute immediately in an interactive shell. If a complex diagnostic is necessary, reference the native built-in utility or schema rather than printing a script harness.
+Human review catches nuance, voice, and argument structure; deterministic scripts catch drift across hundreds of pages. Every book repository should maintain a single automated audit (`tools/audit_book.py` or equivalent) run before merging that verifies:
 
-### Law 10: Prohibition of Pipeline and Tooling Artifacts in Prose
-* **Anti-Pattern:** Mentioning web scraping difficulties, crawler User-Agent blocks, broken external URLs, paywalls, or HTTP status codes (such as HTTP 403 on TCG sites) in chapter text.
-* **The Rule:** Write with clean, permanent authority based on normative specifications and official documentation. Never expose research tooling friction or manuscript build mechanics to the reader.
+1. Expected chapter structure and heading sequence per the book's house sheet.
+2. Prose-vs-list cadence and typographic restraint (no disallowed inline/table bolding, banned punctuation, or authoring/path leaks).
+3. Reference integrity (`100%` of inline `[N]` citations resolve; `0` uncited bibliography orphans).
+4. Cross-reference parity (every visible `Chapter K` link resolves to the actual `K`-th chapter in the table of contents, and all HTML `#anchor` fragments resolve).
+5. Diagram collision/orthogonality invariants and zero horizontal DOM overflow across all tables, code blocks, and figures in the print/PDF render.
 
-### Law 11: Ban "Recap / Chapter Ownership" Callout Blocks
-* **Anti-Pattern:** Interrupting prose with meta-commentary callouts declaring chapter ownership (e.g. `> **[Concept], recap.** Owned by Chapter X...`).
-* **The Rule:** Concepts flow naturally across chapters. Terminology is either used directly in context or accompanied by a brief parenthetical cross-reference `(Chapter 2)`. Do not hold editorial meetings about chapter boundaries on the published page.
+---
 
-### Law 12: Production Reality Over Academic Curiosities (No Ghost Architecture Chapters)
-* **Anti-Pattern:** Allowing a failed, optional, or non-deployed standard (such as DAA/ECDAA, or speculative cryptographic proposals) to consume the majority of a chapter while the actual shipping Windows system (e.g. Azure Attestation, Health Attestation CSP, AIK enrollment, quote validation) is starved of detail.
-* **The Rule:** Chapters must dedicate the overwhelming majority of their depth to shipping, deployed Windows production architecture. Non-deployed alternatives belong strictly in a focused subsection or gap analysis explaining why production adopted a different operational trade-off.
+## Part II · House Sheet for *The Windows Trust Chain*
 
-### Law 13: Ban "Audience Role-Play" Summaries
-* **Anti-Pattern:** Concluding chapters with persona-based advice blocks (e.g. *"For a platform engineer..."*, *"For an academic researcher..."*, *"For a policymaker..."*).
-* **The Rule:** Maintain a single, rigorous engineering voice calibrated for senior systems and security practitioners. Do not fragment the technical conclusion into disparate persona runbooks.
+*(When adapting Part I to a new book, replace only this section with that book's domain-specific structure, conventions, and chapter map.)*
 
-### Law 14: Prohibition of Fictional and Dramatized Vignettes
-* **Anti-Pattern:** Opening sections with dramatized fictional characters, clocks, or red-team narratives (e.g. *"It is 3:14 a.m. on a 2026 Windows 11 box..."*, *"At 06:00 on a Tuesday in March 2024, an administrator at a 500-seat law firm..."*).
-* **The Rule:** Ground every chapter immediately in the technical problem, architectural invariant, or documented public incident (e.g. Stuxnet, Storm-0558, BlackLotus, or the original Mimikatz release). Never invent narrative fiction to illustrate an engineering concept.
-
-### Law 15: Canonical Attack Analysis (Eliminate Scattered Mention Fatigue)
-* **Anti-Pattern:** Dropping names of prominent exploits (such as Bitpixie, Mimikatz, PetitPotam, or Capcom.sys) 8 to 10 times across introductory sections, trust ledgers, and sidebars before they are ever explained.
-* **The Rule:** An exploit or CVE must be mentioned in passing only with a concise cross-reference, and then systematically analyzed in full exactly once within its canonical home chapter's Attack Catalog & Gap Analysis section.
-
-### Law 16: Decouple Cryptographic Validity from Resource Authorization
-* **Anti-Pattern:** Conflating signature verification with authorization policy (e.g. assuming a valid Authenticode signature implies driver safety, or assuming a valid JWT signature implies permission to read enterprise mail).
-* **The Rule:** Every chapter analyzing signed artifacts (PE drivers, Kerberos PACs, SAML assertions, JWTs, attestation quotes) must explicitly separate cryptographic validity ("was this signed by key K?") from authorization policy ("is key K permitted to access resource R?").
-
-### Law 17: Coherent Synthesis for Merged Subsystems (No Monster Splices)
-* **Anti-Pattern:** Merging multi-chapter sequences (e.g. 05+07+17 for VBS/Secure Kernel, 06+20+21 for Code Integrity, 25+26+27 for Access Control) by simply concatenating three old texts into a single sprawling file.
-* **The Rule:** Merged chapters must be rewritten as a single unified narrative following the standard 7-section progression. Eliminate duplicate pre-histories, harmonize definitions, and combine all diagnostics into a single concise inspection section.
-
+* **Core Thesis:** Every security guarantee in modern Windows is inherited upward from immutable silicon roots (`Boot Guard`, `UEFI`, `TPM 2.0`, `Pluton`) through hypervisor `SLAT` isolation (`VTL0`/`VTL1`), kernel code integrity, local tokens and data vaults, Active Directory and passkey protocols, `ETW` telemetry, and cloud `Zero Trust` / `Confidential VM` enforcement; the chain snaps whenever a higher layer mistakes cryptographic validity for delegated authorization.
+* **Target Audience:** Systems security architects, principal detection engineers, incident responders, and OS/cloud platform engineers.
+* **Chapter Progression (7 `H2` Sections):**
+  1. `Overview` (rendered as a colored, outlined 5-coordinate specification card: `Role in the Chain`, `Core Security Invariant`, `Trusted Computing Base (TCB)`, `Primary Failure Modes`, `Handoff`)
+  2. `Core Engineering Problem & Threat Model`
+  3. `Architectural Deep Dive`
+  4. `Attack Catalog & Gap Analysis` (opening with the standardized 6-column table: `Attack / Tool | Year | Boundary Broken | Prerequisite | Adversary Mechanism | Defense / Fix Path`, treating attacks strictly as architectural gap analysis rather than exploit tutorials)
+  5. `Theoretical Limits & Structural Invariants`
+  6. `Inspecting and Verifying on a Running System` (read-only `1-4` line PowerShell, Win32, WMI/CIM, and cloud CLI queries)
+  7. `Summary & Handoff`
+* **House Typographic Choices:** Zero em-dashes (`U+2014`) and zero emojis in prose, tables, headings, diagrams, and commit messages; `0` bulleted or numbered lists outside the `Overview` card, `70-references.md`, and `95-index.md`; `Figure: ` caption prefix on all 76 vector SVG diagrams; `7.00 x 9.25 in` PDF trim (`tools/build-pdf.mjs`).
+* **23-Chapter Canonical Map:**
+  * *Opening:* `Prologue` · `Foundations`
+  * *Part I · Silicon (Ch. 1-5):* `1. Secure Boot` · `2. The TPM` · `3. Pluton` · `4. Measured Boot` · `5. Attestation`
+  * *Part II · Kernel & Code (Ch. 6-9):* `6. The Secure Kernel and VBS` · `7. Code Integrity and Application Control` · `8. Protected Process Light` · `9. Process Mitigation Policies`
+  * *Part III · Credentials & Access (Ch. 10-17):* `10. Windows Access Control, Integrity Levels, and Impersonation` · `11. Data Protection and Local Secret Custody` · `12. Credential Guard and LSASS Isolation` · `13. The Death of NTLM` · `14. Kerberos and Ticket Forgery` · `15. Enterprise PKI, Service Identities, and Hybrid Bridges` · `16. Pass-the-Hash to Pass-the-PRT` · `17. Windows Hello and Passkeys`
+  * *Interlude · Watching the Chain (Ch. 18):* `18. ETW: The EDR Substrate`
+  * *Part IV · Cloud (Ch. 19-22):* `19. Zero Trust` · `20. Continuous Access Evaluation` · `21. Workload and AI Agent Security` · `22. Confidential VMs`
+  * *Finale · When the Chain Snaps (Ch. 23):* `23. When the Chain Snaps: Storm-0558`

@@ -39,7 +39,9 @@ Every chapter adheres to the standards codified in [`editorial.md`](editorial.md
 2. Preview locally with `mdbook serve --open` or build `./book` via `mdbook build`.
 3. If chapter titles or reading order change, run `node tools/gen-summary.mjs` to
    update `src/SUMMARY.md`.
-4. Open a pull request describing the change and the primary source or live
+4. Run `npm run audit` (`python3 tools/audit_book.py`) to verify editorial,
+   typographic, citation, and cross-reference rules.
+5. Open a pull request describing the change and the primary source or live
    Windows build used to verify it.
 
 By contributing, you agree that your contributions are licensed under the

@@ -2,8 +2,11 @@
 
 ## The Author
 
-Parag Mali is a systems and security engineer who writes about Windows
-architecture, cryptographic protocols, and cloud security at paragmali.com.
+Parag Mali is a systems and security engineer who writes about operating-system
+architecture, cryptographic protocols, and cloud security at paragmali.com. *The
+Windows Trust Chain* is Volume I of *The Platform Trust Chain Series*, alongside
+Volume II (*The Apple Trust Chain*), Volume III (*The Linux Trust Chain*), and
+Volume IV (*The Android Trust Chain*).
 
 ## Method and Editorial Standard
 

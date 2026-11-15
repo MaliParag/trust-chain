@@ -1,10 +1,34 @@
 {
+  "name": "platform-trust-chain-series",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Platform Trust Chain Series: four open systems-security monographs (Windows, Apple, Linux, Android) by Parag Mali.",
+  "author": "Parag Mali <https://paragmali.com>",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://maliparag.github.io/trust-chain/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaliParag/trust-chain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MaliParag/trust-chain/issues"
+  },
+  "keywords": [
+    "systems-security",
+    "trusted-computing",
+    "windows-security",
+    "apple-security",
+    "linux-security",
+    "android-security",
+    "confidential-computing",
+    "ai-security"
+  ],
   "scripts": {
     "audit": "python3 tools/audit_book.py",
     "summary": "node tools/gen-summary.mjs",
     "diagrams": "python3 books/windows/tools/gen_diagrams.py && python3 books/apple/tools/gen_diagrams.py && python3 books/linux/tools/gen_diagrams.py && python3 books/android/tools/gen_diagrams.py",
     "covers": "python3 books/windows/tools/gen_covers.py && python3 tools/gen_series_covers.py",
-    "build": "mdbook build && SITE_URL=https://maliparag.github.io/windows-trust-chain node tools/gen-seo.mjs && python3 tools/batch_readalong.py",
+    "build": "mdbook build && SITE_URL=https://maliparag.github.io/trust-chain node tools/gen-seo.mjs && python3 tools/batch_readalong.py",
     "pdf": "node tools/build-pdf.mjs",
     "pdfs": "node tools/build-pdf.mjs --book windows && node tools/build-pdf.mjs --book apple && node tools/build-pdf.mjs --book linux && node tools/build-pdf.mjs --book android"
   },

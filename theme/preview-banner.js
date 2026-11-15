@@ -4,7 +4,7 @@
   function resolveSiteRoot() {
     var relToBook = (typeof path_to_root === 'string') ? path_to_root : '';
     var p = window.location.pathname || '';
-    var subMounts = ['apple', 'linux', 'android'];
+    var subMounts = ['windows', 'apple', 'linux', 'android'];
     for (var i = 0; i < subMounts.length; i++) {
       var seg = '/' + subMounts[i] + '/';
       if (p.indexOf(seg) !== -1) {
@@ -27,7 +27,7 @@
     document.documentElement.setAttribute('data-volume', ctx.active);
     var r = ctx.root;
     var vols = [
-      { slug: 'windows', label: 'Vol. I · Windows', href: r + 'index.html' },
+      { slug: 'windows', label: 'Vol. I · Windows', href: r + 'windows/index.html' },
       { slug: 'apple',   label: 'Vol. II · Apple',  href: r + 'apple/index.html' },
       { slug: 'linux',   label: 'Vol. III · Linux', href: r + 'linux/index.html' },
       { slug: 'android', label: 'Vol. IV · Android', href: r + 'android/index.html' }
@@ -44,10 +44,10 @@
     banner.innerHTML =
       '<div><strong>Preview edition.</strong> Open technical security monograph; ' +
       'corrections and reproductions welcome via ' +
-      '<a href="https://github.com/MaliParag/windows-trust-chain/issues">GitHub Issues</a>.</div>' +
+      '<a href="https://github.com/MaliParag/trust-chain/issues">GitHub Issues</a>.</div>' +
       '<div class="series-switcher"><span><strong>Platform Trust Chains:</strong></span> ' +
       pills +
-      ' · <a href="' + r + 'series/index.html">Series Overview</a></div>';
+      ' · <a href="' + r + 'index.html">Series Showcase</a></div>';
 
     main.insertBefore(banner, main.firstChild);
 

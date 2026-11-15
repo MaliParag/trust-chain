@@ -17,11 +17,11 @@ renderers = ["html"]
 theme = "../../theme"
 default-theme = "navy"
 preferred-dark-theme = "navy"
-git-repository-url = "https://github.com/MaliParag/windows-trust-chain"
-edit-url-template = "https://github.com/MaliParag/windows-trust-chain/edit/main/books/linux/src/{path}"
+git-repository-url = "https://github.com/MaliParag/trust-chain"
+edit-url-template = "https://github.com/MaliParag/trust-chain/edit/main/books/linux/src/{path}"
 additional-css = ["../../theme/trustchain.css"]
 additional-js = ["../../theme/preview-banner.js"]
-site-url = "/windows-trust-chain/linux/"
+site-url = "/trust-chain/linux/"
 no-section-label = false
 
 [output.html.fold]

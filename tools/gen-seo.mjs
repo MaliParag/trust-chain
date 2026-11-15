@@ -12,19 +12,23 @@
  *   4. Writes unified `sitemap.xml` and `robots.txt`.
  */
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { writeSeriesPortals } from './build-series-portal.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BOOK_DIR = path.resolve(ROOT, process.argv[2] || 'book');
-const BASE = (process.env.SITE_URL || 'https://maliparag.github.io/windows-trust-chain').replace(/\/+$/, '');
 const REGISTRY = JSON.parse(readFileSync(path.join(ROOT, 'tools', 'books.json'), 'utf8'));
+const envSite = process.env.SITE_URL && !process.env.SITE_URL.includes('/windows-trust-chain')
+  ? process.env.SITE_URL
+  : null;
+const BASE = (envSite || REGISTRY.siteUrl || 'https://maliparag.github.io/trust-chain').replace(/\/+$/, '');
 const LICENSE = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 const IMAGE_W = 1400;
 const IMAGE_H = 1850;
 
-// 1. Build all secondary volumes into book/<mount>/ so a single root build populates every OS volume
+// 1. Build all volumes with explicit mounts (`windows`, `apple`, `linux`, `android`) into `book/<mount>/`
 for (const vol of REGISTRY.volumes) {
   if (!vol.mount) continue;
   const volBookToml = path.join(ROOT, vol.dir, 'book.toml');
@@ -40,127 +44,6 @@ function esc(s) {
 function attr(s) {
   return s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 }
-
-// 2. Generate book/series/index.html portal
-function buildSeriesPortal() {
-  const seriesDir = path.join(BOOK_DIR, 'series');
-  mkdirSync(seriesDir, { recursive: true });
-  const cards = REGISTRY.volumes.map((v) => {
-    const href = v.mount ? `../${v.mount}/index.html` : `../index.html`;
-    const coverHref = v.mount ? `../${v.mount}/cover.png` : `../cover.png`;
-    return `
-      <a class="vol-card" href="${href}" style="--accent:${v.accent}">
-        <div class="vol-cover-wrap">
-          <img src="${coverHref}" alt="${esc(v.title)} cover" loading="lazy">
-        </div>
-        <div class="vol-meta">
-          <div class="vol-tag">${esc(v.volume)} · ${esc(v.status)}</div>
-          <h2>${esc(v.title)}</h2>
-          <p>${esc(v.subtitle)}</p>
-        </div>
-      </a>`;
-  }).join('\n');
-
-  const gaId = REGISTRY.gaMeasurementId || '';
-  const gaSnippet = gaId ? `
-  <script>
-  (function () {
-    if (location.protocol !== 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=${esc(gaId)}';
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', '${esc(gaId)}', { book_volume: 'series' });
-  })();
-  </script>` : '';
-
-  const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(REGISTRY.seriesTitle)} - ${esc(REGISTRY.author)}</title>
-  <meta name="description" content="${esc(REGISTRY.seriesSubtitle)}">${gaSnippet}
-  <style>
-    :root { color-scheme: dark; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at 50% 0%, #132036 0%, #090e18 65%);
-      color: #edf2f7;
-      min-height: 100vh;
-    }
-    .wrap { max-width: 1160px; margin: 0 auto; padding: 3.2rem 1.5rem 4rem; }
-    .eyebrow {
-      color: #d4a843; font-size: 0.78rem; font-weight: 700;
-      letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.6rem;
-    }
-    h1 {
-      font-family: Georgia, Baskerville, serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin: 0 0 0.75rem; color: #f8f5ee;
-    }
-    .lead {
-      max-width: 760px; font-size: 1.08rem; line-height: 1.6;
-      color: #b9c6d8; margin: 0 0 2.5rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-      gap: 1.5rem;
-    }
-    .vol-card {
-      display: flex; flex-direction: column;
-      background: #0e1726;
-      border: 1px solid #24354f;
-      border-top: 3px solid var(--accent, #d4a843);
-      border-radius: 10px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.16s ease, border-color 0.16s ease;
-    }
-    .vol-card:hover { transform: translateY(-3px); border-color: var(--accent, #d4a843); }
-    .vol-cover-wrap { background: #070b12; aspect-ratio: 1400 / 1850; overflow: hidden; }
-    .vol-cover-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .vol-meta { padding: 1.1rem 1.2rem 1.3rem; }
-    .vol-tag {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--accent, #d4a843); margin-bottom: 0.4rem;
-    }
-    .vol-meta h2 {
-      font-family: Georgia, serif; font-size: 1.22rem; margin: 0 0 0.45rem; color: #f7f4ed;
-    }
-    .vol-meta p { margin: 0; font-size: 0.88rem; line-height: 1.5; color: #9fb0c7; }
-    footer {
-      margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid #1e2d44;
-      font-size: 0.86rem; color: #8496b0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
-    }
-    footer a { color: #9cc4f0; text-decoration: none; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="eyebrow">Open Systems Security Monographs · ${esc(REGISTRY.author)}</div>
-    <h1>${esc(REGISTRY.seriesTitle)}</h1>
-    <p class="lead">${esc(REGISTRY.seriesSubtitle)}. Each volume traces one platform's verifiable chain of trust link by link from immutable silicon roots up to cloud policy and confidential AI compute, grounded in primary specifications.</p>
-    <div class="grid">${cards}</div>
-    <footer>
-      <span>Copyright © 2026 ${esc(REGISTRY.author)} · CC BY-NC-SA 4.0</span>
-      <span><a href="${esc(REGISTRY.repoUrl)}">GitHub Repository</a></span>
-    </footer>
-  </div>
-</body>
-</html>\n`;
-  writeFileSync(path.join(seriesDir, 'index.html'), html, 'utf8');
-}
-
-buildSeriesPortal();
 
 function formatTables(html) {
   return html.replace(/<table\b[^>]*>[\s\S]*?<\/table>/gi, (tableHtml) => {
@@ -237,8 +120,7 @@ for (const file of walk(BOOK_DIR)) {
   const base = path.basename(file);
   if (SKIP_BASENAMES.has(base)) continue;
 
-  if (rel === 'series/index.html') {
-    pages.push(`${BASE}/series/`);
+  if (rel === 'index.html' || rel === 'series/index.html') {
     continue;
   }
 
@@ -330,12 +212,16 @@ for (const file of walk(BOOK_DIR)) {
   injectedCount++;
 }
 
-pages.sort((a, b) => (a === `${BASE}/` ? -1 : b === `${BASE}/` ? 1 : a.localeCompare(b)));
+// Write flagship Apple-grade Series Showcase at both book/index.html and book/series/index.html
+writeSeriesPortals(BOOK_DIR, { ...REGISTRY, siteUrl: BASE });
+pages.push(`${BASE}/`, `${BASE}/series/`);
+const uniquePages = Array.from(new Set(pages));
+uniquePages.sort((a, b) => (a === `${BASE}/` ? -1 : b === `${BASE}/` ? 1 : a.localeCompare(b)));
 const today = new Date().toISOString().slice(0, 10);
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-  ...pages.map((u) => `  <url><loc>${u}</loc><lastmod>${today}</lastmod></url>`),
+  ...uniquePages.map((u) => `  <url><loc>${u}</loc><lastmod>${today}</lastmod></url>`),
   '</urlset>',
   '',
 ].join('\n');
@@ -344,4 +230,4 @@ writeFileSync(path.join(BOOK_DIR, 'sitemap.xml'), sitemap, 'utf8');
 const robots = ['User-agent: *', 'Allow: /', '', `Sitemap: ${BASE}/sitemap.xml`, ''].join('\n');
 writeFileSync(path.join(BOOK_DIR, 'robots.txt'), robots, 'utf8');
 
-console.log(`SEO & Multi-Volume: processed ${injectedCount} pages across ${REGISTRY.volumes.length} volumes; wrote series/index.html + sitemap.xml (${pages.length} urls)`);
+console.log(`SEO & Multi-Volume: processed ${injectedCount} pages across ${REGISTRY.volumes.length} volumes; wrote index.html + series/index.html + sitemap.xml (${uniquePages.length} urls)`);

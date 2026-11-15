@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you cite this monograph series, please use the metadata below."
+type: book
+title: "The Platform Trust Chain Series: Windows, Apple, Linux, and Android"
+abstract: "Four open systems-security monographs (83 chapters, 1,457 pages, 266 vector figures, and 2,587 primary sources) tracing verifiable cryptographic trust from silicon reset vectors through hypervisors, kernels, sandboxes, credentials, and telemetry to confidential cloud enclaves and agentic AI."
+authors:
+  - family-names: "Mali"
+    given-names: "Parag"
+    website: "https://paragmali.com"
+year: 2026
+date-released: "2026-11-15"
+license: "CC-BY-NC-SA-4.0"
+url: "https://maliparag.github.io/trust-chain/"
+repository-code: "https://github.com/MaliParag/trust-chain"
+keywords:
+  - systems-security
+  - operating-systems
+  - trusted-computing
+  - windows-security
+  - apple-security
+  - linux-security
+  - android-security
+  - secure-boot
+  - confidential-computing
+  - ai-security

@@ -16,13 +16,13 @@ renderers = ["html"]
 [output.html]
 default-theme = "navy"
 preferred-dark-theme = "navy"
-git-repository-url = "https://github.com/MaliParag/windows-trust-chain"
+git-repository-url = "https://github.com/MaliParag/trust-chain"
 # git-repository-icon = "fa-github"
-edit-url-template = "https://github.com/MaliParag/windows-trust-chain/edit/main/books/windows/src/{path}"
+edit-url-template = "https://github.com/MaliParag/trust-chain/edit/main/books/windows/src/{path}"
 additional-css = ["theme/trustchain.css"]
 additional-js = ["theme/preview-banner.js"]
 # For a GitHub Pages *project* site served at /<repo>/. Change if hosted elsewhere.
-site-url = "/windows-trust-chain/"
+site-url = "/trust-chain/"
 no-section-label = false
 
 [output.html.fold]

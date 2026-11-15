@@ -100,7 +100,7 @@
 <text x="920.0" y="1488" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="16.5" font-weight="400" fill="#b8c5d6" text-anchor="start">wevtutil, and registry audits</text>
 <line x1="136" y1="1648" x2="1264" y2="1648" stroke="#233248" stroke-width="1.2"/>
 <text x="136" y="1696" font-family='Georgia, Baskerville, "Times New Roman", serif' font-size="30" font-weight="700" fill="#f7f4ed" text-anchor="start">Parag Mali</text>
-<text x="136" y="1728" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="15.5" font-weight="400" fill="#8cb0db" text-anchor="start">https://maliparag.github.io/windows-trust-chain</text>
+<text x="136" y="1728" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="15.5" font-weight="400" fill="#8cb0db" text-anchor="start">The Platform Trust Chain Series</text>
 <rect x="846" y="1668" width="418" height="72" rx="5" fill="#0d1728" stroke="#d4a843" stroke-width="1.1" stroke-opacity="0.55"/>
 <text x="1055.0" y="1698" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="13.5" font-weight="700" letter-spacing="1.1px" fill="#d4a843" text-anchor="middle">OPEN TECHNICAL EDITION  ·  2026</text>
 <text x="1055.0" y="1721" font-family='-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif' font-size="11.8" font-weight="500" letter-spacing="0.8px" fill="#9fb0c7" text-anchor="middle">CC BY-NC-SA 4.0  ·  SECURITY &amp; OPERATING SYSTEMS</text>

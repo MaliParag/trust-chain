@@ -295,7 +295,7 @@ def build_back_cover():
     # Bottom Colophon & License Bar
     els.append(f'<line x1="{lx}" y1="1648" x2="{rx}" y2="1648" stroke="#233248" stroke-width="1.2"/>')
     els.append(text_el(lx, 1696, "Parag Mali", font=SERIF, size=30, fill="#f7f4ed", weight="700"))
-    els.append(text_el(lx, 1728, "https://maliparag.github.io/windows-trust-chain",
+    els.append(text_el(lx, 1728, "The Platform Trust Chain Series",
                        font=MONO, size=15.5, fill="#8cb0db"))
 
     # Right badge box

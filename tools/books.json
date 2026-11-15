@@ -2,20 +2,28 @@
   "seriesTitle": "The Platform Trust Chain Series",
   "seriesSubtitle": "How Modern Operating Systems Build Verifiable Trust from Silicon to Cloud, and Where Attackers Break It",
   "author": "Parag Mali",
-  "repoUrl": "https://github.com/MaliParag/windows-trust-chain",
+  "siteUrl": "https://maliparag.github.io/trust-chain",
+  "repoUrl": "https://github.com/MaliParag/trust-chain",
   "gaPropertyId": "564397272",
   "gaMeasurementId": "G-X539HZM68M",
   "volumes": [
     {
       "slug": "windows",
       "dir": "books/windows",
-      "mount": "",
+      "mount": "windows",
       "volume": "Volume I",
       "shortName": "Windows",
       "title": "The Windows Trust Chain",
       "subtitle": "How Modern Windows Builds Trust from Silicon to Cloud, and Where Attackers Break It",
       "accent": "#d4a843",
-      "status": "Complete · 23 Chapters"
+      "status": "Complete · 23 Chapters",
+      "chapters": 23,
+      "pages": 379,
+      "figures": 76,
+      "sources": 912,
+      "words": "100K",
+      "pdfSize": "10.0 MB",
+      "pdfFile": "the-windows-trust-chain.pdf"
     },
     {
       "slug": "apple",
@@ -26,7 +34,14 @@
       "title": "The Apple Trust Chain",
       "subtitle": "From Boot ROM and Secure Enclave Across iOS, macOS, iPadOS, watchOS, and visionOS to Private Cloud Compute",
       "accent": "#7cc4f8",
-      "status": "Complete · 20 Chapters"
+      "status": "Complete · 20 Chapters",
+      "chapters": 20,
+      "pages": 357,
+      "figures": 64,
+      "sources": 545,
+      "words": "101K",
+      "pdfSize": "11.0 MB",
+      "pdfFile": "the-apple-trust-chain.pdf"
     },
     {
       "slug": "linux",
@@ -37,7 +52,14 @@
       "title": "The Linux Trust Chain",
       "subtitle": "From UEFI, Unified Kernel Images, and dm-verity Through LSMs, eBPF, and Containers to Confidential Cloud",
       "accent": "#e5954b",
-      "status": "Complete · 20 Chapters"
+      "status": "Complete · 20 Chapters",
+      "chapters": 20,
+      "pages": 363,
+      "figures": 63,
+      "sources": 577,
+      "words": "102K",
+      "pdfSize": "11.4 MB",
+      "pdfFile": "the-linux-trust-chain.pdf"
     },
     {
       "slug": "android",
@@ -48,7 +70,14 @@
       "title": "The Android Trust Chain",
       "subtitle": "From Verified Boot 2.0, StrongBox, and pKVM Through SELinux and Keystore to Play Integrity and Private Compute",
       "accent": "#57c98c",
-      "status": "Complete · 20 Chapters"
+      "status": "Complete · 20 Chapters",
+      "chapters": 20,
+      "pages": 358,
+      "figures": 63,
+      "sources": 553,
+      "words": "102K",
+      "pdfSize": "11.3 MB",
+      "pdfFile": "the-android-trust-chain.pdf"
     }
   ]
 }

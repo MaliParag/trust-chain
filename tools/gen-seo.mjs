@@ -61,13 +61,30 @@ function buildSeriesPortal() {
       </a>`;
   }).join('\n');
 
+  const gaId = REGISTRY.gaMeasurementId || '';
+  const gaSnippet = gaId ? `
+  <script>
+  (function () {
+    if (location.protocol !== 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=${esc(gaId)}';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', '${esc(gaId)}', { book_volume: 'series' });
+  })();
+  </script>` : '';
+
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(REGISTRY.seriesTitle)} - ${esc(REGISTRY.author)}</title>
-  <meta name="description" content="${esc(REGISTRY.seriesSubtitle)}">
+  <meta name="description" content="${esc(REGISTRY.seriesSubtitle)}">${gaSnippet}
   <style>
     :root { color-scheme: dark; }
     * { box-sizing: border-box; }

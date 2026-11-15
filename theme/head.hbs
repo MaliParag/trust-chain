@@ -1,1 +1,31 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css">
+<script>
+(function () {
+  if (location.protocol !== 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
+  var GA_ID = 'G-X539HZM68M';
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+  var p = location.pathname || '';
+  var vol = /\/apple(\/|$)/.test(p) ? 'apple'
+          : /\/linux(\/|$)/.test(p) ? 'linux'
+          : /\/android(\/|$)/.test(p) ? 'android'
+          : /\/series(\/|$)/.test(p) ? 'series' : 'windows';
+  gtag('js', new Date());
+  gtag('config', GA_ID, { book_volume: vol });
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (/\.pdf($|\?|#)/i.test(href)) {
+      gtag('event', 'pdf_download', { book_volume: vol, file_url: href });
+    } else if (a.classList && a.classList.contains('vol-pill')) {
+      gtag('event', 'switch_volume', { from_volume: vol, to_label: (a.textContent || '').trim() });
+    }
+  });
+})();
+</script>

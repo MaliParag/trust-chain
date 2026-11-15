@@ -3,6 +3,8 @@
   "seriesSubtitle": "How Modern Operating Systems Build Verifiable Trust from Silicon to Cloud, and Where Attackers Break It",
   "author": "Parag Mali",
   "repoUrl": "https://github.com/MaliParag/windows-trust-chain",
+  "gaPropertyId": "564397272",
+  "gaMeasurementId": "G-X539HZM68M",
   "volumes": [
     {
       "slug": "windows",

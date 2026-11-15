@@ -90,7 +90,7 @@ A parallel boundary follows from Rice's Theorem (1953) and Fred Cohen's 1984 pro
 
 ### Decoupling Point-in-Time Policy Evaluation from Continuous Post-Issuance Validity
 
-Consistent with Law 16, evaluating every Zero Trust signal correctly at token issuance (`t = 0`) neither protects the orchestration plane itself nor revokes a bearer token when reality changes at `t = 1` minute.
+Evaluating every Zero Trust signal correctly at token issuance (`t = 0`) neither protects the orchestration plane itself nor revokes a bearer token when reality changes at `t = 1` minute.
 
 > **Key idea.**
 > Zero Trust centralizes access governance into the `PDP` (`Conditional Access`) and `STS`. That centralization creates two structural invariants: first, the orchestration-plane paradox, where stealing the IdP's signing key (`Golden SAML` or `Storm-0558`) lets downstream `PEPs` cryptographically trust assertions the `PDP` never approved (`Assume Breach` [679, 714]); second, temporal decay, where an OAuth access token minted for a compliant, low-risk laptop at `09:00` remains a valid bearer credential until `10:00` even if the user is terminated or Defender detects `Mimikatz` at `09:02`, unless an active revocation channel intervenes ([Chapter 20](14-cae.md)).

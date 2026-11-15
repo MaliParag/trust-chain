@@ -32,11 +32,11 @@ Decoding the raw hexadecimal byte (`Level = (Signer << 4) | (Audit << 3) | Type`
 
 ### The Dominance Lattice and `NtOpenProcess` Ordering
 
-Cross-process handle mediation follows three dominance rules over caller signer $S_c$ and target signer $S_t$ (`diagrams/18-ppl-signer-lattice.svg`) [288, 295]. First, a full `PP` caller (`Type = 2`) may open either a `PP` or a `PPL` target with full access if and only if $S_c \ge S_t$. Second, a `PPL` caller (`Type = 1`) may open another `PPL` with full access if and only if $S_c \ge S_t$, yet can *never* open a full `PP` (`Type = 2`) with full access regardless of signer rung. Third, an unprotected caller (`None`, `0x00`), including an elevated `SYSTEM` command prompt holding `SeDebugPrivilege`, is denied full access to *every* `PP` and `PPL` target.
+Cross-process handle mediation follows three dominance rules over caller signer $S_c$ and target signer $S_t$ [288, 295]. First, a full `PP` caller (`Type = 2`) may open either a `PP` or a `PPL` target with full access if and only if $S_c \ge S_t$. Second, a `PPL` caller (`Type = 1`) may open another `PPL` with full access if and only if $S_c \ge S_t$, yet can *never* open a full `PP` (`Type = 2`) with full access regardless of signer rung. Third, an unprotected caller (`None`, `0x00`), including an elevated `SYSTEM` command prompt holding `SeDebugPrivilege`, is denied full access to *every* `PP` and `PPL` target.
 
 ![Figure: The signer lattice as a 6x6 dominance grid: caller signer rung (rows) against target signer rung (columns). A caller opens a target with full access if and only if its rung is greater-or-equal to the target's, so the grant region is the lower-left triangle and the denied region is the upper-right (where only the limited mask still applies per the target's DACL). The gold-outlined diagonal marks equal-rung peers where every PPL can open another at its own rung.](diagrams/18-ppl-signer-lattice.svg)
 
-Why does `SeDebugPrivilege` fail to rescue `Mimikatz`? The answer lies in strict execution ordering inside `ntoskrnl.exe` (`diagrams/18-ppl-access-check.svg`) [288].
+Why does `SeDebugPrivilege` fail to rescue `Mimikatz`? The answer lies in strict execution ordering inside `ntoskrnl.exe` [288].
 
 ![Figure: The ordering inside NtOpenProcess that makes PPL work. OpenProcess → NtOpenProcess → PspProcessOpen → PspCheckForInvalidAccessByProtection, which splits the requested mask: the full mask (PROCESS_VM_READ / WRITE / CREATE_THREAD) is run through RtlTestProtectedAccess (indexing RtlProtectedAccess[] by the caller's signer rung and the target's type) and is stripped when the caller's rung is below the target's, so it never reaches SeAccessCheck; only the limited mask survives. SeDebugPrivilege is weighed only at the SeAccessCheck box, after the lattice has already pruned the dangerous bits. Which is why a SYSTEM administrator still receives STATUS_ACCESS_DENIED on the read.](diagrams/18-ppl-access-check.svg)
 
@@ -89,7 +89,7 @@ Even with page-in `TOCTOU` races closed, `ci.dll` validates signatures rather th
 
 ### Decoupling Channel Admission from Runtime Conduct
 
-Consistent with Law 16, verifying the cryptographic signer rung of an executable or DLL at load time proves who authored the binary, never that the binary cannot be driven into unsafe behavior via untrusted IPC, registry parameters, or memory corruption.
+Verifying the cryptographic signer rung of an executable or DLL at load time proves who authored the binary, never that the binary cannot be driven into unsafe behavior via untrusted IPC, registry parameters, or memory corruption.
 
 > **Key idea.**
 > Every user-mode `PPL` bypass (`COM` scriptlets, `PPLdump`, `PPLFault`, `BYOVDLL`, and `WerFaultSecure` peer abuse) respects the `RtlProtectedAccess[]` handle lattice completely; instead of opening `lsass.exe` from below, the attacker supplies malicious configuration, RPC payloads, or older signed modules across an already-admitted channel ($S_c \ge S_t$). Protecting `PPL` targets therefore requires pairing signer-lattice admission with intra-process exploit mitigations (`CFG`, `ACG`, `CET`, [Chapter 9](19-mitigations.md)) and `App Control` DLL blocklists ([Chapter 7](06-code-integrity.md)).

@@ -97,7 +97,7 @@ By design, `ETW`'s lock-free per-CPU ring buffers prioritize bounded producer la
 
 ### Decoupling Endpoint Telemetry from Ground-Truth Integrity
 
-Consistent with Law 16, receiving clean or silent `ETW` telemetry from an endpoint does not prove the endpoint is uncompromised, nor does `ETW` alone establish forensic chain-of-custody completeness.
+Receiving clean or silent `ETW` telemetry from an endpoint does not prove the endpoint is uncompromised, nor does `ETW` alone establish forensic chain-of-custody completeness.
 
 > **Key idea.**
 > `ETW` is a high-throughput, best-effort behavioral sensor, not a synchronous access-control monitor or tamper-proof flight recorder [618]. Downstream cloud policy engines (Zero Trust, [Chapter 19](13-zero-trust.md) and Continuous Access Evaluation, [Chapter 20](14-cae.md)) consume EDR device-risk scores derived from `ETW` to revoke or gate tokens, but sound architecture never mistakes the absence of an `ETW` alert for cryptographic proof of host integrity.

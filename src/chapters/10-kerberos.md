@@ -20,7 +20,7 @@ Against this protocol surface, the Active Directory Kerberos threat model spans 
 
 ### The Six-Message Protocol (`AS`, `TGS`, `AP`) and `PA-DATA` Extensions
 
-Kerberos separates authentication into three two-message exchanges mediated by the Key Distribution Center (`KDC`, `kdcsvc.dll` on every writable DC) (`diagrams/10-kerberos-message-triple.svg`) [482, 488].
+Kerberos separates authentication into three two-message exchanges mediated by the Key Distribution Center (`KDC`, `kdcsvc.dll` on every writable DC) [482, 488].
 
 ![Figure: The 1988 Kerberos message triple (AS-REQ/REP, TGS-REQ/REP, AP-REQ/REP) structurally unchanged thirty-eight years later. The AS and TGS exchanges are the two logical halves of one KDC; the service validates the final ticket locally with its own long-term key.](diagrams/10-kerberos-message-triple.svg)
 
@@ -47,7 +47,7 @@ Because Windows 2000 defined `enctype 23` (`RC4-HMAC`) directly over the unsalte
 
 Every Active Directory domain contains one built-in, disabled, indelible account at `S-1-5-21-<domain>-502`: `krbtgt` (paired with isolated `krbtgt_<rid>` accounts for Read-Only Domain Controllers) [510, 511, 512]. Its system-generated secret, stored with a password history of 2 (`current` and `previous` key sets across supported enctypes) inside `ntds.dit` and loaded in cleartext by `kdcsvc.dll` on every writable DC, encrypts every `TGT` in the realm [488, 513].
 
-Inside `EncTicketPart.authorization-data`, Windows embeds the `[MS-PAC]` Privilege Attribute Certificate carrying the user's primary SID, domain/universal group RIDs, `ExtraSIDs` (`SIDHistory`), and up to four cryptographic signatures (`diagrams/23-krbtgt-pac-convergence.svg`) [487, 490, 514, 515]:
+Inside `EncTicketPart.authorization-data`, Windows embeds the `[MS-PAC]` Privilege Attribute Certificate carrying the user's primary SID, domain/universal group RIDs, `ExtraSIDs` (`SIDHistory`), and up to four cryptographic signatures [487, 490, 514, 515]:
 
 ![Figure: A TGT's four PAC signatures (Server Signature, KDC Signature, Ticket Signature added for CVE-2020-17049, and Full PAC Signature added for CVE-2022-37967 / KB5020805) all terminate at a single node: the krbtgt (RID 502) long-term key. Enlarging the signed surface closed partial-PAC tampering, but an adversary holding krbtgt recomputes all four in one step.](diagrams/23-krbtgt-pac-convergence.svg)
 
@@ -76,7 +76,7 @@ Every major Active Directory Kerberos compromise exploits either weak password-d
 
 ### Post-`NTLM` Delegation and Relay Chains: `RBCD` and `KrbRelayUp`
 
-Elad Shamir's *Wagging the Dog* (2019) [451] and Mor Davidovich's `KrbRelayUp` (2022) [478] demonstrate why Kerberos delegation + Active Directory defaults reproduce instant local and remote privilege escalation with zero `NTLM` packets (`diagrams/10-kerberos-rbcd-chain.svg`):
+Elad Shamir's *Wagging the Dog* (2019) [451] and Mor Davidovich's `KrbRelayUp` (2022) [478] demonstrate why Kerberos delegation + Active Directory defaults reproduce instant local and remote privilege escalation with zero `NTLM` packets:
 
 ![Figure: The post-NTLM RBCD chain: six steps from a low-privileged user to Administrator-level access on the file server, with zero NTLM messages in the path. Five of the six exchanges touch only the Domain Controller; the trust boundary abused is the msDS-AllowedToActOnBehalfOfOtherIdentity directory attribute, not a password fallback.](diagrams/10-kerberos-rbcd-chain.svg)
 
@@ -98,7 +98,7 @@ Kerberos's greatest scalability triumph, that a file server or web server valida
 
 ### Decoupling `KRBTGT` Key Rotation from Systemic Domain Recovery
 
-Consistent with Law 16, invalidating forged cryptographic tickets (`krbtgt` double rotation) does not evict an adversary who held Tier-0 authority.
+Invalidating forged cryptographic tickets (`krbtgt` double rotation) does not evict an adversary who held Tier-0 authority.
 
 > **Key idea.**
 > Because Active Directory retains a 2-password history (`current` $K_1$ and `previous` $K_0$) on `krbtgt` to avoid breaking active user sessions during routine maintenance, a single `krbtgt` reset leaves the attacker's stolen key $K_0$ valid in the `previous` slot. Evicting $K_0$ requires two password resets separated by at least `MaxTicketAge` (10 hours by default) with verified `repadmin` directory convergence after each reset [513]. Yet an adversary capable of running `DCSync` almost certainly extracted service/machine keys (`Silver` tickets), `AD CS` CA private keys (`Golden Certificate`), the `KDS` root key (`Golden gMSA`), inter-forest trust keys, `DSRM` local passwords, or planted `AdminSDHolder` / `SIDHistory` backdoors, making confirmed `krbtgt` theft a full Tier-0 forest recovery incident rather than a routine key rotation [513, 529].

@@ -20,7 +20,7 @@ The threat model spans remote `AitM` operators, database-breach crackers, physic
 
 ### `NGC`, the Gesture-to-Key Separation, and `WHfB` Trust Models
 
-Windows Hello's foundational design separates local user verification from remote cryptographic authentication (`diagrams/12-hello-auth-flow.svg`) [575].
+Windows Hello's foundational design separates local user verification from remote cryptographic authentication [575].
 
 ![Figure: The gesture-to-key-to-signature flow. A relying-party challenge enters the device; a local gesture (PIN, face, or fingerprint) authorizes a non-exportable TPM key that signs the challenge; the signed assertion leaves, and the server verifies it with the public key enrolled at provisioning. The biometric template, the PIN, and the private key never leave the device: the server only ever holds a public key and a signature.](diagrams/12-hello-auth-flow.svg)
 
@@ -40,13 +40,13 @@ Where `WHfB` replaces domain passwords, FIDO2 (the pairing of W3C `WebAuthn` `Le
 
 When a site calls `navigator.credentials.create()` or `get()`, the browser (not page JavaScript) writes the actual HTTPS origin into `clientDataJSON.origin`. The authenticator computes `authenticatorData` (comprising `rpIdHash` as `SHA256(rpId)` where `rpId` must be a registrable suffix of `origin`, a 1-byte `flags` bitmap with `UP` user present, `UV` user verified, `BE` backup eligible, `BS` backup state, `AT` attested data, and `ED` extensions, a 32-bit signature counter, and on registration `AAGUID`, `credentialId`, and `COSE_Key` using `ES256` ECDSA P-256 or `EdDSA` [591]) and signs `authenticatorData || SHA256(clientDataJSON)` [570, 592]. An `AitM` proxy on `login-microsoft0nline.example` cannot forge `origin` or obtain a signature over `SHA256("microsoft.com")`: phishing fails mathematically at step one [559, 568].
 
-`CTAP 2.1+` hardened roaming USB/NFC/BLE keys with `rpId`-scoped `pinUvAuthToken` permissions, `credProtect` (`0x03` requiring `UV=1` before enumerating resident credentials), and enterprise attestation [586], while IANA defines seven registration attestation formats (`packed`, `tpm` using `TPM2_Certify` + `AIK`/`EK` from [Chapter 2](01-tpm.md), `apple`, `android-key`, legacy `fido-u2f`, retired `android-safetynet`, and privacy-preserving `none` [149, 593, 594, 595]). When signing in on a borrowed Windows PC lacking local keys, Hybrid Transport (`caBLE`) (`diagrams/24-webauthn-hybrid-transport.svg`) pairs a mobile phone authenticator via a QR-code-seeded ephemeral `ECDH` handshake, `BLE` physical proximity routing, and an end-to-end encrypted `CTAP2` cloud tunnel relay without stranding credentials on the PC [570, 584].
+`CTAP 2.1+` hardened roaming USB/NFC/BLE keys with `rpId`-scoped `pinUvAuthToken` permissions, `credProtect` (`0x03` requiring `UV=1` before enumerating resident credentials), and enterprise attestation [586], while IANA defines seven registration attestation formats (`packed`, `tpm` using `TPM2_Certify` + `AIK`/`EK` from [Chapter 2](01-tpm.md), `apple`, `android-key`, legacy `fido-u2f`, retired `android-safetynet`, and privacy-preserving `none` [149, 593, 594, 595]). When signing in on a borrowed Windows PC lacking local keys, Hybrid Transport (`caBLE`) pairs a mobile phone authenticator via a QR-code-seeded ephemeral `ECDH` handshake, `BLE` physical proximity routing, and an end-to-end encrypted `CTAP2` cloud tunnel relay without stranding credentials on the PC [570, 584].
 
 ![Figure: Hybrid transport (caBLE). A phone authenticates a sign-in on a laptop that holds no credential. Three channels do three jobs: the QR code is the cryptographic binding (ephemeral ECDH), BLE supplies a physical-proximity signal (not identity), and the cloud Tunnel Service is an encrypted CTAP2 relay, not a trust anchor. The phone performs local user verification and signs over the laptop's clientDataJSON.origin and rpIdHash, so origin binding (and phishing resistance) holds end to end.](diagrams/24-webauthn-hybrid-transport.svg)
 
 ### `webauthn.dll`, Synced Passkeys (`BE`/`BS`), and `Windows 11 24H2` Plug-In Providers
 
-Since Windows 10 `1903`, browsers and native apps on Windows do not speak raw `CTAP2` over USB/BLE; they call the OS dispatcher `webauthn.dll` (`WebAuthNAuthenticatorMakeCredential`, `WebAuthNAuthenticatorGetAssertion`, and `Conditional UI` autofill mediation [596, 597, 598, 599]) (`diagrams/24-webauthn-windows-registration.svg`).
+Since Windows 10 `1903`, browsers and native apps on Windows do not speak raw `CTAP2` over USB/BLE; they call the OS dispatcher `webauthn.dll` (`WebAuthNAuthenticatorMakeCredential`, `WebAuthNAuthenticatorGetAssertion`, and `Conditional UI` autofill mediation [596, 597, 598, 599]).
 
 ![Figure: A platform-bound WebAuthn registration on Windows. The browser calls MakeCredential() across the OS dispatch boundary into webauthn.dll; Windows Hello collects the user-verification gesture, CNG/NCrypt provisions the key, and the TPM 2.0 generates a non-exportable keypair and certifies the attestation. The caller hands off a request and receives only bytes (clientDataJSON, authenticatorData, attestationObject) and never holds the TPM private key or speaks raw CTAP transport.](diagrams/24-webauthn-windows-registration.svg)
 
@@ -75,7 +75,7 @@ Omer Tsarfati's `CVE-2021-34466` (CyberArk, 2021) [573] and ERNW's `Faceplant` r
 
 ### The Recovery Floor Theorem: `System AAL = min(Ceremony, Recovery)`
 
-Across every consumer and enterprise platform surveyed, account recovery is where phishing-resistant cryptography collapses back into shared secrets (`diagrams/24-webauthn-recovery-floor.svg`) [559, 564, 602, 609, 610]:
+Across every consumer and enterprise platform surveyed, account recovery is where phishing-resistant cryptography collapses back into shared secrets [559, 564, 602, 609, 610]:
 
 ![Figure: The surveyed passkey platforms start from the same origin-bound ceremony, but expose different ladders of account-recovery primitives, and the common weak floors are out-of-band recovery primitives such as SMS-OTP, email, a retained secret, or an admin Temporary Access Pass. Per-leaf AAL tags show the drop; the system's assurance is the minimum: System AAL = min(ceremony, recovery).](diagrams/24-webauthn-recovery-floor.svg)
 
@@ -89,7 +89,7 @@ Unlike a compromised cryptographic key or password, a human user possesses one f
 
 ### Decoupling Front-Door Origin Binding from Recovery and Post-Sign-In Sessions
 
-Consistent with Law 16, proving phishing-resistant possession of a `TPM`-bound key at `t = 0` guarantees neither the strength of account recovery nor the integrity of the bearer session at `t > 0`.
+Proving phishing-resistant possession of a `TPM`-bound key at `t = 0` guarantees neither the strength of account recovery nor the integrity of the bearer session at `t > 0`.
 
 > **Key idea.**
 > A relying party that verifies `clientDataJSON.origin`, `rpIdHash`, `UV = 1`, and `BE = 0` proves exactly one proposition: the legitimate hardware authenticator authorized a sign-in to the genuine origin right now [570]. If that sign-in mints an unbound OAuth refresh token or browser cookie ([Chapter 16](11-pth-prt.md)), post-unlock malware steals the session without ever touching the `TPM`; if the user's account still permits password, `SMS`, or unverified `TAP` recovery, the attacker bypasses `WebAuthn` entirely (`System AAL = min(ceremony, recovery)`) [559, 564, 609].

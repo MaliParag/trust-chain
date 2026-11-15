@@ -16,7 +16,7 @@ Local verification scaled cloud APIs to billions of requests per second, yet int
 
 Closing the fired-employee and active-intrusion gap without sacrificing $O(1)$ data-plane verification required a fourth design: server-initiated publish-subscribe push decoupling revocation events from token expiry. Proposed as the Continuous Access Evaluation Profile (`CAEP`) by Google's Atul Tulshibagwale in February 2019 [730, 731], shipped in production as Microsoft Entra Continuous Access Evaluation (`CAE`, public preview in 2020 and general availability in January 2022) [728, 732, 733], and finalized vendor-neutrally on September 2, 2025 in the OpenID Foundation `SSF 1.0`, `CAEP 1.0`, and `RISC 1.0` specifications [734], push-based session governance turned revocation into an asynchronous control-plane state stream.
 
-![Figure: The thirteen-year arc from RFC 6749's static-expiry bargain (October 2012) to the OpenID Shared Signals Final Specifications (September 2025), shown as two rails: the IETF and OpenID standards track, and Zero Trust thinking alongside Microsoft Entra's CAE rollout. The oxblood bracket is the fired-employee window: for roughly a decade, 2012-2022, a revoked user's token stayed cryptographically valid until expiry, and Entra CAE's general availability is what finally closed it.](diagrams/14-cae-timeline.svg)
+![Figure: The thirteen-year arc from RFC 6749's static-expiry bargain (2012) to the OpenID Shared Signals 1.0 Final Specifications (September 2025), shown across two parallel rails: the IETF and OpenID standards track on the left, and Zero Trust alongside Microsoft Entra CAE on the right, closing the multi-minute-to-hour bearer revocation window without per-request introspection.](diagrams/14-cae-timeline.svg)
 
 ## Architectural Deep Dive
 
@@ -84,7 +84,7 @@ No distributed pub-sub revocation protocol can achieve zero-millisecond global p
 
 ### Decoupling Temporal Revocation from Token Binding and Cryptographic Provenance
 
-Consistent with Law 16, shrinking revocation latency (`CAE`) proves neither that the presenter is the legitimate client nor that the identity provider ever issued the token.
+Shrinking revocation latency (`CAE`) proves neither that the presenter is the legitimate client nor that the identity provider ever issued the token.
 
 > **Key idea.**
 > `CAE` answers exactly one question: *"Has the authorization state of a principal whose token Entra legitimately issued changed since `iat`?"* If an attacker steals an active bearer token and replays it *before* any detection fires, `CAE` approves every request unless sender-constrained Proof-of-Possession (`Token Protection` / `DPoP`) is enforced [535, 556]. Worse, if an attacker steals the IdP's signing key and forges tokens offline (`Storm-0558`), `CAE` has no session record to revoke unless an explicit subject-level revocation watermark is pushed ([Chapter 23](15-storm0558.md)) [714].

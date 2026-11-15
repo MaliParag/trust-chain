@@ -22,7 +22,7 @@ Conflating these two layers produces recurring enterprise failures. Organization
 
 `BitLocker Drive Encryption` decouples volume re-keying from protector rotation through a three-tier key hierarchy enforced by `bootmgr` during pre-OS initialization and by the filter driver `fvevol.sys` situated between the file system (`ntfs.sys`) and the volume manager (`volmgr.sys`) [879]:
 
-![BitLocker three-tier key hierarchy and hardware-encryption bypass seam](diagrams/30-bitlocker-key-hierarchy.svg)
+![Figure: BitLocker three-tier key hierarchy and hardware-encryption bypass seam](diagrams/30-bitlocker-key-hierarchy.svg)
 
 At the bottom of that hierarchy, the 128-bit or 256-bit Full Volume Encryption Key (`FVEK`) encrypts and decrypts raw disk sectors inline inside `fvevol.sys`, defaulting since Windows 10 version 1511 to `XTS-AES` rather than legacy `AES-CBC` with the `Elephant` diffuser [879]. Rather than storing the `FVEK` directly under user credentials, BitLocker wraps the `FVEK` under a 256-bit Volume Master Key (`VMK`) using `AES-CCM` authenticated encryption across three redundant `-FVE-FS-` metadata headers on the volume, so rotating a compromised PIN or rolling a recovery password re-wraps only the 32-byte `VMK` in milliseconds without re-encrypting terabytes of sector data [879]. Above the `VMK` sit one or more independent key protectors: `TPM`-only sealing (`TPM2_Seal` bound to `PCR[7, 11]` on `UEFI`, analyzed in [Chapter 4](03-measured-boot.md)), `TPM + PIN` (mixing a 6-to-20 character pre-boot secret with `TPM` anti-hammering dictionary lockout), an external USB startup key (`.BEK`), and the 48-digit numeric recovery password whose eight 6-digit groups encode 128 bits of entropy with each group divisible by 11 as a typographical checksum [879].
 
@@ -48,7 +48,7 @@ To eliminate `MasterKey` file management for cross-machine scenarios, Windows 8 
 
 Because classic `DPAPI` treats every process running under the user's `SID` as equally authorized, three progressively stronger isolation mechanisms narrow runtime secret exposure on modern Windows.
 
-![Local secret custody split: user-context DPAPI versus VTL1 KeyIso, App-Bound Encryption, and VBS Enclaves](diagrams/30-dpapi-keyiso-custody.svg)
+![Figure: Local secret custody split: user-context DPAPI versus VTL1 KeyIso, App-Bound Encryption, and VBS Enclaves](diagrams/30-dpapi-keyiso-custody.svg)
 
 At the cryptographic key layer, `CNG Key Isolation` (`KeyIso`) hosts asymmetric keys created via `Cryptography API: Next Generation` (`CNG`, `ncrypt.dll`) under the `Microsoft Software Key Storage Provider` inside `lsass.exe`, handing client processes only an opaque `NCRYPT_KEY_HANDLE` rather than raw private key bytes [883]. When `Virtualization-Based Security` ([Chapter 6](05-secure-kernel.md)) is active and a key is generated or imported without export permissions (`NCRYPT_ALLOW_EXPORT_FLAG` omitted), `VBS Key Isolation` wraps the private key under a `VTL1` `LsaIso.exe` trustlet key and performs all private-key signing and decryption exclusively inside `VTL1` memory [883]. Even a local `SYSTEM` or Ring-0 `VTL0` attacker cannot extract the raw private key bytes, reducing key theft to an in-session signing oracle while the host remains compromised.
 
@@ -56,7 +56,7 @@ For symmetric application databases such as browser session stores, Chrome and M
 
 The strictest local custody tier emerged from Microsoft's redesign of Copilot+ `Windows Recall`. When `Recall` was first previewed in May 2024, storing semantic screen-activity snapshots in a local SQLite database guarded only by standard `DPAPI` and file ACLs meant that any same-user infostealer or elevated administrative process could harvest historical screen contents. Microsoft suspended the rollout and rebuilt `Recall` around a `VTL1` `VBS Enclave`, an Isolated User Mode enclave instantiated via `CreateEnclave(ENCLAVE_TYPE_VBS)` and verified by `skci.dll` [885].
 
-![Copilot+ Recall VBS Enclave and Windows Hello ESS presence-gated decryption](diagrams/30-recall-enclave-gate.svg)
+![Figure: Copilot+ Recall VBS Enclave and Windows Hello ESS presence-gated decryption](diagrams/30-recall-enclave-gate.svg)
 
 Under the hardened `Recall` architecture, captured screen frames and the `UKP` vector/SQLite index are encrypted with per-user keys sealed to the `TPM 2.0` and isolated inside a `VTL1` `VBS Enclave` [885]. Releasing or querying decrypted index contents requires a live `Windows Hello Enhanced Sign-in Security` (`ESS`) biometric or `PIN` authorization ceremony evaluated in `VTL1` ([Chapter 17](12-hello.md)), rate-limited by hardware anti-hammering counters. Neither an offline disk clone nor a silent background infostealer running under the user's `SID` can bulk-decrypt `Recall` history without interactive user verification [885].
 

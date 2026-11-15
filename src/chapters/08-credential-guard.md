@@ -22,7 +22,7 @@ Because any secret stored in `VTL0` memory remains readable to a compromised `VT
 
 ### The `VTL0` / `VTL1` Agent-Trustlet Split (`lsass.exe` vs. `LsaIso.exe`)
 
-Rather than moving millions of lines of complex network authentication parsers into `VTL1`, Credential Guard splits the Local Security Authority across the hypervisor `SLAT` boundary (`diagrams/08-credential-guard-vtl-boundary.svg`) [182, 439].
+Rather than moving millions of lines of complex network authentication parsers into `VTL1`, Credential Guard splits the Local Security Authority across the hypervisor `SLAT` boundary [182, 439].
 
 ![Figure: Architectural split under Credential Guard. Left, VTL0 lsass.exe retains protocol parsers and short-lived service tickets while holding zero raw NTOWF or TGT keys; right, VTL1 LsaIso.exe holds long-term secrets across the SLAT boundary, reachable only through mediated LSA_ISO_RPC_SERVER calls.](diagrams/08-credential-guard-vtl-boundary.svg)
 
@@ -34,7 +34,7 @@ Across the `SLAT` boundary, `LsaIso.exe` (`Trustlet ID 1`) executes as the `VTL1
 
 When an attacker bypasses `RunAsPPL` and dumps `lsass.exe` on a Credential-Guard-protected host (for example using `Mimikatz` or `Pypykatz`), `msv1_0.dll`'s logon-session heap no longer contains 16-byte `NTOWF` digests. Instead, the structure holds an `[LSA Isolated Data]` record composed of four sequential fields [441, 442]. It opens with a versioned protection header (`0xa0...`) and plaintext routing tags such as ASCII `NtlmHash` (`4e746c6d48617368`) that identify the credential schema without exposing secret bytes, followed by an opaque `Context Handle` indexing `LsaIso.exe`'s internal session table alongside `VTL0` `Proxy Info` state [441]. Next sits the `AES-GCM` `Encrypted Blob` wrapping the user's `NTOWF` or Kerberos key material under symmetric keys held exclusively in `VTL1` RAM, rendering the ciphertext computationally useless offline even in a full physical memory dump [441]. Finally, a `DPAPI` binding GUID links the isolated logon credential to the user's on-disk `DPAPI` master-key hierarchy so `lsass.exe` can request `DPAPI` unwrapping via `LsaIso.exe` without ever learning the underlying password hash [182, 441].
 
-During a legitimate outbound `NTLMv2` network authentication (`diagrams/08-credential-guard-ntlm-roundtrip.svg`), `msv1_0.dll` receives the remote server's 8-byte challenge in `VTL0`, constructs a client blob (timestamp, target info, client nonce), and sends an RPC request over `\RPC Control\LSA_ISO_RPC_SERVER` (marshaled across `securekernel!IumInvokeSecureService`) supplying the `Context Handle`, `Encrypted Blob`, and challenge parameters [182, 441, 443]. Inside `VTL1`, `LsaIso.exe` unwraps the `Encrypted Blob`, computes `HMAC-MD5` (`NTProofStr` and session base key), and returns *only* the one-time response and session key to `msv1_0.dll`, leaving the `NTOWF` permanently sealed inside `VTL1`. Analogously, for Kerberos `TGS-REQ` exchanges, `LsaIso.exe` holds the `TGT` and TGT session key in `VTL1`, signing authenticators and decrypting KDC `TGS-REP` replies to hand only scoped *service tickets* back to `kerberos.dll` in `VTL0` [182].
+During a legitimate outbound `NTLMv2` network authentication, `msv1_0.dll` receives the remote server's 8-byte challenge in `VTL0`, constructs a client blob (timestamp, target info, client nonce), and sends an RPC request over `\RPC Control\LSA_ISO_RPC_SERVER` (marshaled across `securekernel!IumInvokeSecureService`) supplying the `Context Handle`, `Encrypted Blob`, and challenge parameters [182, 441, 443]. Inside `VTL1`, `LsaIso.exe` unwraps the `Encrypted Blob`, computes `HMAC-MD5` (`NTProofStr` and session base key), and returns *only* the one-time response and session key to `msv1_0.dll`, leaving the `NTOWF` permanently sealed inside `VTL1`. Analogously, for Kerberos `TGS-REQ` exchanges, `LsaIso.exe` holds the `TGT` and TGT session key in `VTL1`, signing authenticators and decrypting KDC `TGS-REP` replies to hand only scoped *service tickets* back to `kerberos.dll` in `VTL0` [182].
 
 ![Figure: The per-authentication NTLM round-trip across the agent / trustlet boundary. msv1_0.dll in lsass.exe is the network-side parser; the Secure Kernel mediates the hypercall; LsaIso.exe in VTL1 holds the key and returns only the derived response: the NTOWF never crosses back to VTL0.](diagrams/08-credential-guard-ntlm-roundtrip.svg)
 
@@ -61,7 +61,7 @@ Credential Guard ended the era of passive `sekurlsa` hash extraction on protecte
 
 ### The RPC Oracle Seam: `Pass-the-Challenge` (Lyak, 2022)
 
-Disclosed by Oliver Lyak in December 2022 [441, 443], Pass-the-Challenge (`PtC`) is the definitive demonstration of where Credential Guard's guarantee stops (`diagrams/08-credential-guard-pass-the-challenge.svg`):
+Disclosed by Oliver Lyak in December 2022 [441, 443], Pass-the-Challenge (`PtC`) is the definitive demonstration of where Credential Guard's guarantee stops:
 
 ![Figure: The Pass-the-Challenge attack flow. The trustlet is faithful (no page is read and no bug is exploited) but its RPC output is exactly the NTLMv1 response the attacker asked for, and crack.sh recovers the NT hash in ~30 seconds.](diagrams/08-credential-guard-pass-the-challenge.svg)
 
@@ -69,7 +69,7 @@ After obtaining `SYSTEM` and injecting a custom Security Support Provider (`Secu
 
 ### Documented Exclusions: `TGS` Tickets, Prompted Secrets, and Domain Controllers
 
-Microsoft's architecture documentation explicitly defines four boundaries Credential Guard never claims to defend (`diagrams/08-credential-guard-residual-taxonomy.svg`) [69, 182, 444].
+Microsoft's architecture documentation explicitly defines four boundaries Credential Guard never claims to defend [69, 182, 444].
 
 ![Figure: The four-class residual taxonomy Credential Guard was never going to close: credential use (not theft), tickets already in lsass, token attacks, and off-box replay, each routed to the chapter that owns it.](diagrams/08-credential-guard-residual-taxonomy.svg)
 
@@ -87,7 +87,7 @@ Why not move `msv1_0.dll`, `kerberos.dll`, `schannel.dll`, and `cloudap.dll` ins
 
 ### Decoupling Long-Term Secrets from Ephemeral Bearer Artifacts
 
-Consistent with Law 16, protecting the long-term root credential (`NTOWF` or `TGT`) does not protect downstream bearer artifacts derived from it (`VTL0` access tokens, `TGS` service tickets, or HTTP session cookies).
+Protecting the long-term root credential (`NTOWF` or `TGT`) does not protect downstream bearer artifacts derived from it (`VTL0` access tokens, `TGS` service tickets, or HTTP session cookies).
 
 > **Key idea.**
 > On a fully hardened endpoint running both *UEFI-locked Credential Guard* (`LsaCfgFlags = 1`) and *UEFI-locked LSA Protection* (`RunAsPPL = 1`), an attacker who reaches `Administrator` is blocked at `NtOpenProcess` by `PPL`, and an attacker who escalates further to `VTL0` Ring 0 (`BYOVD`) is still blocked at `SLAT` from extracting the `NTOWF` or `TGT` for persistent off-box replay. What the attacker retains is bounded strictly to *in-place session hijacking* on that single compromised machine for as long as the user remains signed in [182, 292].

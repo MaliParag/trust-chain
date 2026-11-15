@@ -15,10 +15,10 @@ URLs, structured `schema.org/Book` JSON-LD, and sitemaps are generated via
 and the front and back covers (`tools/gen_covers.py`) are generated from declarative
 vector specifications with automated collision and orthogonal-alignment verification.
 The print-ready `7 in x 9.25 in` PDF edition (`tools/build-pdf.mjs`) compiles the
-complete manuscript with full-bleed vector covers, KaTeX mathematical notation,
+complete book with full-bleed vector covers, KaTeX mathematical notation,
 native PDF bookmarks, and hyperlinked primary-source citations.
 
-**Editorial Verification.** Every chapter in the twenty-three-chapter manuscript is
+**Editorial Verification.** Every chapter in the twenty-three-chapter book is
 validated mechanically against structural progression rules, citation resolution
 against `src/back-matter/70-references.md`, diagram integrity, diagnostic code
 conciseness, and house typographic standards.

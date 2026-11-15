@@ -22,7 +22,7 @@ The VBS threat model assumes an adversary has already achieved full `SYSTEM` and
 
 ### The Micro-Kernelized Hypervisor and Its Five Primitives
 
-When VBS or Hyper-V is enabled, `hvloader.efi` launches the platform hypervisor binary (`hvix64.exe` on Intel VT-x; `hvax64.exe` on AMD-V) *before* `ntoskrnl.exe` initializes [176]. The hypervisor claims VMX root / SVM host mode, takes ownership of the system IOMMU, and places the main Windows operating system inside the *root partition*. Unlike monolithic VMMs that embed massive device-driver stacks inside the hypervisor, Hyper-V follows a micro-kernelized split (`diagrams/07-hypervisor-hyperv-stack.svg`) [165].
+When VBS or Hyper-V is enabled, `hvloader.efi` launches the platform hypervisor binary (`hvix64.exe` on Intel VT-x; `hvax64.exe` on AMD-V) *before* `ntoskrnl.exe` initializes [176]. The hypervisor claims VMX root / SVM host mode, takes ownership of the system IOMMU, and places the main Windows operating system inside the *root partition*. Unlike monolithic VMMs that embed massive device-driver stacks inside the hypervisor, Hyper-V follows a micro-kernelized split [165].
 
 ![Figure: The layered 2008 Hyper-V stack. The micro-kernel hypervisor owns only CPU virtualization, scheduling, and the second-level page tables, while the root partition (a full Windows install) runs the VSPs, vmswitch.sys, and vmwp.exe and a child partition reaches its VSCs over the VMBus. A child network packet crosses four trust domains: guest NDIS and the NIC VSC, then VMBus/SynIC, then the root VSP and vmswitch.sys, then the physical NIC driver: the division that kept the hypervisor's Trusted Computing Base small and is the design fact behind the later CVE record.](diagrams/07-hypervisor-hyperv-stack.svg)
 
@@ -32,11 +32,11 @@ Complementing explicit hypercalls, the hypervisor enforces mandatory boundaries 
 
 ### Virtual Trust Levels (`VTL0` vs. `VTL1`) and the Secure Kernel
 
-Rather than spinning up a separate heavyweight virtual machine to hold OS secrets, VBS partitions *a single partition* vertically into hierarchical Virtual Trust Levels (`VTLs`) [169, 171]. Although the `TLFS` architecture reserves 4 bits for up to 16 levels, production Windows implements `#define HV_NUM_VTLS 2` [171]. The lower level, `VTL0` (the *Normal World*), hosts `ntoskrnl.exe` in Ring 0 alongside device drivers, file systems, the network stack, `lsass.exe`, system services, and all standard Win32 and UWP applications in Ring 3 [177]. Above it, `VTL1` (the *Secure World*) hosts the minimal Secure Kernel (`securekernel.exe` and `skci.dll` in `VTL1` Ring 0) together with Isolated User Mode (`IUM`) trustlets and enclaves in `VTL1` Ring 3 (`diagrams/05-secure-kernel-vtl-architecture.svg`) [177, 178, 179].
+Rather than spinning up a separate heavyweight virtual machine to hold OS secrets, VBS partitions *a single partition* vertically into hierarchical Virtual Trust Levels (`VTLs`) [169, 171]. Although the `TLFS` architecture reserves 4 bits for up to 16 levels, production Windows implements `#define HV_NUM_VTLS 2` [171]. The lower level, `VTL0` (the *Normal World*), hosts `ntoskrnl.exe` in Ring 0 alongside device drivers, file systems, the network stack, `lsass.exe`, system services, and all standard Win32 and UWP applications in Ring 3 [177]. Above it, `VTL1` (the *Secure World*) hosts the minimal Secure Kernel (`securekernel.exe` and `skci.dll` in `VTL1` Ring 0) together with Isolated User Mode (`IUM`) trustlets and enclaves in `VTL1` Ring 3 [177, 178, 179].
 
 ![Figure: The VTL stack. The Hyper-V hypervisor owns SLAT at the base, and VTL1 (securekernel.exe plus the IUM trustlets lsaiso.exe and VBS enclaves) sits beside VTL0 (ntoskrnl.exe, lsass.exe, drivers, and any Ring 0 malware); SLAT denies VTL0 any mapping of VTL1 pages, so the only VTL0→VTL1 crossing is the Secure Service Call.](diagrams/05-secure-kernel-vtl-architecture.svg)
 
-Isolation between `VTL0` and `VTL1` is enforced asymmetrically in hardware via per-VTL SLAT trees (`diagrams/07-hypervisor-slat-double-walk.svg`):
+Isolation between `VTL0` and `VTL1` is enforced asymmetrically in hardware via per-VTL SLAT trees:
 
 ![Figure: The per-VTL SLAT double walk for one guest-physical page G. The first walk through the guest's own page tables (virtual address to guest-physical) succeeds for both a VTL0 kernel load and a VTL1 access (VTL0 can even forge a PTE to G) but the decisive second walk is the hypervisor-owned SLAT: VTL0's tree omits G, so the CPU raises an EPT/NPT violation before the load retires, while VTL1's tree maps G read-only to the one real frame. Same guest-physical address, two second translations, two authorities.](diagrams/07-hypervisor-slat-double-walk.svg)
 
@@ -46,7 +46,7 @@ Beyond protecting `VTL1` memory, the hypervisor and Secure Kernel harden `VTL0` 
 
 ### Isolated User Mode (`IUM`) Trustlets and the Five Load-Time Gates
 
-User-mode processes inside `VTL1` Ring 3 are termed trustlets (`IUM` processes) [178, 179]. Because `VTL1` user mode sits inside the platform TCB, third-party developers cannot ship inbox trustlets. As reverse-engineered by Alex Ionescu [178] and documented in *Windows Internals* [180], a PE binary becomes a running trustlet only by passing five cumulative admission gates (`diagrams/17-vbs-trustlets-five-gates.svg`):
+User-mode processes inside `VTL1` Ring 3 are termed trustlets (`IUM` processes) [178, 179]. Because `VTL1` user mode sits inside the platform TCB, third-party developers cannot ship inbox trustlets. As reverse-engineered by Alex Ionescu [178] and documented in *Windows Internals* [180], a PE binary becomes a running trustlet only by passing five cumulative admission gates:
 
 ![Figure: The five load-time gates that turn a binary into a trustlet (process attribute, signing EKUs at Level 12, `.tpolicy` metadata, Instance GUID, and the stripped-down IUM loader) each shown with its distinct failure outcome.](diagrams/17-vbs-trustlets-five-gates.svg)
 
@@ -54,7 +54,7 @@ Admitting a binary into `VTL1` Isolated User Mode requires passing five sequenti
 
 ### The Agent/Trustlet Broker Pattern, Inbox Roster, and VBS Enclaves
 
-Because `VTL1` contains no network stack, filesystem, or GUI, almost every trustlet pairs with an untrusted `VTL0` agent process over an Advanced Local Procedure Call (`ALPC`) channel (`diagrams/17-vbs-trustlets-agent-trustlet-split.svg`) [182]:
+Because `VTL1` contains no network stack, filesystem, or GUI, almost every trustlet pairs with an untrusted `VTL0` agent process over an Advanced Local Procedure Call (`ALPC`) channel [182]:
 
 ![Figure: The canonical agent/trustlet split. The VTL0 agent (lsass.exe) keeps the protocol, session, and network state while the VTL1 trustlet (LsaIso.exe) holds the secret; only the request and response cross the LSA_ISO_RPC_SERVER ALPC channel the Secure Kernel marshals.](diagrams/17-vbs-trustlets-agent-trustlet-split.svg)
 
@@ -107,7 +107,7 @@ VBS enforces a selective confidentiality and integrity invariant rather than who
 
 ### Decoupling Secret Isolation from Capability Authorization
 
-Consistent with Law 16, hardware memory isolation (`SLAT`) must be decoupled from operational capability authorization (`RPC` / `CallEnclave`) and version freshness.
+Hardware memory isolation (`SLAT`) must be decoupled from operational capability authorization (`RPC` / `CallEnclave`) and version freshness.
 
 > **Key idea.**
 > Placing a key or policy engine inside `VTL1` prevents a compromised `ntoskrnl.exe` from *extracting* the secret or *overwriting* the code. It does not prevent `VTL0` from exercising whatever legitimate API `VTL1` exposes (`Pass-the-Challenge`), nor does signature verification alone prevent an administrator from booting yesterday's buggy `securekernel.exe` (`Windows Downdate`) unless paired with anti-rollback `SiPolicy` version floors [193, 198, 200].

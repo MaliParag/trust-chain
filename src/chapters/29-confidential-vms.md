@@ -75,7 +75,7 @@ Microarchitectural side channels and physical motherboard interposers establish 
 
 ### Decoupling Hardware Memory Encryption from Relying-Party Key-Release Policy
 
-Consistent with Law 16, booting inside genuine `SEV-SNP` or `TDX` silicon protects nothing if the relying party releases keys without verifying launch measurements, `VBS` posture, and current `TCB SVN` floors inside `authorizationrules`.
+Booting inside genuine `SEV-SNP` or `TDX` silicon protects nothing if the relying party releases keys without verifying launch measurements, `VBS` posture, and current `TCB SVN` floors inside `authorizationrules`.
 
 > **Key idea.**
 > Hardware memory encryption (`Rail 1`) stops a curious host from reading RAM directly, yet without strict remote attestation (`Rail 2`), an adversarial host can simply boot its *own* attacker-controlled Confidential VM on genuine AMD or Intel silicon, obtain a mathematically valid `VCEK` or `TD Quote` signature, and request the customer's secret from Key Vault. Workload confidentiality holds if and only if the `MAA` `v1.2` `authorizationrules` gate pins the expected `OpenHCL` and firmware launch measurement, `PCR 7` or `RTMR` Secure Boot baseline, `vbsEnabled == true`, and `tcb-svn >= latest_advisory` before emitting `permit()` [145, 788].

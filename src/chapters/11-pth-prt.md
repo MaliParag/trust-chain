@@ -12,7 +12,7 @@
 
 Across three decades of Windows enterprise architecture, five named offensive techniques (`Pass-the-Hash`, `Pass-the-Ticket`, `Overpass-the-Hash`, `Pass-the-Certificate`, and `Pass-the-PRT`) instantiate a single structural theorem: any reusable authentication proof or key-derivation context reachable by the software process that consumes it can be replayed from another host unless both the in-use derivation path is hardware-isolated and the verifier enforces cryptographic channel or device binding.
 
-Paul Ashton proved the theorem in April 1997 with a 5-line `smbclient` diff (`Exploit-DB 19197`) feeding a stored LanMan/NT hash straight into SMB challenge encryption without knowing the cleartext password [531]. Eleven years later, Hernan Ochoa's *Pass-the-Hash Toolkit* (`iam.exe`, 2008) moved that substitution inside live Windows `lsass.exe` memory (`PROCESS_VM_WRITE`) so native OS tools (`net.exe`, `sc.exe`, `wmic`, `DCOM`) inherited the replayed identity transparently [532, 533, 534]. Every subsequent defensive milestone (`Protected Users` and `RunAsPPL` in 2013-2014 [292, 431, 435], `Credential Guard` / `LsaIso.exe` in `VTL1` in 2015 [69], `KB5014754` strong certificate mapping in 2022-2025 [501], and Entra `Token Protection` in 2023-2025 [535]) closed one storage class or verifier path while leaving adjacent credentials exposed (`diagrams/11-pth-prt-storage-class-ladder.svg`).
+Paul Ashton proved the theorem in April 1997 with a 5-line `smbclient` diff (`Exploit-DB 19197`) feeding a stored LanMan/NT hash straight into SMB challenge encryption without knowing the cleartext password [531]. Eleven years later, Hernan Ochoa's *Pass-the-Hash Toolkit* (`iam.exe`, 2008) moved that substitution inside live Windows `lsass.exe` memory (`PROCESS_VM_WRITE`) so native OS tools (`net.exe`, `sc.exe`, `wmic`, `DCOM`) inherited the replayed identity transparently [532, 533, 534]. Every subsequent defensive milestone (`Protected Users` and `RunAsPPL` in 2013-2014 [292, 431, 435], `Credential Guard` / `LsaIso.exe` in `VTL1` in 2015 [69], `KB5014754` strong certificate mapping in 2022-2025 [501], and Entra `Token Protection` in 2023-2025 [535]) closed one storage class or verifier path while leaving adjacent credentials exposed.
 
 ![Figure: The storage-class progression as a layered staircase, read as gap analysis. Each defense relocates the long-term secret inward to a stronger boundary: on-disk SAM to the lsass.exe cache to the LsaIso VTL1 trustlet to a TPM/VSC key container, and the family targets the next artifact just outside it. The bottom rung is the crux: the CloudAP-held PRT and its session key live in VTL0 LSASS outside Credential Guard's scope, with only the device/transport keys TPM-sealed at rest, so an attacker with local admin can extract and replay them.](diagrams/11-pth-prt-storage-class-ladder.svg)
 
@@ -50,7 +50,7 @@ With `SYSTEM` privileges in `VTL0`, an adversary never needs to extract the hard
 
 ### The 5x5 Attack/Defense Coverage Matrix
 
-Mapping all five credential-replay generations against Microsoft's five defensive eras reveals why no single control closes the lineage (`diagrams/11-pth-prt-attack-defense-matrix.svg`) [69, 435, 501, 535]:
+Mapping all five credential-replay generations against Microsoft's five defensive eras reveals why no single control closes the lineage [69, 435, 501, 535]:
 
 ![Figure: The 5x5 attack/defense matrix as a heatmap. Five attack generations (rows) against five defense generations (columns), each cell graded Closed (returns empty buffers or fails authentication), Partial (one sub-case or raised cost), or Open (outside the defense's design scope) on a hardware-eligible 2026 Windows 11 endpoint with every control on. The fully-Closed cells form a single green block in the Credential Guard column, confined to Generations 1-3; Pass-the-Certificate and Pass-the-PRT reach only Partial, so the staircase of closed cells never reaches the cloud era.](diagrams/11-pth-prt-attack-defense-matrix.svg)
 
@@ -82,7 +82,7 @@ A hardware security module (`TPM 2.0` or `VTL1` `LsaIso`) prevents an attacker f
 
 ### Decoupling Endpoint Key Custody from Verifier-Enforced Binding
 
-Consistent with Law 16, proving that a client device stores its identity key inside a `TPM` (`TpmProtected : YES`) guarantees nothing about whether a cloud resource server rejects unbound tokens.
+Proving that a client device stores its identity key inside a `TPM` (`TpmProtected : YES`) guarantees nothing about whether a cloud resource server rejects unbound tokens.
 
 > **Key idea.**
 > Closing the credential-replay family across an enterprise requires the simultaneous intersection of three independent controls controlled by different engineering teams: (1) Non-exportable hardware key custody and isolated per-request signing on the endpoint (`TPM 2.0` + `VTL1` trustlet), (2) Mandatory protocol-layer Proof-of-Possession (`Token Protection` / `DPoP` `RFC 9449`) enforced at *every* identity issuer and downstream resource server, and (3) Near-real-time session revocation (`CAE`) [155, 535, 556]. Whenever any one of those three legs is missing (such as a browser SaaS app accepting bearer tokens without `Token Protection`), the replay lineage survives intact.
